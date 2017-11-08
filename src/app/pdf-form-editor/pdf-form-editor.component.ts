@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PdfFormNavigationComponent } from './pdf-form-navigation/pdf-form-navigation.component';
+import { PdfFormNavigationComponent } from './navigation/pdf-form-navigation.component';
 
 @Component({
   selector: 'pdf-form-editor',

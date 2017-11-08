@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PdfFormPageTabComponent implements OnInit {
 
-  @Input('title') title: string;
+  @Input('pageNo') pageNo: number;
   @Input() active = false;
 
   constructor() { }

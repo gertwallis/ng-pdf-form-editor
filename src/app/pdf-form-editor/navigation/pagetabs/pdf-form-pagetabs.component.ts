@@ -1,13 +1,13 @@
-import { PdfFormPageTabComponent } from './../pdf-form-pagetab/pdf-form-pagetab.component';
 import { Component, ContentChildren, OnInit, QueryList, AfterContentInit } from '@angular/core';
 
+import { PdfFormPageTabComponent } from './../pagetab/pdf-form-pagetab.component';
 
 @Component({
   selector: 'pdf-form-pagetabs',
   templateUrl: './pdf-form-pagetabs.component.html',
   styleUrls: ['./pdf-form-pagetabs.component.css']
 })
-export class PdfFormTabsComponent implements OnInit, AfterContentInit {
+export class PdfFormPageTabsComponent implements OnInit, AfterContentInit {
 
   @ContentChildren(PdfFormPageTabComponent) pages: QueryList<PdfFormPageTabComponent>;
 
@@ -22,12 +22,12 @@ export class PdfFormTabsComponent implements OnInit, AfterContentInit {
 
     // if there is no active tab set, activate the first
     if (activePages.length === 0) {
-      this.selectTab(this.pages.first);
+      this.selectPage(this.pages.first);
     }
 
   }
 
-  selectTab(newPage: PdfFormPageTabComponent) {
+  selectPage(newPage: PdfFormPageTabComponent) {
     // deactivate all tabs
     this.pages.toArray().forEach(page => page.active = false);
 
