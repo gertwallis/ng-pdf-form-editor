@@ -1,11 +1,11 @@
 import { Component, ContentChildren, OnInit, QueryList, AfterContentInit } from '@angular/core';
 
-import { PdfFormPageTabComponent } from './../pagetab/pdf-form-pagetab.component';
+import { PdfFormPageTabComponent } from './../page-tab/page-tab.component';
 
 @Component({
   selector: 'pdf-form-pagetabs',
-  templateUrl: './pdf-form-pagetabs.component.html',
-  styleUrls: ['./pdf-form-pagetabs.component.css']
+  templateUrl: './page-tabs.component.html',
+  styleUrls: ['./page-tabs.component.css']
 })
 export class PdfFormPageTabsComponent implements OnInit, AfterContentInit {
 

@@ -7,17 +7,16 @@ import { AppComponent } from './app.component';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
-import { PdfFormEditorComponent } from './pdf-form-editor/pdf-form-editor.component';
-import { PdfFormNavigationComponent } from './pdf-form-editor/navigation/pdf-form-navigation.component';
-import { PdfFormPageTabsComponent } from './pdf-form-editor/navigation/pagetabs/pdf-form-pagetabs.component';
-import { PdfFormPageTabComponent } from './pdf-form-editor/navigation/pagetab/pdf-form-pagetab.component';
-
+import { PdfFormPageTabComponent } from './pdf-form-editor/navigation/page-tab/page-tab.component';
+import { PdfFormPageTabsComponent } from './pdf-form-editor/navigation/page-tabs/page-tabs.component';
+import { PdfFormPageNavComponent } from './pdf-form-editor/navigation/page-nav/page-nav.component';
+import { PdfFormEditorComponent } from './pdf-form-editor/editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PdfFormEditorComponent,
-    PdfFormNavigationComponent,
+    PdfFormPageNavComponent,
     PdfFormPageTabsComponent,
     PdfFormPageTabComponent
   ],

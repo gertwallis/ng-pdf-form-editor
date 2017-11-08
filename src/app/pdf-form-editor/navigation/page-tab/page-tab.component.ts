@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'pdf-form-pagetab',
-  templateUrl: './pdf-form-pagetab.component.html',
-  styleUrls: ['./pdf-form-pagetab.component.css']
+  templateUrl: './page-tab.component.html',
+  styleUrls: ['./page-tab.component.css']
 })
 export class PdfFormPageTabComponent implements OnInit {
 
