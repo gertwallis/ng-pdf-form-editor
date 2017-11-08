@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PdfFormNavigationComponent } from './pdf-form-navigation/pdf-form-navigation.component';
+
 @Component({
   selector: 'pdf-form-editor',
   templateUrl: './pdf-form-editor.component.html',

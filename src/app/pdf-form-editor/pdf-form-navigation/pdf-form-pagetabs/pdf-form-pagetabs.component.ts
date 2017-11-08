@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pdf-form-tabs',
-  templateUrl: './pdf-form-tabs.component.html',
-  styleUrls: ['./pdf-form-tabs.component.css']
+  selector: 'pdf-form-pagetabs',
+  templateUrl: './pdf-form-pagetabs.component.html',
+  styleUrls: ['./pdf-form-pagetabs.component.css']
 })
 export class PdfFormTabsComponent implements OnInit {
 

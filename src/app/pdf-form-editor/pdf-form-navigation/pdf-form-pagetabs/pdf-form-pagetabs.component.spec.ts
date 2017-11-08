@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { PdfFormTabsComponent } from './pdf-form-tabs.component';
+import { PdfFormTabsComponent } from './pdf-form-pagetabs.component';
 
 describe('PdfFormTabsComponent', () => {
   let component: PdfFormTabsComponent;
