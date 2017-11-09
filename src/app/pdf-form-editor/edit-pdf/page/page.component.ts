@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Model } from './../../model/PdfForm';
+
 @Component({
   selector: 'page',
   templateUrl: './page.component.html',
@@ -7,8 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PdfFormPageComponent implements OnInit {
 
-  @Input('pageNo') pageNo: number;
-  @Input() active = false;
+ //  @Input('pageNo') pageNo: number;
+   @Input() Page: Model.Page;
+   @Input() active = false;
 
   constructor() { }
 

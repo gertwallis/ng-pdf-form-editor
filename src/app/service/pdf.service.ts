@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
 
- import { PdfForm } from './../models/interfaces'
+ import { Model } from './../pdf-form-editor/model/PdfForm';
 
 @Injectable()
 export class PdfService {
 
-  // const test: PdfEdit.Form = {URL = 'gert', };
-   //xxx:  PdfModel.Form  = { };
   constructor() { }
 
-  loadPdf(): PdfForm  {
+  loadPdf(): Model.Form  {
     // return localStorage.getItem("something");
-    const pdfForm: PdfForm = {
-      shown: true,
-      url: '/assets/247OR.pdf',
-      pdfBytes: ''
-    }
+    // const pdfForm: PdfForm = {
+    //   shown: true,
+    //   url: '/assets/???.pdf',
+    //   pdfBytes: '',
+    // }
+    // pdForm.pages.push()
 
-    return pdfForm;
+    return null;
   }
 
 }

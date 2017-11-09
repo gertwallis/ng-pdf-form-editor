@@ -1,6 +1,8 @@
-import { Component, ContentChildren, OnInit, QueryList, AfterContentInit } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList } from '@angular/core';
 
 import { PdfFormPageComponent } from './../page/page.component';
+
+import { Model } from './../../model/PdfForm';
 
 @Component({
   selector: 'pages',
@@ -8,6 +10,8 @@ import { PdfFormPageComponent } from './../page/page.component';
   styleUrls: ['./pages.component.css']
 })
 export class PdfFormPagesComponent implements OnInit, AfterContentInit {
+
+  @Input() Form: Model.Form;
 
   @ContentChildren(PdfFormPageComponent) pages: QueryList<PdfFormPageComponent>;
 
