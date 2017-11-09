@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'page-nav',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PdfFormPageNavComponent implements OnInit {
 
-  constructor() { }
+  @Input()  noOfPages = 0;
+
+  pages: number[];
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.pages = Array.from({length: this.noOfPages}, (v, k) => k + 1);
   }
 
 }
