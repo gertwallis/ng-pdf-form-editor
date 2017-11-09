@@ -1,0 +1,7 @@
+<p>
+  pdf-form-editor works!
+  {{pdfForm.url}}
+</p>
+<page-nav [noOfPages]="pdfForm.noOfPages"></page-nav>
+<!-- <display-pdf></display-pdf> -->
+<display-pdf [pdfSrc]="'assets/PenTax.pdf'" [zoom]="1" [showAll]="false" style="display:block"></display-pdf>

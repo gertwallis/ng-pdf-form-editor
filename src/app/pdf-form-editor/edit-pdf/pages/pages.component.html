@@ -1,4 +1,3 @@
-Tabs {{pages.length}} --
 <ul class="nav nav-tabs">
   <li *ngFor="let page of pages" (click)="selectPage(page)" [class.active]="page.active">
     <a href="#">{{page.pageNo}}</a>

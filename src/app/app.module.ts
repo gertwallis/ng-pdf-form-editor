@@ -5,26 +5,19 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 
-import { PdfFormPageTabComponent } from './pdf-form-editor/navigation/page-tab/page-tab.component';
-import { PdfFormPageTabsComponent } from './pdf-form-editor/navigation/page-tabs/page-tabs.component';
-import { PdfFormPageNavComponent } from './pdf-form-editor/navigation/page-nav/page-nav.component';
-import { PdfFormEditorComponent } from './pdf-form-editor/editor.component';
+import { PdfEditModule } from './pdf-form-editor/edit-pdf.module';
+import { PdfEditComponent } from './pdf-form-editor/edit-pdf.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PdfFormEditorComponent,
-    PdfFormPageNavComponent,
-    PdfFormPageTabsComponent,
-    PdfFormPageTabComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    PdfViewerModule
+    PdfEditModule
   ],
   providers: [],
   bootstrap: [AppComponent]

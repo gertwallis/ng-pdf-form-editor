@@ -1,15 +1,15 @@
 import { Component, ContentChildren, OnInit, QueryList, AfterContentInit } from '@angular/core';
 
-import { PdfFormPageTabComponent } from './../page-tab/page-tab.component';
+import { PdfFormPageComponent } from './../page/page.component';
 
 @Component({
-  selector: 'pdf-form-pagetabs',
-  templateUrl: './page-tabs.component.html',
-  styleUrls: ['./page-tabs.component.css']
+  selector: 'pages',
+  templateUrl: './pages.component.html',
+  styleUrls: ['./pages.component.css']
 })
-export class PdfFormPageTabsComponent implements OnInit, AfterContentInit {
+export class PdfFormPagesComponent implements OnInit, AfterContentInit {
 
-  @ContentChildren(PdfFormPageTabComponent) pages: QueryList<PdfFormPageTabComponent>;
+  @ContentChildren(PdfFormPageComponent) pages: QueryList<PdfFormPageComponent>;
 
   constructor() { }
 
@@ -26,7 +26,7 @@ export class PdfFormPageTabsComponent implements OnInit, AfterContentInit {
     // }
   }
 
-  selectPage(newPage: PdfFormPageTabComponent) {
+  selectPage(newPage: PdfFormPageComponent) {
     // deactivate all page tabs
     this.pages.toArray().forEach(page => page.active = false);
 
