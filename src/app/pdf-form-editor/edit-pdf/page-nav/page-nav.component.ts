@@ -9,14 +9,12 @@ import { Model } from './../../model/PdfForm';
 })
 export class PdfFormPageNavComponent implements OnInit {
 
-  // @Input()  noOfPages = 0;
   @Input() Form: Model.Form;
 
   constructor() {
   }
 
   ngOnInit() {
-    // this.pages = Array.from({length: this.noOfPages}, (v, k) => k + 1);
   }
 
 }

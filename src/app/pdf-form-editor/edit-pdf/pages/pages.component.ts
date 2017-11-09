@@ -1,5 +1,5 @@
 import { map } from 'rxjs/operator/map';
-import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ContentChildren, Input, OnInit, QueryList } from '@angular/core';
 
 import { PdfFormPageComponent } from './../page/page.component';
 
@@ -21,23 +21,14 @@ export class PdfFormPagesComponent implements OnInit, AfterContentInit {
   ngOnInit() {
   }
 
-
   public ngAfterContentInit(): void {
 
-    let pageArray = this.pages.toArray;
-    for (let i =  0; i <  pageArray.length; i++) {
+    const pageArray = this.pages.toArray();
+    for (let i = 0; i < pageArray.length; i++) {
       pageArray[i].PageLabel = i + 1;
     }
-
-    //this.pages.forEach(page => page.PageLabel = 1);
-  
-    // const activePages = this.pages.filter((page) => page.active);
-
-    // // if there is no active tab set, activate the first
-    // if (activePages.length === 0 && this.pages.length > 0) {
-    //    this.selectPage(this.pages.first);
-    // }
-  }
+      //this.selectPage(this.pages.first);
+    }
 
   selectPage(newPage: PdfFormPageComponent) {
     // deactivate all page tabs
