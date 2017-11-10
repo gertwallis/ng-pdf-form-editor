@@ -25,10 +25,28 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   public ngAfterContentInit(): void {
     this.viewer.pdfSrc = this.Form.Url;
-    // const pageArray = this.pages.toArray();
-    // for (let i = 0; i < pageArray.length; i++) {
-    //   pageArray[i].pageNo = i + 1;
-    // }
+   }
+
+   edit() {
+     console.log('Show editing screen');
+   }
+
+  nextPage() {
+    this.viewer.incrementPage(1);
+    this.setPage();
+  }
+
+  previousPage(){
+    this.viewer.incrementPage(-1);
+    this.setPage();
+  }
+
+  setPage() {
+    const pageComponent = this.pages.filter(page => page.pageNo === this.viewer.page)
+
+    if (pageComponent.length === 1) {
+      this.selectPage(pageComponent[0]);
+    }
   }
 
   selectPage(newPage: PageComponent) {

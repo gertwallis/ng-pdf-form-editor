@@ -11,9 +11,9 @@ export class DisplayPdfComponent {
     @ViewChild('pdfViewer') pdfViewer: PdfViewerComponent;
 
     @Input() public pdfSrc: string;
+    @Input() public page = 1;
 
     @Input() private originalSize = true;
-    @Input() private page = 1;
     @Input() private renderText = false;
     @Input() private rotation = 0;
     @Input() private showAll = false;

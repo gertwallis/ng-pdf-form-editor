@@ -1,13 +1,20 @@
-<ul class="nav nav-tabs">
-  <li *ngFor="let page of pages" (click)="selectPage(page)" [class.active]="page.active">
-    {{index}}
-    <a href="#">{{page.pageNo}}</a>
-  </li>
-</ul>
-<!-- <pdf-viewer #pdfViewer [src]="'assets/247WI.PDF'" [(page)]="page" [rotation]="rotation" [original-size]="originalSize" [show-all]="showAll"
-(after-load-complete)="afterLoadComplete($event)" [zoom]="zoom" [render-text]="false">
-</pdf-viewer> -->
-
-<div class="pdfdisplay">
-    <display-pdf #viewer [pdfSrc]="'assets/247WI.PDF'" [zoom]="1.25" [showAll]="false" style="display:block"></display-pdf>
+<div class="panel with-nav-tabs panel-default">
+  <div class="panel-heading">
+      <div class="btn-toolbar pull-right"> 
+          <button type="button" (click)="nextPage()" class="btn btn-primary btn-round-xs btn-sm pull-right">Next</button>
+          <button type="button" (click)="nextPage()" class="btn btn-primary btn-round-xs btn-sm pull-right">Previous</button>
+          <button type="button" (click)="edit()" class="btn btn-primary btn-round-xs btn-sm pull-right">Edit</button>
+        </div>
+      <ul class="nav nav-tabs">
+      <li *ngFor="let page of pages" (click)="selectPage(page)" [class.active]="page.active">
+        {{index}}
+        <a href="#">{{page.pageNo}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="panel-body">
+    <div class="tab-content">
+      <display-pdf #viewer [pdfSrc]="'assets/247WI.PDF'" [zoom]="1.25" [showAll]="false" style="display:block"></display-pdf>
+    </div>
+  </div>
 </div>

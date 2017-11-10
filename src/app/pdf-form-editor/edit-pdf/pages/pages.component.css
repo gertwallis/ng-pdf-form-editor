@@ -1,6 +1,18 @@
-.pdfdisplay {
+/* .pdfdisplay {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    padding: 5px;
+} */
+/* .controls{
+    display: inline-block;
+    vertical-align: top; 
+    align-content: right;
+} */
+.panel.with-nav-tabs .panel-heading {
+    padding: 0px;
+    border-bottom: none;
+}
+.btn-toolbar {
     padding: 5px;
 }
