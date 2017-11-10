@@ -1,13 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
-export class PdfFormPageComponent implements OnInit {
+export class PageComponent implements OnInit {
 
-   @Input() PageLabel: number;
+   @Input() pageNo: number;
    @Input() active = false;
 
   constructor() { }
@@ -15,4 +15,10 @@ export class PdfFormPageComponent implements OnInit {
   ngOnInit() {
   }
 
+
+    // public ngAfterContentInit(): void {
+    //   // if (this.PageNo === 1) {
+    //   //   this.active = true;
+    //   // }
+    // }
 }
