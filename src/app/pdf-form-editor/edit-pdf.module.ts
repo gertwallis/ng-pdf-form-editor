@@ -15,10 +15,8 @@ import { TabComponent } from './edit-pdf/tab/tab.component';
 
 // Editing
 import { PageComponent } from './edit-pdf/page/page.component';
-// import { PdfFormEditPagesComponent } from './edit-pdf/pages/pages.component';
-// import { PdfFormEditFieldTextComponent } from './edit-pdf/field/text/text.component';
-// import { PdfFormEditFieldComponent } from './edit-pdf/field/field.component';
-// import { PdfFormEditTabComponent } from './edit-pdf/page/page.component';
+import { TextComponent } from './edit-pdf/field/text/text.component';
+import { FieldComponent } from './edit-pdf/field/field.component';
 
 // Display of PDF
 import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
@@ -41,6 +39,8 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     PagesComponent,
     TabComponent,
     PdfEditComponent,
+    FieldComponent,
+    TextComponent,
     DisplayPdfComponent
   ]
 })

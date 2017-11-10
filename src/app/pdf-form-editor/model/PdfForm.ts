@@ -52,7 +52,7 @@ export namespace Model {
         NoOfPages(): number {
             return this.Pages.length;
         };
-        
+
         PageSize?: Size;
     }
 }

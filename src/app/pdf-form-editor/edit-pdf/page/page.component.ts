@@ -7,14 +7,22 @@ import { Model } from './../../model/PdfForm';
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
-export class PageComponent implements OnInit {
+export class PageComponent implements OnInit, AfterContentInit {
 
    @Input() active = false;
-   @Input() editPage: Model.Page;
+   @Input() Page: Model.Page;
+   @Input() FieldData: Model.FieldData;
    
   constructor() { }
 
   ngOnInit() {
-    console.log("TESTING" +this. editPage.PageNo);
   }
+
+  getData(name): Model.DataField {
+    return new Model.DataField();
+  }
+
+    public ngAfterContentInit(): void {
+      console.log("loading page");
+    }
 }

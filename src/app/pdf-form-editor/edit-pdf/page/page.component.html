@@ -1,5 +1,6 @@
 <div [hidden]="!active" class="pane">
+  <field *ngFor="let location of Page.Locations" [Location]="location" [Data] = "getData()" [class.active]="false">
+    
+  </field>
 
-  Hallo Page!
-  <ng-content></ng-content>
 </div>

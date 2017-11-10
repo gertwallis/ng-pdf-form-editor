@@ -11,7 +11,7 @@ export class PdfService {
     const newForm = new Model.Form();
 
     newForm.Shown = true;
-    newForm.Url = "/assets/247WI.pdf";
+    newForm.Url = "/assets/247OR.pdf";
     newForm.Pages = [];
     newForm.PageSize = new Model.Size();
     newForm.PageSize.Width = 8500;
