@@ -29,7 +29,7 @@ export class PdfEditComponent implements OnInit {
     newForm.Url = '/assets/247WI.pdf';
     newForm.Pages = [];
     for (let i = 1; i <= 4; i++) {
-      let page = new Model.Page();
+      const page = new Model.Page();
       page.PageNo = i;
       newForm.Pages.push(page);
     }

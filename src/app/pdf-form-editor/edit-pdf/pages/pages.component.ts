@@ -1,4 +1,4 @@
-import { map } from 'rxjs/operator/map';
+import { DisplayPdfComponent } from './../display/display-pdf.component';
 import { AfterContentInit, AfterViewInit, Component, ContentChildren, Input, OnInit, QueryList, ViewChild } from '@angular/core';
 
 import { PdfFormPageComponent } from './../page/page.component';
@@ -16,15 +16,15 @@ export class PdfFormPagesComponent implements OnInit, AfterContentInit {
   @Input() Form: Model.Form;
 
   @ContentChildren(PdfFormPageComponent) pages: QueryList<PdfFormPageComponent>;
-  @ViewChild('pdfViewer') pdfViewer: PdfViewerComponent;
+  @ViewChild('viewer') viewer: DisplayPdfComponent;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   public ngAfterContentInit(): void {
-
-    this.pdfViewer.src = this.Form.Url;
+    this.viewer.pdfSrc = this.Form.Url;
     const pageArray = this.pages.toArray();
     for (let i = 0; i < pageArray.length; i++) {
       pageArray[i].PageLabel = i + 1;
@@ -40,6 +40,6 @@ export class PdfFormPagesComponent implements OnInit, AfterContentInit {
     // activate the tab the user has clicked on.
     newPage.active = true;
 
-    this.pdfViewer.page = newPage.PageLabel;
+    this.viewer.goToPage(newPage.PageLabel);
   }
 }

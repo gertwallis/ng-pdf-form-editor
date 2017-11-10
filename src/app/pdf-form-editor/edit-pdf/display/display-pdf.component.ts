@@ -10,7 +10,7 @@ export class DisplayPdfComponent {
 
     @ViewChild('pdfViewer') pdfViewer: PdfViewerComponent;
 
-    @Input() private pdfSrc: string;
+    @Input() public pdfSrc: string;
 
     @Input() private originalSize = true;
     @Input() private page = 1;
@@ -23,6 +23,11 @@ export class DisplayPdfComponent {
 
     constructor() {
     }
+
+    setSource(url: string) {
+        this.pdfSrc = url;
+    }
+
 
     goToPage(pageNumber) {
         this.page = pageNumber;
