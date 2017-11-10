@@ -3,3 +3,10 @@
     <a href="#">{{page.PageLabel}}</a>
   </li>
 </ul>
+<pdf-viewer #pdfViewer [src]="pdfSrc" [(page)]="page" [rotation]="rotation" [original-size]="originalSize" [show-all]="showAll"
+(after-load-complete)="afterLoadComplete($event)" [zoom]="zoom" [render-text]="false">
+</pdf-viewer>
+
+<!-- <div #gert class="pdfdisplay">
+    <display-pdf [pdfSrc]="'assets/247WI.PDF'" [zoom]="1.25" [showAll]="false" style="display:block"></display-pdf>
+</div> -->
