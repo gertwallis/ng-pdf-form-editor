@@ -9,15 +9,16 @@ import { PdfService } from './service/pdf.service';
 import { PdfEditComponent } from './edit-pdf.component';
 
 // Page Navigation
-import { PdfFormPageNavComponent } from './edit-pdf/page-nav/page-nav.component';
+import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
 import { PagesComponent } from './edit-pdf/pages/pages.component';
-import { PageComponent } from './edit-pdf/page/page.component';
+import { TabComponent } from './edit-pdf/tab/tab.component';
 
 // Editing
+import { PageComponent } from './edit-pdf/page/page.component';
 // import { PdfFormEditPagesComponent } from './edit-pdf/pages/pages.component';
 // import { PdfFormEditFieldTextComponent } from './edit-pdf/field/text/text.component';
 // import { PdfFormEditFieldComponent } from './edit-pdf/field/field.component';
-// import { PdfFormEditPageComponent } from './edit-pdf/page/page.component';
+// import { PdfFormEditTabComponent } from './edit-pdf/page/page.component';
 
 // Display of PDF
 import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
@@ -35,9 +36,10 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     PdfEditComponent
   ],
   declarations: [
-    PdfFormPageNavComponent,
-    PagesComponent,
+    NavigationComponent,
     PageComponent,
+    PagesComponent,
+    TabComponent,
     PdfEditComponent,
     DisplayPdfComponent
   ]

@@ -7,7 +7,7 @@ import { Model } from './../../model/PdfForm';
   templateUrl: './page-nav.component.html',
   styleUrls: ['./page-nav.component.css']
 })
-export class PdfFormPageNavComponent implements OnInit {
+export class NavigationComponent implements OnInit {
 
   @Input() Form: Model.Form;
 

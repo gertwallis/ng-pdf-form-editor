@@ -1,5 +1,7 @@
 import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 
+import { Model } from './../../model/PdfForm';
+
 @Component({
   selector: 'page',
   templateUrl: './page.component.html',
@@ -7,18 +9,12 @@ import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
-   @Input() pageNo: number;
    @Input() active = false;
-
+   @Input() editPage: Model.Page;
+   
   constructor() { }
 
   ngOnInit() {
+    console.log("TESTING" +this. editPage.PageNo);
   }
-
-
-    // public ngAfterContentInit(): void {
-    //   // if (this.PageNo === 1) {
-    //   //   this.active = true;
-    //   // }
-    // }
 }

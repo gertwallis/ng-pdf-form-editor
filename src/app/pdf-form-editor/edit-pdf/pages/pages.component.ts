@@ -1,8 +1,9 @@
 import { DisplayPdfComponent } from './../display/display-pdf.component';
 import { AfterContentInit, AfterViewInit, Component, ContentChildren, Input, OnInit, QueryList, ViewChild } from '@angular/core';
 
-import { PageComponent } from './../page/page.component';
+import { TabComponent } from './../tab/tab.component';
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
+import { PageComponent } from './../page/page.component';
 
 import { Model } from './../../model/PdfForm';
 
@@ -15,7 +16,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   @Input() Form: Model.Form;
 
-  @ContentChildren(PageComponent) pages: QueryList<PageComponent>;
+  @ContentChildren(TabComponent) pages: QueryList<TabComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
 
   constructor() { }
@@ -24,7 +25,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
-    this.viewer.pdfSrc = this.Form.Url;
+    // this.viewer.pdfSrc = this.Form.Url;
    }
 
    edit() {
@@ -42,14 +43,14 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   setPage() {
-    const pageComponent = this.pages.filter(page => page.pageNo === this.viewer.page)
+    const TabComponent = this.pages.filter(page => page.pageNo === this.viewer.page)
 
-    if (pageComponent.length === 1) {
-      this.selectPage(pageComponent[0]);
+    if (TabComponent.length === 1) {
+      this.selectPage(TabComponent[0]);
     }
   }
 
-  selectPage(newPage: PageComponent) {
+  selectPage(newPage: TabComponent) {
     // deactivate all page tabs
     this.pages.toArray().forEach(page => page.active = false);
 

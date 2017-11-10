@@ -16,6 +16,7 @@ export namespace Model {
         X: number;
         Y: number;
         PageNo: number;
+        TabOrder: number;
     }
 
     export enum DisplayState {
@@ -25,26 +26,33 @@ export namespace Model {
     }
 
 
-    export class Field extends Describe {
-        // Field can occur in multiple locations.
+    export class DataField extends Describe {
+        Type: string;
         Value: string;
+        MaxChar: number;
+    }
+
+    export class FieldData {
+        Fields: DataField[];
     }
 
     export class Page {
         IsShown: boolean;
-        HasFields: boolean;
+        Editable: boolean;
         PageNo: number;
         Locations: Location[];
     }
 
     export class Form {
         Pages?: Page[];
-        Fields?: Field[];
+        FieldData?: FieldData;
         Shown?: boolean;
         Url?: string;
         PdfBytes?: string;
         NoOfPages(): number {
             return this.Pages.length;
-        }
+        };
+        
+        PageSize?: Size;
     }
 }

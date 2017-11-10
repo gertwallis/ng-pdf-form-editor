@@ -1,7 +1,7 @@
 import { PdfService } from './service/pdf.service';
 import { Component, Input, OnInit } from '@angular/core';
 
-import { PdfFormPageNavComponent } from './edit-pdf/page-nav/page-nav.component';
+import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
 
 import { Model } from './model/PdfForm';
 

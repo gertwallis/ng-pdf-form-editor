@@ -9,10 +9,12 @@
     vertical-align: top; 
     align-content: right;
 } */
+
 .panel.with-nav-tabs .panel-heading {
     padding: 0px;
     border-bottom: none;
-}
+} 
+
 .btn-toolbar {
     padding: 5px;
 }
