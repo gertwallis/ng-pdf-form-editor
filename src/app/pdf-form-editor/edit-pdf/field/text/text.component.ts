@@ -9,16 +9,16 @@ import { Model } from './../../../model/PdfForm';
 })
 export class TextComponent implements OnInit, AfterContentInit {
 
-  @Input() Name: string;
-  @Input() Value: string;
-  
+  @Input() name: string;
+  @Input() value: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
 
-    public ngAfterContentInit(): void {
-      console.log("TEXT:" + this.Name);
-    }
+  public ngAfterContentInit(): void {
+    console.log("TEXT:" + this.name);
+  }
 }

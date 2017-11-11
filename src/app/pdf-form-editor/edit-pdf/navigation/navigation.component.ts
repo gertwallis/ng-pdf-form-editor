@@ -9,7 +9,7 @@ import { Model } from './../../model/PdfForm';
 })
 export class NavigationComponent implements OnInit {
 
-  @Input() Form: Model.Form;
+  @Input() form: Model.Form;
 
   constructor() {
   }

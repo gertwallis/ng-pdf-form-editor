@@ -13,12 +13,13 @@ import { Model } from './model/PdfForm';
 export class PdfEditComponent implements OnInit {
 
   // @Input() private pdfForm: PdfForm;
-  private Form: Model.Form;
+  private form: Model.Form;
 
   constructor(private pdfService: PdfService) { }
 
   ngOnInit() {
-    this.Form = this.pdfService.loadPdf();
+    const pdfDocument = this.pdfService.loadPdf();
+    this.form = pdfDocument.form;
   }
 
 }

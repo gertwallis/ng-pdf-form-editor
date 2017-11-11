@@ -10,16 +10,16 @@ import { Model } from './../../model/PdfForm';
 export class PageComponent implements OnInit, AfterContentInit {
 
    @Input() active = false;
-   @Input() Page: Model.Page;
-   @Input() FieldData: Model.FieldData;
+   @Input() page: Model.Page;
+   @Input() data: Model.FieldData;
    
   constructor() { }
 
   ngOnInit() {
   }
 
-  getData(name): Model.DataField {
-    return new Model.DataField();
+  getData(name): Model.FieldData {
+    return new Model.FieldData();
   }
 
     public ngAfterContentInit(): void {

@@ -9,8 +9,8 @@ import { Model } from './../../model/PdfForm';
 })
 export class FieldComponent implements OnInit, AfterContentInit {
 
-  @Input() Data: Model.DataField;
-  @Input() Location: Model.Location;
+  @Input() data: Model.FieldData;
+  @Input() location: Model.Location;
   
   constructor() { }
 

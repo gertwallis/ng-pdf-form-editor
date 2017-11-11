@@ -1,5 +1,5 @@
 <div [hidden]="!active" class="pane">
-  <field *ngFor="let location of Page.Locations" [Location]="location" [Data] = "getData()" [class.active]="false">
+  <field *ngFor="let location of page.locations" [location]="location" [data] = "getData()" [class.active]="false">
     
   </field>
 

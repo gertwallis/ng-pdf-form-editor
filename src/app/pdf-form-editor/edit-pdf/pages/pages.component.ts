@@ -14,8 +14,7 @@ import { Model } from './../../model/PdfForm';
 })
 export class PagesComponent implements OnInit, AfterContentInit {
 
-  @Input() Form: Model.Form;
-  
+  @Input() form: Model.Form;
   @ContentChildren(TabComponent) pages: QueryList<TabComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
 

@@ -15,8 +15,8 @@
     <div class="tab-content">
       PDF VIEWER COMMENTED OUT.
       <!-- <display-pdf #viewer [pdfSrc]="'assets/247OR.pdf.PDF'" [zoom]="1.25" [showAll]="false" style="display:block"></display-pdf> -->
-     Pages: {{Form.Pages.length}}
-      <page *ngFor="let page of Form.Pages" [FieldData]= "Form.FieldData" [Page]="page" [class.active]="false"></page>
+     Pages: {{form.pages.length}}
+      <page *ngFor="let page of form.pages" [data]= "form.data" [page]="page" [class.active]="false"></page>
     </div>
   </div>
 </div>
