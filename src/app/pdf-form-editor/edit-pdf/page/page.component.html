@@ -1,5 +1,9 @@
 <div [ngStyle]="pageSize"  [hidden]="!active">
-  <field *ngFor="let location of page.locations" [location]="location.pdf" [data] = "getData(location.name)" [class.active]="false">
+  <field *ngFor="let location of page.locations" 
+  [location]="location.view" 
+  [data] = "getData(location.name)" 
+  [tabIndex] = 'location.tabOrder'
+  [class.active]="false">
     
   </field>
 

@@ -36,7 +36,7 @@ export class PageComponent implements OnInit, AfterContentInit {
     //   'height': this.page.pageSize.height + 'px'
     // };
     this.pageSize = {
-      'position': 'fixed',
+      'position': 'relative',
       'width': '650px',
       'height': '1100px',
       'border': '1px solid #ddd'

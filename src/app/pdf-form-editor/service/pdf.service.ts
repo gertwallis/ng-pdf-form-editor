@@ -15,8 +15,8 @@ export class PdfService {
     newDocument.form.shown = true;
     newDocument.form.pages = [];
     newDocument.form.pageSize = new Model.Size();
-    newDocument.form.pageSize.width = 8500;
-    newDocument.form.pageSize.height = 11000;
+    newDocument.form.pageSize.width = 11000;
+    newDocument.form.pageSize.height = 8500;
 
     newDocument.form.data = new Model.FormData();
     newDocument.form.data.fields = [];
@@ -2518,7 +2518,7 @@ export class PdfService {
     page.pageNo = 7;
     page.locations = [];
     newDocument.form.pages.push(page);
-/*
+
     location.pageNo = 7;
     location.tabOrder = 159;
     location.name = "Remarks1";
@@ -2627,7 +2627,6 @@ export class PdfService {
     location.pdf.height = 166;
     location.pdf.width = 7348;
     page.locations.push(location);
-*/
 
     location = new Model.ScaledLocation();
     location.pageNo = 7;

@@ -11,7 +11,8 @@ export class TextComponent implements OnInit, AfterContentInit {
 
   @Input() data: Model.FieldData;
   @Input() location: Model.Location;
-
+  @Input() tabIndex: number;
+  
   inputSize: {};
   inputPosition: {};
 
@@ -28,14 +29,17 @@ export class TextComponent implements OnInit, AfterContentInit {
       // 'font-size':   this.isSpecial    ? '24px'   : '12px'
       // 'padding': '20px 10px',
       // 'line-height': '28px'
+      'width': this.location.x + 'px',
+      // 'line-eight': this.location.height + 'px',
+    
     };
+
     this.inputPosition = {
       'position': 'absolute',
-      'left': (this.location.width /10) + 'px',
-      'top': (this.location.y / 10) + 'px',
-      'width': this.location.x + 'px',
-      'height': this.location.height + 'px',
-      
+      'left': this.location.x + 'px',
+      'top': this.location.y + 'px',
+      //'width': this.location.width + 'px',
+      //'height': this.location.height + 'px',
     };
   }
 }

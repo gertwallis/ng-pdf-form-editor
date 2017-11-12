@@ -70,7 +70,8 @@ export namespace Model {
         view: Location = new Location();
     }
 
-    export class Scale {
+    // Scale to convert from PDF coordinates to View
+    export class Scale extends Size {
         horiz: number;
         vertical: number;
     }
@@ -102,11 +103,11 @@ export namespace Model {
             // an observable pattern to propagate changes to UI.
             for (const page of this.pages) {
                 for (const location of page.locations) {
-                    location.view.y = location.pdf.width * scale.horiz;
-                    location.view.height = location.pdf.height * scale.horiz;
+                    location.view.y = location.pdf.y * scale.vertical;
+                    location.view.height = location.pdf.height * scale.vertical;
 
-                    location.view.x = location.pdf.height * scale.vertical;
-                    location.view.width = location.pdf.width * scale.vertical;
+                    location.view.x = location.pdf.x * scale.horiz;
+                    location.view.width = location.pdf.width * scale.horiz;
                 }
             }
         }

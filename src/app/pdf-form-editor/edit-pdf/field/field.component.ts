@@ -11,7 +11,8 @@ export class FieldComponent implements OnInit, AfterContentInit {
 
   @Input() data: Model.FieldData;
   @Input() location: Model.Location;
-  
+  @Input() tabIndex: number;
+
   constructor() { }
 
   ngOnInit() {

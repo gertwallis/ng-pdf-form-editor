@@ -43,6 +43,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
+    this.setScale();
   }
 
   edit() {
@@ -50,37 +51,46 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   nextPage() {
-    //this.viewer.incrementPage(1);
+    // this.viewer.incrementPage(1);
     this.pageNo = (this.pageNo === this.form.noOfPages()) ? 1 : this.pageNo + 1;
     this.setPage(this.pageNo);
   }
 
   previousPage() {
-    //this.viewer.incrementPage(-1);
+    // this.viewer.incrementPage(-1);
     this.pageNo = (this.pageNo === 1) ? this.form.noOfPages() : this.pageNo - 1;
     this.setPage(this.pageNo);
   }
 
   setPage(no: number) {
     this.pageNo = no;
-    const TabComponent = this.tabs.filter(page => page.pageNo === this.pageNo)
-    const PageComponent = this.pages.filter(x => x.page.pageNo === this.pageNo)
-    
+    const TabComponent = this.tabs.filter(page => page.pageNo === this.pageNo);
+    const PageComponent = this.pages.filter(x => x.page.pageNo === this.pageNo);
+
     if (TabComponent.length === 1 && PageComponent.length === 1) {
       this.selectPage(TabComponent[0], PageComponent[0]);
     }
   }
 
+  setScale() {
+    // TODO: Get the scale based of the pdf viewport.
+    const scale = new Model.Scale();
+    scale.horiz = 0.1;
+    scale.vertical = 0.1;
+    scale.height = 800;
+    scale.width = 1000;
+    this.form.scale = scale;
+  }
   selectPage(newTab: TabComponent, newPage: PageComponent) {
     // deactivate all page tabs
     this.tabs.toArray().forEach(page => page.active = false);
     this.pages.toArray().forEach(page => page.active = false);
-    
+
     // activate the tab the user has clicked on.
     newTab.active = true;
     newPage.active = true;
-        
-    //this.viewer.goToPage(newTab.pageNo);
+
+    // this.viewer.goToPage(newTab.pageNo);
   }
 
 }

@@ -1,3 +1,7 @@
 <div [ngStyle]="inputPosition">
-    <input [ngStyle]="inputSize" name="data.name">{{data.value}}>
+    <input [ngStyle]="inputSize" 
+        [name]="data.name" 
+        [value]="data.name"
+        [tabIndex]="tabIndex">
+    <!-- {{location.name}}: ({{location.x}},{{location.y}} - ({{location.width}}/{{location.height}})<br/> -->
 </div>
