@@ -2,11 +2,11 @@
   <div class="panel-heading">
     <div class="btn-toolbar pull-right">
       <button type="button" (click)="nextPage()" class="btn btn-primary btn-round-xs btn-sm pull-right">Next</button>
-      <button type="button" (click)="nextPage()" class="btn btn-primary btn-round-xs btn-sm pull-right">Previous</button>
+      <button type="button" (click)="previousPage()" class="btn btn-primary btn-round-xs btn-sm pull-right">Previous</button>
       <button type="button" (click)="edit()" class="btn btn-primary btn-round-xs btn-sm pull-right">Edit</button>
     </div>
     <ul class="nav nav-tabs">
-      <li *ngFor="let page of pages" (click)="selectPage(page)" [class.active]="page.active">
+      <li *ngFor="let page of tabs" (click)="setPage(page.pageNo)" [class.active]="page.active">
         <a href="#">{{page.pageNo}}</a>
       </li>
     </ul>
@@ -15,8 +15,9 @@
     <div class="tab-content">
       PDF VIEWER COMMENTED OUT.
       <!-- <display-pdf #viewer [pdfSrc]="'assets/247OR.pdf.PDF'" [zoom]="1.25" [showAll]="false" style="display:block"></display-pdf> -->
-     Pages: {{form.pages.length}}
-      <page *ngFor="let page of form.pages" [data]= "form.data" [page]="page" [class.active]="false"></page>
+      <div >
+        <page #childPage *ngFor="let page of form.pages" [data]="form.data" [page]="page" [class.active]="false"></page>
+      </div>
     </div>
   </div>
 </div>

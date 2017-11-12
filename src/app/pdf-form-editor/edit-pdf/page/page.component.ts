@@ -12,7 +12,7 @@ export class PageComponent implements OnInit, AfterContentInit {
    @Input() active = false;
    @Input() page: Model.Page;
    @Input() data: Model.FieldData;
-   
+
   constructor() { }
 
   ngOnInit() {
@@ -23,6 +23,6 @@ export class PageComponent implements OnInit, AfterContentInit {
   }
 
     public ngAfterContentInit(): void {
-      console.log("loading page");
+      console.log('loading page');
     }
 }

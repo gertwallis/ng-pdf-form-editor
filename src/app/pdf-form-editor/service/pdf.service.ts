@@ -943,7 +943,7 @@ export class PdfService {
     location.pdf.height = 191;
     location.pdf.width = 2513;
     page.locations.push(location);
-
+/*
     location = new Model.ScaledLocation();
     location.pageNo = 5;
     location.tabOrder = 0;
@@ -1923,7 +1923,7 @@ export class PdfService {
     location.pdf.height = 166;
     location.pdf.width = 1099;
     page.locations.push(location);
-
+*/
 
     // ---------------------------------------------------------------------------
     // Sixth Page
@@ -2051,7 +2051,7 @@ export class PdfService {
   location.pdf.height = 148;
   location.pdf.width = 125;
   page.locations.push(location);
-
+/*
   location = new Model.ScaledLocation();
   location.pageNo = 6;
   location.tabOrder = 113;
@@ -2511,14 +2511,14 @@ export class PdfService {
   location.pdf.height = 166;
   location.pdf.width = 99;
   page.locations.push(location);
-
+*/
     // ---------------------------------------------------------------------------
     // Seventh Page
     page = new Model.Page();
     page.pageNo = 7;
     page.locations = [];
     newDocument.form.pages.push(page);
-
+/*
     location.pageNo = 7;
     location.tabOrder = 159;
     location.name = "Remarks1";
@@ -2627,6 +2627,7 @@ export class PdfService {
     location.pdf.height = 166;
     location.pdf.width = 7348;
     page.locations.push(location);
+*/
 
     location = new Model.ScaledLocation();
     location.pageNo = 7;

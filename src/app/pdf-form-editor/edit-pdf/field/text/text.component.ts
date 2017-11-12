@@ -19,6 +19,6 @@ export class TextComponent implements OnInit, AfterContentInit {
 
 
   public ngAfterContentInit(): void {
-    console.log("TEXT:" + this.name);
+   // console.log("TEXT:" + this.name);
   }
 }

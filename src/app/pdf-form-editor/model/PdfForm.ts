@@ -46,7 +46,7 @@ export namespace Model {
         y: number;
     }
 
-    export class ScaledLocation{
+    export class ScaledLocation {
         name: string;
         pageNo: number;
         tabOrder: number;
@@ -69,7 +69,7 @@ export namespace Model {
 
     export class Form {
         private _scale: Scale;
-  
+
         pages?: Page[] = [];
         data?: FormData = new FormData();
         pageSize?: Size;
@@ -81,9 +81,9 @@ export namespace Model {
 
         public set scale(scale: Scale){
             this._scale = scale;
-            
-            // Note: may want to change this to a QueryList or make it 
-            // an observable pattern to propagate changes to UI. 
+
+            // Note: may want to change this to a QueryList or make it
+            // an observable pattern to propagate changes to UI.
             for (const page of this.pages) {
                 for (const location of page.locations) {
                     location.view.y = location.pdf.width * scale.horiz;
