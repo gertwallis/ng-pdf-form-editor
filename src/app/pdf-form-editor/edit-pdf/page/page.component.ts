@@ -11,7 +11,7 @@ export class PageComponent implements OnInit, AfterContentInit {
 
    @Input() active = false;
    @Input() page: Model.Page;
-   @Input() data: Model.FieldData;
+   @Input() data: Model.FormData;
 
   constructor() { }
 
@@ -19,7 +19,7 @@ export class PageComponent implements OnInit, AfterContentInit {
   }
 
   getData(name): Model.FieldData {
-    return new Model.FieldData();
+    return this.data.findField(name);
   }
 
     public ngAfterContentInit(): void {

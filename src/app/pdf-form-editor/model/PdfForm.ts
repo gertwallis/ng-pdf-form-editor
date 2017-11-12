@@ -33,6 +33,21 @@ export namespace Model {
     export class FormData {
         displayState: DisplayState = DisplayState.None;
         fields: FieldData[] = [];
+
+        findField(name: string) {
+            const field = this.fields.filter(x => x.name === name);
+
+            // Expecting to find only one but if more - return first.
+            if (field.length > 0) {
+                return field[0];
+            }
+
+            // Returning an empty object - the use case is generally to display the data field.
+            // for a location. Bad data but returning an undefined will trow an error in the UI
+            // based on bad data. Should probably do avalidation check for good data. but don't want 
+            // UI have to check for bad data.
+            return new FieldData();
+        }
     }
 
     export class Size {
@@ -75,11 +90,11 @@ export namespace Model {
         pageSize?: Size;
         shown?: boolean;
 
-        public get scale(): Scale{
+        public get scale(): Scale {
             return this._scale;
         }
 
-        public set scale(scale: Scale){
+        public set scale(scale: Scale) {
             this._scale = scale;
 
             // Note: may want to change this to a QueryList or make it
