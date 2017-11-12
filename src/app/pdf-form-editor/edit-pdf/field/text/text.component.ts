@@ -9,8 +9,11 @@ import { Model } from './../../../model/PdfForm';
 })
 export class TextComponent implements OnInit, AfterContentInit {
 
-  @Input() name: string;
-  @Input() value: string;
+  @Input() data: Model.FieldData;
+  @Input() location: Model.Location;
+
+  inputSize: {};
+  inputPosition: {};
 
   constructor() { }
 
@@ -19,6 +22,17 @@ export class TextComponent implements OnInit, AfterContentInit {
 
 
   public ngAfterContentInit(): void {
-   // console.log("TEXT:" + this.name);
+    this.inputSize = {
+      // 'font-style':  this.canSave      ? 'italic' : 'normal',
+      // 'font-weight': !this.isUnchanged ? 'bold'   : 'normal',
+      // 'font-size':   this.isSpecial    ? '24px'   : '12px'
+      'padding': '20px 10px',
+      'line-height': '28px'
+    };
+    this.inputPosition = {
+      'position': 'absolute',
+      'left': this.location.x + 'px',
+      'top': this.location.y + 'px'
+    };
   }
 }

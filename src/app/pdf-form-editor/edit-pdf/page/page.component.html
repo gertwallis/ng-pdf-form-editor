@@ -1,4 +1,4 @@
-<div [hidden]="!active" class="pane">
+<div [ngStyle]="pageSize"  [hidden]="!active">
   <field *ngFor="let location of page.locations" [location]="location" [data] = "getData(location.name)" [class.active]="false">
     
   </field>

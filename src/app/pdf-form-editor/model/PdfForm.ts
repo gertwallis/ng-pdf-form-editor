@@ -79,6 +79,7 @@ export namespace Model {
         isShown: boolean;
         editable: boolean;
         pageNo: number;
+        pageSize: Size;
         locations: ScaledLocation[] = [];
     }
 
