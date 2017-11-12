@@ -39,7 +39,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   public nonteNontInit(): void {
-    // this.viewer.pdfSrc = this.Form.Url;
+    this.viewer.pdfSrc = this.form.url;
   }
 
   public ngAfterContentInit(): void {
@@ -51,13 +51,13 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   nextPage() {
-    // this.viewer.incrementPage(1);
+    this.viewer.incrementPage(1);
     this.pageNo = (this.pageNo === this.form.noOfPages()) ? 1 : this.pageNo + 1;
     this.setPage(this.pageNo);
   }
 
   previousPage() {
-    // this.viewer.incrementPage(-1);
+    this.viewer.incrementPage(-1);
     this.pageNo = (this.pageNo === 1) ? this.form.noOfPages() : this.pageNo - 1;
     this.setPage(this.pageNo);
   }
@@ -76,7 +76,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
     // TODO: Get the scale based of the pdf viewport.
     const scale = new Model.Scale();
     scale.horiz = 0.1;
-    scale.vertical = 0.1;
+    scale.vertical = 0.15;
     scale.height = 800;
     scale.width = 1000;
     this.form.scale = scale;
@@ -90,7 +90,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
     newTab.active = true;
     newPage.active = true;
 
-    // this.viewer.goToPage(newTab.pageNo);
+    this.viewer.goToPage(newTab.pageNo);
   }
 
 }

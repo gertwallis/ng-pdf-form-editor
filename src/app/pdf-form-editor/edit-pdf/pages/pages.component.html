@@ -14,7 +14,7 @@
   <div class="panel-body">
     <div class="tab-content">
       PDF VIEWER COMMENTED OUT.
-      <!-- <display-pdf #viewer [pdfSrc]="'assets/247OR.pdf.PDF'" [zoom]="1.25" [showAll]="false" style="display:block"></display-pdf> -->
+      <display-pdf #viewer [pdfSrc]="'assets/247OR.pdf.PDF'" [zoom]="1.25" [showAll]="false" style="display:block"></display-pdf>
       <div >
         <page #childPage *ngFor="let page of form.pages" [data]="form.data" [page]="page" [class.active]="false"></page>
       </div>
