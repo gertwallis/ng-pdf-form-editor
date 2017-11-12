@@ -35,5 +35,12 @@ export class PageComponent implements OnInit, AfterContentInit {
     //   'width': this.page.pageSize.width + 'px',
     //   'height': this.page.pageSize.height + 'px'
     // };
+    this.pageSize = {
+      'position': 'fixed',
+      'width': '650px',
+      'height': '1100px',
+      'border': '1px solid #ddd'
+      // 'max-width': '250px'
+    };
   }
 }

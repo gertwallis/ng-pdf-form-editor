@@ -26,13 +26,16 @@ export class TextComponent implements OnInit, AfterContentInit {
       // 'font-style':  this.canSave      ? 'italic' : 'normal',
       // 'font-weight': !this.isUnchanged ? 'bold'   : 'normal',
       // 'font-size':   this.isSpecial    ? '24px'   : '12px'
-      'padding': '20px 10px',
-      'line-height': '28px'
+      // 'padding': '20px 10px',
+      // 'line-height': '28px'
     };
     this.inputPosition = {
       'position': 'absolute',
-      'left': this.location.x + 'px',
-      'top': this.location.y + 'px'
+      'left': (this.location.width /10) + 'px',
+      'top': (this.location.y / 10) + 'px',
+      'width': this.location.x + 'px',
+      'height': this.location.height + 'px',
+      
     };
   }
 }
