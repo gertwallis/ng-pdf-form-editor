@@ -2,9 +2,8 @@
   <field *ngFor="let location of page.locations" 
   [location]="location.view" 
   [data] = "getData(location.name)" 
-  [tabIndex] = 'location.tabOrder'
-  [class.active]="false">
-    
+  [tabIndex] = 'location.tabIndex'
+  [class.active]="false">    
   </field>
 
 </div>

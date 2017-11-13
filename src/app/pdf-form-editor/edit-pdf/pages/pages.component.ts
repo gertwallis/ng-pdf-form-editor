@@ -24,7 +24,7 @@ import { Model } from './../../model/PdfForm';
 })
 export class PagesComponent implements OnInit, AfterContentInit {
 
-  @Input() form: Model.Form;
+  @Input() document: Model.Document;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChildren(PageComponent) pages: QueryList<PageComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
@@ -39,7 +39,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   public nonteNontInit(): void {
-    this.viewer.pdfSrc = this.form.url;
+    //this.viewer.pdfSrc = this.document.url;
   }
 
   public ngAfterContentInit(): void {
@@ -52,13 +52,13 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   nextPage() {
     this.viewer.incrementPage(1);
-    this.pageNo = (this.pageNo === this.form.noOfPages()) ? 1 : this.pageNo + 1;
+    this.pageNo = (this.pageNo === this.document.form.noOfPages()) ? 1 : this.pageNo + 1;
     this.setPage(this.pageNo);
   }
 
   previousPage() {
     this.viewer.incrementPage(-1);
-    this.pageNo = (this.pageNo === 1) ? this.form.noOfPages() : this.pageNo - 1;
+    this.pageNo = (this.pageNo === 1) ? this.document.form.noOfPages() : this.pageNo - 1;
     this.setPage(this.pageNo);
   }
 
@@ -75,11 +75,11 @@ export class PagesComponent implements OnInit, AfterContentInit {
   setScale() {
     // TODO: Get the scale based of the pdf viewport.
     const scale = new Model.Scale();
-    scale.horiz = 0.1;
-    scale.vertical = 0.15;
-    scale.height = 800;
-    scale.width = 1000;
-    this.form.scale = scale;
+    scale.width = 1019;
+    scale.height = 1319;
+    scale.horiz =  scale.width/ this.document.form.pageSize.width;
+    scale.vertical = scale.height / this.document.form.pageSize.height;
+    this.document.form.scale = scale;
   }
   selectPage(newTab: TabComponent, newPage: PageComponent) {
     // deactivate all page tabs

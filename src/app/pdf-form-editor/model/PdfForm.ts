@@ -64,7 +64,7 @@ export namespace Model {
     export class ScaledLocation {
         name: string;
         pageNo: number;
-        tabOrder: number;
+        tabIndex: number;
 
         pdf: Location = new Location();
         view: Location = new Location();

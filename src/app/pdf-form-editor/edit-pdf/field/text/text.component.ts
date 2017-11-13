@@ -29,7 +29,7 @@ export class TextComponent implements OnInit, AfterContentInit {
       // 'font-size':   this.isSpecial    ? '24px'   : '12px'
       // 'padding': '20px 10px',
       // 'line-height': '28px'
-      'width': this.location.x + 'px',
+      'width': this.location.width + 'px',
       // 'line-eight': this.location.height + 'px',
     
     };

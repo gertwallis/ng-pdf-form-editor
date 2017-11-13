@@ -1,3 +1,15 @@
-:host(.active) {
-    border-width: 3px;
-  }
+
+.licensePlateSVG{
+  left: 73.3217px;
+  top: 231.093px;
+  font-size: 10px;
+  font-family: sans-serif;
+  transform: scaleX(0.977911);
+}
+
+
+.licensePlateMine {
+  position: absolute;
+  left: 56.5082px;
+  top: 312.836px;
+}

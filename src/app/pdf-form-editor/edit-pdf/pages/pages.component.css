@@ -18,3 +18,15 @@
 .btn-toolbar {
     padding: 5px;
 }
+
+.viewChild {
+    position: relative;
+}
+
+.pageChild {
+    position: absolute;
+    z-index: 99;
+    background:rgba(255,255,255,0.5);
+    width:1019px;
+     margin:0 auto;
+}
