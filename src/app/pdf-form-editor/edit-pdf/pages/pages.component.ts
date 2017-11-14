@@ -30,6 +30,8 @@ export class PagesComponent implements OnInit, AfterContentInit {
   @ViewChild('viewer') viewer: DisplayPdfComponent;
 
   pageNo: number;
+  editMode = false;
+  
 
   constructor() {
     this.pageNo = 1;
@@ -39,7 +41,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   public nonteNontInit(): void {
-    //this.viewer.pdfSrc = this.document.url;
+    this.viewer.pdfSrc = this.document.url;
   }
 
   public ngAfterContentInit(): void {
@@ -47,7 +49,10 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   edit() {
-    console.log('Show editing screen');
+    this.editMode = !this.editMode;
+
+    let staticPages =   this.document.form.pages.filter(x => x.editable === false);
+  
   }
 
   nextPage() {
@@ -75,9 +80,9 @@ export class PagesComponent implements OnInit, AfterContentInit {
   setScale() {
     // TODO: Get the scale based of the pdf viewport.
     const scale = new Model.Scale();
-    scale.width = 1019;
-    scale.height = 1319;
-    scale.horiz =  scale.width/ this.document.form.pageSize.width;
+    scale.width = 1427;
+    scale.height = 1847;
+    scale.horiz =  scale.width / this.document.form.pageSize.width;
     scale.vertical = scale.height / this.document.form.pageSize.height;
     this.document.form.scale = scale;
   }

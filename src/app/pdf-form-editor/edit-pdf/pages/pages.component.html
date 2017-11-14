@@ -6,7 +6,7 @@
       <button type="button" (click)="edit()" class="btn btn-primary btn-round-xs btn-sm pull-right">Edit</button>
     </div>
     <ul class="nav nav-tabs">
-      <li *ngFor="let page of tabs" (click)="setPage(page.pageNo)" [class.active]="page.active">
+      <li *ngFor="let page of tabs" (click)="setPage(page.pageNo)" [class.active]="page.active" [class.disabled]="page.disabled">
         <a href="#">{{page.pageNo}}</a>
       </li>
     </ul>
@@ -18,7 +18,7 @@
         <page #childPage *ngFor="let page of document.form.pages" [data]="document.form.data" [page]="page" [class.active]="false"></page>
       </div>
       <div class="viewChild"[tabindex]="-1">
-        <display-pdf #viewer [pdfSrc]="'assets/247OR.pdf'" [zoom]="1.25" [showAll]="false" style="display:block" ></display-pdf>
+        <display-pdf #viewer [pdfSrc]="'assets/247OR.pdf'" [zoom]="1.75" [showAll]="false" style="display:block" ></display-pdf>
       </div>
     </div>
   </div>
