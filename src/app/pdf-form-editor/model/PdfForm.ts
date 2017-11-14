@@ -78,10 +78,13 @@ export namespace Model {
 
     export class Page {
         isShown: boolean;
-        editable: boolean;
         pageNo: number;
         pageSize: Size;
         locations: ScaledLocation[] = [];
+
+        editable(): boolean {
+            return this.locations.length > 0;
+        }
     }
 
     export class Form {

@@ -9,7 +9,8 @@ export class TabComponent implements OnInit {
 
    @Input() pageNo: number;
    @Input() active = false;
-
+   @Input() disabled = false;
+   
   constructor() { }
 
   ngOnInit() {

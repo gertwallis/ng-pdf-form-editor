@@ -1,14 +1,15 @@
 import { DisplayPdfComponent } from './../display/display-pdf.component';
 import {
-  AfterContentInit,
-  AfterViewInit,
-  Component,
-  ContentChildren,
-  Input,
-  OnInit,
-  QueryList,
-  ViewChild,
-  ViewChildren,
+    AfterContentInit,
+    AfterViewInit,
+    Component,
+    ContentChildren,
+    ElementRef,
+    Input,
+    OnInit,
+    QueryList,
+    ViewChild,
+    ViewChildren,
 } from '@angular/core';
 
 import { TabComponent } from './../tab/tab.component';
@@ -31,7 +32,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   pageNo: number;
   editMode = false;
-  
+
 
   constructor() {
     this.pageNo = 1;
@@ -45,14 +46,20 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
-    this.setScale();
+   // this.setScale(800, 1056);
   }
 
-  edit() {
+  toggleEdit() {
     this.editMode = !this.editMode;
 
-    let staticPages =   this.document.form.pages.filter(x => x.editable === false);
-  
+    // Make non editible pages to enabled / disabled.
+    const staticPages = this.document.form.pages.filter(x => !x.editable());
+    for (let i = 0; i < staticPages.length; i++) {
+      const tab = this.tabs.find(x => x.pageNo === staticPages[i].pageNo);
+      tab.disabled = this.editMode;
+    }
+
+    this.setScale(800, 1056);
   }
 
   nextPage() {
@@ -77,15 +84,20 @@ export class PagesComponent implements OnInit, AfterContentInit {
     }
   }
 
-  setScale() {
+  setScale(width:number, height: number) {
     // TODO: Get the scale based of the pdf viewport.
     const scale = new Model.Scale();
-    scale.width = 1427;
-    scale.height = 1847;
-    scale.horiz =  scale.width / this.document.form.pageSize.width;
+    scale.width = width;
+    scale.height = height;
+
+ //   scale.width = document.getElementsByClassName('page')[0].clientWidth;
+ //   scale.height = document.getElementsByClassName('page')[0].clientHeight;
+ 
+    scale.horiz = scale.width / this.document.form.pageSize.width;
     scale.vertical = scale.height / this.document.form.pageSize.height;
     this.document.form.scale = scale;
   }
+
   selectPage(newTab: TabComponent, newPage: PageComponent) {
     // deactivate all page tabs
     this.tabs.toArray().forEach(page => page.active = false);
@@ -97,5 +109,15 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
     this.viewer.goToPage(newTab.pageNo);
   }
-
 }
+
+// Scale 1.25
+// width: 1427px x 1847px;
+// left: 119.527 x 373.249px;
+
+// position: absolute;
+// left: 92.2361px;
+// top: 512.162px;
+// width: 155.673px;
+
+// Scale 1
