@@ -46,7 +46,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
-   // this.setScale(800, 1056);
+      this.setScale(800, 1056);
   }
 
   toggleEdit() {
@@ -59,7 +59,8 @@ export class PagesComponent implements OnInit, AfterContentInit {
       tab.disabled = this.editMode;
     }
 
-    this.setScale(800, 1056);
+    this.setScale(document.getElementsByClassName('page')[0].clientWidth,
+                  document.getElementsByClassName('page')[0].clientHeight);
   }
 
   nextPage() {
@@ -89,9 +90,6 @@ export class PagesComponent implements OnInit, AfterContentInit {
     const scale = new Model.Scale();
     scale.width = width;
     scale.height = height;
-
- //   scale.width = document.getElementsByClassName('page')[0].clientWidth;
- //   scale.height = document.getElementsByClassName('page')[0].clientHeight;
  
     scale.horiz = scale.width / this.document.form.pageSize.width;
     scale.vertical = scale.height / this.document.form.pageSize.height;
