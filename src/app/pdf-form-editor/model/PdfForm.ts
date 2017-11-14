@@ -44,7 +44,7 @@ export namespace Model {
 
             // Returning an empty object - the use case is generally to display the data field.
             // for a location. Bad data but returning an undefined will trow an error in the UI
-            // based on bad data. Should probably do avalidation check for good data. but don't want 
+            // based on bad data. Should probably do avalidation check for good data. but don't want
             // UI have to check for bad data.
             return new FieldData();
         }
@@ -63,7 +63,7 @@ export namespace Model {
 
     export class ScaledLocation {
         name: string;
-        pageNo: number;
+        // pageNo: number;
         tabIndex: number;
 
         pdf: Location = new Location();
@@ -77,11 +77,15 @@ export namespace Model {
     }
 
     export class Page {
-        isShown: boolean;
-        editable: boolean;
+        active: boolean;
         pageNo: number;
-        pageSize: Size;
+        // pageSize: Size;
         locations: ScaledLocation[] = [];
+
+        public editable() {
+            // Can only edit pages which has editable locations.
+            return this.locations.length > 0;
+        }
     }
 
     export class Form {
@@ -90,7 +94,7 @@ export namespace Model {
         pages?: Page[] = [];
         data?: FormData = new FormData();
         pageSize?: Size;
-        shown?: boolean;
+        active?: boolean;
 
         public get scale(): Scale {
             return this._scale;
@@ -119,7 +123,10 @@ export namespace Model {
     }
 
     export class Document {
+        id: string;
         form: Form = new Form();
+        title: string;
+        description: string;
         url?: string;
         pdfBytes?: string;
     }
