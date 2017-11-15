@@ -14,11 +14,21 @@ export class PdfEditComponent implements OnInit {
 
   // @Input() private pdfForm: PdfForm;
   private document: Model.Document;
+  private test: Model.Document;
+
+  setDocument(newDocument: Model.Document) {
+    this.document = newDocument;
+  }
 
   constructor(private pdfService: PdfService) { }
 
   ngOnInit() {
-   this.document = this.pdfService.loadPdf();
+    // 018BAV2 251NVV2  247ORV2 247WI 247WIV2 251NVV2 252ORV2
+    this.pdfService.loadDocument('251NVV2')
+      .subscribe(doc =>
+        this.setDocument(doc));
+
+    // this.document = this.pdfService.loadPdf();
   }
 
 }

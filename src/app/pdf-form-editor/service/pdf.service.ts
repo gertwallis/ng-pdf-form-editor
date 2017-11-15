@@ -1,18 +1,41 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { MessageService } from './message.service';
+
+import 'rxjs/Rx';
 
 import { Model } from './../model/PdfForm';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class PdfService {
 
-  constructor() { }
+  private pdfUrl = "/assets/";
+
+  constructor(private http: Http, private messageService: MessageService) {
+  }
+
+  loadDocument(documentId: string): Observable<Model.Document> {
+
+    this.messageService.add('PdfService: Fetching ' + documentId); 
+    return this.http.get(this.pdfUrl + documentId + ".json")
+      .map((response: Response) => <Model.Document> response.json())
+      .do(data =>
+        console.log(JSON.stringify(data))
+      );
+  }
+
+  update(name: string, value: string) {
+
+  }
 
   loadPdf(): Model.Document {
+    this.messageService.add('PDF Service: Loaded model.');
     const newDocument = new Model.Document();
 
     newDocument.url = "/assets/247OR.pdf";
 
-    newDocument.form.shown = true;
+    //    newDocument.form.shown = true;
     newDocument.form.pages = [];
     newDocument.form.pageSize = new Model.Size();
     newDocument.form.pageSize.width = 11000;
@@ -357,7 +380,7 @@ export class PdfService {
     dataField.description = "This field shows the vehicle identification number (VIN) of the first vehicle.";
     dataField.format = Model.Format.AlphaNumeric;
     dataField.maxChar = 20;
-      newDocument.form.data.fields.push(dataField);
+    newDocument.form.data.fields.push(dataField);
     dataField = new Model.FieldData();
 
     dataField.name = "VehicleMake";
@@ -807,7 +830,7 @@ export class PdfService {
     dataField.description = "This field shows the suffix name, (e.g., 'Jr.', 'III', 'M.D.', etc.), if applicable, for the second owner.";
     dataField.format = Model.Format.AlphaNumeric;
     dataField.maxChar = 2;
-      newDocument.form.data.fields.push(dataField);
+    newDocument.form.data.fields.push(dataField);
     dataField = new Model.FieldData();
 
     dataField.name = "Owner3FirstName";
@@ -907,7 +930,7 @@ export class PdfService {
     page.locations = [];
     newDocument.form.pages.push(page);
 
-        // ---------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
     // Fourth Page
     page = new Model.Page();
     page.pageNo = 5;
@@ -922,7 +945,7 @@ export class PdfService {
     newDocument.form.pages.push(page);
 
     let location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 96;
     location.name = "SignatureOwner1";
     location.pdf.x = 937;
@@ -932,7 +955,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 100;
     location.name = "SignatureLienholder1";
     location.pdf.x = 937;
@@ -942,7 +965,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 69;
     location.name = "SignatureVeteranOwner";
     location.pdf.x = 5616;
@@ -952,7 +975,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 0;
     location.name = "VehicleIdentificationNumber";
     location.pdf.x = 3554;
@@ -962,7 +985,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 6;
     location.name = "VehicleMake";
     location.pdf.x = 4434;
@@ -972,7 +995,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 5;
     location.name = "VehicleYear";
     location.pdf.x = 3734;
@@ -982,7 +1005,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 77;
     location.name = "Lienholder1Address";
     location.pdf.x = 741;
@@ -992,7 +1015,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 82;
     location.name = "Lienholder2Address";
     location.pdf.x = 711;
@@ -1002,7 +1025,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 74;
     location.name = "Lienholder1Name";
     location.pdf.x = 710;
@@ -1012,7 +1035,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 79;
     location.name = "Lienholder2Name";
     location.pdf.x = 710;
@@ -1022,7 +1045,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 98;
     location.name = "Owner2PhoneNumber";
     location.pdf.x = 6610;
@@ -1032,7 +1055,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 17;
     location.name = "FuelTypeNaturalGas";
     location.pdf.x = 4788;
@@ -1042,7 +1065,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 12;
     location.name = "FuelTypePlugInHybrid";
     location.pdf.x = 5412;
@@ -1052,7 +1075,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 1;
     location.name = "TitleNumber";
     location.pdf.x = 6439;
@@ -1062,7 +1085,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 4;
     location.name = "LicensePlateNumber";
     location.pdf.x = 711;
@@ -1072,7 +1095,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 7;
     location.name = "VehicleVesselBodyStyle";
     location.pdf.x = 5091;
@@ -1082,7 +1105,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 8;
     location.name = "VehicleWeightLength";
     location.pdf.x = 5385;
@@ -1092,7 +1115,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 2;
     location.name = "VehicleGreaterThan26KYes";
     location.pdf.x = 7013;
@@ -1102,7 +1125,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 3;
     location.name = "VehicleGreaterThan26KNo";
     location.pdf.x = 7013;
@@ -1112,7 +1135,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 19;
     location.name = "VehicleFarmIDNumber";
     location.pdf.x = 711;
@@ -1122,7 +1145,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 20;
     location.name = "FleetAccountNumber";
     location.pdf.x = 1964;
@@ -1132,7 +1155,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 21;
     location.name = "EquipmentNumber";
     location.pdf.x = 2984;
@@ -1142,7 +1165,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 9;
     location.name = "FuelTypeGas";
     location.pdf.x = 3742;
@@ -1152,7 +1175,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 15;
     location.name = "FuelTypeElectric";
     location.pdf.x = 3742;
@@ -1162,7 +1185,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 10;
     location.name = "FuelTypeDiesel";
     location.pdf.x = 4279;
@@ -1172,7 +1195,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 16;
     location.name = "FuelTypePropane";
     location.pdf.x = 4279;
@@ -1182,7 +1205,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 11;
     location.name = "FuelTypeHybrid";
     location.pdf.x = 4788;
@@ -1192,7 +1215,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 50;
     location.name = "Owner3LastName";
     location.pdf.x = 723;
@@ -1202,7 +1225,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 53;
     location.name = "Owner3MiddleName";
     location.pdf.x = 3542;
@@ -1212,7 +1235,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 51;
     location.name = "Owner3SuffixName";
     location.pdf.x = 2119;
@@ -1222,7 +1245,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 64;
     location.name = "VeteranOwnerFirstName";
     location.pdf.x = 3597;
@@ -1232,7 +1255,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 68;
     location.name = "VeteranOwnerFullName";
     location.pdf.x = 3618;
@@ -1242,7 +1265,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 66;
     location.name = "VeteranOwnerLastName";
     location.pdf.x = 5039;
@@ -1252,7 +1275,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 65;
     location.name = "VeteranOwnerMiddleName";
     location.pdf.x = 4851;
@@ -1262,7 +1285,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 67;
     location.name = "VeteranOwnerSuffixName";
     location.pdf.x = 6602;
@@ -1272,7 +1295,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 18;
     location.name = "FuelTypeOther";
     location.pdf.x = 5412;
@@ -1282,7 +1305,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 22;
     location.name = "FuelTypeOtherDescription";
     location.pdf.x = 5826;
@@ -1292,7 +1315,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 24;
     location.name = "OdometerReading";
     location.pdf.x = 853;
@@ -1302,7 +1325,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 25;
     location.name = "OdometerReadingDate";
     location.pdf.x = 2993;
@@ -1312,7 +1335,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 23;
     location.name = "OdometerReadingExceeds";
     location.pdf.x = 4405;
@@ -1322,7 +1345,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 26;
     location.name = "OdometerReadingNotActual";
     location.pdf.x = 4405;
@@ -1332,7 +1355,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 29;
     location.name = "Owner1BusinessName";
     location.pdf.x = 711;
@@ -1342,7 +1365,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 27;
     location.name = "Owner";
     location.pdf.x = 3489;
@@ -1352,7 +1375,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 28;
     location.name = "Lessee";
     location.pdf.x = 4504;
@@ -1362,7 +1385,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 34;
     location.name = "IdentificationNumber1";
     location.pdf.x = 5441;
@@ -1372,7 +1395,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 35;
     location.name = "Owner1DateOfBirth";
     location.pdf.x = 6846;
@@ -1382,7 +1405,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 36;
     location.name = "Owner1StreetAddress";
     location.pdf.x = 712;
@@ -1392,7 +1415,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 37;
     location.name = "Owner1MailingStreetAddress";
     location.pdf.x = 4480;
@@ -1402,7 +1425,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 38;
     location.name = "Owner1CityStateZIP";
     location.pdf.x = 712;
@@ -1412,7 +1435,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 39;
     location.name = "Owner1County";
     location.pdf.x = 3144;
@@ -1422,7 +1445,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 40;
     location.name = "Owner1MailingCityStateZIP";
     location.pdf.x = 4479;
@@ -1432,7 +1455,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 41;
     location.name = "OwnerMailingCounty";
     location.pdf.x = 6777;
@@ -1442,7 +1465,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 42;
     location.name = "Owner2BusinessName";
     location.pdf.x = 711;
@@ -1452,7 +1475,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 47;
     location.name = "IdentificationNumber2";
     location.pdf.x = 5453;
@@ -1462,7 +1485,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 48;
     location.name = "Owner2DateOfBirth";
     location.pdf.x = 6854;
@@ -1472,7 +1495,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 49;
     location.name = "Owner3BusinessName";
     location.pdf.x = 711;
@@ -1482,7 +1505,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 54;
     location.name = "IdentificationNumber3";
     location.pdf.x = 5452;
@@ -1492,7 +1515,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 55;
     location.name = "Owner3DateOfBirth";
     location.pdf.x = 6853;
@@ -1502,7 +1525,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 58;
     location.name = "OneTimeStreetAddress";
     location.pdf.x = 711;
@@ -1512,7 +1535,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 61;
     location.name = "OneTimeCityStateZIP";
     location.pdf.x = 711;
@@ -1522,7 +1545,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 59;
     location.name = "VehicleStreetAddress";
     location.pdf.x = 4865;
@@ -1532,7 +1555,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 62;
     location.name = "VehicleCityStateZIP";
     location.pdf.x = 4480;
@@ -1542,7 +1565,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 63;
     location.name = "VehicleCounty";
     location.pdf.x = 6777;
@@ -1552,7 +1575,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 70;
     location.name = "JointOwnershipSurvivorshipYes";
     location.pdf.x = 6831;
@@ -1562,7 +1585,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 71;
     location.name = "JointOwnershipSurvivorshipNo";
     location.pdf.x = 7373;
@@ -1572,7 +1595,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 72;
     location.name = "JointSecurityInterestSurvivorshipYes";
     location.pdf.x = 6831;
@@ -1582,7 +1605,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 73;
     location.name = "JointSecurityInterestSurvivorshipNo";
     location.pdf.x = 7373;
@@ -1592,7 +1615,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 75;
     location.name = "Lienholder1IdentificationNumber";
     location.pdf.x = 5413;
@@ -1602,7 +1625,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 76;
     location.name = "Lienholder1DateOfBirth";
     location.pdf.x = 6814;
@@ -1612,7 +1635,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 78;
     location.name = "Lienholder1PhoneNumber";
     location.pdf.x = 6814;
@@ -1622,7 +1645,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 80;
     location.name = "Lienholder2IdentificationNumber";
     location.pdf.x = 5413;
@@ -1632,7 +1655,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 81;
     location.name = "Lienholder2DateOfBirth";
     location.pdf.x = 6814;
@@ -1642,7 +1665,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 83;
     location.name = "Lienholder2PhoneNumber";
     location.pdf.x = 6814;
@@ -1652,7 +1675,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 84;
     location.name = "LessorName";
     location.pdf.x = 733;
@@ -1662,7 +1685,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 89;
     location.name = "LessorIdentificationNumber";
     location.pdf.x = 5415;
@@ -1672,7 +1695,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 90;
     location.name = "LessorDateOfBirth";
     location.pdf.x = 6814;
@@ -1682,7 +1705,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 91;
     location.name = "LessorAddress";
     location.pdf.x = 711;
@@ -1692,7 +1715,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 92;
     location.name = "LessorPhoneNumber";
     location.pdf.x = 6814;
@@ -1702,7 +1725,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 93;
     location.name = "InsuranceCompanyName";
     location.pdf.x = 925;
@@ -1712,7 +1735,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 94;
     location.name = "InsurancePolicyNumber";
     location.pdf.x = 5767;
@@ -1722,7 +1745,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 97;
     location.name = "Owner1SignatureDate";
     location.pdf.x = 4555;
@@ -1732,7 +1755,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 95;
     location.name = "Owner1PhoneNumber";
     location.pdf.x = 6610;
@@ -1742,7 +1765,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 85;
     location.name = "LessorLastName";
     location.pdf.x = 743;
@@ -1752,7 +1775,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 86;
     location.name = "LessorSuffixName";
     location.pdf.x = 2130;
@@ -1762,7 +1785,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 87;
     location.name = "LessorFirstName";
     location.pdf.x = 2412;
@@ -1772,7 +1795,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 88;
     location.name = "LessorMiddleName";
     location.pdf.x = 3542;
@@ -1782,7 +1805,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 99;
     location.name = "LessorSignatureDate";
     location.pdf.x = 4555;
@@ -1792,7 +1815,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 56;
     location.name = "OneTimeMailingAddressRegular";
     location.pdf.x = 4305;
@@ -1802,7 +1825,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 57;
     location.name = "OneTimeMailingAddressTitle";
     location.pdf.x = 4305;
@@ -1812,7 +1835,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 60;
     location.name = "OneTimeMailingAddressBoth";
     location.pdf.x = 4305;
@@ -1822,7 +1845,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 13;
     location.name = "TrailerOver8000LBS";
     location.pdf.x = 7013;
@@ -1832,7 +1855,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 14;
     location.name = "TrailerLessThan8000LBS";
     location.pdf.x = 7013;
@@ -1842,7 +1865,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 31;
     location.name = "Owner1FirstName";
     location.pdf.x = 2407;
@@ -1852,7 +1875,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 30;
     location.name = "Owner1LastName";
     location.pdf.x = 719;
@@ -1862,7 +1885,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 32;
     location.name = "Owner1MiddleName";
     location.pdf.x = 3527;
@@ -1872,7 +1895,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 33;
     location.name = "Owner1SuffixName";
     location.pdf.x = 2118;
@@ -1882,7 +1905,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 45;
     location.name = "Owner2FirstName";
     location.pdf.x = 2411;
@@ -1892,7 +1915,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 43;
     location.name = "Owner2LastName";
     location.pdf.x = 723;
@@ -1902,7 +1925,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 46;
     location.name = "Owner2MiddleName";
     location.pdf.x = 3542;
@@ -1912,7 +1935,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 44;
     location.name = "Owner2SuffixName";
     location.pdf.x = 2119;
@@ -1922,7 +1945,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 5;
+
     location.tabIndex = 52;
     location.name = "Owner3FirstName";
     location.pdf.x = 2411;
@@ -1939,584 +1962,584 @@ export class PdfService {
     newDocument.form.pages.push(page);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 6;
-  location.tabIndex = 134;
-  location.name = "Owner1SuffixName";
-  location.pdf.x = 2017;
-  location.pdf.y = 4004;
-  location.pdf.height = 166;
-  location.pdf.width = 265;
-  page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 144;
-  location.name = "Owner2FirstName";
-  location.pdf.x = 2311;
-  location.pdf.y = 4930;
-  location.pdf.height = 166;
-  location.pdf.width = 1099;
-  page.locations.push(location);
+    location.tabIndex = 134;
+    location.name = "Owner1SuffixName";
+    location.pdf.x = 2017;
+    location.pdf.y = 4004;
+    location.pdf.height = 166;
+    location.pdf.width = 265;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 142;
-  location.name = "Owner2LastName";
-  location.pdf.x = 622;
-  location.pdf.y = 4930;
-  location.pdf.height = 166;
-  location.pdf.width = 1360;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 145;
-  location.name = "Owner2MiddleName";
-  location.pdf.x = 3441;
-  location.pdf.y = 4930;
-  location.pdf.height = 166;
-  location.pdf.width = 99;
-  page.locations.push(location);
+    location.tabIndex = 144;
+    location.name = "Owner2FirstName";
+    location.pdf.x = 2311;
+    location.pdf.y = 4930;
+    location.pdf.height = 166;
+    location.pdf.width = 1099;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 143;
-  location.name = "Owner2SuffixName";
-  location.pdf.x = 2019;
-  location.pdf.y = 4930;
-  location.pdf.height = 166;
-  location.pdf.width = 265;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 149;
-  location.name = "Owner3FirstName";
-  location.pdf.x = 2311;
-  location.pdf.y = 5242;
-  location.pdf.height = 166;
-  location.pdf.width = 1099;
-  page.locations.push(location);
+    location.tabIndex = 142;
+    location.name = "Owner2LastName";
+    location.pdf.x = 622;
+    location.pdf.y = 4930;
+    location.pdf.height = 166;
+    location.pdf.width = 1360;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 147;
-  location.name = "Owner3LastName";
-  location.pdf.x = 622;
-  location.pdf.y = 5242;
-  location.pdf.height = 166;
-  location.pdf.width = 1360;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 150;
-  location.name = "Owner3MiddleName";
-  location.pdf.x = 3441;
-  location.pdf.y = 5242;
-  location.pdf.height = 166;
-  location.pdf.width = 99;
-  page.locations.push(location);
+    location.tabIndex = 145;
+    location.name = "Owner2MiddleName";
+    location.pdf.x = 3441;
+    location.pdf.y = 4930;
+    location.pdf.height = 166;
+    location.pdf.width = 99;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 148;
-  location.name = "Owner3SuffixName";
-  location.pdf.x = 2019;
-  location.pdf.y = 5242;
-  location.pdf.height = 166;
-  location.pdf.width = 265;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 107;
-  location.name = "VehicleMake";
-  location.pdf.x = 4333;
-  location.pdf.y = 2016;
-  location.pdf.height = 166;
-  location.pdf.width = 516;
-  page.locations.push(location);
+    location.tabIndex = 143;
+    location.name = "Owner2SuffixName";
+    location.pdf.x = 2019;
+    location.pdf.y = 4930;
+    location.pdf.height = 166;
+    location.pdf.width = 265;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 106;
-  location.name = "VehicleYear";
-  location.pdf.x = 3633;
-  location.pdf.y = 2016;
-  location.pdf.height = 166;
-  location.pdf.width = 433;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 117;
-  location.name = "FuelTypeNaturalGas";
-  location.pdf.x = 4687;
-  location.pdf.y = 2354;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location.tabIndex = 149;
+    location.name = "Owner3FirstName";
+    location.pdf.x = 2311;
+    location.pdf.y = 5242;
+    location.pdf.height = 166;
+    location.pdf.width = 1099;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 113;
-  location.name = "FuelTypePlugInHybrid";
-  location.pdf.x = 5312;
-  location.pdf.y = 2200;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 102;
-  location.name = "TitleNumber";
-  location.pdf.x = 6338;
-  location.pdf.y = 1746;
-  location.pdf.height = 166;
-  location.pdf.width = 933;
-  page.locations.push(location);
+    location.tabIndex = 147;
+    location.name = "Owner3LastName";
+    location.pdf.x = 622;
+    location.pdf.y = 5242;
+    location.pdf.height = 166;
+    location.pdf.width = 1360;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 105;
-  location.name = "LicensePlateNumber";
-  location.pdf.x = 610;
-  location.pdf.y = 2016;
-  location.pdf.height = 166;
-  location.pdf.width = 1349;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 108;
-  location.name = "VehicleVesselBodyStyle";
-  location.pdf.x = 4990;
-  location.pdf.y = 2016;
-  location.pdf.height = 166;
-  location.pdf.width = 199;
-  page.locations.push(location);
+    location.tabIndex = 150;
+    location.name = "Owner3MiddleName";
+    location.pdf.x = 3441;
+    location.pdf.y = 5242;
+    location.pdf.height = 166;
+    location.pdf.width = 99;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 109;
-  location.name = "VehicleWeightLength";
-  location.pdf.x = 5284;
-  location.pdf.y = 2016;
-  location.pdf.height = 166;
-  location.pdf.width = 933;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 103;
-  location.name = "VehicleGreaterThan26KYes";
-  location.pdf.x = 6913;
-  location.pdf.y = 1901;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location.tabIndex = 148;
+    location.name = "Owner3SuffixName";
+    location.pdf.x = 2019;
+    location.pdf.y = 5242;
+    location.pdf.height = 166;
+    location.pdf.width = 265;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 104;
-  location.name = "VehicleGreaterThan26KNo";
-  location.pdf.x = 6913;
-  location.pdf.y = 2042;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 120;
-  location.name = "VehicleFarmIDNumber";
-  location.pdf.x = 610;
-  location.pdf.y = 2344;
-  location.pdf.height = 166;
-  location.pdf.width = 1200;
-  page.locations.push(location);
+    location.tabIndex = 107;
+    location.name = "VehicleMake";
+    location.pdf.x = 4333;
+    location.pdf.y = 2016;
+    location.pdf.height = 166;
+    location.pdf.width = 516;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 121;
-  location.name = "FleetAccountNumber";
-  location.pdf.x = 1863;
-  location.pdf.y = 2344;
-  location.pdf.height = 166;
-  location.pdf.width = 864;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 122;
-  location.name = "EquipmentNumber";
-  location.pdf.x = 2883;
-  location.pdf.y = 2344;
-  location.pdf.height = 166;
-  location.pdf.width = 700;
-  page.locations.push(location);
+    location.tabIndex = 106;
+    location.name = "VehicleYear";
+    location.pdf.x = 3633;
+    location.pdf.y = 2016;
+    location.pdf.height = 166;
+    location.pdf.width = 433;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 110;
-  location.name = "FuelTypeGas";
-  location.pdf.x = 3641;
-  location.pdf.y = 2200;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 115;
-  location.name = "FuelTypeElectric";
-  location.pdf.x = 3641;
-  location.pdf.y = 2354;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location.tabIndex = 117;
+    location.name = "FuelTypeNaturalGas";
+    location.pdf.x = 4687;
+    location.pdf.y = 2354;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 111;
-  location.name = "FuelTypeDiesel";
-  location.pdf.x = 4178;
-  location.pdf.y = 2200;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 116;
-  location.name = "FuelTypePropane";
-  location.pdf.x = 4178;
-  location.pdf.y = 2354;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location.tabIndex = 113;
+    location.name = "FuelTypePlugInHybrid";
+    location.pdf.x = 5312;
+    location.pdf.y = 2200;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 112;
-  location.name = "FuelTypeHybrid";
-  location.pdf.x = 4687;
-  location.pdf.y = 2200;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 118;
-  location.name = "FuelTypeOther";
-  location.pdf.x = 5312;
-  location.pdf.y = 2354;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location.tabIndex = 102;
+    location.name = "TitleNumber";
+    location.pdf.x = 6338;
+    location.pdf.y = 1746;
+    location.pdf.height = 166;
+    location.pdf.width = 933;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 123;
-  location.name = "FuelTypeOtherDescription";
-  location.pdf.x = 5726;
-  location.pdf.y = 2344;
-  location.pdf.height = 166;
-  location.pdf.width = 515;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 125;
-  location.name = "OdometerReading";
-  location.pdf.x = 752;
-  location.pdf.y = 3269;
-  location.pdf.height = 166;
-  location.pdf.width = 933;
-  page.locations.push(location);
+    location.tabIndex = 105;
+    location.name = "LicensePlateNumber";
+    location.pdf.x = 610;
+    location.pdf.y = 2016;
+    location.pdf.height = 166;
+    location.pdf.width = 1349;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 126;
-  location.name = "OdometerReadingDate";
-  location.pdf.x = 2893;
-  location.pdf.y = 3269;
-  location.pdf.height = 166;
-  location.pdf.width = 1016;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 124;
-  location.name = "OdometerReadingExceeds";
-  location.pdf.x = 4304;
-  location.pdf.y = 3165;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location.tabIndex = 108;
+    location.name = "VehicleVesselBodyStyle";
+    location.pdf.x = 4990;
+    location.pdf.y = 2016;
+    location.pdf.height = 166;
+    location.pdf.width = 199;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 127;
-  location.name = "OdometerReadingNotActual";
-  location.pdf.x = 4304;
-  location.pdf.y = 3314;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 130;
-  location.name = "Owner1BusinessName";
-  location.pdf.x = 610;
-  location.pdf.y = 3990;
-  location.pdf.height = 166;
-  location.pdf.width = 4600;
-  page.locations.push(location);
+    location.tabIndex = 109;
+    location.name = "VehicleWeightLength";
+    location.pdf.x = 5284;
+    location.pdf.y = 2016;
+    location.pdf.height = 166;
+    location.pdf.width = 933;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 128;
-  location.name = "Owner";
-  location.pdf.x = 3389;
-  location.pdf.y = 3895;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 129;
-  location.name = "Lessee";
-  location.pdf.x = 4404;
-  location.pdf.y = 3895;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location.tabIndex = 103;
+    location.name = "VehicleGreaterThan26KYes";
+    location.pdf.x = 6913;
+    location.pdf.y = 1901;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 135;
-  location.name = "Owner1StreetAddress";
-  location.pdf.x = 612;
-  location.pdf.y = 4331;
-  location.pdf.height = 166;
-  location.pdf.width = 3680;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 136;
-  location.name = "Owner1MailingStreetAddress";
-  location.pdf.x = 4379;
-  location.pdf.y = 4331;
-  location.pdf.height = 166;
-  location.pdf.width = 3516;
-  page.locations.push(location);
+    location.tabIndex = 104;
+    location.name = "VehicleGreaterThan26KNo";
+    location.pdf.x = 6913;
+    location.pdf.y = 2042;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 137;
-  location.name = "Owner1CityStateZIP";
-  location.pdf.x = 612;
-  location.pdf.y = 4651;
-  location.pdf.height = 166;
-  location.pdf.width = 2374;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 138;
-  location.name = "Owner1County";
-  location.pdf.x = 3043;
-  location.pdf.y = 4651;
-  location.pdf.height = 166;
-  location.pdf.width = 1200;
-  page.locations.push(location);
+    location.tabIndex = 120;
+    location.name = "VehicleFarmIDNumber";
+    location.pdf.x = 610;
+    location.pdf.y = 2344;
+    location.pdf.height = 166;
+    location.pdf.width = 1200;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 139;
-  location.name = "Owner1MailingCityStateZIP";
-  location.pdf.x = 4378;
-  location.pdf.y = 4651;
-  location.pdf.height = 166;
-  location.pdf.width = 2199;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 140;
-  location.name = "OwnerMailingCounty";
-  location.pdf.x = 6677;
-  location.pdf.y = 4651;
-  location.pdf.height = 166;
-  location.pdf.width = 1349;
-  page.locations.push(location);
+    location.tabIndex = 121;
+    location.name = "FleetAccountNumber";
+    location.pdf.x = 1863;
+    location.pdf.y = 2344;
+    location.pdf.height = 166;
+    location.pdf.width = 864;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 101;
-  location.name = "VehicleIdentificationNumber";
-  location.pdf.x = 3454;
-  location.pdf.y = 1746;
-  location.pdf.height = 166;
-  location.pdf.width = 2016;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 141;
-  location.name = "Owner2BusinessName";
-  location.pdf.x = 610;
-  location.pdf.y = 4923;
-  location.pdf.height = 166;
-  location.pdf.width = 4600;
-  page.locations.push(location);
+    location.tabIndex = 122;
+    location.name = "EquipmentNumber";
+    location.pdf.x = 2883;
+    location.pdf.y = 2344;
+    location.pdf.height = 166;
+    location.pdf.width = 700;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 146;
-  location.name = "Owner3BusinessName";
-  location.pdf.x = 610;
-  location.pdf.y = 5236;
-  location.pdf.height = 166;
-  location.pdf.width = 4600;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 153;
-  location.name = "OneTimeStreetAddress";
-  location.pdf.x = 610;
-  location.pdf.y = 5554;
-  location.pdf.height = 166;
-  location.pdf.width = 3516;
-  page.locations.push(location);
+    location.tabIndex = 110;
+    location.name = "FuelTypeGas";
+    location.pdf.x = 3641;
+    location.pdf.y = 2200;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 156;
-  location.name = "OneTimeCityStateZIP";
-  location.pdf.x = 610;
-  location.pdf.y = 5839;
-  location.pdf.height = 166;
-  location.pdf.width = 3681;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 154;
-  location.name = "VehicleStreetAddress";
-  location.pdf.x = 4764;
-  location.pdf.y = 5554;
-  location.pdf.height = 166;
-  location.pdf.width = 3199;
-  page.locations.push(location);
+    location.tabIndex = 115;
+    location.name = "FuelTypeElectric";
+    location.pdf.x = 3641;
+    location.pdf.y = 2354;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 157;
-  location.name = "VehicleCityStateZIP";
-  location.pdf.x = 4379;
-  location.pdf.y = 5839;
-  location.pdf.height = 166;
-  location.pdf.width = 2199;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 158;
-  location.name = "VehicleCounty";
-  location.pdf.x = 6677;
-  location.pdf.y = 5839;
-  location.pdf.height = 166;
-  location.pdf.width = 1349;
-  page.locations.push(location);
+    location.tabIndex = 111;
+    location.name = "FuelTypeDiesel";
+    location.pdf.x = 4178;
+    location.pdf.y = 2200;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 151;
-  location.name = "OneTimeMailingAddressRegular";
-  location.pdf.x = 4205;
-  location.pdf.y = 5403;
-  location.pdf.height = 148;
-  location.pdf.width = 97;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 152;
-  location.name = "OneTimeMailingAddressTitle";
-  location.pdf.x = 4205;
-  location.pdf.y = 5506;
-  location.pdf.height = 148;
-  location.pdf.width = 97;
-  page.locations.push(location);
+    location.tabIndex = 116;
+    location.name = "FuelTypePropane";
+    location.pdf.x = 4178;
+    location.pdf.y = 2354;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 155;
-  location.name = "OneTimeMailingAddressBoth";
-  location.pdf.x = 4205;
-  location.pdf.y = 5606;
-  location.pdf.height = 148;
-  location.pdf.width = 97;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 114;
-  location.name = "TrailerOver8000LBS";
-  location.pdf.x = 6913;
-  location.pdf.y = 2200;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location.tabIndex = 112;
+    location.name = "FuelTypeHybrid";
+    location.pdf.x = 4687;
+    location.pdf.y = 2200;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 119;
-  location.name = "TrailerLessThan8000LBS";
-  location.pdf.x = 6913;
-  location.pdf.y = 2354;
-  location.pdf.height = 148;
-  location.pdf.width = 125;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 132;
-  location.name = "Owner1FirstName";
-  location.pdf.x = 2307;
-  location.pdf.y = 4003;
-  location.pdf.height = 166;
-  location.pdf.width = 1099;
-  page.locations.push(location);
+    location.tabIndex = 118;
+    location.name = "FuelTypeOther";
+    location.pdf.x = 5312;
+    location.pdf.y = 2354;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 131;
-  location.name = "Owner1LastName";
-  location.pdf.x = 618;
-  location.pdf.y = 4003;
-  location.pdf.height = 166;
-  location.pdf.width = 1360;
-  page.locations.push(location);
+    location = new Model.ScaledLocation();
 
-  location = new Model.ScaledLocation();
-  location.pageNo = 6;
-  location.tabIndex = 133;
-  location.name = "Owner1MiddleName";
-  location.pdf.x = 3427;
-  location.pdf.y = 4003;
-  location.pdf.height = 166;
-  location.pdf.width = 99;
-  page.locations.push(location);
+    location.tabIndex = 123;
+    location.name = "FuelTypeOtherDescription";
+    location.pdf.x = 5726;
+    location.pdf.y = 2344;
+    location.pdf.height = 166;
+    location.pdf.width = 515;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 125;
+    location.name = "OdometerReading";
+    location.pdf.x = 752;
+    location.pdf.y = 3269;
+    location.pdf.height = 166;
+    location.pdf.width = 933;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 126;
+    location.name = "OdometerReadingDate";
+    location.pdf.x = 2893;
+    location.pdf.y = 3269;
+    location.pdf.height = 166;
+    location.pdf.width = 1016;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 124;
+    location.name = "OdometerReadingExceeds";
+    location.pdf.x = 4304;
+    location.pdf.y = 3165;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 127;
+    location.name = "OdometerReadingNotActual";
+    location.pdf.x = 4304;
+    location.pdf.y = 3314;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 130;
+    location.name = "Owner1BusinessName";
+    location.pdf.x = 610;
+    location.pdf.y = 3990;
+    location.pdf.height = 166;
+    location.pdf.width = 4600;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 128;
+    location.name = "Owner";
+    location.pdf.x = 3389;
+    location.pdf.y = 3895;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 129;
+    location.name = "Lessee";
+    location.pdf.x = 4404;
+    location.pdf.y = 3895;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 135;
+    location.name = "Owner1StreetAddress";
+    location.pdf.x = 612;
+    location.pdf.y = 4331;
+    location.pdf.height = 166;
+    location.pdf.width = 3680;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 136;
+    location.name = "Owner1MailingStreetAddress";
+    location.pdf.x = 4379;
+    location.pdf.y = 4331;
+    location.pdf.height = 166;
+    location.pdf.width = 3516;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 137;
+    location.name = "Owner1CityStateZIP";
+    location.pdf.x = 612;
+    location.pdf.y = 4651;
+    location.pdf.height = 166;
+    location.pdf.width = 2374;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 138;
+    location.name = "Owner1County";
+    location.pdf.x = 3043;
+    location.pdf.y = 4651;
+    location.pdf.height = 166;
+    location.pdf.width = 1200;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 139;
+    location.name = "Owner1MailingCityStateZIP";
+    location.pdf.x = 4378;
+    location.pdf.y = 4651;
+    location.pdf.height = 166;
+    location.pdf.width = 2199;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 140;
+    location.name = "OwnerMailingCounty";
+    location.pdf.x = 6677;
+    location.pdf.y = 4651;
+    location.pdf.height = 166;
+    location.pdf.width = 1349;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 101;
+    location.name = "VehicleIdentificationNumber";
+    location.pdf.x = 3454;
+    location.pdf.y = 1746;
+    location.pdf.height = 166;
+    location.pdf.width = 2016;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 141;
+    location.name = "Owner2BusinessName";
+    location.pdf.x = 610;
+    location.pdf.y = 4923;
+    location.pdf.height = 166;
+    location.pdf.width = 4600;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 146;
+    location.name = "Owner3BusinessName";
+    location.pdf.x = 610;
+    location.pdf.y = 5236;
+    location.pdf.height = 166;
+    location.pdf.width = 4600;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 153;
+    location.name = "OneTimeStreetAddress";
+    location.pdf.x = 610;
+    location.pdf.y = 5554;
+    location.pdf.height = 166;
+    location.pdf.width = 3516;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 156;
+    location.name = "OneTimeCityStateZIP";
+    location.pdf.x = 610;
+    location.pdf.y = 5839;
+    location.pdf.height = 166;
+    location.pdf.width = 3681;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 154;
+    location.name = "VehicleStreetAddress";
+    location.pdf.x = 4764;
+    location.pdf.y = 5554;
+    location.pdf.height = 166;
+    location.pdf.width = 3199;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 157;
+    location.name = "VehicleCityStateZIP";
+    location.pdf.x = 4379;
+    location.pdf.y = 5839;
+    location.pdf.height = 166;
+    location.pdf.width = 2199;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 158;
+    location.name = "VehicleCounty";
+    location.pdf.x = 6677;
+    location.pdf.y = 5839;
+    location.pdf.height = 166;
+    location.pdf.width = 1349;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 151;
+    location.name = "OneTimeMailingAddressRegular";
+    location.pdf.x = 4205;
+    location.pdf.y = 5403;
+    location.pdf.height = 148;
+    location.pdf.width = 97;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 152;
+    location.name = "OneTimeMailingAddressTitle";
+    location.pdf.x = 4205;
+    location.pdf.y = 5506;
+    location.pdf.height = 148;
+    location.pdf.width = 97;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 155;
+    location.name = "OneTimeMailingAddressBoth";
+    location.pdf.x = 4205;
+    location.pdf.y = 5606;
+    location.pdf.height = 148;
+    location.pdf.width = 97;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 114;
+    location.name = "TrailerOver8000LBS";
+    location.pdf.x = 6913;
+    location.pdf.y = 2200;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 119;
+    location.name = "TrailerLessThan8000LBS";
+    location.pdf.x = 6913;
+    location.pdf.y = 2354;
+    location.pdf.height = 148;
+    location.pdf.width = 125;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 132;
+    location.name = "Owner1FirstName";
+    location.pdf.x = 2307;
+    location.pdf.y = 4003;
+    location.pdf.height = 166;
+    location.pdf.width = 1099;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 131;
+    location.name = "Owner1LastName";
+    location.pdf.x = 618;
+    location.pdf.y = 4003;
+    location.pdf.height = 166;
+    location.pdf.width = 1360;
+    page.locations.push(location);
+
+    location = new Model.ScaledLocation();
+
+    location.tabIndex = 133;
+    location.name = "Owner1MiddleName";
+    location.pdf.x = 3427;
+    location.pdf.y = 4003;
+    location.pdf.height = 166;
+    location.pdf.width = 99;
+    page.locations.push(location);
 
     // ---------------------------------------------------------------------------
     // Seventh Page
@@ -2525,7 +2548,7 @@ export class PdfService {
     page.locations = [];
     newDocument.form.pages.push(page);
 
-    location.pageNo = 7;
+
     location.tabIndex = 159;
     location.name = "Remarks1";
     location.pdf.x = 879;
@@ -2535,7 +2558,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 160;
     location.name = "Remarks2";
     location.pdf.x = 356;
@@ -2545,7 +2568,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 161;
     location.name = "Remarks3";
     location.pdf.x = 356;
@@ -2555,7 +2578,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 162;
     location.name = "Remarks4";
     location.pdf.x = 356;
@@ -2565,7 +2588,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 163;
     location.name = "VehicleVesselReconstructedYes";
     location.pdf.x = 601;
@@ -2575,7 +2598,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 164;
     location.name = "VehicleAssembled";
     location.pdf.x = 601;
@@ -2585,7 +2608,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 165;
     location.name = "VehicleVesselReplica";
     location.pdf.x = 601;
@@ -2595,7 +2618,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 166;
     location.name = "Component1PartNameVIN";
     location.pdf.x = 358;
@@ -2605,7 +2628,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 167;
     location.name = "Component2PartNameVIN";
     location.pdf.x = 2974;
@@ -2615,7 +2638,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 168;
     location.name = "Component3PartNameVIN";
     location.pdf.x = 5555;
@@ -2625,7 +2648,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 169;
     location.name = "SchoolDistrictName";
     location.pdf.x = 358;
@@ -2635,7 +2658,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 171;
     location.name = "Consort1FirstName";
     location.pdf.x = 3322;
@@ -2645,7 +2668,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 172;
     location.name = "Consort1MiddleName";
     location.pdf.x = 4505;
@@ -2655,7 +2678,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 173;
     location.name = "Consort1LastName";
     location.pdf.x = 5692;
@@ -2665,7 +2688,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 174;
     location.name = "Consort1SuffixName";
     location.pdf.x = 7154;
@@ -2675,7 +2698,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 170;
     location.name = "Consort1FullName";
     location.pdf.x = 3294;
@@ -2685,7 +2708,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 176;
     location.name = "Consort2FirstName";
     location.pdf.x = 3322;
@@ -2695,7 +2718,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 177;
     location.name = "Consort2MiddleName";
     location.pdf.x = 4505;
@@ -2705,7 +2728,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 178;
     location.name = "Consort2LastName";
     location.pdf.x = 5692;
@@ -2715,7 +2738,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 179;
     location.name = "Consort2SuffixName";
     location.pdf.x = 7154;
@@ -2725,7 +2748,7 @@ export class PdfService {
     page.locations.push(location);
 
     location = new Model.ScaledLocation();
-    location.pageNo = 7;
+
     location.tabIndex = 175;
     location.name = "Consort2FullName";
     location.pdf.x = 3294;
@@ -2739,7 +2762,7 @@ export class PdfService {
     page.pageNo = 9;
     page.locations = [];
     newDocument.form.pages.push(page);
-   return newDocument;
+    return newDocument;
   }
 }
 
