@@ -43,7 +43,7 @@
         {
           "state": 0,
           "description": "This field shows that signatures from both/all parties are required to release the title.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that signatures from both/all parties are required to release the title.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_BothSignaturesRequired",
@@ -70,7 +70,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle requires a consecutive monthly permit.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle requires a consecutive monthly permit.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_ConsecutiveMonthlyPermit",
@@ -88,7 +88,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle has sustained hail damage.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle has sustained hail damage.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_DamageTypeHail",
@@ -97,7 +97,7 @@
         {
           "state": 0,
           "description": "This field shows that either signature is required to release the title.   Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that either signature is required to release the title.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_EitherSignatureRequred",
@@ -304,7 +304,7 @@
         {
           "state": 0,
           "description": "This field shows that the request is for passenger license plates.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the request is for passenger license plates.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_PassengerLicensePlates",
@@ -313,7 +313,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plates have been transferred from husband/wife.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plates have been transferred from husband/wife.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_PlatesTransferredFromHusbandOrWife",
@@ -412,7 +412,7 @@
         {
           "state": 0,
           "description": "This field indicates that the applicant(s) may remove his/her name(s) from mailing lists that contain 10 or more individual names. Businesses are not eligible for opt out. Mark this box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box if the applicant(s) wants to remove his/her name(s) from mailing lists.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_TitleOptOutProvision",
@@ -421,7 +421,7 @@
         {
           "state": 0,
           "description": "This field shows that the party is applying for an original certificate of title.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the party is applying for an original certificate of title.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_TitleOriginal",
@@ -430,7 +430,7 @@
         {
           "state": 0,
           "description": "This field shows that the request is for a title for a salvaged vehicle.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the request is for a title for a salvaged vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_TitleSalvage",
@@ -475,7 +475,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle carrier class is an intrastate for \"for hire\" use.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle carrier class is an intrastate for \"for hire\" use.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleCarrierClassIntrastate",
@@ -484,7 +484,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle carrier class is an intrastate for \"for hire\" use with the purchase of a Department of Transportation permit.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle carrier class is an intrastate for \"for hire\" use with the purchase of a DOT Permit.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleCarrierClassIntrastateDOT",
@@ -493,7 +493,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle carrier class is private.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle carrier class is private.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleCarrierClassPrivate",
@@ -502,7 +502,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle carrier class is a rental for private and \"for hire\" use.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle carrier class is a rental for private and \"for hire\" use.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleCarrierClassRentalBoth",
@@ -511,7 +511,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle carrier class is a rental for \"for hire\" use.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle carrier class is a rental for \"for hire\" use.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleCarrierClassRentalForHire",
@@ -520,7 +520,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle carrier class is a rental for private use.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle carrier class is a rental for private use.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleCarrierClassRentalPrivate",
@@ -529,7 +529,7 @@
         {
           "state": 0,
           "description": "This shows that the vehicle has been damaged by water in the excess of 70% actual cash value.",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle has been damaged by water in the excess of 70% of fair market value.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleFloodDamage",
@@ -538,7 +538,7 @@
         {
           "state": 0,
           "description": "This field shows the vehicle is manufactured for highway use and displays the required Federal Certification Label.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate the vehicle is manufactured for highway use.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleHighwayUse",
@@ -556,7 +556,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle has  other license plate fee, different from passenger vehicle or light truck. Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle has other license plate fee.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleLicensePlateOther",
@@ -565,7 +565,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle is a light truck.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle is a light truck.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleLightTruck",
@@ -574,7 +574,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle is kept/garaged in a city.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle is kept/garaged in a city.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleLocationCity",
@@ -583,7 +583,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle is kept/garaged in a town.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle is kept/garaged in a town.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleLocationTown",
@@ -592,7 +592,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle is kept/garaged in a village.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle is kept/garaged in a village.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleLocationVillage",
@@ -610,7 +610,7 @@
         {
           "state": 0,
           "description": "This field shows an amateur radio license plate type.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate an amateur radio license plate type.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeAmateurRadio",
@@ -619,7 +619,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for an automobile.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for an automobile.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeAutomobile",
@@ -628,7 +628,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is a intercity/urban mass transportation bus.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is an intercity/urban mass transportation bus.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeBusIntercity",
@@ -637,7 +637,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is a regular bus.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is a regular bus.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeBusRegular",
@@ -646,7 +646,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is a school bus.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is a school bus.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeBusSchool",
@@ -655,7 +655,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a collector vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a collector vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeCollector",
@@ -664,7 +664,7 @@
         {
           "state": 0,
           "description": "This field shows a collector special license plate type.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate a collector special license plate type.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeCollectorSpecial",
@@ -673,7 +673,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used exclusively for transporting dairy products.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used exclusively for transporting dairy products.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDairy",
@@ -682,7 +682,7 @@
         {
           "state": 0,
           "description": "This field shows a disabled person license plate type.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate a disabled person license plate type.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDisabledPerson",
@@ -691,7 +691,7 @@
         {
           "state": 0,
           "description": "This field shows a disabled veteran license plate type.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate a disabled veteran license plate type.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDisabledVeteran",
@@ -700,7 +700,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used as a driver's education vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as a driver's education vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDriverEducation",
@@ -709,7 +709,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used as a duel purpose farm vehicle (for farm and non-farm activity).  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as a duel purpose farm vehicle (for farm and non-farm activity).",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDuelPurposeFarm",
@@ -718,7 +718,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used as a duel purpose truck.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as a duel purpose truck.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDuelPurposeTruck",
@@ -727,7 +727,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used as a farm trailer.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as a farm trailer.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeFarmTrailer",
@@ -736,7 +736,7 @@
         {
           "state": 0,
           "description": "This field shows that the  license plate type is for a vehicle that is used as a farm truck/tractor.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as a farm truck/tractor.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeFarmTruck",
@@ -745,7 +745,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used exclusively for transporting raw forest products.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used exclusively for transporting raw forest products.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeForest",
@@ -754,7 +754,7 @@
         {
           "state": 0,
           "description": "This field shows that the  license plate type is for a vehicle that is used as a human services vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as a human services vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeHumanServices",
@@ -763,7 +763,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a moped.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a moped.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMoped",
@@ -772,7 +772,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a motorcycle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a motorcycle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMotorcycle",
@@ -781,7 +781,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a motor home/recreational vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a motor home/recreational vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMotorHome",
@@ -790,7 +790,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used as a municipal vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as a municipal vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMunicipal",
@@ -799,7 +799,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used as an official municipal vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as an official municipal vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMunicipalOfficial",
@@ -808,7 +808,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used as a regular municipal vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used as a regular municipal vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMunicipalRegular",
@@ -817,7 +817,7 @@
         {
           "state": 0,
           "description": "This field shows a personalized license plate type.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate a personalized license plate type.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypePersonalized",
@@ -826,7 +826,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is used for private hauling purposes.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is used for private hauling purposes.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypePrivateHauling",
@@ -835,7 +835,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a  recreational vehicle (for human habitation).  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a recreational vehicle  (for human habitation).",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeRVTrailer",
@@ -844,7 +844,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a semitrailer.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a semitrailer.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeSemitrailer",
@@ -853,7 +853,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a vehicle that is a special mobile equipment vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a vehicle that is a special mobile equipment vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeSpecialEquipment",
@@ -862,7 +862,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a special use vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a special use vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeSpecialUse",
@@ -871,7 +871,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a state owned vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a state owned vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeStateOwned",
@@ -880,7 +880,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a trailer.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a trailer.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeTrailer",
@@ -889,7 +889,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a transit vehicle.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a transit vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeTransit",
@@ -898,7 +898,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a truck.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a truck.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeTruck",
@@ -907,7 +907,7 @@
         {
           "state": 0,
           "description": "This field shows that the license plate type is for a truck - tractor.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the license plate type is for a truck - tractor.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePlateTypeTruckTractor",
@@ -916,7 +916,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle has been used/will be used as a police vehicle.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle has been used/will be used as a police vehicle.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePolice",
@@ -925,7 +925,7 @@
         {
           "state": 0,
           "description": "This field shows that the private hauling vehicle is used for seasonal hauling of carnival equipment.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the private hauling vehicle is used for seasonal hauling of carnival equipment.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePrivateCarnival",
@@ -934,7 +934,7 @@
         {
           "state": 0,
           "description": "This field shows that the private hauling vehicle is used for transporting grading, ditching, or excavating equipment.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the private hauling vehicle is used for transporting grading, ditching, or excavating equipment.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehiclePrivateExcavatingEquipment",
@@ -943,7 +943,7 @@
         {
           "state": 0,
           "description": "This field shows that the special use vehicle is used for charity purposes.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the special use vehicle is used for charity purposes.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleSpecialUseCharity",
@@ -952,7 +952,7 @@
         {
           "state": 0,
           "description": "This field shows that the special use vehicle is used for services (that qualify by statute) that are not listed on the form..  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the special use vehicle is used for services (that qualify by statute) that are not listed on the form.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleSpecialUseOther",
@@ -961,7 +961,7 @@
         {
           "state": 0,
           "description": "This field shows that the special use vehicle is used for parade purposes.  Indicate this by marking the box with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the special use vehicle is used for parade purposes.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleSpecialUseParade",
@@ -970,7 +970,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle has been used/will be used as a taxi.  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle has been used/will be used as a taxi.",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleTaxi",
@@ -988,7 +988,7 @@
         {
           "state": 0,
           "description": "This field shows that the vehicle will be used \"For Hire\".  Indicate this by marking the field with an \"X\".",
-          "format": 1,
+          "format": 3,
           "label": "Check this box to indicate that the vehicle will be used \"For Hire\".",
           "maxChar": 0,
           "name": "L_GNL_ADDL_TITL_VehicleUseForHire",
@@ -1184,7 +1184,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "Used for Digital Signature.",
           "format": 10,
           "label": "Used for Digital Signature.",
@@ -1193,7 +1193,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "Used for Digital Signature.",
           "format": 10,
           "label": "Used for Digital Signature.",
@@ -1202,7 +1202,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "Used for Digital Signature.",
           "format": 10,
           "label": "Used for Digital Signature.",
@@ -1211,7 +1211,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "Used for Digital Signature.",
           "format": 10,
           "label": "Used for Digital Signature.",
@@ -1247,7 +1247,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field show the first name of the first lessee.",
           "format": 1,
           "label": "Enter the first name of the first lessee.",
@@ -1256,7 +1256,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the last name of the first lessee.",
           "format": 1,
           "label": "Enter the last name of the first lessee.",
@@ -1265,7 +1265,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the middle initial of the first lessee.",
           "format": 1,
           "label": "Enter the middle initial of the first lessee.",
@@ -1274,7 +1274,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the suffix name (e.g., \"Jr.\", \"III\", \"M.D.\", etc.), if applicable, for the first lessee.",
           "format": 1,
           "label": "Enter the suffix name, if applicable, for the first lessee.",
@@ -1292,7 +1292,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the first name of the first owner.",
           "format": 1,
           "label": "Enter the first name of the first owner.",
@@ -1301,7 +1301,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the last name of the first owner.",
           "format": 1,
           "label": "Enter the last name of the first owner.",
@@ -1310,7 +1310,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the middle initial/name of the first owner.",
           "format": 1,
           "label": "Enter the middle initial/name of the first owner.",
@@ -1319,7 +1319,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the suffix name (e.g., \"Jr.,\" \"III,\" \"M.D.,\" etc.), if applicable, for the first owner.",
           "format": 1,
           "label": "Enter the suffix name, if applicable, for the first owner.",
@@ -1328,7 +1328,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the first name of the second owner.",
           "format": 1,
           "label": "Enter the first name of the second owner.",
@@ -1337,7 +1337,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the last name of the second owner.",
           "format": 1,
           "label": "Enter the last name of the second owner.",
@@ -1346,7 +1346,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the middle initial/name of the second owner.",
           "format": 1,
           "label": "Enter the middle initial/name of the second owner.",
@@ -1355,7 +1355,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the suffix name, (e.g., \"Jr.\", \"III\", \"M.D.\", etc.), if applicable, for the second owner.",
           "format": 1,
           "label": "Enter the suffix name, if applicable, for the second owner.",
@@ -1380,1412 +1380,708 @@
         "active": false,
         "locations": [
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleFloodDamage",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6397.0,
-              "y": 4972.0
-            },
             "tabIndex": 49,
-            "view": {
-              "height": .0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6397.0,
+            "y": 4972.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_BothSignaturesRequired",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 1352.0,
-              "y": 2463.0
-            },
             "tabIndex": 11,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 1352.0,
+            "y": 2463.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_EitherSignatureRequred",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 953.0,
-              "y": 2463.0
-            },
             "tabIndex": 10,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 953.0,
+            "y": 2463.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePolice",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 5418.0,
-              "y": 4972.0
-            },
             "tabIndex": 47,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 5418.0,
+            "y": 4972.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleTaxi",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 5936.0,
-              "y": 4972.0
-            },
             "tabIndex": 48,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 5936.0,
+            "y": 4972.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleLocationVillage",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 4128.0,
-              "y": 5281.0
-            },
             "tabIndex": 52,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 4128.0,
+            "y": 5281.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_FleetAccountNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 599.0,
-              "x": 4464.0,
-              "y": 4663.0
-            },
             "tabIndex": 42,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 599.0,
+            "x": 4464.0,
+            "y": 4663.0
           },
           {
+            "height": 153.0,
             "name": "L_GNL_MISC_SIGN_eSignatureOwner1",
-            "pdf": {
-              "height": 153.0,
-              "width": 2599.0,
-              "x": 439.0,
-              "y": 10294.0
-            },
             "tabIndex": 86,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2599.0,
+            "x": 439.0,
+            "y": 10294.0
           },
           {
+            "height": 153.0,
             "name": "L_GNL_MISC_SIGN_eSignatureOwner2",
-            "pdf": {
-              "height": 153.0,
-              "width": 2599.0,
-              "x": 4502.0,
-              "y": 10294.0
-            },
             "tabIndex": 87,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2599.0,
+            "x": 4502.0,
+            "y": 10294.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_LicensePlateFee",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 7726.0
-            },
             "tabIndex": 73,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 7726.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_TitleFee",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 6618.0
-            },
             "tabIndex": 63,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 6618.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_TotalFees",
-            "pdf": {
-              "height": 166.0,
-              "width": 849.0,
-              "x": 3523.0,
-              "y": 9738.0
-            },
             "tabIndex": 85,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 849.0,
+            "x": 3523.0,
+            "y": 9738.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_FilingFee",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 7562.0
-            },
             "tabIndex": 72,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 7562.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Lessee1FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1516.0,
-              "x": 2425.0,
-              "y": 3340.0
-            },
             "tabIndex": 26,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1516.0,
+            "x": 2425.0,
+            "y": 3340.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Lessee1BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 4183.0,
-              "x": 347.0,
-              "y": 3340.0
-            },
             "tabIndex": 24,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 4183.0,
+            "x": 347.0,
+            "y": 3340.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Lessee1LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 2015.0,
-              "x": 348.0,
-              "y": 3340.0
-            },
             "tabIndex": 25,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2015.0,
+            "x": 348.0,
+            "y": 3340.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Lessee1MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 99.0,
-              "x": 4016.0,
-              "y": 3340.0
-            },
             "tabIndex": 27,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 99.0,
+            "x": 4016.0,
+            "y": 3340.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Lessee1SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 347.0,
-              "x": 4220.0,
-              "y": 3340.0
-            },
             "tabIndex": 28,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 347.0,
+            "x": 4220.0,
+            "y": 3340.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_VehicleVesselColor",
-            "pdf": {
-              "height": 166.0,
-              "width": 516.0,
-              "x": 3453.0,
-              "y": 4663.0
-            },
             "tabIndex": 41,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 516.0,
+            "x": 3453.0,
+            "y": 4663.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_VehicleIdentificationNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 2014.0,
-              "x": 403.0,
-              "y": 4279.0
-            },
             "tabIndex": 35,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2014.0,
+            "x": 403.0,
+            "y": 4279.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_VehicleMake",
-            "pdf": {
-              "height": 166.0,
-              "width": 766.0,
-              "x": 782.0,
-              "y": 4656.0
-            },
             "tabIndex": 39,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 766.0,
+            "x": 782.0,
+            "y": 4656.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_LicensePlateNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1119.0,
-              "x": 3512.0,
-              "y": 4279.0
-            },
             "tabIndex": 36,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1119.0,
+            "x": 3512.0,
+            "y": 4279.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_VehicleCounty",
-            "pdf": {
-              "height": 166.0,
-              "width": 2016.0,
-              "x": 597.0,
-              "y": 5271.0
-            },
             "tabIndex": 54,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2016.0,
+            "x": 597.0,
+            "y": 5271.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_ExemptionReason",
-            "pdf": {
-              "height": 166.0,
-              "width": 1183.0,
-              "x": 7019.0,
-              "y": 7500.0
-            },
             "tabIndex": 71,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1183.0,
+            "x": 7019.0,
+            "y": 7500.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_LocalTaxDue",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 7394.0
-            },
             "tabIndex": 70,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 7394.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_MunicipalWheelTax",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 8736.0
-            },
             "tabIndex": 80,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 8736.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_TemporaryPlateTax",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 9133.0
-            },
             "tabIndex": 82,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 9133.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_CounterServiceFee",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 9427.0
-            },
             "tabIndex": 83,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 9427.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_ElectronicFilingFee",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 9566.0
-            },
             "tabIndex": 84,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 9566.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_VehicleType",
-            "pdf": {
-              "height": 166.0,
-              "width": 1119.0,
-              "x": 1810.0,
-              "y": 4656.0
-            },
             "tabIndex": 40,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1119.0,
+            "x": 1810.0,
+            "y": 4656.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_ClassFee",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 8940.0
-            },
             "tabIndex": 81,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 8940.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Lessee1IdentificationNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 2115.0,
-              "x": 4733.0,
-              "y": 3340.0
-            },
             "tabIndex": 29,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2115.0,
+            "x": 4733.0,
+            "y": 3340.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_SecuredPartyStateNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1777.0,
-              "x": 4326.0,
-              "y": 5874.0
-            },
             "tabIndex": 57,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1777.0,
+            "x": 4326.0,
+            "y": 5874.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Owner1SocialSecurityNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1290.0,
-              "x": 398.0,
-              "y": 2087.0
-            },
             "tabIndex": 7,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1290.0,
+            "x": 398.0,
+            "y": 2087.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Owner1DriverLicenseNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 2014.0,
-              "x": 2982.0,
-              "y": 2087.0
-            },
             "tabIndex": 8,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2014.0,
+            "x": 2982.0,
+            "y": 2087.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Owner1FEINEIN",
-            "pdf": {
-              "height": 166.0,
-              "width": 1932.0,
-              "x": 5847.0,
-              "y": 2087.0
-            },
             "tabIndex": 9,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1932.0,
+            "x": 5847.0,
+            "y": 2087.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_TitleOriginal",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 4140.0,
-              "y": 4972.0
-            },
             "tabIndex": 45,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 4140.0,
+            "y": 4972.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleLocationCity",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 3652.0,
-              "y": 5281.0
-            },
             "tabIndex": 51,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 3652.0,
+            "y": 5281.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleLocationTown",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 4683.0,
-              "y": 5281.0
-            },
             "tabIndex": 53,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 4683.0,
+            "y": 5281.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_LicensePlateType",
-            "pdf": {
-              "height": 166.0,
-              "width": 1599.0,
-              "x": 5716.0,
-              "y": 4279.0
-            },
             "tabIndex": 37,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1599.0,
+            "x": 5716.0,
+            "y": 4279.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_TitleSalvage",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 4822.0,
-              "y": 4972.0
-            },
             "tabIndex": 46,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 4822.0,
+            "y": 4972.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Owner1PhoneNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1191.0,
-              "x": 5477.0,
-              "y": 2953.0
-            },
             "tabIndex": 23,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1191.0,
+            "x": 5477.0,
+            "y": 2953.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_FirstOperatedDate",
-            "pdf": {
-              "height": 166.0,
-              "width": 933.0,
-              "x": 5709.0,
-              "y": 4670.0
-            },
             "tabIndex": 43,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 933.0,
+            "x": 5709.0,
+            "y": 4670.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_VehicleYear",
-            "pdf": {
-              "height": 166.0,
-              "width": 433.0,
-              "x": 339.0,
-              "y": 4656.0
-            },
             "tabIndex": 38,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 433.0,
+            "x": 339.0,
+            "y": 4656.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_VehicleCityVillageTown",
-            "pdf": {
-              "height": 166.0,
-              "width": 2110.0,
-              "x": 5546.0,
-              "y": 5271.0
-            },
             "tabIndex": 55,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2110.0,
+            "x": 5546.0,
+            "y": 5271.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lessee1StreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 2535.0,
-              "x": 339.0,
-              "y": 3728.0
-            },
             "tabIndex": 30,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2535.0,
+            "x": 339.0,
+            "y": 3728.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lessee1City",
-            "pdf": {
-              "height": 166.0,
-              "width": 1187.0,
-              "x": 2932.0,
-              "y": 3728.0
-            },
             "tabIndex": 31,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1187.0,
+            "x": 2932.0,
+            "y": 3728.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lessee1State",
-            "pdf": {
-              "height": 166.0,
-              "width": 360.0,
-              "x": 4228.0,
-              "y": 3728.0
-            },
             "tabIndex": 32,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 360.0,
+            "x": 4228.0,
+            "y": 3728.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lessee1ZIPCode",
-            "pdf": {
-              "height": 166.0,
-              "width": 769.0,
-              "x": 4640.0,
-              "y": 3728.0
-            },
             "tabIndex": 33,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 769.0,
+            "x": 4640.0,
+            "y": 3728.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lienholder1StreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 3932.0,
-              "x": 314.0,
-              "y": 6250.0
-            },
             "tabIndex": 59,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3932.0,
+            "x": 314.0,
+            "y": 6250.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lienholder1City",
-            "pdf": {
-              "height": 166.0,
-              "width": 2624.0,
-              "x": 4261.0,
-              "y": 6250.0
-            },
             "tabIndex": 60,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2624.0,
+            "x": 4261.0,
+            "y": 6250.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lienholder1State",
-            "pdf": {
-              "height": 166.0,
-              "width": 278.0,
-              "x": 6967.0,
-              "y": 6250.0
-            },
             "tabIndex": 61,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 278.0,
+            "x": 6967.0,
+            "y": 6250.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Lienholder1Name",
-            "pdf": {
-              "height": 166.0,
-              "width": 3932.0,
-              "x": 314.0,
-              "y": 5874.0
-            },
             "tabIndex": 56,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3932.0,
+            "x": 314.0,
+            "y": 5874.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lienholder1ZIPCode",
-            "pdf": {
-              "height": 166.0,
-              "width": 848.0,
-              "x": 7335.0,
-              "y": 6250.0
-            },
             "tabIndex": 62,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 848.0,
+            "x": 7335.0,
+            "y": 6250.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 2768.0,
-              "x": 331.0,
-              "y": 2953.0
-            },
             "tabIndex": 19,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2768.0,
+            "x": 331.0,
+            "y": 2953.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Owner1City",
-            "pdf": {
-              "height": 166.0,
-              "width": 1264.0,
-              "x": 3129.0,
-              "y": 2953.0
-            },
             "tabIndex": 20,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1264.0,
+            "x": 3129.0,
+            "y": 2953.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Owner1State",
-            "pdf": {
-              "height": 166.0,
-              "width": 264.0,
-              "x": 4425.0,
-              "y": 2953.0
-            },
             "tabIndex": 21,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 264.0,
+            "x": 4425.0,
+            "y": 2953.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Owner1ZIPCode",
-            "pdf": {
-              "height": 166.0,
-              "width": 765.0,
-              "x": 4693.0,
-              "y": 2953.0
-            },
             "tabIndex": 22,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 765.0,
+            "x": 4693.0,
+            "y": 2953.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1191.0,
-              "x": 2154.0,
-              "y": 1619.0
-            },
             "tabIndex": 3,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1191.0,
+            "x": 2154.0,
+            "y": 1619.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1688.0,
-              "x": 359.0,
-              "y": 1619.0
-            },
             "tabIndex": 2,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1688.0,
+            "x": 359.0,
+            "y": 1619.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 99.0,
-              "x": 3433.0,
-              "y": 1619.0
-            },
             "tabIndex": 4,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 99.0,
+            "x": 3433.0,
+            "y": 1619.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 347.0,
-              "x": 3633.0,
-              "y": 1619.0
-            },
             "tabIndex": 5,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 347.0,
+            "x": 3633.0,
+            "y": 1619.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1191.0,
-              "x": 1782.0,
-              "y": 2634.0
-            },
             "tabIndex": 16,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1191.0,
+            "x": 1782.0,
+            "y": 2634.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1433.0,
-              "x": 365.0,
-              "y": 2634.0
-            },
             "tabIndex": 15,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1433.0,
+            "x": 365.0,
+            "y": 2634.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 99.0,
-              "x": 3008.0,
-              "y": 2634.0
-            },
             "tabIndex": 17,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 99.0,
+            "x": 3008.0,
+            "y": 2634.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 347.0,
-              "x": 3144.0,
-              "y": 2634.0
-            },
             "tabIndex": 18,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 347.0,
+            "x": 3144.0,
+            "y": 2634.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Lienholder1PhoneNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1353.0,
-              "x": 6258.0,
-              "y": 5874.0
-            },
             "tabIndex": 58,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1353.0,
+            "x": 6258.0,
+            "y": 5874.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Lessee1PhoneNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1191.0,
-              "x": 5478.0,
-              "y": 3728.0
-            },
             "tabIndex": 34,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1191.0,
+            "x": 5478.0,
+            "y": 3728.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_PurchasePrice",
-            "pdf": {
-              "height": 166.0,
-              "width": 1200.0,
-              "x": 1994.0,
-              "y": 6739.0
-            },
             "tabIndex": 64,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1200.0,
+            "x": 1994.0,
+            "y": 6739.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_TaxBase",
-            "pdf": {
-              "height": 166.0,
-              "width": 931.0,
-              "x": 1994.0,
-              "y": 7114.0
-            },
             "tabIndex": 67,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 931.0,
+            "x": 1994.0,
+            "y": 7114.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_TaxExemptionCodeNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 100.0,
-              "x": 7027.0,
-              "y": 7090.0
-            },
             "tabIndex": 66,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 100.0,
+            "x": 7027.0,
+            "y": 7090.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_StateTaxDue",
-            "pdf": {
-              "height": 166.0,
-              "width": 785.0,
-              "x": 3523.0,
-              "y": 7268.0
-            },
             "tabIndex": 68,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 785.0,
+            "x": 3523.0,
+            "y": 7268.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_TradeInAmount",
-            "pdf": {
-              "height": 166.0,
-              "width": 933.0,
-              "x": 1994.0,
-              "y": 6978.0
-            },
             "tabIndex": 65,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 933.0,
+            "x": 1994.0,
+            "y": 6978.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleLicensePlateOther",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 446.0,
-              "y": 8483.0
-            },
             "tabIndex": 79,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 446.0,
+            "y": 8483.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_PassengerLicensePlates",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 446.0,
-              "y": 7909.0
-            },
             "tabIndex": 75,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 446.0,
+            "y": 7909.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleLightTruck",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 446.0,
-              "y": 8076.0
-            },
             "tabIndex": 77,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 446.0,
+            "y": 8076.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Vehicle1PlateType",
-            "pdf": {
-              "height": 166.0,
-              "width": 1016.0,
-              "x": 7038.0,
-              "y": 7855.0
-            },
             "tabIndex": 74,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1016.0,
+            "x": 7038.0,
+            "y": 7855.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_GrossWeight",
-            "pdf": {
-              "height": 166.0,
-              "width": 1016.0,
-              "x": 7038.0,
-              "y": 8000.0
-            },
             "tabIndex": 76,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1016.0,
+            "x": 7038.0,
+            "y": 8000.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_RegistrationPeriod",
-            "pdf": {
-              "height": 166.0,
-              "width": 1016.0,
-              "x": 7038.0,
-              "y": 8181.0
-            },
             "tabIndex": 78,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1016.0,
+            "x": 7038.0,
+            "y": 8181.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_TaxExemptRelationship",
-            "pdf": {
-              "height": 166.0,
-              "width": 1183.0,
-              "x": 7019.0,
-              "y": 7370.0
-            },
             "tabIndex": 69,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1183.0,
+            "x": 7019.0,
+            "y": 7370.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3598.0,
-              "x": 356.0,
-              "y": 1619.0
-            },
             "tabIndex": 1,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3598.0,
+            "x": 356.0,
+            "y": 1619.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3098.0,
-              "x": 363.0,
-              "y": 2624.0
-            },
             "tabIndex": 14,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3098.0,
+            "x": 363.0,
+            "y": 2624.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_IdentificationNumber2",
-            "pdf": {
-              "height": 166.0,
-              "width": 1955.0,
-              "x": 4808.0,
-              "y": 2577.0
-            },
             "tabIndex": 13,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1955.0,
+            "x": 4808.0,
+            "y": 2577.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_Owner1DateOfBirth",
-            "pdf": {
-              "height": 166.0,
-              "width": 933.0,
-              "x": 6882.0,
-              "y": 1619.0
-            },
             "tabIndex": 6,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 933.0,
+            "x": 6882.0,
+            "y": 1619.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_Owner2DateOfBirth",
-            "pdf": {
-              "height": 166.0,
-              "width": 933.0,
-              "x": 3731.0,
-              "y": 2577.0
-            },
             "tabIndex": 12,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 933.0,
+            "x": 3731.0,
+            "y": 2577.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_PlatesTransferredFromHusbandOrWife",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 328.0,
-              "y": 4900.0
-            },
             "tabIndex": 44,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 328.0,
+            "y": 4900.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_DamageTypeHail",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 7378.0,
-              "y": 4972.0
-            },
             "tabIndex": 50,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 7378.0,
+            "y": 4972.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_TitleOptOutProvision",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 3621.0,
-              "y": 1418.0
-            },
             "tabIndex": 0,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 3621.0,
+            "y": 1418.0
           }
         ],
         "pageNo": 3
@@ -2794,996 +2090,500 @@
         "active": false,
         "locations": [
           {
+            "height": 166.0,
             "name": "C_GNL_DATE_SIGN_NotaryDate",
-            "pdf": {
-              "height": 166.0,
-              "width": 1016.0,
-              "x": 4121.0,
-              "y": 824.0
-            },
             "tabIndex": 91,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1016.0,
+            "x": 4121.0,
+            "y": 824.0
           },
           {
+            "height": 138.0,
             "name": "L_GNL_MISC_SIGN_eSignatureGuardianorParent",
-            "pdf": {
-              "height": 138.0,
-              "width": 2286.0,
-              "x": 5889.0,
-              "y": 604.0
-            },
             "tabIndex": 88,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2286.0,
+            "x": 5889.0,
+            "y": 604.0
           },
           {
+            "height": 155.0,
             "name": "L_GNL_MISC_SIGN_eSignatureNotary1a",
-            "pdf": {
-              "height": 155.0,
-              "width": 2286.0,
-              "x": 5889.0,
-              "y": 849.0
-            },
             "tabIndex": 92,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2286.0,
+            "x": 5889.0,
+            "y": 849.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_LienAuthorityNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1200.0,
-              "x": 6872.0,
-              "y": 1722.0
-            },
             "tabIndex": 97,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1200.0,
+            "x": 6872.0,
+            "y": 1722.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMotorcycle",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 1820.0
-            },
             "tabIndex": 98,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 1820.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeTrailer",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 6022.0
-            },
             "tabIndex": 120,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 6022.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMotorHome",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 2383.0
-            },
             "tabIndex": 101,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 2383.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeSemitrailer",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 5724.0
-            },
             "tabIndex": 119,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 5724.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeBusRegular",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 6567.0
-            },
             "tabIndex": 122,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 6567.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeBusSchool",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 6879.0
-            },
             "tabIndex": 124,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 6879.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeBusIntercity",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 6730.0
-            },
             "tabIndex": 123,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 6730.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMoped",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 2093.0
-            },
             "tabIndex": 100,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 2093.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeFarmTruck",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 2961.0
-            },
             "tabIndex": 104,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 2961.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeTruckTractor",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 4724.0
-            },
             "tabIndex": 114,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 4724.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeCollector",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 9824.0
-            },
             "tabIndex": 147,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 9824.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_VehicleNotOperativeStartDate",
-            "pdf": {
-              "height": 166.0,
-              "width": 933.0,
-              "x": 5591.0,
-              "y": 1194.0
-            },
             "tabIndex": 93,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 933.0,
+            "x": 5591.0,
+            "y": 1194.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_VehicleNotOperativeEndDate",
-            "pdf": {
-              "height": 166.0,
-              "width": 933.0,
-              "x": 7117.0,
-              "y": 1194.0
-            },
             "tabIndex": 94,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 933.0,
+            "x": 7117.0,
+            "y": 1194.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDuelPurposeFarm",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 3685.0
-            },
             "tabIndex": 106,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 3685.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeFarmTrailer",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 3984.0
-            },
             "tabIndex": 108,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 3984.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDuelPurposeTruck",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 4415.0
-            },
             "tabIndex": 112,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 4415.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDairy",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 5141.0
-            },
             "tabIndex": 116,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 5141.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeForest",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 5436.0
-            },
             "tabIndex": 117,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 5436.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeHumanServices",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 7023.0
-            },
             "tabIndex": 125,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 7023.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDriverEducation",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 7175.0
-            },
             "tabIndex": 126,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 7175.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMunicipal",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 7330.0
-            },
             "tabIndex": 127,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 7330.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMunicipalRegular",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 2973.0,
-              "y": 7330.0
-            },
             "tabIndex": 128,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 2973.0,
+            "y": 7330.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeMunicipalOfficial",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 3471.0,
-              "y": 7330.0
-            },
             "tabIndex": 129,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 3471.0,
+            "y": 7330.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeStateOwned",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 7592.0
-            },
             "tabIndex": 130,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 7592.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypePrivateHauling",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 7752.0
-            },
             "tabIndex": 131,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 7752.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePrivateCarnival",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 2115.0,
-              "y": 7907.0
-            },
             "tabIndex": 132,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 2115.0,
+            "y": 7907.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePrivateExcavatingEquipment",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 2115.0,
-              "y": 8050.0
-            },
             "tabIndex": 133,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 2115.0,
+            "y": 8050.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeSpecialEquipment",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 8162.0
-            },
             "tabIndex": 134,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 8162.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeTransit",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 8333.0
-            },
             "tabIndex": 135,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 8333.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeSpecialUse",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 8668.0
-            },
             "tabIndex": 136,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 8668.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleSpecialUseCharity",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 2115.0,
-              "y": 8809.0
-            },
             "tabIndex": 137,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 2115.0,
+            "y": 8809.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleSpecialUseParade",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 2115.0,
-              "y": 8949.0
-            },
             "tabIndex": 138,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 2115.0,
+            "y": 8949.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleSpecialUseOther",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 2115.0,
-              "y": 9089.0
-            },
             "tabIndex": 139,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 2115.0,
+            "y": 9089.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypePersonalized",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 9245.0
-            },
             "tabIndex": 140,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 9245.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDisabledPerson",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 9391.0
-            },
             "tabIndex": 144,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 9391.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeDisabledVeteran",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 9537.0
-            },
             "tabIndex": 145,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 9537.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeCollectorSpecial",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 9967.0
-            },
             "tabIndex": 148,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 9967.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeAmateurRadio",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 9683.0
-            },
             "tabIndex": 146,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 9683.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleUseForHire",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6734.0,
-              "y": 1540.0
-            },
             "tabIndex": 95,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6734.0,
+            "y": 1540.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleHighwayUse",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6744.0,
-              "y": 2006.0
-            },
             "tabIndex": 99,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6744.0,
+            "y": 2006.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleCarrierClassPrivate",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6811.0,
-              "y": 3681.0
-            },
             "tabIndex": 105,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6811.0,
+            "y": 3681.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleCarrierClassRentalPrivate",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6811.0,
-              "y": 3863.0
-            },
             "tabIndex": 107,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6811.0,
+            "y": 3863.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleCarrierClassRentalForHire",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6811.0,
-              "y": 4051.0
-            },
             "tabIndex": 109,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6811.0,
+            "y": 4051.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleCarrierClassRentalBoth",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6811.0,
-              "y": 4244.0
-            },
             "tabIndex": 111,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6811.0,
+            "y": 4244.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleCarrierClassIntrastate",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6811.0,
-              "y": 4441.0
-            },
             "tabIndex": 113,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6811.0,
+            "y": 4441.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehicleCarrierClassIntrastateDOT",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6811.0,
-              "y": 4734.0
-            },
             "tabIndex": 115,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6811.0,
+            "y": 4734.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_ConsecutiveMonthlyPermit",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 6795.0,
-              "y": 6546.0
-            },
             "tabIndex": 121,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 6795.0,
+            "y": 6546.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_PassangerCapacityBus",
-            "pdf": {
-              "height": 166.0,
-              "width": 348.0,
-              "x": 6829.0,
-              "y": 9311.0
-            },
             "tabIndex": 141,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 348.0,
+            "x": 6829.0,
+            "y": 9311.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_PassangerCapacitySchoolBus",
-            "pdf": {
-              "height": 166.0,
-              "width": 348.0,
-              "x": 7339.0,
-              "y": 9311.0
-            },
             "tabIndex": 142,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 348.0,
+            "x": 7339.0,
+            "y": 9311.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_PassangerCapacityHumanServicesBus",
-            "pdf": {
-              "height": 166.0,
-              "width": 348.0,
-              "x": 7811.0,
-              "y": 9311.0
-            },
             "tabIndex": 143,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 348.0,
+            "x": 7811.0,
+            "y": 9311.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_CollectorLicensePlateNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1119.0,
-              "x": 4653.0,
-              "y": 10062.0
-            },
             "tabIndex": 149,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1119.0,
+            "x": 4653.0,
+            "y": 10062.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeAutomobile",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 1662.0
-            },
             "tabIndex": 96,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 1662.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeRVTrailer",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 2532.0
-            },
             "tabIndex": 102,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 2532.0
           },
           {
+            "height": 148.0,
             "name": "L_GNL_ADDL_TITL_VehiclePlateTypeTruck",
-            "pdf": {
-              "height": 148.0,
-              "width": 125.0,
-              "x": 961.0,
-              "y": 4149.0
-            },
             "tabIndex": 110,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 125.0,
+            "x": 961.0,
+            "y": 4149.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_ADDR_SIGN_NotaryCounty",
-            "pdf": {
-              "height": 166.0,
-              "width": 1766.0,
-              "x": 935.0,
-              "y": 824.0
-            },
             "tabIndex": 89,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1766.0,
+            "x": 935.0,
+            "y": 824.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_DATE_SIGN_NotaryExpirationDate",
-            "pdf": {
-              "height": 166.0,
-              "width": 1016.0,
-              "x": 2981.0,
-              "y": 824.0
-            },
             "tabIndex": 90,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1016.0,
+            "x": 2981.0,
+            "y": 824.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_USDOTPermitNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1266.0,
-              "x": 6769.0,
-              "y": 5450.0
-            },
             "tabIndex": 118,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1266.0,
+            "x": 6769.0,
+            "y": 5450.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_RVTrailerLength",
-            "pdf": {
-              "height": 166.0,
-              "width": 516.0,
-              "x": 6757.0,
-              "y": 2893.0
-            },
             "tabIndex": 103,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 516.0,
+            "x": 6757.0,
+            "y": 2893.0
           }
         ],
         "pageNo": 4
@@ -3792,8 +2592,7 @@
     "pageSize": {
       "height": 11000,
       "width": 8500
-    },
-    "scale": null
+    }
   },
   "id": "247WI",
   "pdfBytes": null,

@@ -59,7 +59,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the first name of the Notary Public who will be performing the acknowledgment as an officer of the state.",
           "format": 1,
           "label": "Enter the first name of the Notary Public.",
@@ -77,7 +77,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field identifies the last name of the Notary Public, who is signing the acknowledgment as officer of the state.",
           "format": 1,
           "label": "Enter the last name of the Notary Public.",
@@ -86,7 +86,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the middle initial of the Notary Public who will be performing the acknowledgment as an officer of the state.",
           "format": 1,
           "label": "Enter the middle initial of the Notary Public.",
@@ -95,7 +95,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the suffix name, (e.g., \"Jr.\", \"III\", \"M.D.\", etc.), if applicable, of the Notary Public who will be performing the acknowledgment as an officer of the state.",
           "format": 1,
           "label": "Enter the suffix name, if applicable, of the Notary Public.",
@@ -401,7 +401,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "Used for Digital Signature.",
           "format": 10,
           "label": "Used for Digital Signature.",
@@ -410,7 +410,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "Used for Digital Signature.",
           "format": 10,
           "label": "Used for Digital Signature.",
@@ -419,7 +419,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "Used for Digital Signature.",
           "format": 10,
           "label": "Used for Digital Signature.",
@@ -428,7 +428,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "Used for Digital Signature.",
           "format": 10,
           "label": "Used for Digital Signature.",
@@ -464,7 +464,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the first name of the first seller or transferor.",
           "format": 1,
           "label": "Enter the first name of the first seller or transferor.",
@@ -473,7 +473,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the last name of the first seller or transferor.",
           "format": 1,
           "label": "Enter the last name of the first seller or transferor.",
@@ -482,7 +482,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the middle initial of the first seller or transferor.",
           "format": 1,
           "label": "Enter the middle initial of the first seller or transferor.",
@@ -491,7 +491,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the suffix name, (e.g., \"Jr.\", \"III\", \"M.D.\", etc.), if applicable, of the first seller or transferor.",
           "format": 1,
           "label": "Enter the suffix name, if applicable, of the first seller or transferor.",
@@ -518,7 +518,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the first name of the first owner.",
           "format": 1,
           "label": "Enter the first name of the first owner.",
@@ -527,7 +527,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the last name of the first owner.",
           "format": 1,
           "label": "Enter the last name of the first owner.",
@@ -536,7 +536,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the middle initial/name of the first owner.",
           "format": 1,
           "label": "Enter the middle initial/name of the first owner.",
@@ -545,7 +545,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the suffix name (e.g., \"Jr.,\" \"III,\" \"M.D.,\" etc.), if applicable, for the first owner.",
           "format": 1,
           "label": "Enter the suffix name, if applicable, for the first owner.",
@@ -554,7 +554,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the first name of the second owner.",
           "format": 1,
           "label": "Enter the first name of the second owner.",
@@ -563,7 +563,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the last name of the second owner.",
           "format": 1,
           "label": "Enter the last name of the second owner.",
@@ -572,7 +572,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the middle initial/name of the second owner.",
           "format": 1,
           "label": "Enter the middle initial/name of the second owner.",
@@ -581,7 +581,7 @@
           "value": null
         },
         {
-          "state": 0,
+          "state": 3,
           "description": "This field shows the suffix name, (e.g., \"Jr.\", \"III\", \"M.D.\", etc.), if applicable, for the second owner.",
           "format": 1,
           "label": "Enter the suffix name, if applicable, for the second owner.",
@@ -605,724 +605,364 @@
         "active": false,
         "locations": [
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_Lien1Amount",
-            "pdf": {
-              "height": 166.0,
-              "width": 1119.0,
-              "x": 2278.0,
-              "y": 9919.0
-            },
             "tabIndex": 48,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1119.0,
+            "x": 2278.0,
+            "y": 9919.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_MISC_ManufacturedHomeSerialNumber",
-            "pdf": {
-              "height": 166.0,
-              "width": 1766.0,
-              "x": 1311.0,
-              "y": 4709.0
-            },
             "tabIndex": 19,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1766.0,
+            "x": 1311.0,
+            "y": 4709.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lienholder1StreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 5849.0,
-              "x": 2033.0,
-              "y": 9530.0
-            },
             "tabIndex": 44,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 5849.0,
+            "x": 2033.0,
+            "y": 9530.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lienholder1City",
-            "pdf": {
-              "height": 166.0,
-              "width": 1766.0,
-              "x": 900.0,
-              "y": 9719.0
-            },
             "tabIndex": 45,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1766.0,
+            "x": 900.0,
+            "y": 9719.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lienholder1State",
-            "pdf": {
-              "height": 166.0,
-              "width": 206.0,
-              "x": 5621.0,
-              "y": 9719.0
-            },
             "tabIndex": 46,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 206.0,
+            "x": 5621.0,
+            "y": 9719.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Lienholder1Name",
-            "pdf": {
-              "height": 166.0,
-              "width": 7264.0,
-              "x": 600.0,
-              "y": 9178.0
-            },
             "tabIndex": 43,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 7264.0,
+            "x": 600.0,
+            "y": 9178.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Lienholder1ZIPCode",
-            "pdf": {
-              "height": 166.0,
-              "width": 958.0,
-              "x": 6908.0,
-              "y": 9719.0
-            },
             "tabIndex": 47,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 958.0,
+            "x": 6908.0,
+            "y": 9719.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 3849.0,
-              "x": 1776.0,
-              "y": 2979.0
-            },
             "tabIndex": 11,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3849.0,
+            "x": 1776.0,
+            "y": 2979.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Owner1City",
-            "pdf": {
-              "height": 166.0,
-              "width": 4766.0,
-              "x": 885.0,
-              "y": 3186.0
-            },
             "tabIndex": 12,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 4766.0,
+            "x": 885.0,
+            "y": 3186.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Owner1State",
-            "pdf": {
-              "height": 166.0,
-              "width": 266.0,
-              "x": 6236.0,
-              "y": 3196.0
-            },
             "tabIndex": 14,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 266.0,
+            "x": 6236.0,
+            "y": 3196.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Owner1ZIPCode",
-            "pdf": {
-              "height": 166.0,
-              "width": 850.0,
-              "x": 7031.0,
-              "y": 3186.0
-            },
             "tabIndex": 13,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 850.0,
+            "x": 7031.0,
+            "y": 3186.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 1860.0,
-              "y": 2610.0
-            },
             "tabIndex": 1,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 1860.0,
+            "y": 2610.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 4889.0,
-              "y": 2610.0
-            },
             "tabIndex": 6,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 4889.0,
+            "y": 2610.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Seller1StreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 2933.0,
-              "x": 1210.0,
-              "y": 5796.0
-            },
             "tabIndex": 29,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2933.0,
+            "x": 1210.0,
+            "y": 5796.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Seller1City",
-            "pdf": {
-              "height": 166.0,
-              "width": 1683.0,
-              "x": 4436.0,
-              "y": 5796.0
-            },
             "tabIndex": 30,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1683.0,
+            "x": 4436.0,
+            "y": 5796.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Seller1State",
-            "pdf": {
-              "height": 166.0,
-              "width": 187.0,
-              "x": 6544.0,
-              "y": 5796.0
-            },
             "tabIndex": 31,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 187.0,
+            "x": 6544.0,
+            "y": 5796.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_Seller1ZIPCode",
-            "pdf": {
-              "height": 166.0,
-              "width": 850.0,
-              "x": 6994.0,
-              "y": 5796.0
-            },
             "tabIndex": 32,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 850.0,
+            "x": 6994.0,
+            "y": 5796.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Seller1BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 989.0,
-              "y": 5445.0
-            },
             "tabIndex": 24,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 989.0,
+            "y": 5445.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_MISC_Seller1FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1119.0,
-              "x": 1042.0,
-              "y": 5455.0
-            },
             "tabIndex": 25,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1119.0,
+            "x": 1042.0,
+            "y": 5455.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_MISC_Seller1LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1766.0,
-              "x": 2434.0,
-              "y": 5455.0
-            },
             "tabIndex": 27,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1766.0,
+            "x": 2434.0,
+            "y": 5455.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_MISC_Seller1MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 107.0,
-              "x": 2274.0,
-              "y": 5455.0
-            },
             "tabIndex": 26,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 107.0,
+            "x": 2274.0,
+            "y": 5455.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Seller1Name",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 987.0,
-              "y": 5436.0
-            },
             "tabIndex": 23,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 987.0,
+            "y": 5436.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_MISC_Seller1SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 347.0,
-              "x": 4209.0,
-              "y": 5455.0
-            },
             "tabIndex": 28,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 347.0,
+            "x": 4209.0,
+            "y": 5455.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_ManufacturedHomeCounty",
-            "pdf": {
-              "height": 166.0,
-              "width": 1766.0,
-              "x": 1418.0,
-              "y": 1931.0
-            },
             "tabIndex": 0,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1766.0,
+            "x": 1418.0,
+            "y": 1931.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_MISC_ManufacturedHomeMake",
-            "pdf": {
-              "height": 166.0,
-              "width": 2183.0,
-              "x": 1096.0,
-              "y": 4320.0
-            },
             "tabIndex": 15,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2183.0,
+            "x": 1096.0,
+            "y": 4320.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_ManufacturedHomeYear",
-            "pdf": {
-              "height": 166.0,
-              "width": 433.0,
-              "x": 1089.0,
-              "y": 4513.0
-            },
             "tabIndex": 17,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 433.0,
+            "x": 1089.0,
+            "y": 4513.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_ManufacturedHomeSize",
-            "pdf": {
-              "height": 166.0,
-              "width": 766.0,
-              "x": 4290.0,
-              "y": 4513.0
-            },
             "tabIndex": 18,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 766.0,
+            "x": 4290.0,
+            "y": 4513.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_ManufacturedHomeType",
-            "pdf": {
-              "height": 166.0,
-              "width": 2112.0,
-              "x": 4537.0,
-              "y": 4320.0
-            },
             "tabIndex": 16,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2112.0,
+            "x": 4537.0,
+            "y": 4320.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_ManufacturedHomeDayObtained",
-            "pdf": {
-              "height": 166.0,
-              "width": 680.0,
-              "x": 4625.0,
-              "y": 5099.0
-            },
             "tabIndex": 20,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 680.0,
+            "x": 4625.0,
+            "y": 5099.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_ManufacturedHomeMonthObtained",
-            "pdf": {
-              "height": 166.0,
-              "width": 1349.0,
-              "x": 5527.0,
-              "y": 5099.0
-            },
             "tabIndex": 21,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1349.0,
+            "x": 5527.0,
+            "y": 5099.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_DATE_TITL_ManufacturedHomeYearObtained",
-            "pdf": {
-              "height": 166.0,
-              "width": 433.0,
-              "x": 6977.0,
-              "y": 5099.0
-            },
             "tabIndex": 22,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 433.0,
+            "x": 6977.0,
+            "y": 5099.0
           },
           {
+            "height": 679.0,
             "name": "L_GNL_ADDL_TITL_ManufacturedHomeOwnershipCertNotObtainedBlock",
-            "pdf": {
-              "height": 679.0,
-              "width": 7265.0,
-              "x": 598.0,
-              "y": 6548.0
-            },
             "tabIndex": 33,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 7265.0,
+            "x": 598.0,
+            "y": 6548.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_ManufacturedHomeOwnershipCertStateIssued",
-            "pdf": {
-              "height": 166.0,
-              "width": 1183.0,
-              "x": 5340.0,
-              "y": 7302.0
-            },
             "tabIndex": 38,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1183.0,
+            "x": 5340.0,
+            "y": 7302.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_ManufacturedHomeStreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 4766.0,
-              "x": 3034.0,
-              "y": 7728.0
-            },
             "tabIndex": 39,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 4766.0,
+            "x": 3034.0,
+            "y": 7728.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_ManufacturedHomeCityCounty",
-            "pdf": {
-              "height": 166.0,
-              "width": 2765.0,
-              "x": 603.0,
-              "y": 8075.0
-            },
             "tabIndex": 40,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2765.0,
+            "x": 603.0,
+            "y": 8075.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_ManufacturedHomeState",
-            "pdf": {
-              "height": 166.0,
-              "width": 1619.0,
-              "x": 4091.0,
-              "y": 8075.0
-            },
             "tabIndex": 41,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1619.0,
+            "x": 4091.0,
+            "y": 8075.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_ManufacturedHomeZipCode",
-            "pdf": {
-              "height": 166.0,
-              "width": 1097.0,
-              "x": 6354.0,
-              "y": 8075.0
-            },
             "tabIndex": 42,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1097.0,
+            "x": 6354.0,
+            "y": 8075.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1099.0,
-              "x": 1910.0,
-              "y": 2610.0
-            },
             "tabIndex": 2,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1099.0,
+            "x": 1910.0,
+            "y": 2610.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1349.0,
-              "x": 3210.0,
-              "y": 2610.0
-            },
             "tabIndex": 4,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1349.0,
+            "x": 3210.0,
+            "y": 2610.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 99.0,
-              "x": 3060.0,
-              "y": 2610.0
-            },
             "tabIndex": 3,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 99.0,
+            "x": 3060.0,
+            "y": 2610.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 350.0,
-              "x": 4560.0,
-              "y": 2610.0
-            },
             "tabIndex": 5,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 350.0,
+            "x": 4560.0,
+            "y": 2610.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1099.0,
-              "x": 4939.0,
-              "y": 2620.0
-            },
             "tabIndex": 7,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1099.0,
+            "x": 4939.0,
+            "y": 2620.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1349.0,
-              "x": 6239.0,
-              "y": 2620.0
-            },
             "tabIndex": 9,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1349.0,
+            "x": 6239.0,
+            "y": 2620.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 99.0,
-              "x": 6089.0,
-              "y": 2620.0
-            },
             "tabIndex": 8,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 99.0,
+            "x": 6089.0,
+            "y": 2620.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 350.0,
-              "x": 7589.0,
-              "y": 2620.0
-            },
             "tabIndex": 10,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 350.0,
+            "x": 7589.0,
+            "y": 2620.0
           }
         ],
         "pageNo": 1
@@ -1331,644 +971,324 @@
         "active": false,
         "locations": [
           {
+            "height": 250.0,
             "name": "L_GNL_MISC_SIGN_eSignatureClerk1",
-            "pdf": {
-              "height": 250.0,
-              "width": 2599.0,
-              "x": 648.0,
-              "y": 9762.0
-            },
             "tabIndex": 88,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2599.0,
+            "x": 648.0,
+            "y": 9762.0
           },
           {
+            "height": 250.0,
             "name": "L_GNL_MISC_SIGN_eSignatureNotary1a",
-            "pdf": {
-              "height": 250.0,
-              "width": 2599.0,
-              "x": 901.0,
-              "y": 8440.0
-            },
             "tabIndex": 87,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2599.0,
+            "x": 901.0,
+            "y": 8440.0
           },
           {
+            "height": 250.0,
             "name": "L_GNL_MISC_SIGN_eSignatureNewLienholder",
-            "pdf": {
-              "height": 250.0,
-              "width": 2599.0,
-              "x": 4247.0,
-              "y": 6441.0
-            },
             "tabIndex": 66,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2599.0,
+            "x": 4247.0,
+            "y": 6441.0
           },
           {
+            "height": 250.0,
             "name": "L_GNL_MISC_SIGN_eSignatureNewOwner1",
-            "pdf": {
-              "height": 250.0,
-              "width": 2599.0,
-              "x": 4247.0,
-              "y": 6077.0
-            },
             "tabIndex": 65,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2599.0,
+            "x": 4247.0,
+            "y": 6077.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_NewLienholderStreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 4350.0,
-              "y": 3556.0
-            },
             "tabIndex": 62,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 4350.0,
+            "y": 3556.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_NewLienholderCityStateZIP",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 4350.0,
-              "y": 3774.0
-            },
             "tabIndex": 64,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 4350.0,
+            "y": 3774.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_NewLienholderName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 4350.0,
-              "y": 2462.0
-            },
             "tabIndex": 50,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 4350.0,
+            "y": 2462.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_NAME_SIGN_NotaryFullName",
-            "pdf": {
-              "height": 166.0,
-              "width": 2602.0,
-              "x": 4069.0,
-              "y": 7350.0
-            },
             "tabIndex": 69,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2602.0,
+            "x": 4069.0,
+            "y": 7350.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_NAME_SIGN_NotaryFirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 954.0,
-              "x": 4098.0,
-              "y": 7359.0
-            },
             "tabIndex": 70,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 954.0,
+            "x": 4098.0,
+            "y": 7359.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_NAME_SIGN_NotaryLastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1180.0,
-              "x": 5225.0,
-              "y": 7359.0
-            },
             "tabIndex": 72,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1180.0,
+            "x": 5225.0,
+            "y": 7359.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_NAME_SIGN_NotaryMiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 100.0,
-              "x": 5095.0,
-              "y": 7359.0
-            },
             "tabIndex": 71,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 100.0,
+            "x": 5095.0,
+            "y": 7359.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_NAME_SIGN_NotarySuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 266.0,
-              "x": 6396.0,
-              "y": 7359.0
-            },
             "tabIndex": 73,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 266.0,
+            "x": 6396.0,
+            "y": 7359.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3682.0,
-              "x": 579.0,
-              "y": 2462.0
-            },
             "tabIndex": 49,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3682.0,
+            "x": 579.0,
+            "y": 2462.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 775.0,
-              "y": 8034.0
-            },
             "tabIndex": 77,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 775.0,
+            "y": 8034.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3682.0,
-              "x": 579.0,
-              "y": 3045.0
-            },
             "tabIndex": 56,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3682.0,
+            "x": 579.0,
+            "y": 3045.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
-            "pdf": {
-              "height": 166.0,
-              "width": 3016.0,
-              "x": 4331.0,
-              "y": 8054.0
-            },
             "tabIndex": 82,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3016.0,
+            "x": 4331.0,
+            "y": 8054.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_ADDR_SIGN_NotaryCounty",
-            "pdf": {
-              "height": 166.0,
-              "width": 1766.0,
-              "x": 4677.0,
-              "y": 6967.0
-            },
             "tabIndex": 68,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1766.0,
+            "x": 4677.0,
+            "y": 6967.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_ADDR_SIGN_NotaryState",
-            "pdf": {
-              "height": 166.0,
-              "width": 1766.0,
-              "x": 1482.0,
-              "y": 6967.0
-            },
             "tabIndex": 67,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1766.0,
+            "x": 1482.0,
+            "y": 6967.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_DATE_SIGN_NotaryDay",
-            "pdf": {
-              "height": 166.0,
-              "width": 433.0,
-              "x": 2302.0,
-              "y": 7671.0
-            },
             "tabIndex": 74,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 433.0,
+            "x": 2302.0,
+            "y": 7671.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_DATE_SIGN_NotaryMonth",
-            "pdf": {
-              "height": 166.0,
-              "width": 1099.0,
-              "x": 3343.0,
-              "y": 7671.0
-            },
             "tabIndex": 75,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1099.0,
+            "x": 3343.0,
+            "y": 7671.0
           },
           {
+            "height": 166.0,
             "name": "C_GNL_DATE_SIGN_NotaryYear",
-            "pdf": {
-              "height": 166.0,
-              "width": 433.0,
-              "x": 4711.0,
-              "y": 7671.0
-            },
             "tabIndex": 76,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 433.0,
+            "x": 4711.0,
+            "y": 7671.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_NewOwner1StreetAddress",
-            "pdf": {
-              "height": 166.0,
-              "width": 2600.0,
-              "x": 579.0,
-              "y": 3556.0
-            },
             "tabIndex": 61,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2600.0,
+            "x": 579.0,
+            "y": 3556.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDR_TITL_NewOwner1CityStateZIP",
-            "pdf": {
-              "height": 166.0,
-              "width": 2600.0,
-              "x": 579.0,
-              "y": 3774.0
-            },
             "tabIndex": 63,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 2600.0,
+            "x": 579.0,
+            "y": 3774.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_ADDL_TITL_TitleVestedOwnership",
-            "pdf": {
-              "height": 166.0,
-              "width": 3516.0,
-              "x": 579.0,
-              "y": 2751.0
-            },
             "tabIndex": 55,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 3516.0,
+            "x": 579.0,
+            "y": 2751.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1347.0,
-              "x": 640.0,
-              "y": 2472.0
-            },
             "tabIndex": 51,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1347.0,
+            "x": 640.0,
+            "y": 2472.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1099.0,
-              "x": 825.0,
-              "y": 8044.0
-            },
             "tabIndex": 78,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1099.0,
+            "x": 825.0,
+            "y": 8044.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1600.0,
-              "x": 2217.0,
-              "y": 2472.0
-            },
             "tabIndex": 53,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1600.0,
+            "x": 2217.0,
+            "y": 2472.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1349.0,
-              "x": 2125.0,
-              "y": 8044.0
-            },
             "tabIndex": 80,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1349.0,
+            "x": 2125.0,
+            "y": 8044.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 121.0,
-              "x": 2035.0,
-              "y": 2472.0
-            },
             "tabIndex": 52,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 121.0,
+            "x": 2035.0,
+            "y": 2472.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 99.0,
-              "x": 1975.0,
-              "y": 8044.0
-            },
             "tabIndex": 79,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 99.0,
+            "x": 1975.0,
+            "y": 8044.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 363.0,
-              "x": 3854.0,
-              "y": 2472.0
-            },
             "tabIndex": 54,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 363.0,
+            "x": 3854.0,
+            "y": 2472.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner1SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 350.0,
-              "x": 3475.0,
-              "y": 8044.0
-            },
             "tabIndex": 81,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 350.0,
+            "x": 3475.0,
+            "y": 8044.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1350.0,
-              "x": 640.0,
-              "y": 3055.0
-            },
             "tabIndex": 57,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1350.0,
+            "x": 640.0,
+            "y": 3055.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2FirstName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1099.0,
-              "x": 4381.0,
-              "y": 8064.0
-            },
             "tabIndex": 83,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1099.0,
+            "x": 4381.0,
+            "y": 8064.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1599.0,
-              "x": 2220.0,
-              "y": 3055.0
-            },
             "tabIndex": 59,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1599.0,
+            "x": 2220.0,
+            "y": 3055.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2LastName",
-            "pdf": {
-              "height": 166.0,
-              "width": 1349.0,
-              "x": 5681.0,
-              "y": 8064.0
-            },
             "tabIndex": 85,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 1349.0,
+            "x": 5681.0,
+            "y": 8064.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 121.0,
-              "x": 2038.0,
-              "y": 3055.0
-            },
             "tabIndex": 58,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 121.0,
+            "x": 2038.0,
+            "y": 3055.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
-            "pdf": {
-              "height": 166.0,
-              "width": 99.0,
-              "x": 5531.0,
-              "y": 8064.0
-            },
             "tabIndex": 84,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 99.0,
+            "x": 5531.0,
+            "y": 8064.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 364.0,
-              "x": 3861.0,
-              "y": 3055.0
-            },
             "tabIndex": 60,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 364.0,
+            "x": 3861.0,
+            "y": 3055.0
           },
           {
+            "height": 166.0,
             "name": "L_GNL_NAME_TITL_Owner2SuffixName",
-            "pdf": {
-              "height": 166.0,
-              "width": 350.0,
-              "x": 7031.0,
-              "y": 8064.0
-            },
             "tabIndex": 86,
-            "view": {
-              "height": 0.0,
-              "width": 0.0,
-              "x": 0.0,
-              "y": 0.0
-            }
+            "width": 350.0,
+            "x": 7031.0,
+            "y": 8064.0
           }
         ],
         "pageNo": 2
@@ -1977,8 +1297,7 @@
     "pageSize": {
       "height": 11000,
       "width": 8500
-    },
-    "scale": null
+    }
   },
   "id": "251NV",
   "pdfBytes": null,

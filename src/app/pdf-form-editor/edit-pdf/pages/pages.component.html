@@ -36,8 +36,10 @@
   </div>
   <div class="panel-body">
     <div class="tab-content">
-      <div class="formView">
-        <page #childPage *ngFor="let page of document.form.pages" [data]="document.form.data" [page]="page" [class.active]="false"></page>
+        <h1>TEST {{formPages}}</h1>
+      <div *ngIf="formPages != null"  class="formView">
+        <h1>{{formPages}}</h1>
+        <page  *ngFor="let page of formPages" [formPage]="page" [class.active]="false"></page>
       </div>
       <div class="pdfView">
         <display-pdf #viewer 

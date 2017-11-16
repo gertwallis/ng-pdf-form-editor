@@ -9,16 +9,21 @@ export namespace Model {
         Unknown = 0,
         AlphaNumeric = 1,
         Integer = 2,
-        Date = 3,
-        Dollar = 4,
-        Percent = 5,
-        Number = 6,
-        PhoneNumber = 7,
-        Signature = 8
+        CheckBox = 3,
+        TextArea = 4,
+        Date = 5,
+        Dollar = 6,
+        Percent = 7,
+        Number = 8,
+        PhoneNumber = 9,
+        Signature = 10,
+        SocialSecurityNumber = 11,
+        State = 12
     }
 
 
     export class FieldData extends Describe {
+        state: DisplayState;
         format: Format;
         value: string;
         maxChar: number;
@@ -27,11 +32,11 @@ export namespace Model {
     export enum DisplayState {
         None = 0,
         Saved = 1,
-        Captured = 1
+        Captured = 2,
+        Hidden = 3
     }
 
     export class FormData {
-        displayState: DisplayState = DisplayState.None;
         fields: FieldData[] = [];
     }
 
@@ -42,38 +47,36 @@ export namespace Model {
 
     export class Location extends Size {
         // Corresponds to Field.Name
+        name: string;
+        tabIndex: number;
         x: number;
         y: number;
     }
 
-    export class ScaledLocation {
-        name: string;
-        // pageNo: number;
-        tabIndex: number;
-
-        pdf: Location = new Location();
-        view: Location = new Location();
-    }
-
-    // Scale to convert from PDF coordinates to View
-    export class Scale extends Size {
-        horiz: number;
-        vertical: number;
+    // FormField combines the FieldData and Location into a single model.
+    export class FormField {
+        state: DisplayState = DisplayState.None;
+        location: Location = new Location();
+        data: FieldData = new FieldData();
     }
 
     export class Page {
-        active: boolean;
         pageNo: number;
         // pageSize: Size;
-        locations: ScaledLocation[] = [];
+        locations: Location[] = [];
+    }
+
+    export class FormPage {
+        active: boolean;
+        pageNo: number;
+        fields: FormField[] = [];
 
         editable(): boolean {
-            return this.locations.length > 0;
+            return this.fields.length > 0;
         }
     }
 
     export class Form {
-        public scale: Scale;
 
         pages?: Page[] = [];
         data?: FormData = new FormData();

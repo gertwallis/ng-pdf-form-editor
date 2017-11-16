@@ -1,9 +1,5 @@
 <div [ngStyle]="locationStyle" [tabindex]="tabIndex" (focus)="gotFocus()">
-        <!-- [className]="editingClass" -->
-        <!-- [ngClass]="{'inactiveStyle': !busyEditing, 'editStyle': busyEditing}" -->
-        <div #editContainer 
-          [ngStyle]="editingStyle"
-        >
+    <div [ngStyle]="editingStyle">
         <text [data]="data" [location]="location" (doneEditing)="doneEditing($event)"></text>
     </div>
 </div>

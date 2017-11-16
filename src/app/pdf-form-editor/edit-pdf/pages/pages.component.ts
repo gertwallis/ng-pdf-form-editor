@@ -16,12 +16,14 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   @Input() document: Model.Document = null;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
-  @ViewChildren(PageComponent) pages: QueryList<PageComponent>;
+  @ViewChildren(PageComponent) pageViews: QueryList<PageComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
 
   pageNo: number;
   editMode = false;
   currentZoom = 0;
+
+  formPages: Model.FormPage[] = null;
 
   constructor() {
     this.pageNo = 1;
@@ -32,13 +34,14 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   public ngAfterContentInit(): void {
     this.viewer.pdfSrc = this.document.url;
+    this.buildFormModel();
   }
 
   toggleEdit() {
     this.editMode = !this.editMode;
 
     this.document.form.pages.forEach(page => {
-      page.active = this.editMode;
+      // page.active = this.editMode;
       if (page.locations.length === 0) {
         const tab = this.tabs.find(t => t.pageNo === page.pageNo);
         tab.disabled = this.editMode;
@@ -51,6 +54,40 @@ export class PagesComponent implements OnInit, AfterContentInit {
     this.viewer.incrementPage(1);
     this.pageNo = (this.pageNo === this.document.form.pages.length) ? 1 : this.pageNo + 1;
     this.setPage(this.pageNo);
+  }
+
+  buildFormModel() {
+
+    for (let page of this.document.form.pages) {
+      const formPage = new Model.FormPage();
+
+      formPage.pageNo = page.pageNo;
+
+      console.log('PAGENO:' + page.pageNo);
+      for (let location of page.locations) {
+        const formField = new Model.FormField();
+        formField.data = this.getFieldData(location.name);
+        if (formField.data.state != Model.DisplayState.Hidden) {
+          formField.location = location;
+          formPage.fields.push(formField);
+        }
+      }
+    }
+  }
+
+  getFieldData(fieldName): Model.FieldData {
+    const fields = this.document.form.data.fields.filter(x => x.name === name);
+
+    // Expecting to find only one but if more - return first.
+    if (fields.length > 0) {
+      return fields[0];
+    }
+
+    // Returning an empty object - the use case is generally to display the data field.
+    // for a location. Bad data but returning an undefined will trow an error in the UI
+    // based on bad data. Should probably do avalidation check for good data. but don't want
+    // UI have to check for bad data.
+    return new Model.FieldData();
   }
 
   incrementZoom(amount: number) {
@@ -70,7 +107,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
   setPage(no: number) {
     this.pageNo = no;
     const TabComponent = this.tabs.filter(page => page.pageNo === this.pageNo);
-    const PageComponent = this.pages.filter(x => x.page.pageNo === this.pageNo);
+    const PageComponent = this.pageViews.filter(x => x.formPage.pageNo === this.pageNo);
 
     if (TabComponent.length === 1 && PageComponent.length === 1) {
       this.selectPage(TabComponent[0], PageComponent[0]);
@@ -78,24 +115,24 @@ export class PagesComponent implements OnInit, AfterContentInit {
   }
 
   setScale(size: Model.Size) {
-    if (this.pages && this.currentZoom !== this.viewer.zoom) {
+    if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
       this.currentZoom = this.viewer.zoom;
 
-      const scale = new Model.Scale();
-      scale.width = size.width;
-      scale.height = size.height;
+      // const size = new Model.Size();
+      // size.width = size.width;
+      // size.height = size.height;
 
-      scale.horiz = scale.width / this.document.form.pageSize.width;
-      scale.vertical = scale.height / this.document.form.pageSize.height;
+      const horiz = size.width / this.document.form.pageSize.width;
+      const vertical = size.height / this.document.form.pageSize.height;
 
-      this.pages.forEach(page => {
+      this.pageViews.forEach(page => {
         page.setPageSize(size.width, size.height);
         page.fieldView.forEach(field => {
           field.setLocation(
-            field.pdf.x * scale.horiz,
-            field.pdf.y * scale.vertical,
-            field.pdf.width * scale.horiz,
-            field.pdf.height * scale.vertical);
+            field.formField.location.x * horiz,
+            field.formField.location.y * vertical,
+            field.formField.location.width * horiz,
+            field.formField.location.height * vertical);
         });
       });
     }
@@ -104,7 +141,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
   selectPage(newTab: TabComponent, newPage: PageComponent) {
     // deactivate all page tabs
     this.tabs.toArray().forEach(page => page.active = false);
-    this.pages.toArray().forEach(page => page.active = false);
+    this.pageViews.toArray().forEach(page => page.active = false);
 
     // activate the tab the user has clicked on.
     newTab.active = true;

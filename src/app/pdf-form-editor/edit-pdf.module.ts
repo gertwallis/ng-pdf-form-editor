@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
@@ -24,6 +25,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
 
 @NgModule({
   imports: [
+    FormsModule,
     CommonModule,
     PdfViewerModule,
   ],

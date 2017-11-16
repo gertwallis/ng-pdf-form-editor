@@ -9,61 +9,66 @@ import { Model } from './../../model/PdfForm';
 })
 export class FieldComponent implements OnInit {
 
-  @Input() data: Model.FieldData;
-  @Input() pdf: Model.Location;
-  @Input() tabIndex: number;
 
-  // @ViewChild('editContainer') editContainer: ElementRef;
+  @Input() formField: Model.FormField;
 
-  location: Model.Location;
+  private x = 0;
+  private y = 0;
+  private width = 0;
+  private height = 0;
 
   locationStyle: {};
 
-  busyEditing: boolean = false;
-  public editingClass = 'inactiveStyle';
   editingStyle: {};
 
   constructor() {
-    this.location = new Model.Location();
   }
 
   ngOnInit() {
     this.editingStyle = {
       'display': 'none',
-    }
+    };
   }
 
   gotFocus() {
-    console.log('Got Focus:' + this.data.name);
+    console.log('Got Focus:' + this.formField.data.name);
     // this.editingClass = 'editStyle'
 
     this.editingStyle = {
       'display': 'block',
-      'width': this.location.width + 'px',
-      'height': this.location.height + 'px'
-    }
+      'width': this.width + 'px',
+      'height': this.height + 'px'
+    };
   }
 
   doneEditing(value) {
-    console.log('Done  editing:' + value);
+    this.editingStyle = {
+      'display': 'none',
+    };
+
+    this.formField.data = value;
+  }
+
+  dataChanged(something) {
+    console.log('Done  editing:' + something);
     this.editingStyle = {
       'display': 'none',
     };
   }
 
   setLocation(x: number, y: number, width: number, height: number) {
-    this.location.x = x;
-    this.location.y = y;
-    this.location.width = width;
-    this.location.height = height;
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
 
     this.locationStyle = {
       'position': 'absolute',
-      'left': this.location.x + 'px',
-      'top': this.location.y + 'px',
-      'width': this.location.width + 'px',
-      'height': this.location.height + 'px',
-      'background-color': 'lightgreen',
+      'left': x + 'px',
+      'top': y + 'px',
+      'width': width + 'px',
+      'height': height + 'px',
+      'background-color': 'lightpink',
       'border': '1px solid black'
     };
   }

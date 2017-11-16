@@ -16,10 +16,11 @@ export class TextComponent implements OnInit {
 
   constructor() { }
 
-  test() {
-    this.doneEditing.emit(this.data.value);
+  leavingField(currentValue) {
+    // console.log("Test blur function called" + currentValue);
+    this.doneEditing.emit(currentValue);
   }
-    
+
   ngOnInit() {
   }
 }

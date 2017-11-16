@@ -59,8 +59,8 @@ export class DisplayPdfComponent {
         const pageElement = document.getElementsByClassName('page');
 
         if (pageElement.length === 1) {
-            let size = new Model.Size();
-            size.width = pageElement[0].clientWidth,
+            const size = new Model.Size();
+            size.width = pageElement[0].clientWidth;
             size.height = pageElement[0].clientHeight;
 
             this.scaleChange.emit(size);

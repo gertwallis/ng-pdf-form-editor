@@ -1,5 +1,7 @@
 <input class="test" 
        [name]="data.name" 
-       [value]="data.value"
+       [(ngModel)]="data.value"
        style='width:100%'
-       (click)='test()'>
+       (blur)="leavingField(data.value)">
+
+       
