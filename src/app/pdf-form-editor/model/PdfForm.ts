@@ -62,11 +62,7 @@ export namespace Model {
     }
 
     export class Page {
-<<<<<<< HEAD
-        isShown: boolean;
-=======
         active: boolean;
->>>>>>> 66695d728aa0f6d657ca57958603f8eda048eb6c
         pageNo: number;
         // pageSize: Size;
         locations: ScaledLocation[] = [];
@@ -77,7 +73,7 @@ export namespace Model {
     }
 
     export class Form {
-        public  scale: Scale;
+        public scale: Scale;
 
         pages?: Page[] = [];
         data?: FormData = new FormData();
