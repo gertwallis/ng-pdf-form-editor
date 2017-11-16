@@ -12,13 +12,13 @@ export class DisplayPdfComponent {
 
     @Input() public pdfSrc: string;
     @Input() public page = 1;
-
+    @Input() public zoom = 1.0;
+    
     @Input() private originalSize = true;
     @Input() private renderText = false;
     @Input() private rotation = 0;
     @Input() private showAll = false;
-    @Input() private zoom = 1.0;
-
+ 
     private pdf: PDFDocumentProxy;
 
     constructor() {

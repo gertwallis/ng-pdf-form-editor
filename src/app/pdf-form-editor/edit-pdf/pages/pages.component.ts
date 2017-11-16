@@ -1,5 +1,5 @@
 import { DisplayPdfComponent } from './../display/display-pdf.component';
-import { AfterContentInit, AfterViewInit, Component, ContentChildren, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren, } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList, ViewChild, ViewChildren, } from '@angular/core';
 
 import { TabComponent } from './../tab/tab.component';
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
@@ -21,6 +21,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   pageNo: number;
   editMode = false;
+  currentZoom = 0;
 
   constructor() {
     this.pageNo = 1;
@@ -31,27 +32,44 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   public ngAfterContentInit(): void {
     this.viewer.pdfSrc = this.document.url;
-    this.setScale(800, 1056);
   }
 
   toggleEdit() {
     this.editMode = !this.editMode;
 
     // Make non editible pages to enabled / disabled.
-    const staticPages = this.document.form.pages.filter(x => !(x.locations.length > 0));
-    for (let i = 0; i < staticPages.length; i++) {
-      const tab = this.tabs.find(x => x.pageNo === staticPages[i].pageNo);
-      tab.disabled = this.editMode;
-    }
+    // const staticPages = this.document.form.pages.filter(x => !(x.locations.length > 0));
+    // for (let i = 0; i < staticPages.length; i++) {
+    //   const tab = this.tabs.find(x => x.pageNo === staticPages[i].pageNo);
+    //   tab.disabled = this.editMode;
+    // }
 
-    this.setScale(document.getElementsByClassName('page')[0].clientWidth,
-      document.getElementsByClassName('page')[0].clientHeight);
+    this.document.form.pages.forEach(page => {
+      page.active = this.editMode;
+      if (page.locations.length === 0) {
+        const tab = this.tabs.find(t => t.pageNo === page.pageNo);
+        tab.disabled = this.editMode;
+      }
+
+    });
+
+    this.setScale();
   }
 
   nextPage() {
     this.viewer.incrementPage(1);
     this.pageNo = (this.pageNo === this.document.form.pages.length) ? 1 : this.pageNo + 1;
     this.setPage(this.pageNo);
+  }
+
+  incrementZoom(amount: number) {
+    this.viewer.incrementZoom(amount);
+    this.setScale();
+
+  }
+
+  resetZoom() {
+    this.viewer.zoom = 1;
   }
 
   previousPage() {
@@ -70,9 +88,12 @@ export class PagesComponent implements OnInit, AfterContentInit {
     }
   }
 
-  setScale(width: number, height: number) {
-    if (this.pages) {
+  setScale() {
+    if (this.pages && this.currentZoom !== this.viewer.zoom) {
+      this.currentZoom = this.viewer.zoom;
 
+      const width = document.getElementsByClassName('page')[0].clientWidth;
+      const height = document.getElementsByClassName('page')[0].clientHeight;
       // TODO: Get the scale based of the pdf viewport.
       const scale = new Model.Scale();
       scale.width = width;

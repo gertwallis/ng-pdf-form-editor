@@ -15,7 +15,7 @@ import { Model } from './../../model/PdfForm';
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
-export class PageComponent implements OnInit{
+export class PageComponent implements OnInit {
 
   @Input() active = false;
   @Input() page: Model.Page;
