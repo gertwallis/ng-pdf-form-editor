@@ -37,13 +37,6 @@ export class PagesComponent implements OnInit, AfterContentInit {
   toggleEdit() {
     this.editMode = !this.editMode;
 
-    // Make non editible pages to enabled / disabled.
-    // const staticPages = this.document.form.pages.filter(x => !(x.locations.length > 0));
-    // for (let i = 0; i < staticPages.length; i++) {
-    //   const tab = this.tabs.find(x => x.pageNo === staticPages[i].pageNo);
-    //   tab.disabled = this.editMode;
-    // }
-
     this.document.form.pages.forEach(page => {
       page.active = this.editMode;
       if (page.locations.length === 0) {
@@ -52,8 +45,6 @@ export class PagesComponent implements OnInit, AfterContentInit {
       }
 
     });
-
-    this.setScale();
   }
 
   nextPage() {
@@ -64,8 +55,6 @@ export class PagesComponent implements OnInit, AfterContentInit {
 
   incrementZoom(amount: number) {
     this.viewer.incrementZoom(amount);
-    this.setScale();
-
   }
 
   resetZoom() {
@@ -88,22 +77,19 @@ export class PagesComponent implements OnInit, AfterContentInit {
     }
   }
 
-  setScale() {
+  setScale(size: Model.Size) {
     if (this.pages && this.currentZoom !== this.viewer.zoom) {
       this.currentZoom = this.viewer.zoom;
 
-      const width = document.getElementsByClassName('page')[0].clientWidth;
-      const height = document.getElementsByClassName('page')[0].clientHeight;
-      // TODO: Get the scale based of the pdf viewport.
       const scale = new Model.Scale();
-      scale.width = width;
-      scale.height = height;
+      scale.width = size.width;
+      scale.height = size.height;
 
       scale.horiz = scale.width / this.document.form.pageSize.width;
       scale.vertical = scale.height / this.document.form.pageSize.height;
 
       this.pages.forEach(page => {
-        page.setPageSize(width, height);
+        page.setPageSize(size.width, size.height);
         page.fieldView.forEach(field => {
           field.setLocation(
             field.pdf.x * scale.horiz,

@@ -1,5 +1,5 @@
 ﻿import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
-import { Component, EventEmitter, Input, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Model } from 'app/pdf-form-editor/model/PdfForm';
 
 @Component({
@@ -20,7 +20,7 @@ export class DisplayPdfComponent {
     @Input() private rotation = 0;
     @Input() private showAll = false;
 
-    scaleChange: EventEmitter<Model.Size>;
+    @Output() scaleChange = new EventEmitter<Model.Size>();
 
     private pdf: PDFDocumentProxy;
 
@@ -55,8 +55,17 @@ export class DisplayPdfComponent {
         this.rotation += angle;
     }
 
-    private test() {
-        console.log('Changed');
+    private pageChanged() {
+
+        const pageElement = document.getElementsByClassName('page');
+
+        if (pageElement.length === 1) {
+            let size = new Model.Size();
+            size.width = pageElement[0].clientWidth,
+            size.height = pageElement[0].clientHeight;
+
+            this.scaleChange.emit(size);
+        }
     }
 
     private afterLoadComplete(pdf: PDFDocumentProxy) {
