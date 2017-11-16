@@ -36,7 +36,6 @@
   </div>
   <div class="panel-body">
     <div class="tab-content">
-      <!-- <display-pdf #viewer [pdfSrc]="'assets/247OR.PDF'" [zoom]="1.25" [showAll]="false" style="display:block"></display-pdf> -->
       <div class="formView">
         <page #childPage *ngFor="let page of document.form.pages" [data]="document.form.data" [page]="page" [class.active]="false"></page>
       </div>

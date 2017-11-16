@@ -1,5 +1,4 @@
-﻿<div class="page-content">
-    <!-- 
+﻿    <!-- 
     <input type="checkbox" id="original-size" [checked]="originalSize" [(ngModel)]="originalSize" size="2">
     <button (click)="incrementZoom(-0.1)">-</button>
     <input [(ngModel)]="zoom" [value]="zoom" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="pdf-zoom" size="2">
@@ -25,4 +24,3 @@
     <pdf-viewer #pdfViewer [src]="pdfSrc" [(page)]="page" [rotation]="rotation" [original-size]="originalSize" [show-all]="showAll"
         (after-load-complete)="afterLoadComplete($event)" [zoom]="zoom" [render-text]="false">
     </pdf-viewer>
-</div>
