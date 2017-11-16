@@ -33,21 +33,6 @@ export namespace Model {
     export class FormData {
         displayState: DisplayState = DisplayState.None;
         fields: FieldData[] = [];
-
-        findField(name: string) {
-            const field = this.fields.filter(x => x.name === name);
-
-            // Expecting to find only one but if more - return first.
-            if (field.length > 0) {
-                return field[0];
-            }
-
-            // Returning an empty object - the use case is generally to display the data field.
-            // for a location. Bad data but returning an undefined will trow an error in the UI
-            // based on bad data. Should probably do avalidation check for good data. but don't want 
-            // UI have to check for bad data.
-            return new FieldData();
-        }
     }
 
     export class Size {
@@ -63,7 +48,7 @@ export namespace Model {
 
     export class ScaledLocation {
         name: string;
-        pageNo: number;
+        // pageNo: number;
         tabIndex: number;
 
         pdf: Location = new Location();
@@ -77,9 +62,13 @@ export namespace Model {
     }
 
     export class Page {
+<<<<<<< HEAD
         isShown: boolean;
+=======
+        active: boolean;
+>>>>>>> 66695d728aa0f6d657ca57958603f8eda048eb6c
         pageNo: number;
-        pageSize: Size;
+        // pageSize: Size;
         locations: ScaledLocation[] = [];
 
         editable(): boolean {
@@ -88,41 +77,19 @@ export namespace Model {
     }
 
     export class Form {
-        private _scale: Scale;
+        public  scale: Scale;
 
         pages?: Page[] = [];
         data?: FormData = new FormData();
         pageSize?: Size;
-        shown?: boolean;
-
-        public get scale(): Scale {
-            return this._scale;
-        }
-
-        public set scale(scale: Scale) {
-            this._scale = scale;
-
-            // Note: may want to change this to a QueryList or make it
-            // an observable pattern to propagate changes to UI.
-            for (const page of this.pages) {
-                for (const location of page.locations) {
-                    location.view.y = location.pdf.y * scale.vertical;
-                    location.view.height = location.pdf.height * scale.vertical;
-
-                    location.view.x = location.pdf.x * scale.horiz;
-                    location.view.width = location.pdf.width * scale.horiz;
-                }
-            }
-        }
-
-        noOfPages(): number {
-            return this.pages.length;
-        };
-
+        active?: boolean;
     }
 
     export class Document {
+        id: string;
         form: Form = new Form();
+        title: string;
+        description: string;
         url?: string;
         pdfBytes?: string;
     }

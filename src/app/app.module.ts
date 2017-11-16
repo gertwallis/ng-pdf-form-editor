@@ -8,10 +8,15 @@ import { AppComponent } from './app.component';
 
 import { PdfEditModule } from './pdf-form-editor/edit-pdf.module';
 import { PdfEditComponent } from './pdf-form-editor/edit-pdf.component';
+import { MessagesComponent } from './messages/messages.component';
+
+import { MessageService } from './pdf-form-editor/service/message.service';
+import { PdfService } from './pdf-form-editor/service/pdf.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +24,7 @@ import { PdfEditComponent } from './pdf-form-editor/edit-pdf.component';
     HttpModule,
     PdfEditModule
   ],
-  providers: [],
+  providers: [PdfService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { DisplayPdfComponent } from './../display/display-pdf.component';
 import {
+<<<<<<< HEAD
     AfterContentInit,
     AfterViewInit,
     Component,
@@ -10,6 +11,18 @@ import {
     QueryList,
     ViewChild,
     ViewChildren,
+=======
+  AfterContentInit,
+  AfterViewInit,
+  Component,
+  ContentChildren,
+  ElementRef,
+  Input,
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+>>>>>>> 66695d728aa0f6d657ca57958603f8eda048eb6c
 } from '@angular/core';
 
 import { TabComponent } from './../tab/tab.component';
@@ -25,14 +38,17 @@ import { Model } from './../../model/PdfForm';
 })
 export class PagesComponent implements OnInit, AfterContentInit {
 
-  @Input() document: Model.Document;
+  @Input() document: Model.Document = null;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChildren(PageComponent) pages: QueryList<PageComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
 
   pageNo: number;
   editMode = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 66695d728aa0f6d657ca57958603f8eda048eb6c
 
   constructor() {
     this.pageNo = 1;
@@ -41,37 +57,51 @@ export class PagesComponent implements OnInit, AfterContentInit {
   ngOnInit() {
   }
 
+<<<<<<< HEAD
   public nonteNontInit(): void {
     this.viewer.pdfSrc = this.document.url;
   }
 
   public ngAfterContentInit(): void {
       this.setScale(800, 1056);
+=======
+  public ngAfterContentInit(): void {
+    this.viewer.pdfSrc = this.document.url;
+    this.setScale(800, 1056);
+>>>>>>> 66695d728aa0f6d657ca57958603f8eda048eb6c
   }
 
   toggleEdit() {
     this.editMode = !this.editMode;
 
     // Make non editible pages to enabled / disabled.
+<<<<<<< HEAD
     const staticPages = this.document.form.pages.filter(x => !x.editable());
+=======
+    const staticPages = this.document.form.pages.filter(x => !(x.locations.length > 0));
+>>>>>>> 66695d728aa0f6d657ca57958603f8eda048eb6c
     for (let i = 0; i < staticPages.length; i++) {
       const tab = this.tabs.find(x => x.pageNo === staticPages[i].pageNo);
       tab.disabled = this.editMode;
     }
 
     this.setScale(document.getElementsByClassName('page')[0].clientWidth,
+<<<<<<< HEAD
                   document.getElementsByClassName('page')[0].clientHeight);
+=======
+      document.getElementsByClassName('page')[0].clientHeight);
+>>>>>>> 66695d728aa0f6d657ca57958603f8eda048eb6c
   }
 
   nextPage() {
     this.viewer.incrementPage(1);
-    this.pageNo = (this.pageNo === this.document.form.noOfPages()) ? 1 : this.pageNo + 1;
+    this.pageNo = (this.pageNo === this.document.form.pages.length) ? 1 : this.pageNo + 1;
     this.setPage(this.pageNo);
   }
 
   previousPage() {
     this.viewer.incrementPage(-1);
-    this.pageNo = (this.pageNo === 1) ? this.document.form.noOfPages() : this.pageNo - 1;
+    this.pageNo = (this.pageNo === 1) ? this.document.form.pages.length : this.pageNo - 1;
     this.setPage(this.pageNo);
   }
 
@@ -85,6 +115,7 @@ export class PagesComponent implements OnInit, AfterContentInit {
     }
   }
 
+<<<<<<< HEAD
   setScale(width:number, height: number) {
     // TODO: Get the scale based of the pdf viewport.
     const scale = new Model.Scale();
@@ -94,6 +125,40 @@ export class PagesComponent implements OnInit, AfterContentInit {
     scale.horiz = scale.width / this.document.form.pageSize.width;
     scale.vertical = scale.height / this.document.form.pageSize.height;
     this.document.form.scale = scale;
+=======
+  setScale(width: number, height: number) {
+    if (this.pages) {
+
+      // TODO: Get the scale based of the pdf viewport.
+      const scale = new Model.Scale();
+      scale.width = width;
+      scale.height = height;
+
+      scale.horiz = scale.width / this.document.form.pageSize.width;
+      scale.vertical = scale.height / this.document.form.pageSize.height;
+
+      this.pages.forEach(page => {
+        page.fieldView.forEach(field => {
+          field.setLocation(
+          field.pdf.x * scale.horiz,
+          field.pdf.y * scale.vertical,
+          field.pdf.width * scale.horiz,
+          field.pdf.height * scale.vertical);
+        });
+      });
+    }
+    // for (const page of this.pages) {
+    //   for (const location of page.locations) {
+    //       location.view.y = location.pdf.y * scale.vertical;
+    //       location.view.height = location.pdf.height * scale.vertical;
+
+    //       location.view.x = location.pdf.x * scale.horiz;
+    //       location.view.width = location.pdf.width * scale.horiz;
+    //   }
+    //}
+
+    // this.document.form.scale = scale;
+>>>>>>> 66695d728aa0f6d657ca57958603f8eda048eb6c
   }
 
   selectPage(newTab: TabComponent, newPage: PageComponent) {

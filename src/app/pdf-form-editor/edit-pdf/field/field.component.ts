@@ -10,16 +10,44 @@ import { Model } from './../../model/PdfForm';
 export class FieldComponent implements OnInit, AfterContentInit {
 
   @Input() data: Model.FieldData;
-  @Input() location: Model.Location;
+  @Input() pdf: Model.Location;
   @Input() tabIndex: number;
 
-  constructor() { }
+  location: Model.Location;
+   
+  locationStyle: {};
+
+  constructor() {
+    this.location = new Model.Location();
+   }
 
   ngOnInit() {
   }
+  
+  setLocation(x: number, y: number, width: number, height: number) {
+     this.location.x = x;
+     this.location.y = y;
+    this.location.width = width;
+     this.location.height = height;
 
+     this.locationStyle = {
+      'position': 'absolute',
+      'left': this.location.x + 'px',
+      'top': this.location.y + 'px',
+      'width': this.location.width + 'px',
+      'height': this.location.height + 'px',
+    };
+     console.log("UPDATED: " + this.data.name);
+}
 
-    public ngAfterContentInit(): void {
-      //console.log(this.Location.Name);
-    }
+  public ngAfterContentInit(): void {
+    // this.locationStyle = {
+    //   'position': 'absolute',
+    //   'left': this.location.x + 'px',
+    //   'top': this.location.y + 'px',
+    //   'width': this.location.width + 'px',
+    //   'height': this.location.height + 'px',
+    // };
+
+  }
 }
