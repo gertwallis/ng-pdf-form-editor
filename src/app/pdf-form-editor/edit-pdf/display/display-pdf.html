@@ -21,6 +21,13 @@
     <span>Render text layer</span>
     -->
 
-    <pdf-viewer #pdfViewer [src]="pdfSrc" [(page)]="page" [rotation]="rotation" [original-size]="originalSize" [show-all]="showAll"
-        (after-load-complete)="afterLoadComplete($event)" [zoom]="zoom" [render-text]="false">
+    <pdf-viewer #pdfViewer [src]="pdfSrc" 
+        [(page)]="page" 
+        [rotation]="rotation" 
+        [original-size]="originalSize" 
+        [show-all]="showAll"
+        [zoom]="zoom" 
+        [render-text]="false"
+        (after-load-complete)="afterLoadComplete($event)" 
+        (pageChange)="test()">
     </pdf-viewer>

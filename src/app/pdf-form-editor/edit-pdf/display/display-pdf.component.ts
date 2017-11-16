@@ -1,5 +1,6 @@
 ﻿import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, ViewChild } from '@angular/core';
+import { Model } from 'app/pdf-form-editor/model/PdfForm';
 
 @Component({
     // tslint:disable-next-line:component-selector
@@ -13,12 +14,14 @@ export class DisplayPdfComponent {
     @Input() public pdfSrc: string;
     @Input() public page = 1;
     @Input() public zoom = 1.0;
-    
+
     @Input() private originalSize = true;
     @Input() private renderText = false;
     @Input() private rotation = 0;
     @Input() private showAll = false;
- 
+
+    scaleChange: EventEmitter<Model.Size>;
+
     private pdf: PDFDocumentProxy;
 
     constructor() {
@@ -52,6 +55,9 @@ export class DisplayPdfComponent {
         this.rotation += angle;
     }
 
+    private test() {
+        console.log('Changed');
+    }
 
     private afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
