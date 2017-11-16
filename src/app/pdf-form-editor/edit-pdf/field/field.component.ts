@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 import { Model } from './../../model/PdfForm';
 
@@ -13,15 +13,42 @@ export class FieldComponent implements OnInit {
   @Input() pdf: Model.Location;
   @Input() tabIndex: number;
 
+  // @ViewChild('editContainer') editContainer: ElementRef;
+
   location: Model.Location;
 
   locationStyle: {};
+
+  busyEditing: boolean = false;
+  public editingClass = 'inactiveStyle';
+  editingStyle: {};
 
   constructor() {
     this.location = new Model.Location();
   }
 
   ngOnInit() {
+    this.editingStyle = {
+      'display': 'none',
+    }
+  }
+
+  gotFocus() {
+    console.log('Got Focus:' + this.data.name);
+    // this.editingClass = 'editStyle'
+
+    this.editingStyle = {
+      'display': 'block',
+      'width': this.location.width + 'px',
+      'height': this.location.height + 'px'
+    }
+  }
+
+  doneEditing(value) {
+    console.log('Done  editing:' + value);
+    this.editingStyle = {
+      'display': 'none',
+    };
   }
 
   setLocation(x: number, y: number, width: number, height: number) {

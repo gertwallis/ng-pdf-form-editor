@@ -3,7 +3,6 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 import { Model } from 'app/pdf-form-editor/model/PdfForm';
 
 @Component({
-    // tslint:disable-next-line:component-selector
     'selector': 'display-pdf',
     'templateUrl': './display-pdf.html'
 })

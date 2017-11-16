@@ -1,13 +1,13 @@
 <div class="formContainer" [hidden]="!active">
-  <div class="formNoPageBorders">
+  <!-- <div class="formNoPageBorders">
     <div class="formPage">
-      <div class="formCanvas" [ngStyle]="pageSize">
+      <div class="formCanvas" [ngStyle]="pageSize"> -->
         <div [ngStyle]="pageSize" >
-          <field class="fieldLayer" *ngFor="let location of page.locations" [pdf]="location.pdf" [data]="getData(location.name)" [tabIndex]='location.tabIndex'
+          <field  *ngFor="let location of page.locations" [pdf]="location.pdf" [data]="getData(location.name)" [tabIndex]='location.tabIndex'
             [class.active]="false">
           </field>
         </div>
-      </div>
+      <!-- </div>
     </div>
-  </div>
+  </div> -->
 </div>

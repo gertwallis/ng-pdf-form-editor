@@ -1,9 +1,5 @@
-<div [ngStyle]="inputPosition">
-    <input [ngStyle]="inputSize" 
-        [name]="data.name" 
-        [value]="data.name"
-        [tabIndex]="tabIndex"
-        [placeholder]="data.name"
-        > 
-    <!-- {{location.name}}: ({{location.x}},{{location.y}} - ({{location.width}}/{{location.height}})<br/> -->
-</div>
+<input class="test" 
+       [name]="data.name" 
+       [value]="data.value"
+       style='width:100%'
+       (click)='test()'>

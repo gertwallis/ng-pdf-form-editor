@@ -5,6 +5,6 @@
 .fieldLayer {
     color: transparent;
     position: absolute;
-    white-space: pre;
-    cursor: text;
+    /* white-space: pre;
+    cursor: text; */
   }

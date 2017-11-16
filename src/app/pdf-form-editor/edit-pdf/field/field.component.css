@@ -1,0 +1,9 @@
+.editStyle {
+    display: block;
+    background-color: lightcoral,
+  };
+
+.inactiveStyle {
+    display: none;
+    background-color: blue,
+};

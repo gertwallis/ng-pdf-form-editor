@@ -24,7 +24,7 @@ export class PdfEditComponent implements OnInit {
 
   ngOnInit() {
     // 018BAV2 251NVV2  247ORV2 247WI 247WIV2 251NVV2 252ORV2
-    this.pdfService.loadDocument('251NVV2')
+    this.pdfService.loadDocument('018BAV2')
       .subscribe(doc =>
         this.setDocument(doc));
 
