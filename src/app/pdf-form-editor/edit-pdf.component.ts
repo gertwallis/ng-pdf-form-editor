@@ -48,8 +48,8 @@ export class PdfEditComponent implements OnInit {
           formField.location.y = pdfLocation.y;
 
           // Set the data value if it exist in the pdf
-          var dataValues = pdfDocument.data.filter(x => x.name === pdfLocation.name);
-          
+          const dataValues = pdfDocument.data.filter(x => x.name === pdfLocation.name);
+
           if (dataValues.length > 0) {
             formField.value = dataValues[0].value;
           }
@@ -90,7 +90,7 @@ export class PdfEditComponent implements OnInit {
 
   ngOnInit() {
     // 018BAV2  247ORV2 247WIV2 251NVV2 252ORV2
-    this.pdfService.loadDocument('247ORV2')
+    this.pdfService.loadDocument('252MDV2')
       .subscribe(doc =>
         this.setDocument(doc));
   }

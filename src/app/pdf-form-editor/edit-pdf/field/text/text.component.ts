@@ -12,8 +12,8 @@ export class TextComponent {
 
   @Output() doneEditing = new EventEmitter<string>();
 
-  leavingField(editedValue) {
-    console.log('Test blur function called' + editedValue);
-    this.doneEditing.emit(editedValue);
+  leavingField() {
+    console.log('Test blur function called');
+    this.doneEditing.emit(this.value);
   }
 }

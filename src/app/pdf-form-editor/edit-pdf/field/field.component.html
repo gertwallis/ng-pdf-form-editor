@@ -1,8 +1,12 @@
-<div [ngStyle]="locationStyle" [tabindex]="formField.tabOrder" (focus)="gotFocus()">
+<div [ngStyle]="locationStyle" 
+     [tabindex]="formField.location.tabOrder" 
+     (focus)="gotFocus()"
+     (blur)="lostFocus()"
+     title = "formField.name">
     <div [ngStyle]="editingStyle">
         <text [name]="formField.name" [value]="formField.value" (doneEditing)="doneEditing($event)"></text>
-
-        <span class="helpIcon glyphicon glyphicon-question-sign" title="What is this?"></span>
-        <span class="helpIcon glyphicon glyphicon-wrench" title="Debug Information"></span>
     </div>
 </div>
+
+<!-- <span class="helpIcon glyphicon glyphicon-question-sign" title="What is this?" [ngStyle]="editingStyle"></span>
+<span class="helpIcon glyphicon glyphicon-wrench" title="Debug Information" [ngStyle]="editingStyle"></span> -->

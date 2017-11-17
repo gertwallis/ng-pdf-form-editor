@@ -34,13 +34,16 @@ export class FieldComponent implements OnInit {
 
   gotFocus() {
     console.log('Got Focus:' + this.formField.name);
-    // this.editingClass = 'editStyle'
 
     this.editingStyle = {
       'display': 'block',
       'width': this.width + 'px',
       'height': this.height + 'px'
     };
+  }
+
+  lostFocus() {
+    console.log('Lost Focus:' + this.formField.name);
   }
 
   doneEditing(value) {
@@ -65,10 +68,15 @@ export class FieldComponent implements OnInit {
       'left': x + 'px',
       'top': y + 'px',
       'width': width + 'px',
-      'height': height + 'px',
-      'background-color': this.getBackGroundColor(),
-      'border': '1px solid black'
+      'height': height + 'px'
     };
+
+    this.addFieldStyles();
+  }
+
+  addFieldStyles() {
+//    this.locationStyle.push('background-color': ''lightpink';
+//     border: 1px solid black;')
   }
 
   getBackGroundColor() {

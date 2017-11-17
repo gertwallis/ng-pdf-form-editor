@@ -1108,7 +1108,128 @@
       "value": null
     }
   ],
-  "data": [],
+  "data": [
+    {
+      "name": "L_GNL_ADDL_TITL_FleetAccountNumber",
+      "value": "ABCD-123-xyz"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_LicensePlateNumber",
+      "value": "ab-cd-de-fg"
+    },
+    {
+      "name": "L_GNL_ADDR_TITL_VehicleCounty",
+      "value": "Vehicle County"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_Component1PartNameVIN",
+      "value": "1234567890ABCDEFG"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_Component2PartNameVIN",
+      "value": "1234567890HIJKLMN"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_Component3PartNameVIN",
+      "value": "1234567890OPGRSTU"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_VehicleVesselReconstructedYes",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_VehicleAssembled",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_VehicleVesselReplica",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDR_TITL_Lienholder1Address",
+      "value": "500 North Boulevard E, Some City, MI 49456"
+    },
+    {
+      "name": "L_GNL_ADDR_TITL_Lienholder2Address",
+      "value": "16898 North Ave, Boulder, CO 12345"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_Lienholder1IdentificationNumber",
+      "value": "ID ONE"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_Lienholder1PhoneNumber",
+      "value": "(616) 846-1234"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_Lienholder2IdentificationNumber",
+      "value": "ID TWO"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_Lienholder2PhoneNumber",
+      "value": "(843) 888-5678"
+    },
+    {
+      "name": "L_GNL_DATE_TITL_Lienholder1DateOfBirth",
+      "value": "1/2/1980"
+    },
+    {
+      "name": "L_GNL_NAME_TITL_Lienholder1Name",
+      "value": "FIRST LIEN HOLDER"
+    },
+    {
+      "name": "L_GNL_NAME_TITL_Lienholder1Name",
+      "value": "SECOND LIEN HOLDER "
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_FuelTypeDiesel",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_FuelTypeGas",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_FuelTypeHybrid",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_FuelTypeElectric",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_FuelTypeNaturalGas",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_FuelTypeOther",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_FuelTypePlugInHybrid",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_FuelTypePropane",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipNo",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipYes",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_JointSecurityInterestSurvivorshipNo",
+      "value": "X"
+    },
+    {
+      "name": "L_GNL_ADDL_TITL_JointSecurityInterestSurvivorshipYes",
+      "value": "X"
+    }
+  ],
   "pageSize": {
     "height": 11000,
     "width": 8500
