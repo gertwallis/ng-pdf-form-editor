@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Model } from './../../model/PdfForm';
+import { Form } from './../../model/Form';
 
 @Component({
   selector: 'navigation',
@@ -9,7 +9,7 @@ import { Model } from './../../model/PdfForm';
 })
 export class NavigationComponent implements OnInit {
 
-  @Input() document: Model.Document;
+  @Input() document: Form.Document;
 
   constructor() {
   }

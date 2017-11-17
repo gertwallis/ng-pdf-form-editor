@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
-import { Model } from './../../model/PdfForm';
+import { DocumentBase } from './../../model/DocumentBase';
+import { Form } from './../../model/Form';
 
 @Component({
   selector: 'field',
@@ -9,8 +10,7 @@ import { Model } from './../../model/PdfForm';
 })
 export class FieldComponent implements OnInit {
 
-
-  @Input() formField: Model.FormField;
+  @Input() formData: Form.Data;
 
   private x = 0;
   private y = 0;
@@ -31,7 +31,7 @@ export class FieldComponent implements OnInit {
   }
 
   gotFocus() {
-    console.log('Got Focus:' + this.formField.data.name);
+    console.log('Got Focus:' + this.formData.name);
     // this.editingClass = 'editStyle'
 
     this.editingStyle = {
@@ -46,7 +46,7 @@ export class FieldComponent implements OnInit {
       'display': 'none',
     };
 
-    this.formField.data = value;
+    this.formData = value;
   }
 
   dataChanged(something) {
@@ -68,8 +68,21 @@ export class FieldComponent implements OnInit {
       'top': y + 'px',
       'width': width + 'px',
       'height': height + 'px',
-      'background-color': 'lightpink',
+      'background-color': this.getBackGroundColor,
       'border': '1px solid black'
     };
+  }
+
+  getBackGroundColor() {
+    switch (this.formData.state) {
+      case DocumentBase.DisplayState.None:
+        return 'lightpink';
+      case DocumentBase.DisplayState.Captured:
+        return 'lightgreen';
+      case DocumentBase.DisplayState.Saved:
+        return 'lightblue';
+      default:
+        return 'graya';
+    }
   }
 }

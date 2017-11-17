@@ -1,18 +1,18 @@
-import { AfterContentInit, Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
 
 import { FieldComponent } from '../field/field.component';
 
-import { Model } from './../../model/PdfForm';
+import { Form } from './../../model/Form';
 
 @Component({
   selector: 'page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
-export class PageComponent implements OnInit, AfterContentInit {
+export class PageComponent implements OnInit {
 
   @Input() active = false;
-  @Input() formPage: Model.FormPage;
+  @Input() formPage: Form.Page;
 
   @ViewChildren(FieldComponent) fieldView: QueryList<FieldComponent>;
 
@@ -30,8 +30,4 @@ export class PageComponent implements OnInit, AfterContentInit {
       'height': height + 'px',
     };
   }
-
-    public ngAfterContentInit(): void {
-      console.log("PAGE CHILDREN" + this.formPage);
-    }
 }

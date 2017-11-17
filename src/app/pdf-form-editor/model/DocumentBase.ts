@@ -1,4 +1,4 @@
-export namespace Model {
+export namespace DocumentBase {
     export class Describe {
         name: string;
         label: string;
@@ -21,8 +21,7 @@ export namespace Model {
         State = 12
     }
 
-
-    export class FieldData extends Describe {
+    export class Data extends Describe {
         state: DisplayState;
         format: Format;
         value: string;
@@ -36,60 +35,23 @@ export namespace Model {
         Hidden = 3
     }
 
-    export class FormData {
-        fields: FieldData[] = [];
-    }
-
     export class Size {
         width: number;
         height: number;
     }
 
     export class Location extends Size {
-        // Corresponds to Field.Name
-        name: string;
-        tabIndex: number;
+        tabOrder: number;
         x: number;
         y: number;
     }
 
-    // FormField combines the FieldData and Location into a single model.
-    export class FormField {
-        state: DisplayState = DisplayState.None;
-        location: Location = new Location();
-        data: FieldData = new FieldData();
-    }
-
-    export class Page {
-        pageNo: number;
-        // pageSize: Size;
-        locations: Location[] = [];
-    }
-
-    export class FormPage {
-        active: boolean;
-        pageNo: number;
-        fields: FormField[] = [];
-
-        editable(): boolean {
-            return this.fields.length > 0;
-        }
-    }
-
-    export class Form {
-
-        pages?: Page[] = [];
-        data?: FormData = new FormData();
-        pageSize?: Size;
-        active?: boolean;
-    }
-
     export class Document {
         id: string;
-        form: Form = new Form();
         title: string;
         description: string;
         url?: string;
         pdfBytes?: string;
+        pageSize?: Size;
     }
 }
