@@ -1125,30 +1125,6 @@
       "value": "777-88-9999"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Owner2DriverLicenseIssueState",
-      "value": "L_GNL_ADDL_TITL_Owner2DriverLicenseIssueState"
-    },
-    {
-      "name": "L_GNL_ADDL_TITL_Owner2DriverLicenseNumber",
-      "value": "L_GNL_ADDL_TITL_Owner2DriverLicenseNumber"
-    },
-    {
-      "name": "L_GNL_ADDL_TITL_Owner2Female",
-      "value": "x"
-    },
-    {
-      "name": "L_GNL_ADDL_TITL_Owner2Male",
-      "value": "x"
-    },
-    {
-      "name": "L_GNL_ADDL_TITL_Owner2PhoneNumber",
-      "value": "(616) 830-4567"
-    },
-    {
-      "name": "L_GNL_ADDL_TITL_Owner2SocialSecurityNumber",
-      "value": "777-88-9999"
-    },
-    {
       "name": "L_GNL_ADDL_TITL_PenaltyFee",
       "value": "999.99"
     },
@@ -1319,18 +1295,6 @@
     {
       "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
       "value": "L_GNL_ADDR_TITL_Owner1StreetAddress"
-    },
-    {
-      "name": "L_GNL_ADDR_TITL_Owner2CityStateZIP",
-      "value": "L_GNL_ADDR_TITL_Owner2CityStateZIP"
-    },
-    {
-      "name": "L_GNL_ADDR_TITL_Owner2County",
-      "value": "L_GNL_ADDR_TITL_Owner2County"
-    },
-    {
-      "name": "L_GNL_ADDR_TITL_Owner2StreetAddress",
-      "value": "L_GNL_ADDR_TITL_Owner2StreetAddress"
     },
     {
       "name": "L_GNL_ADDR_TITL_VesselMoorageCounty",

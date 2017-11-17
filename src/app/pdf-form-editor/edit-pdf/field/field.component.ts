@@ -24,8 +24,6 @@ export class FieldComponent implements OnInit {
 
   editingStyle: {};
 
-  statusStyle: {};
-
   constructor() {
   }
 
@@ -61,7 +59,7 @@ export class FieldComponent implements OnInit {
     if (value !== this.formField.value) {
       this.formField.value = value;
       this.formField.state = DocumentBase.DisplayState.EditedValue;
-      this.setStatusStyle();
+      this.setStyle();
     }
   }
 
@@ -72,35 +70,42 @@ export class FieldComponent implements OnInit {
     this.width = width;
     this.height = height;
 
-    this.locationStyle = {
-      'position': 'absolute',
-      'left': x + 'px',
-      'top': y + 'px',
-      'width': width + 'px',
-      'height': height + 'px',
-    };
-
-    this.setStatusStyle();
+    this.setStyle();
   }
 
-  private setStatusStyle() {
-
+  private setStyle() {
     switch (this.formField.state) {
       case DocumentBase.DisplayState.NoValue:
-        this.statusStyle = {
+        this.locationStyle = {
+          'position': 'absolute',
+          'left': this.x + 'px',
+          'top': this.y + 'px',
+          'width': this.width + 'px',
+          'height': this.height + 'px',
           'background-color': 'lightpink'
         };
         break;
 
       case DocumentBase.DisplayState.EditedValue:
-        this.statusStyle = {
+        this.locationStyle = {
+          'position': 'absolute',
+          'left': this.x + 'px',
+          'top': this.y + 'px',
+          'width': this.width + 'px',
+          'height': this.height + 'px',
           'background-color': 'lightgreen'
         };
         break;
 
       case DocumentBase.DisplayState.SavedValue:
-        this.statusStyle = {
-          background: 'rgba(255, 255, 255, 0.5)'
+        this.locationStyle = {
+          'position': 'absolute',
+          'left': this.x + 'px',
+          'top': this.y + 'px',
+          'width': this.width + 'px',
+          'height': this.height + 'px',
+          'background-color': 'lightgrey'
+          // background: 'rgba(255, 255, 255, 0.5)'
         };
         break;
     }

@@ -1,9 +1,8 @@
 <div [ngStyle]="locationStyle" [tabindex]="formField.location.tabOrder" (focus)="gotFocus()" (blur)="lostFocus()" title="formField.name">
-    <div [ngStyle]="statusStyle">
-        <div [ngStyle]="editingStyle">
-            <text [name]="formField.name" [value]="formField.value" (doneEditing)="doneEditing($event)"></text>
-        </div>
+    <div [ngStyle]="editingStyle">
+        <text [name]="formField.name" [value]="formField.value" (doneEditing)="doneEditing($event)"></text>
     </div>
+    {{formField.value}}
 </div>
 
 <!-- <span class="helpIcon glyphicon glyphicon-question-sign" title="What is this?" [ngStyle]="editingStyle"></span>
