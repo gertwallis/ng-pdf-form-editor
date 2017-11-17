@@ -11,7 +11,6 @@ import { Form } from './../../model/Form';
 })
 export class PageComponent implements OnInit {
 
-  @Input() active = false;
   @Input() formPage: Form.Page;
 
   @ViewChildren(FieldComponent) fieldView: QueryList<FieldComponent>;

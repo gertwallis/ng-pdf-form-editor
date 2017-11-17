@@ -35,19 +35,6 @@ export class PagesComponent implements OnInit, AfterContentInit {
     this.viewer.pdfSrc = this.document.url;
   }
 
-  toggleEdit() {
-    this.editMode = !this.editMode;
-
-    this.document.pages.forEach(page => {
-      // page.active = this.editMode;
-      // if (page.locations.length === 0) {
-      //   const tab = this.tabs.find(t => t.pageNo === page.pageNo);
-      //   tab.disabled = this.editMode;
-      // }
-
-    });
-  }
-
   nextPage() {
     this.viewer.incrementPage(1);
     this.currentPageNo = (this.currentPageNo === this.document.pages.length) ? 1 : this.currentPageNo + 1;
@@ -101,11 +88,11 @@ export class PagesComponent implements OnInit, AfterContentInit {
   selectPage(newTab: TabComponent, newPage: PageComponent) {
     // deactivate all page tabs
     this.tabs.toArray().forEach(page => page.active = false);
-    this.pageViews.toArray().forEach(page => page.active = false);
+    this.pageViews.toArray().forEach(page => page.formPage.active = false);
 
     // activate the tab the user has clicked on.
     newTab.active = true;
-    newPage.active = true;
+    newPage.formPage.active = true;
 
     this.viewer.goToPage(newTab.pageNo);
   }

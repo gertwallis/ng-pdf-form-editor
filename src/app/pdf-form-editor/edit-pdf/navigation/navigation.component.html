@@ -1,4 +1,4 @@
 <pages [document] = "document">
-   <tab *ngFor="let page of document.pages" [pageNo]="page.pageNo">
+   <tab *ngFor="let page of document.pages" [pageNo]="page.pageNo" [active]="page.active">
    </tab>
 </pages>

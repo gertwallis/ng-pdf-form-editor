@@ -1,4 +1,4 @@
-<div class="formContainer" [hidden]="!active">
+<div class="formContainer" [hidden]="!formPage.active">
   <div [ngStyle]="pageSize">
     <field *ngFor="let formData of this.formPage.data" [formData]="formData" [class.active]="false">
     </field>
