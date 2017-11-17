@@ -1,7 +1,8 @@
-<input class="test" 
+<input #childEditField 
        [name]="name" 
        [(ngModel)]="value"
        style='width:100%'
-       (blur)="leavingField()">
+       (blur)="leavingField()"
+       (keypress)="keyPressHandler($event)">
 
        

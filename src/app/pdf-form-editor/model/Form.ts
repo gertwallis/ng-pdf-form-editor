@@ -7,7 +7,7 @@ export namespace Form {
     // FormField combines the FieldData and Location into a single model.
     //   including a location (name not duplicated in data and location).
     export class Field extends DocumentBase.Field {
-        value : string;
+        value: string;
         // Flag set to true if the same name occurs in muleiple locations in the document (duplicated).
         multipleLocations = false;
         location: DocumentBase.Location = new DocumentBase.Location();

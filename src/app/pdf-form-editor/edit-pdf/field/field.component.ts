@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ContentChild, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 
 import { DocumentBase } from './../../model/DocumentBase';
 import { Form } from './../../model/Form';
@@ -11,6 +11,7 @@ import { Form } from './../../model/Form';
 export class FieldComponent implements OnInit {
 
   @Input() formField: Form.Field;
+  @ViewChild('childEditField') childEditField;
 
   tabIndex = 0;
 
@@ -23,6 +24,8 @@ export class FieldComponent implements OnInit {
 
   editingStyle: {};
 
+  statusStyle: {};
+
   constructor() {
   }
 
@@ -34,6 +37,8 @@ export class FieldComponent implements OnInit {
 
   gotFocus() {
     console.log('Got Focus:' + this.formField.name);
+
+    // this.childEditField.nativeElement.focus();
 
     this.editingStyle = {
       'display': 'block',
@@ -53,7 +58,11 @@ export class FieldComponent implements OnInit {
       'display': 'none',
     };
 
-    this.formField.value = value;
+    if (value !== this.formField.value) {
+      this.formField.value = value;
+      this.formField.state = DocumentBase.DisplayState.EditedValue;
+      this.setStatusStyle();
+    }
   }
 
 
@@ -68,27 +77,32 @@ export class FieldComponent implements OnInit {
       'left': x + 'px',
       'top': y + 'px',
       'width': width + 'px',
-      'height': height + 'px'
+      'height': height + 'px',
     };
 
-    this.addFieldStyles();
+    this.setStatusStyle();
   }
 
-  addFieldStyles() {
-//    this.locationStyle.push('background-color': ''lightpink';
-//     border: 1px solid black;')
-  }
+  private setStatusStyle() {
 
-  getBackGroundColor() {
     switch (this.formField.state) {
-      case DocumentBase.DisplayState.None:
-        return 'lightpink';
-      case DocumentBase.DisplayState.Captured:
-        return 'lightgreen';
-      case DocumentBase.DisplayState.Saved:
-        return 'lightblue';
-      default:
-        return 'graya';
+      case DocumentBase.DisplayState.NoValue:
+        this.statusStyle = {
+          'background-color': 'lightpink'
+        };
+        break;
+
+      case DocumentBase.DisplayState.EditedValue:
+        this.statusStyle = {
+          'background-color': 'lightgreen'
+        };
+        break;
+
+      case DocumentBase.DisplayState.SavedValue:
+        this.statusStyle = {
+          background: 'rgba(255, 255, 255, 0.5)'
+        };
+        break;
     }
   }
 }

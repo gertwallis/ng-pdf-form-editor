@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'text',
@@ -12,6 +12,9 @@ export class TextComponent {
 
   @Output() doneEditing = new EventEmitter<string>();
 
+  keyPressHandler(keyCode){
+    console.log('KEY Code:' +  keyCode);
+  }
   leavingField() {
     console.log('Test blur function called');
     this.doneEditing.emit(this.value);

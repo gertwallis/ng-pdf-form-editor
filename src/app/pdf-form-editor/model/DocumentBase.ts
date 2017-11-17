@@ -24,14 +24,13 @@ export namespace DocumentBase {
     export class Field extends Describe {
         state: DisplayState;
         format: Format;
-        value: string;
         maxChar: number;
     }
 
     export enum DisplayState {
-        None = 0,
-        Saved = 1,
-        Captured = 2,
+        NoValue = 0,
+        SavedValue = 1,
+        EditedValue = 2,
         Hidden = 3
     }
 
@@ -44,7 +43,7 @@ export namespace DocumentBase {
         name: string;
         value: string;
     }
-    
+
     export class Location extends Size {
         tabOrder: number;
         x: number;

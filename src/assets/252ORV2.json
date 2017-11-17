@@ -1,0 +1,1637 @@
+{
+  "fields": [
+    {
+      "state": 0,
+      "description": "Type of charter for a financial institution",
+      "format": 1,
+      "label": "Institution Type",
+      "maxChar": 0,
+      "name": "_InstitutionType",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the month, day and year that the party is signing the document.",
+      "format": 5,
+      "label": "Enter the date that the party is signing the document.",
+      "maxChar": 0,
+      "name": "C_GNL_DATE_MISC_SignatureDate",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that personal information may be disclosed for bulk distribution for surveys, marketing or solicitations.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that personal information may be disclosed for bulk distribution.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_MISC_PersonalInfoDisclosureBulkDistribution",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that personal information is not to be disclosed/released for any reason.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that personal information is not to be disclosed/released for any reason.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_MISC_PersonalInfoDisclosureNo",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the boat is used as a charter fishing boat. Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the boat  is used as a charter fishing boat.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_CharterFishingBoat",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This indicates the fee for a duplicate decal and registration card.",
+      "format": 6,
+      "label": "Enter the amount charge for a duplicate decal and registration card.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_DupDecalAndRegCard",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the dollar amount of the fee for a duplicate registration card.  Enter the dollar amount without commas, (e.g. \"1000.50\").",
+      "format": 6,
+      "label": "Enter the fee for a duplicate registration card.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_DuplicateRegistrationFee",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the hull identification number (HIN).",
+      "format": 1,
+      "label": "Enter the hull identification number (HIN).",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_HullIdentificationNumber",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the hull is constructed of aluminum.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the hull is constructed of aluminum.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_HullMaterialAluminum",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the hull is constructed of fiberglass.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the hull is constructed of fiberglass.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_HullMaterialFiberglass",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the hull is constructed of plastic.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the hull is constructed of plastic.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_HullMaterialPlastic",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the hull is made of rubber.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the hull is made of rubber/vinyl/canvas.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_HullMaterialRubberVinylCanvas",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the hull is constructed of steel.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the hull is constructed of steel.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_HullMaterialSteel",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the hull is constructed of wood.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the hull is constructed of wood.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_HullMaterialWood",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the joint owners/lessees agree that the title will not show joint ownership with right of survivorship.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the joint owners/lessees will agree that the title will not show joint ownership with right of survivorship.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipNo",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the joint owners/lessees agree that the title will show joint ownership with right of survivorship.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the joint owners/lessees agree that the title will show joint ownership with right of survivorship.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipYes",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the length in feet of the vehicle/vessel/mobile unit.",
+      "format": 8,
+      "label": "Enter the length in feet of the vehicle/vessel/mobile unit.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_LengthFeet",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the amount of inches (in addition to the footage) that make up the length of the vehicle/vessel/mobile unit.",
+      "format": 8,
+      "label": "Enter the amount of inches (in addition to the footage) that make up the length of the vehicle/vessel/mobile unit.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_LengthInches",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This indicates the amount charge for filing a new registration due to lost title but no  change of ownership.",
+      "format": 6,
+      "label": "Enter the amount charge for filing a new registration due to lost title but no change of ownership.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_LostTitleNoOwnerChange",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This indicates the Out-of-State Certificate Number of the vessel if it was previously registered in a different state.",
+      "format": 1,
+      "label": "Enter the Out-of-State Certificate of Number if the vessel was previously registered in a different state.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_OutOfStateCertOfNumber",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the e-mail address of the first owner.",
+      "format": 1,
+      "label": "Enter the e-mail address of the first owner.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_Owner1EmailAddress",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the area code and telephone number of the first owner.",
+      "format": 9,
+      "label": "Enter the telephone number of the first owner.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_Owner1PhoneNumber",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the dollar amount of the penalty fee.  Enter the dollar amount without commas (e.g. \"1000.50\").",
+      "format": 6,
+      "label": "Enter the dollar amount of the penalty fee.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PenaltyFee",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is air propulsion.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is air propulsion.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypeAir",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is an inboard/outboard motor.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is an inboard/outboard motor.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypeInboardOutboard",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is jet propulsion.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is jet propulsion.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypeJet",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is manual.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is manual.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypeManual",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is an outboard motor.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is an outboard motor.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypeOutboard",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is pod drive.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is pod drive.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypePod",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is a propeller.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is a propeller.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypePropeller",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is a sail.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is a sail.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypeSail",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel propulsion type is stern drive.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel propulsion type is stern drive.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_PropulsionTypeStern",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the dollar amount for the registration fee.  Enter the dollar amount without commas, (e.g., \"1000.50\").",
+      "format": 6,
+      "label": "Enter the registration fee amount.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_RegistrationFee",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the number on the certificate of title/electronic title for the vehicle/vessel/mobile unit.",
+      "format": 1,
+      "label": "Enter the number on the certificate of title/electronic title for the vehicle/vessel/mobile unit.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_TitleNumber",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the dollar amount of the total fees due, including taxes.  Enter the dollar amount without commas, (e.g \"1000\").",
+      "format": 6,
+      "label": "Enter the amount of the total fees due.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_TotalFees",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the dollar amount of the transfer fee.  Enter the dollar amount without comma, (e.g. \"1000.20\").",
+      "format": 6,
+      "label": "Enter the amount of the transfer fee.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_TransferFee",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel fuel type is diesel.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel fuel type is diesel.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselFuelTypeDiesel",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel fuel type is electric.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel fuel type is electric.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselFuelTypeElectric",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel fuel type is gasoline.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel fuel type is gasoline.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselFuelTypeGasoline",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the fuel type of the vessel is a type other than the choices listed on the form.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the fuel type of the vessel is a type other than the choices listed on the form.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselFuelTypeOther",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows a description of the fuel type of the vessel.",
+      "format": 1,
+      "label": "Enter a description of the fuel type of the vessel.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselFuelTypeOtherDescription",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the state registration number for the vessel.",
+      "format": 1,
+      "label": "Enter the state registration number for the vessel.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselRegistrationNumber",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is amphibious.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is amphibious.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeAmphibious",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is an auxillary sail.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is an auxillary sail.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeAuxillarySail",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is a cabin vessel.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is a cabin vessel.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeCabin",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is a houseboat.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is a houseboat.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeHouseboat",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is an inflatable watercraft.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is an inflatable watercraft.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeInflatable",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is a jetski.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is a jetski.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeJetski",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is an open bow.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is an open bow.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeOpen",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is a paddle boat.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is a paddle boat.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypePaddleBoat",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is a pontoon.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is a pontoon.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypePontoon",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is a rowing boat.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is a rowing boat.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeRowing",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel type is a sail.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel type is a sail.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselTypeSail",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used for agency purposes by city/county. Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used for agency purposes by city/county.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseCityAgency",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used for commercial fishing.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used for commercial fishing.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseCommercialFishing",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used for commercial purposes, other than the commercial choices listed on the form.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used for commercial purposes, other than the choices listed on the form.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseCommercialOther",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used for commercial passenger purposes.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used for commercial passenger purposes.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseCommercialPassenger",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used for dealer/demonstration purposes.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used for dealer/demonstration purposes.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseDealer",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used for eleemosynary/exempt  purposes.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used for eleemosynary/exempt  purposes.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseEleemosynaryExempt",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used by marine law enforcement. Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used by marine law enforcement.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseLawEnforcment",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is for personal/pleasure use.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is for personal/pleasure use.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUsePersonal",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used as a rental.  Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used as a rental.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseRental",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows that the vessel is used for agency purposes by state/federal agency. Indicate this by marking the field with an \"X\".",
+      "format": 3,
+      "label": "Check this box to indicate that the vessel is used for agency purposes by state/federal agency.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDL_TITL_VesselUseStateAgency",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the city of the first lienholder.",
+      "format": 1,
+      "label": "Enter the city of the first lienholder.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDR_TITL_Lienholder1City",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the state of the first lienholder.  Enter the state as an abbreviation, (e.g., \"MI\").",
+      "format": 1,
+      "label": "Enter the state of the first lienholder.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDR_TITL_Lienholder1State",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the street address of the first lienholder.",
+      "format": 1,
+      "label": "Enter the street address of the first lienholder.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDR_TITL_Lienholder1StreetAddress",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the ZIP code of the first lienholder.",
+      "format": 8,
+      "label": "Enter the ZIP code of the first lienholder.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDR_TITL_Lienholder1ZIPCode",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the first owner's mailing city if different than the residential city.",
+      "format": 1,
+      "label": "Enter the first owner's mailing city if different than the residential city.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDR_TITL_Owner1MailingCity",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the first owner's mailing state if different than the residential state.  Enter the state as a 2-character abbreviation, (e.g. \"MI\").",
+      "format": 1,
+      "label": "Enter the first owner's mailing state if different than the residential state.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDR_TITL_Owner1MailingState",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the mailing street address of the first owner if different than the residential street address.",
+      "format": 1,
+      "label": "Enter the mailing street address of the first owner if different from the residential street address.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDR_TITL_Owner1MailingStreetAddress",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the first owner's mailing ZIP code if different than the residential zip code.",
+      "format": 8,
+      "label": "Enter the first owner's mailing ZIP code if different than the residential zip code.",
+      "maxChar": 0,
+      "name": "L_GNL_ADDR_TITL_Owner1MailingZIPCode",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the date of birth for the first owner.",
+      "format": 5,
+      "label": "Enter the date of birth for the first owner.",
+      "maxChar": 0,
+      "name": "L_GNL_DATE_TITL_Owner1DateOfBirth",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the date of birth for the second owner.",
+      "format": 5,
+      "label": "Enter the date of birth for the second owner.",
+      "maxChar": 0,
+      "name": "L_GNL_DATE_TITL_Owner2DateOfBirth",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the date of birth for the third owner.",
+      "format": 5,
+      "label": "Enter the date of birth for the third owner.",
+      "maxChar": 0,
+      "name": "L_GNL_DATE_TITL_Owner3DateOfBirth",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the date of birth for the fourth owner.",
+      "format": 5,
+      "label": "Enter the date of birth for the fourth owner.",
+      "maxChar": 0,
+      "name": "L_GNL_DATE_TITL_Owner4DateOfBirth",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the year that the vessel/outboard motor was manufactured/model year.",
+      "format": 8,
+      "label": "Enter the year that the vessel/outboard motor was manufactured/model year.",
+      "maxChar": 0,
+      "name": "L_GNL_DATE_TITL_VesselYear",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "Used for Digital Signature.",
+      "format": 10,
+      "label": "Used for Digital Signature.",
+      "maxChar": 0,
+      "name": "L_GNL_MISC_SIGN_eSignatureOwner1Signer",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the business name of the first owner.  (Note:  If applicable or desired, this field may also be used to display the full name of an individual.)",
+      "format": 1,
+      "label": "Enter the business name of the first owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the business name of the second additional owner.  (Note:  If applicable or desired, this field may also be used to display the full name of an individual.)",
+      "format": 1,
+      "label": "Enter the business name of the second additional owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the business name of the third owner.  (Note:  If applicable or desired, this field may also be used to display the full name of an individual.)",
+      "format": 1,
+      "label": "Enter the business name of the third owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_BSNE_Owner3BusinessName",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the business name of the fourth owner.  (Note:  If applicable or desired, this field may also be used to display the full name of an individual.)",
+      "format": 1,
+      "label": "Enter the business name of the fourth owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_BSNE_Owner4BusinessName",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the make/manufacturer of the vessel.",
+      "format": 1,
+      "label": "Enter the make/manufacturer of the vessel.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_MISC_VesselMakeManufacturer",
+      "value": null
+    },
+    {
+      "state": 0,
+      "description": "This field shows the name of the first lien holder.",
+      "format": 1,
+      "label": "Enter the name of the first lien holder.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Lienholder1Name",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the first name of the first owner.",
+      "format": 1,
+      "label": "Enter the first name of the first owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner1FirstName",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the last name of the first owner.",
+      "format": 1,
+      "label": "Enter the last name of the first owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner1LastName",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the middle initial/name of the first owner.",
+      "format": 1,
+      "label": "Enter the middle initial/name of the first owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the first name of the second owner.",
+      "format": 1,
+      "label": "Enter the first name of the second owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner2FirstName",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the last name of the second owner.",
+      "format": 1,
+      "label": "Enter the last name of the second owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner2LastName",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the middle initial/name of the second owner.",
+      "format": 1,
+      "label": "Enter the middle initial/name of the second owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the first name of the third owner.",
+      "format": 1,
+      "label": "Enter the first name of the third owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner3FirstName",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the last name of the third owner.",
+      "format": 1,
+      "label": "Enter the last name of the third owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner3LastName",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the middle initial of the third owner.",
+      "format": 1,
+      "label": "Enter the middle initial of the third owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner3MiddleInitial",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the first name of the fourth owner.",
+      "format": 1,
+      "label": "Enter the first name of the fourth owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner4FirstName",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the last name of the fourth owner.",
+      "format": 1,
+      "label": "Enter the last name of the fourth owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner4LastName",
+      "value": null
+    },
+    {
+      "state": 3,
+      "description": "This field shows the middle initial of the fourth owner.",
+      "format": 1,
+      "label": "Enter the middle initial of the fourth owner.",
+      "maxChar": 0,
+      "name": "L_GNL_NAME_TITL_Owner4MiddleInitial",
+      "value": null
+    }
+  ],
+  "data": [],
+  "pageSize": {
+    "height": 11000,
+    "width": 8500
+  },
+  "descripton": "To apply for certificate of title for watercraft.",
+  "id": "252OR",
+  "pages": [
+    {
+      "active": false,
+      "locations": [
+        {
+          "height": 250.0,
+          "name": "L_GNL_MISC_SIGN_eSignatureOwner1Signer",
+          "tabOrder": 77,
+          "width": 2186.0,
+          "x": 791.0,
+          "y": 8280.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_HullIdentificationNumber",
+          "tabOrder": 34,
+          "width": 1936.0,
+          "x": 5938.0,
+          "y": 5008.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_LengthFeet",
+          "tabOrder": 32,
+          "width": 432.0,
+          "x": 4847.0,
+          "y": 5008.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeAuxillarySail",
+          "tabOrder": 68,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 7828.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_HullMaterialAluminum",
+          "tabOrder": 43,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 5904.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_HullMaterialSteel",
+          "tabOrder": 55,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 6747.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypeAir",
+          "tabOrder": 50,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 6409.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_HullMaterialRubberVinylCanvas",
+          "tabOrder": 51,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 6409.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_CharterFishingBoat",
+          "tabOrder": 67,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 7661.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypeManual",
+          "tabOrder": 53,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 6575.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseLawEnforcment",
+          "tabOrder": 75,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 8333.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseCityAgency",
+          "tabOrder": 79,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 8497.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseStateAgency",
+          "tabOrder": 81,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 8660.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypeStern",
+          "tabOrder": 91,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 9547.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypePod",
+          "tabOrder": 93,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 9707.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeAmphibious",
+          "tabOrder": 84,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 8820.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselFuelTypeGasoline",
+          "tabOrder": 86,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 9216.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselFuelTypeElectric",
+          "tabOrder": 90,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 9547.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselFuelTypeDiesel",
+          "tabOrder": 88,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 9385.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselFuelTypeOther",
+          "tabOrder": 92,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 9707.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_VesselFuelTypeOtherDescription",
+          "tabOrder": 94,
+          "width": 1100.0,
+          "x": 4861.0,
+          "y": 9699.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_HullMaterialWood",
+          "tabOrder": 54,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 6575.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_HullMaterialFiberglass",
+          "tabOrder": 47,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 6076.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUsePersonal",
+          "tabOrder": 58,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 7153.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseCommercialFishing",
+          "tabOrder": 69,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 7828.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseRental",
+          "tabOrder": 60,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 7327.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseDealer",
+          "tabOrder": 65,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 7492.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseCommercialPassenger",
+          "tabOrder": 71,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 7995.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseCommercialOther",
+          "tabOrder": 73,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 8166.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypeOutboard",
+          "tabOrder": 87,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 9216.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypeInboardOutboard",
+          "tabOrder": 89,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 9385.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypeSail",
+          "tabOrder": 48,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 6244.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeOpen",
+          "tabOrder": 57,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 7153.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeCabin",
+          "tabOrder": 59,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 7327.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeHouseboat",
+          "tabOrder": 66,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 7661.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeJetski",
+          "tabOrder": 72,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 8166.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_DATE_TITL_VesselYear",
+          "tabOrder": 40,
+          "width": 598.0,
+          "x": 4343.0,
+          "y": 5326.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_MISC_VesselMakeManufacturer",
+          "tabOrder": 41,
+          "width": 1936.0,
+          "x": 5938.0,
+          "y": 5326.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_HullMaterialPlastic",
+          "tabOrder": 49,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 6244.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypePontoon",
+          "tabOrder": 64,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 7492.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypePaddleBoat",
+          "tabOrder": 80,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 8660.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeRowing",
+          "tabOrder": 78,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 8497.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_LengthInches",
+          "tabOrder": 33,
+          "width": 516.0,
+          "x": 5361.0,
+          "y": 5008.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypePropeller",
+          "tabOrder": 42,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 5904.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_PropulsionTypeJet",
+          "tabOrder": 46,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 6076.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeInflatable",
+          "tabOrder": 74,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 8333.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselTypeSail",
+          "tabOrder": 70,
+          "width": 125.0,
+          "x": 4394.0,
+          "y": 7995.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDR_TITL_Lienholder1StreetAddress",
+          "tabOrder": 56,
+          "width": 3598.0,
+          "x": 323.0,
+          "y": 6968.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDR_TITL_Lienholder1City",
+          "tabOrder": 61,
+          "width": 2099.0,
+          "x": 323.0,
+          "y": 7438.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDR_TITL_Lienholder1State",
+          "tabOrder": 62,
+          "width": 265.0,
+          "x": 2599.0,
+          "y": 7438.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Lienholder1Name",
+          "tabOrder": 52,
+          "width": 3265.0,
+          "x": 323.0,
+          "y": 6502.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDR_TITL_Lienholder1ZIPCode",
+          "tabOrder": 63,
+          "width": 1098.0,
+          "x": 2988.0,
+          "y": 7438.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+          "tabOrder": 8,
+          "width": 2598.0,
+          "x": 313.0,
+          "y": 2875.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+          "tabOrder": 21,
+          "width": 2598.0,
+          "x": 317.0,
+          "y": 4243.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_BSNE_Owner3BusinessName",
+          "tabOrder": 27,
+          "width": 2598.0,
+          "x": 317.0,
+          "y": 4753.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_BSNE_Owner4BusinessName",
+          "tabOrder": 35,
+          "width": 2598.0,
+          "x": 317.0,
+          "y": 5234.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_VesselRegistrationNumber",
+          "tabOrder": 0,
+          "width": 1265.0,
+          "x": 1078.0,
+          "y": 1529.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_TitleNumber",
+          "tabOrder": 1,
+          "width": 1431.0,
+          "x": 2703.0,
+          "y": 1529.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_TransferFee",
+          "tabOrder": 3,
+          "width": 516.0,
+          "x": 7537.0,
+          "y": 1868.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_TransferFee",
+          "tabOrder": 7,
+          "width": 516.0,
+          "x": 7537.0,
+          "y": 2532.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_RegistrationFee",
+          "tabOrder": 13,
+          "width": 516.0,
+          "x": 7537.0,
+          "y": 3095.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_DuplicateRegistrationFee",
+          "tabOrder": 15,
+          "width": 516.0,
+          "x": 7537.0,
+          "y": 3374.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_DupDecalAndRegCard",
+          "tabOrder": 16,
+          "width": 516.0,
+          "x": 7537.0,
+          "y": 3705.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_LostTitleNoOwnerChange",
+          "tabOrder": 20,
+          "width": 516.0,
+          "x": 7537.0,
+          "y": 4034.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_PenaltyFee",
+          "tabOrder": 6,
+          "width": 516.0,
+          "x": 7537.0,
+          "y": 2200.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_TotalFees",
+          "tabOrder": 26,
+          "width": 516.0,
+          "x": 7537.0,
+          "y": 4356.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_MISC_PersonalInfoDisclosureBulkDistribution",
+          "tabOrder": 4,
+          "width": 125.0,
+          "x": 3169.0,
+          "y": 2212.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_MISC_PersonalInfoDisclosureNo",
+          "tabOrder": 5,
+          "width": 125.0,
+          "x": 3675.0,
+          "y": 2212.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_DATE_TITL_Owner1DateOfBirth",
+          "tabOrder": 12,
+          "width": 933.0,
+          "x": 3060.0,
+          "y": 2886.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDR_TITL_Owner1MailingStreetAddress",
+          "tabOrder": 14,
+          "width": 3774.0,
+          "x": 323.0,
+          "y": 3328.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDR_TITL_Owner1MailingCity",
+          "tabOrder": 17,
+          "width": 1850.0,
+          "x": 323.0,
+          "y": 3761.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDR_TITL_Owner1MailingState",
+          "tabOrder": 18,
+          "width": 265.0,
+          "x": 2220.0,
+          "y": 3761.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDR_TITL_Owner1MailingZIPCode",
+          "tabOrder": 19,
+          "width": 1111.0,
+          "x": 2947.0,
+          "y": 3761.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_DATE_TITL_Owner2DateOfBirth",
+          "tabOrder": 25,
+          "width": 933.0,
+          "x": 3060.0,
+          "y": 4253.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_DATE_TITL_Owner3DateOfBirth",
+          "tabOrder": 31,
+          "width": 933.0,
+          "x": 3060.0,
+          "y": 4763.0
+        },
+        {
+          "height": 166.0,
+          "name": "C_GNL_DATE_MISC_SignatureDate",
+          "tabOrder": 76,
+          "width": 933.0,
+          "x": 3083.0,
+          "y": 8363.0
+        },
+        {
+          "height": 170.0,
+          "name": "L_GNL_ADDL_TITL_Owner1PhoneNumber",
+          "tabOrder": 82,
+          "width": 1766.0,
+          "x": 323.0,
+          "y": 8718.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_ADDL_TITL_OutOfStateCertOfNumber",
+          "tabOrder": 2,
+          "width": 1183.0,
+          "x": 1617.0,
+          "y": 1828.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipYes",
+          "tabOrder": 44,
+          "width": 125.0,
+          "x": 3523.0,
+          "y": 5973.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipNo",
+          "tabOrder": 45,
+          "width": 125.0,
+          "x": 3899.0,
+          "y": 5973.0
+        },
+        {
+          "height": 148.0,
+          "name": "L_GNL_ADDL_TITL_VesselUseEleemosynaryExempt",
+          "tabOrder": 85,
+          "width": 125.0,
+          "x": 6115.0,
+          "y": 8820.0
+        },
+        {
+          "height": 170.0,
+          "name": "L_GNL_ADDL_TITL_Owner1EmailAddress",
+          "tabOrder": 83,
+          "width": 1932.0,
+          "x": 2215.0,
+          "y": 8718.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner1FirstName",
+          "tabOrder": 9,
+          "width": 933.0,
+          "x": 313.0,
+          "y": 2886.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner1LastName",
+          "tabOrder": 11,
+          "width": 1444.0,
+          "x": 1399.0,
+          "y": 2886.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
+          "tabOrder": 10,
+          "width": 181.0,
+          "x": 1251.0,
+          "y": 2886.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner2FirstName",
+          "tabOrder": 22,
+          "width": 933.0,
+          "x": 313.0,
+          "y": 4253.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner2LastName",
+          "tabOrder": 24,
+          "width": 1444.0,
+          "x": 1399.0,
+          "y": 4253.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
+          "tabOrder": 23,
+          "width": 181.0,
+          "x": 1251.0,
+          "y": 4253.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner3FirstName",
+          "tabOrder": 28,
+          "width": 933.0,
+          "x": 313.0,
+          "y": 4763.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner3LastName",
+          "tabOrder": 30,
+          "width": 1444.0,
+          "x": 1399.0,
+          "y": 4763.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner3MiddleInitial",
+          "tabOrder": 29,
+          "width": 181.0,
+          "x": 1251.0,
+          "y": 4763.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner4FirstName",
+          "tabOrder": 36,
+          "width": 933.0,
+          "x": 313.0,
+          "y": 5244.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner4LastName",
+          "tabOrder": 38,
+          "width": 1444.0,
+          "x": 1399.0,
+          "y": 5244.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_NAME_TITL_Owner4MiddleInitial",
+          "tabOrder": 37,
+          "width": 181.0,
+          "x": 1251.0,
+          "y": 5244.0
+        },
+        {
+          "height": 166.0,
+          "name": "L_GNL_DATE_TITL_Owner4DateOfBirth",
+          "tabOrder": 39,
+          "width": 933.0,
+          "x": 3060.0,
+          "y": 5244.0
+        }
+      ],
+      "pageNo": 1
+    }
+  ],
+  "pdfBytes": null,
+  "title": "Application for Certificate of Title (Watercraft)",
+  "url": "/assets/252ORV2.pdf"
+}
