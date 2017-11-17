@@ -6,7 +6,8 @@ export namespace Form {
 
     // FormField combines the FieldData and Location into a single model.
     //   including a location (name not duplicated in data and location).
-    export class Data extends DocumentBase.Data {
+    export class Field extends DocumentBase.Field {
+        value : string;
         // Flag set to true if the same name occurs in muleiple locations in the document (duplicated).
         multipleLocations = false;
         location: DocumentBase.Location = new DocumentBase.Location();
@@ -15,10 +16,10 @@ export namespace Form {
     export class Page {
         active: boolean;
         pageNo: number;
-        data: Data[] = [];
+        fields: Field[] = [];
 
         editable(): boolean {
-            return this.data.length > 0;
+            return this.fields.length > 0;
         }
     }
 

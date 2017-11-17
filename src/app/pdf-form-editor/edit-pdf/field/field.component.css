@@ -7,3 +7,14 @@
     display: none;
     background-color: blue,
 };
+
+.helpIcon {
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    opacity: .3;
+}
+
+.helpIcon:hover {
+    opacity: 1;
+};

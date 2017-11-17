@@ -21,7 +21,7 @@ export namespace DocumentBase {
         State = 12
     }
 
-    export class Data extends Describe {
+    export class Field extends Describe {
         state: DisplayState;
         format: Format;
         value: string;
@@ -40,6 +40,11 @@ export namespace DocumentBase {
         height: number;
     }
 
+    export class DataValue {
+        name: string;
+        value: string;
+    }
+    
     export class Location extends Size {
         tabOrder: number;
         x: number;

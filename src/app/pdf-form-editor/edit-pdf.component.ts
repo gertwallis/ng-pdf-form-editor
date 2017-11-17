@@ -35,18 +35,26 @@ export class PdfEditComponent implements OnInit {
       formPage.active = (pdfPage.pageNo === 1);
 
       for (const pdfLocation of pdfPage.locations) {
-        const formData = this.getFieldData(pdfDocument.data, pdfLocation.name);
+        const formField = this.getFieldData(pdfDocument.fields, pdfLocation.name);
 
         // Only inlude non hidden fields.
-        if (formData.state !== DocumentBase.DisplayState.Hidden) {
-          formData.multipleLocations = pdfPage.locations.filter(x => x.name === pdfLocation.name).length > 1;
-          formData.location = new DocumentBase.Location();
-          formData.location.height = pdfLocation.height;
-          formData.location.tabOrder = pdfLocation.tabOrder;
-          formData.location.width = pdfLocation.width;
-          formData.location.x = pdfLocation.x;
-          formData.location.y = pdfLocation.y;
-          formPage.data.push(formData);
+        if (formField.state !== DocumentBase.DisplayState.Hidden) {
+          formField.multipleLocations = pdfPage.locations.filter(x => x.name === pdfLocation.name).length > 1;
+          formField.location = new DocumentBase.Location();
+          formField.location.height = pdfLocation.height;
+          formField.location.tabOrder = pdfLocation.tabOrder;
+          formField.location.width = pdfLocation.width;
+          formField.location.x = pdfLocation.x;
+          formField.location.y = pdfLocation.y;
+
+          // Set the data value if it exist in the pdf
+          var dataValues = pdfDocument.data.filter(x => x.name === pdfLocation.name);
+          
+          if (dataValues.length > 0) {
+            formField.value = dataValues[0].value;
+          }
+
+          formPage.fields.push(formField);
         }
       }
 
@@ -56,26 +64,26 @@ export class PdfEditComponent implements OnInit {
     this.document = formDocument;
   }
 
-  getFieldData(pdfData: DocumentBase.Data[], dataFieldName: string): Form.Data {
+  getFieldData(pdfData: DocumentBase.Field[], dataFieldName: string): Form.Field {
     const fields = pdfData.filter(x => x.name === dataFieldName);
-    const formData = new Form.Data();
-    formData.name = dataFieldName;
+    const formField = new Form.Field();
+    formField.name = dataFieldName;
     // Expecting to find only one but if more - return first.
     if (fields.length > 0) {
-      formData.description = fields[0].description;
-      formData.format = fields[0].format;
-      formData.label = fields[0].label;
-      formData.maxChar = fields[0].maxChar;
-      formData.name = fields[0].name;
-      formData.state = fields[0].state;
-      formData.value = fields[0].value;
+      formField.description = fields[0].description;
+      formField.format = fields[0].format;
+      formField.label = fields[0].label;
+      formField.maxChar = fields[0].maxChar;
+      formField.name = fields[0].name;
+      formField.state = fields[0].state;
+      formField.value = fields[0].value;
     }
 
     // Returning an empty object - the use case is generally to display the data field.
     // for a location. Bad data but returning an undefined will trow an error in the UI
     // based on bad data. Should probably do avalidation check for good data. but don't want
     // UI have to check for bad data.
-    return formData;
+    return formField;
   }
 
   constructor(private pdfService: PdfService) { }

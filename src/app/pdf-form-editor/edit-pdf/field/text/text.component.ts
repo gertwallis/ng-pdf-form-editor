@@ -7,13 +7,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class TextComponent {
 
-  @Input() name: string;
-  @Input() value: string;
+   @Input() name: string;
+   @Input() value: string;
 
   @Output() doneEditing = new EventEmitter<string>();
 
-  leavingField(currentValue) {
-    // console.log("Test blur function called" + currentValue);
-    this.doneEditing.emit(currentValue);
+  leavingField(editedValue) {
+    console.log('Test blur function called' + editedValue);
+    this.doneEditing.emit(editedValue);
   }
 }

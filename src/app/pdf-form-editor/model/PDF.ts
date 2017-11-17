@@ -17,6 +17,7 @@ export namespace PDF {
 
     export class Document extends DocumentBase.Document {
         pages: Page[] = [];
-        data: DocumentBase.Data[] = [];
+        fields: DocumentBase.Field[] = [];
+        data: DocumentBase.DataValue[] = [];
     }
 }

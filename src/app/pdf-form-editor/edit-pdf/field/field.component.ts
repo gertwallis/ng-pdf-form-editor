@@ -10,7 +10,7 @@ import { Form } from './../../model/Form';
 })
 export class FieldComponent implements OnInit {
 
-  @Input() formData: Form.Data;
+  @Input() formField: Form.Field;
 
   tabIndex = 0;
 
@@ -33,7 +33,7 @@ export class FieldComponent implements OnInit {
   }
 
   gotFocus() {
-    console.log('Got Focus:' + this.formData.name);
+    console.log('Got Focus:' + this.formField.name);
     // this.editingClass = 'editStyle'
 
     this.editingStyle = {
@@ -44,19 +44,15 @@ export class FieldComponent implements OnInit {
   }
 
   doneEditing(value) {
+    console.log('Done  editing:' + value);
+
     this.editingStyle = {
       'display': 'none',
     };
 
-    this.formData = value;
+    this.formField.value = value;
   }
 
-  dataChanged(something) {
-    console.log('Done  editing:' + something);
-    this.editingStyle = {
-      'display': 'none',
-    };
-  }
 
   setLocation(x: number, y: number, width: number, height: number) {
     this.x = x;
@@ -70,13 +66,13 @@ export class FieldComponent implements OnInit {
       'top': y + 'px',
       'width': width + 'px',
       'height': height + 'px',
-      'background-color': this.getBackGroundColor,
+      'background-color': this.getBackGroundColor(),
       'border': '1px solid black'
     };
   }
 
   getBackGroundColor() {
-    switch (this.formData.state) {
+    switch (this.formField.state) {
       case DocumentBase.DisplayState.None:
         return 'lightpink';
       case DocumentBase.DisplayState.Captured:

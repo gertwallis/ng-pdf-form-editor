@@ -1,5 +1,5 @@
 {
-  "data": [
+  "fields": [
     {
       "state": 0,
       "description": "Type of charter for a financial institution",
@@ -1360,6 +1360,7 @@
       "value": null
     }
   ],
+  "data": [],
   "pageSize": {
     "height": 11000,
     "width": 8500

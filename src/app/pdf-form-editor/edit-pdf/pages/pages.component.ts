@@ -76,10 +76,10 @@ export class PagesComponent implements OnInit, AfterContentInit {
         page.setPageSize(size.width, size.height);
         page.fieldView.forEach(field => {
           field.setLocation(
-            field.formData.location.x * horiz,
-            field.formData.location.y * vertical,
-            field.formData.location.width * horiz,
-            field.formData.location.height * vertical);
+            field.formField.location.x * horiz,
+            field.formField.location.y * vertical,
+            field.formField.location.width * horiz,
+            field.formField.location.height * vertical);
         });
       });
     }
