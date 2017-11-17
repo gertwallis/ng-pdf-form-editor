@@ -24,8 +24,6 @@ export class PagesComponent implements OnInit, AfterContentInit {
   editMode = false;
   currentZoom = 0;
 
-  formPages: Form.Page[] = null;
-
   constructor() {
     this.currentPageNo = 1;
   }

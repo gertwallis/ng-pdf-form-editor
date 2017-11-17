@@ -18,6 +18,6 @@ export namespace PDF {
 
     export class Document extends DocumentBase.Document {
         pages: Page[] = [];
-        dataFields: DocumentBase.Data[] = [];
+        data: DocumentBase.Data[] = [];
     }
 }

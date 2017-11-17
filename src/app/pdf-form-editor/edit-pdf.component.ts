@@ -5,7 +5,7 @@ import { NavigationComponent } from './edit-pdf/navigation/navigation.component'
 
 import { DocumentBase } from './model/DocumentBase';
 import { PDF } from './model/PDF';
-import { Form} from './model/Form';
+import { Form } from './model/Form';
 
 @Component({
   selector: 'edit-pdf',
@@ -20,22 +20,23 @@ export class PdfEditComponent implements OnInit {
   setDocument(pdfDocument: PDF.Document) {
 
     // Copy the PDF document into the Form document.
-    this.document = new Form.Document();
-    this.document.description = pdfDocument.description;
-    this.document.id = pdfDocument.id;
-    this.document.pdfBytes = pdfDocument.pdfBytes;
-    this.document.title = pdfDocument.title;
-    this.document.url = pdfDocument.url;
+    const formDocument = new Form.Document();
+    formDocument.description = pdfDocument.description;
+    formDocument.id = pdfDocument.id;
+    formDocument.pdfBytes = pdfDocument.pdfBytes;
+    formDocument.title = pdfDocument.title;
+    formDocument.url = pdfDocument.url;
+    formDocument.pageSize = pdfDocument.pageSize;
 
-    for (let pdfPage of pdfDocument.pages) {
+    for (const pdfPage of pdfDocument.pages) {
       const formPage = new Form.Page();
 
       formPage.pageNo = pdfPage.pageNo;
       formPage.active = (pdfPage.pageNo === 1);
-      
-      for (let pdfLocation of pdfPage.locations) {
-        const formData  = this.getFieldData(pdfDocument.dataFields, pdfLocation.name);
-        
+
+      for (const pdfLocation of pdfPage.locations) {
+        const formData = this.getFieldData(pdfDocument.data, pdfLocation.name);
+
         // Only inlude non hidden fields.
         if (formData.state !== DocumentBase.DisplayState.Hidden) {
           formData.multipleLocations = pdfPage.locations.filter(x => x.name === pdfLocation.name).length > 1;
@@ -48,13 +49,17 @@ export class PdfEditComponent implements OnInit {
           formPage.data.push(formData);
         }
       }
+
+      formDocument.pages.push(formPage);
     }
+
+    this.document = formDocument;
   }
 
-  getFieldData(pdfData: DocumentBase.Data[], dataName: string): Form.Data {
-    const fields = pdfData.filter(x => x.name === name);
+  getFieldData(pdfData: DocumentBase.Data[], dataFieldName: string): Form.Data {
+    const fields = pdfData.filter(x => x.name === dataFieldName);
     const formData = new Form.Data();
-    formData.name = dataName;
+    formData.name = dataFieldName;
     // Expecting to find only one but if more - return first.
     if (fields.length > 0) {
       formData.description = fields[0].description;

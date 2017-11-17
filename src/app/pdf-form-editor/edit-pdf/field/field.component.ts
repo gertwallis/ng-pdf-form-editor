@@ -12,6 +12,8 @@ export class FieldComponent implements OnInit {
 
   @Input() formData: Form.Data;
 
+  tabIndex = 0;
+
   private x = 0;
   private y = 0;
   private width = 0;

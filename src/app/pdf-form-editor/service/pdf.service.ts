@@ -4,7 +4,7 @@ import { MessageService } from './message.service';
 
 import 'rxjs/Rx';
 
-import { Model } from './../model/PdfForm';
+import { PDF } from './../model/Pdf';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -15,11 +15,11 @@ export class PdfService {
   constructor(private http: Http, private messageService: MessageService) {
   }
 
-  loadDocument(documentId: string): Observable<Model.Document> {
+  loadDocument(documentId: string): Observable<PDF.Document> {
 
     this.messageService.add('PdfService: Fetching ' + documentId);
     return this.http.get(this.pdfUrl + documentId + ".json")
-      .map((response: Response) => <Model.Document>response.json())
+      .map((response: Response) => <PDF.Document>response.json())
       .do(data =>
         this.messageService.add('PdfService: Completed ' + documentId)
       // console.log(JSON.stringify(data))
