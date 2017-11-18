@@ -1,7 +1,7 @@
 import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'tab',
+  selector: 'form-tab',
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.css']
 })

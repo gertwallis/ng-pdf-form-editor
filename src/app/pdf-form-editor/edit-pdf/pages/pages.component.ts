@@ -9,7 +9,7 @@ import { DocumentBase } from './../../model/DocumentBase';
 import { Form } from './../../model/Form';
 
 @Component({
-  selector: 'pages',
+  selector: 'form-pages',
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.css']
 })

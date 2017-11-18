@@ -1,6 +1,6 @@
 <div class="formContainer" [hidden]="!formPage.active">
   <div [ngStyle]="pageSize">
-      <field *ngFor="let formField of this.formPage.fields" [formField]="formField" [class.active]="this.formPage.active">
-    </field>
+      <form-field *ngFor="let formField of this.formPage.fields" [formField]="formField" [class.active]="this.formPage.active">
+    </form-field>
   </div>
 </div>

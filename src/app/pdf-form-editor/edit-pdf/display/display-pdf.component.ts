@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 import { DocumentBase } from 'app/pdf-form-editor/model/DocumentBase';
 
 @Component({
-    'selector': 'display-pdf',
+    'selector': 'form-pdf',
     'templateUrl': './display-pdf.html'
 })
 export class DisplayPdfComponent {

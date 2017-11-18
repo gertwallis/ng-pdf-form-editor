@@ -5,7 +5,7 @@ import { FieldComponent } from '../field/field.component';
 import { Form } from './../../model/Form';
 
 @Component({
-  selector: 'page',
+  selector: 'form-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })

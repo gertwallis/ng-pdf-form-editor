@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Form } from './../../model/Form';
 
 @Component({
-  selector: 'navigation',
+  selector: 'form-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })

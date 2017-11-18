@@ -8,7 +8,7 @@ import { PDF } from './model/PDF';
 import { Form } from './model/Form';
 
 @Component({
-  selector: 'edit-pdf',
+  selector: 'form-edit',
   templateUrl: './edit-pdf.component.html',
   styleUrls: ['./edit-pdf.component.css']
 })

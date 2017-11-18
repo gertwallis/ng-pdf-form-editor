@@ -1,7 +1,7 @@
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'text',
+  selector: 'form-text',
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })

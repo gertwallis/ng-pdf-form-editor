@@ -4,7 +4,7 @@ import { DocumentBase } from './../../model/DocumentBase';
 import { Form } from './../../model/Form';
 
 @Component({
-  selector: 'field',
+  selector: 'form-field',
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.css']
 })

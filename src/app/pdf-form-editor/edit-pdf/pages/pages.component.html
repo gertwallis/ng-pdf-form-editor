@@ -34,14 +34,14 @@
   <div class="panel-body">
     <div class="tab-content">
       <div class="formView">
-        <page  *ngFor="let page of document.pages" [formPage]="page" [class.active]="false"></page>
+        <form-page  *ngFor="let page of document.pages" [formPage]="page" [class.active]="false"></form-page>
       </div>
       <div class="pdfView">
-        <display-pdf #viewer 
+        <form-pdf #viewer 
              [zoom]="1" 
              [showAll]="false" 
              (scaleChange)="setScale($event)">
-            ></display-pdf>
+            ></form-pdf>
       </div>
     </div>
   </div>
