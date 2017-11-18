@@ -8,6 +8,9 @@ import { PageComponent } from './../page/page.component';
 import { DocumentBase } from './../../model/DocumentBase';
 import { Form } from './../../model/Form';
 
+// Models
+import { UI } from 'app/pdf-form-editor/model/UI';
+
 @Component({
   selector: 'form-pages',
   templateUrl: './pages.component.html',
@@ -76,7 +79,7 @@ export class PagesComponent implements AfterContentInit {
   }
 
   // Emmittor functions
-  setScale(size: DocumentBase.Size) {
+  setScale(size: UI.Size) {
     if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
       this.currentZoom = this.viewer.zoom;
 

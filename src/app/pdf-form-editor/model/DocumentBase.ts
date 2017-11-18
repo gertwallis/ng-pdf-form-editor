@@ -44,16 +44,6 @@ export namespace DocumentBase {
         y: number;
     }
 
-    export class Size implements FixedSize {
-        width: number;
-        height: number;
-    }
-
-    export class Position implements FixedPosition {
-        x: number;
-        y: number;
-    }
-
     export class DataValue {
         name: string;
         value: string;

@@ -1,7 +1,9 @@
-import { Component, ContentChild, ElementRef, HostListener, Input, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { TextComponent } from './text/text.component';
+import { Component, Input, OnInit, ViewChild, Output, EventEmitter, ElementRef } from '@angular/core';
 
 import { DocumentBase } from './../../model/DocumentBase';
 import { Form } from './../../model/Form';
+import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
   selector: 'form-field',
@@ -12,8 +14,7 @@ export class FieldComponent implements OnInit {
 
   @Input() active: boolean;
   @Input() formField: Form.Field;
-  @ViewChild('childEditField') childEditField;
-
+  
   @Output() fieldActive = new EventEmitter<string>();
 
   color: string;
@@ -29,7 +30,7 @@ export class FieldComponent implements OnInit {
 
   editingStyle: {};
 
-  constructor() {
+  constructor(private divRef: ElementRef) {
   }
 
   ngOnInit() {
@@ -55,7 +56,7 @@ export class FieldComponent implements OnInit {
     console.log('Lost Focus:' + this.formField.name);
   }
 
-  doneEditing(value) {
+  doneEditing(value: UI.EditValue) {
     console.log('Done  editing:' + value);
 
     this.active = false;
@@ -63,11 +64,14 @@ export class FieldComponent implements OnInit {
     //   'display': 'none',
     // };
 
-    if (value !== this.formField.value) {
-      this.formField.value = value;
+    if (value.value !== this.formField.value) {
+      this.formField.value = value.value;
       this.formField.state = DocumentBase.DisplayState.EditedValue;
       this.setStyle();
     }
+
+    // Move focus to the next element
+   //  this.divRef.nativeElement.nextSibling.focus();
   }
 
 
