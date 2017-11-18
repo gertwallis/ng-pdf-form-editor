@@ -12,7 +12,7 @@ export class TextComponent {
 
   @Output() doneEditing = new EventEmitter<string>();
 
-  keyPressHandler(keyCode){
+  keyPressHandler(keyCode) {
     console.log('KEY Code:' +  keyCode);
   }
   leavingField() {

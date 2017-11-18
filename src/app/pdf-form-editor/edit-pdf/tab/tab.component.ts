@@ -7,10 +7,10 @@ import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 })
 export class TabComponent implements OnInit {
 
-   @Input() pageNo: number;
-   @Input() active = false;
-   @Input() disabled = false;
-   
+  @Input() pageNo: number;
+  @Input() active = false;
+  @Input() disabled = false;
+
   constructor() { }
 
   ngOnInit() {

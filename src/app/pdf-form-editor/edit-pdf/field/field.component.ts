@@ -105,7 +105,7 @@ export class FieldComponent implements OnInit {
           'width': this.width + 'px',
           'height': this.height + 'px',
           'background-color': 'lightgrey',
-          'display': "none"
+          'display': 'none'
           // background: 'rgba(255, 255, 255, 0.5)'
         };
         break;
