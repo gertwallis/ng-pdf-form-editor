@@ -1,7 +1,14 @@
-<div [ngStyle]="locationStyle" [formFieldStyle]="color" [tabindex]="formField.location.tabOrder" (focus)="gotFocus()" (blur)="lostFocus()" title="formField.name">
-    <div [ngStyle]="editingStyle" >
-            
-        <form-text [name]="formField.name" [value]="formField.value" (doneEditing)="doneEditing($event)"></form-text>
+<div [ngStyle]="locationStyle" 
+    [formFieldStyle]="color" 
+    [tabindex]="formField.location.tabOrder" 
+    (focus)="gotFocus()" 
+    (blur)="lostFocus()" 
+    title="formField.name">
+    <div *ngIf="active" [ngStyle]="editingStyle" >
+        <form-text 
+            [name]="formField.name" 
+            [value]="formField.value" 
+            (doneEditing)="doneEditing($event)"></form-text>
     </div>
     {{formField.value}}
     <div >

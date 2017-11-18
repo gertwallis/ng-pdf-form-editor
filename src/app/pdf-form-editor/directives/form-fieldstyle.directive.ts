@@ -10,14 +10,14 @@ export class FieldStyleDirective {
   @Input('formFieldStyle') highlightColor: string;
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight(this.highlightColor || 'red');
+    // this.highlight(this.highlightColor || 'red');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.highlight(null);
+    // this.highlight(null);
   }
 
   private highlight(color: string) {
-    this.el.nativeElement.style.backgroundColor = color;
+    // this.el.nativeElement.style.backgroundColor = color;
   }
 }

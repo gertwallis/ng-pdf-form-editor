@@ -13,7 +13,7 @@ import { Form } from './../../model/Form';
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.css']
 })
-export class PagesComponent implements OnInit, AfterContentInit {
+export class PagesComponent implements AfterContentInit {
 
   @Input() document: Form.Document = null;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
@@ -28,8 +28,6 @@ export class PagesComponent implements OnInit, AfterContentInit {
     this.currentPageNo = 1;
   }
 
-  ngOnInit() {
-  }
 
   public ngAfterContentInit(): void {
     this.viewer.pdfSrc = this.document.url;
@@ -65,26 +63,6 @@ export class PagesComponent implements OnInit, AfterContentInit {
     }
   }
 
-  setScale(size: DocumentBase.Size) {
-    if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
-      this.currentZoom = this.viewer.zoom;
-
-      const horiz = size.width / this.document.pageSize.width;
-      const vertical = size.height / this.document.pageSize.height;
-
-      this.pageViews.forEach(page => {
-        page.setPageSize(size.width, size.height);
-        page.fieldView.forEach(field => {
-          field.setLocation(
-            field.formField.location.x * horiz,
-            field.formField.location.y * vertical,
-            field.formField.location.width * horiz,
-            field.formField.location.height * vertical);
-        });
-      });
-    }
-  }
-
   selectPage(newTab: TabComponent, newPage: PageComponent) {
     // deactivate all page tabs
     this.tabs.toArray().forEach(page => page.active = false);
@@ -95,5 +73,26 @@ export class PagesComponent implements OnInit, AfterContentInit {
     newPage.formPage.active = true;
 
     this.viewer.goToPage(newTab.pageNo);
+  }
+
+  // Emmittor functions
+  setScale(size: DocumentBase.Size) {
+    if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
+      this.currentZoom = this.viewer.zoom;
+
+      const horiz = size.width / this.document.pageSize.width;
+      const vertical = size.height / this.document.pageSize.height;
+
+      this.pageViews.forEach(page => {
+        page.setPageSize(size.width, size.height);
+        page.fieldViews.forEach(field => {
+          field.setLocation(
+            field.formField.location.x * horiz,
+            field.formField.location.y * vertical,
+            field.formField.location.width * horiz,
+            field.formField.location.height * vertical);
+        });
+      });
+    }
   }
 }

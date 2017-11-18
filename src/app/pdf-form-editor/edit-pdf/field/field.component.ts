@@ -1,4 +1,4 @@
-import { Component, ContentChild, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ContentChild, ElementRef, HostListener, Input, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 
 import { DocumentBase } from './../../model/DocumentBase';
 import { Form } from './../../model/Form';
@@ -10,8 +10,11 @@ import { Form } from './../../model/Form';
 })
 export class FieldComponent implements OnInit {
 
+  @Input() active: boolean;
   @Input() formField: Form.Field;
   @ViewChild('childEditField') childEditField;
+
+  @Output() fieldActive = new EventEmitter<string>();
 
   color: string;
 
@@ -38,6 +41,7 @@ export class FieldComponent implements OnInit {
   gotFocus() {
     console.log('Got Focus:' + this.formField.name);
 
+    this.fieldActive.emit(this.formField.name);
     // this.childEditField.nativeElement.focus();
 
     this.editingStyle = {
@@ -54,9 +58,10 @@ export class FieldComponent implements OnInit {
   doneEditing(value) {
     console.log('Done  editing:' + value);
 
-    this.editingStyle = {
-      'display': 'none',
-    };
+    this.active = false;
+    // this.editingStyle = {
+    //   'display': 'none',
+    // };
 
     if (value !== this.formField.value) {
       this.formField.value = value;
