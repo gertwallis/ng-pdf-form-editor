@@ -14,8 +14,8 @@ export class FieldComponent implements OnInit {
 
   @Input() active: boolean;
   @Input() formField: Form.Field;
-  
-  @Output() fieldActive = new EventEmitter<string>();
+
+  @Output() fieldEvent = new EventEmitter<UI.EditEvent>();
 
   color: string;
 
@@ -42,7 +42,9 @@ export class FieldComponent implements OnInit {
   gotFocus() {
     console.log('Got Focus:' + this.formField.name);
 
-    this.fieldActive.emit(this.formField.name);
+    const editEvent = new UI.EditEvent();
+    editEvent.name = this.formField.name;
+    this.fieldEvent.emit(this.formField.name);
     // this.childEditField.nativeElement.focus();
 
     this.editingStyle = {
@@ -56,14 +58,10 @@ export class FieldComponent implements OnInit {
     console.log('Lost Focus:' + this.formField.name);
   }
 
-  doneEditing(value: UI.EditValue) {
+  doneEditing(value: UI.EditEvent) {
     console.log('Done  editing:' + value);
 
     this.active = false;
-    // this.editingStyle = {
-    //   'display': 'none',
-    // };
-
     if (value.value !== this.formField.value) {
       this.formField.value = value.value;
       this.formField.state = DocumentBase.DisplayState.EditedValue;
@@ -71,7 +69,7 @@ export class FieldComponent implements OnInit {
     }
 
     // Move focus to the next element
-   //  this.divRef.nativeElement.nextSibling.focus();
+    //  this.divRef.nativeElement.nextSibling.focus();
   }
 
 

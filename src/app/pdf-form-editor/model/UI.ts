@@ -1,7 +1,14 @@
 export namespace UI {
+    export enum EventType {
+        Enter = 1,
+        Exit = 2,
+    }      name: string;
+
+
     // Class to communicate fields from the entry field to the page component to
     // place focus at the correct value.
-    export class EditValue {
+    export class EditEvent {
+        name: string;
         value: string;
         keyCode: number;
     }
