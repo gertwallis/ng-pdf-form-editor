@@ -7,7 +7,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { PdfService } from './service/pdf.service';
 
 // Directives
-import { HighlightDirective } from './directives/form-fieldstyle.directive';
+import { FieldStyleDirective } from './directives/form-fieldstyle.directive';
 import { PositionDirective } from './directives/form-position.directive';
 import { SizeDirective } from './directives/form-size.directive';
 
@@ -49,7 +49,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     FieldComponent,
     TextComponent,
     DisplayPdfComponent,
-    HighlightDirective,
+    FieldStyleDirective,
     PositionDirective,
     SizeDirective
   ]

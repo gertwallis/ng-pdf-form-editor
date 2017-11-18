@@ -1,13 +1,13 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: '[formFieldStyle]'
 })
-export class HighlightDirective {
+export class FieldStyleDirective {
 
   constructor(private el: ElementRef) { }
 
-  @Input('appHighlight') highlightColor: string;
+  @Input('formFieldStyle') highlightColor: string;
 
   @HostListener('mouseenter') onMouseEnter() {
     this.highlight(this.highlightColor || 'red');
