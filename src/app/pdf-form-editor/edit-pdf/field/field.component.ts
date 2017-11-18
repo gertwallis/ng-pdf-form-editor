@@ -13,6 +13,8 @@ export class FieldComponent implements OnInit {
   @Input() formField: Form.Field;
   @ViewChild('childEditField') childEditField;
 
+  color: string;
+
   tabIndex = 0;
 
   private x = 0;

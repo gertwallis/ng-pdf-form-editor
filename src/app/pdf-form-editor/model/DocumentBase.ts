@@ -34,9 +34,24 @@ export namespace DocumentBase {
         Hidden = 3
     }
 
-    export class Size {
+    interface FixedSize {
         width: number;
         height: number;
+    }
+
+    interface FixedPosition {
+        x: number;
+        y: number;
+    }
+
+    export class Size implements FixedSize {
+        width: number;
+        height: number;
+    }
+
+    export class Position implements FixedPosition {
+        x: number;
+        y: number;
     }
 
     export class DataValue {
@@ -44,10 +59,12 @@ export namespace DocumentBase {
         value: string;
     }
 
-    export class Location extends Size {
+    export class Location implements FixedSize, FixedPosition {
         tabOrder: number;
         x: number;
         y: number;
+        width: number;
+        height: number;
     }
 
     export class Document {
@@ -56,6 +73,6 @@ export namespace DocumentBase {
         description: string;
         url?: string;
         pdfBytes?: string;
-        pageSize?: Size;
+        pageSize?: FixedSize;
     }
 }

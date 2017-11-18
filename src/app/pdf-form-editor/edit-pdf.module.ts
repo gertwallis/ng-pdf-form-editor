@@ -6,6 +6,11 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { PdfService } from './service/pdf.service';
 
+// Directives
+import { HighlightDirective } from './directives/form-fieldstyle.directive';
+import { PositionDirective } from './directives/form-position.directive';
+import { SizeDirective } from './directives/form-size.directive';
+
 // Main Component
 import { PdfEditComponent } from './edit-pdf.component';
 
@@ -43,7 +48,10 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     PdfEditComponent,
     FieldComponent,
     TextComponent,
-    DisplayPdfComponent
+    DisplayPdfComponent,
+    HighlightDirective,
+    PositionDirective,
+    SizeDirective
   ]
 })
 export class PdfEditModule { }
