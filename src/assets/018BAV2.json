@@ -47,7 +47,7 @@
     },
     {
       "state": 0,
-      "description": "This is the date of the transaction that is being referred to in the form. In most forms, this date will be input using a mm/dd/yyyy format.  Be sure to use slashes or dashes between the month, day and year.",
+      "description": "This is the date of the transaction that is being referred to in the Edit. In most forms, this date will be input using a mm/dd/yyyy format.  Be sure to use slashes or dashes between the month, day and year.",
       "format": 5,
       "label": "Enter the date of the transaction being referred to on the form.",
       "maxChar": 0,

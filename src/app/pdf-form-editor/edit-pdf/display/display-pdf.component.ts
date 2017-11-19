@@ -6,7 +6,7 @@ import { UI } from 'app/pdf-form-editor/model/UI';
 import { DocumentBase } from 'app/pdf-form-editor/model/DocumentBase';
 
 @Component({
-    'selector': 'form-pdf',
+    'selector': 'edit-pdf-viewer',
     'templateUrl': './display-pdf.html'
 })
 export class DisplayPdfComponent {

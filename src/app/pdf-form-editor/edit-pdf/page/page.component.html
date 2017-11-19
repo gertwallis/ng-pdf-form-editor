@@ -1,15 +1,5 @@
 <div class="formContainer" [hidden]="!formPage.active">
-  <div *ngIf="this.formPage.groups.length > 0" [ngStyle]="pageSize">
-    <!-- <form-group *ngFor="let group of this.formPage.groups" 
-         [formGroup]="group" 
-         [class.active]="this.formPage.active"
-         (fieldActive)="fieldActive($event)">
-    </form-group> -->
-    <!-- <form-group *ngFor="let group of this.formPage.groups" 
-    [formGroup]="group">
-</form-group> -->
-<div *ngFor="let group of this.formPage.groups">{{group.name}}</div>
-<form-group [formGroup]="this.formPage.groups[0]" ></form-group>
-
+  <div *ngIf="this.documentPage.groups.length > 0" [ngStyle]="pageSize">
+    <edit-group [editGroup]="this.documentPage.groups[0]"></edit-group>
   </div>
 </div>

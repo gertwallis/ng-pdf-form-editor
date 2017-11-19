@@ -2,7 +2,7 @@ import { DocumentBase } from './DocumentBase';
 
 // Form is similar to PDF - most notable difference are that the data fields
 // are duplicated for every location. Created from the Pdf model and used to capture fields.
-export namespace Form {
+export namespace Edit {
 
     // FormField combines the FieldData and Location into a single model.
     //   including a location (name not duplicated in data and location).
@@ -71,7 +71,7 @@ export namespace Form {
 
         getGroup(groupName): Group {
             if (!groupName) {
-                groupName = "root";
+                groupName = 'root';
             }
             let group = this.groups.find(x => x.name === groupName);
             if (!group) {

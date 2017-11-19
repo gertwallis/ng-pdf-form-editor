@@ -1,20 +1,20 @@
 import { Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
 
-import { GroupComponent } from './../group/group.component';
+import { EditGroupComponent } from './../group/group.component';
 
-import { Form } from './../../model/Form';
+import { Edit } from './../../model/Edit';
 import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
-  selector: 'form-page',
+  selector: 'edit-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
-export class PageComponent implements OnInit {
+export class EditPageComponent implements OnInit {
 
-  @Input() formPage: Form.Page;
+  @Input() editPage: Edit.Page;
 
-  @ViewChildren(GroupComponent) groupViews: QueryList<GroupComponent>;
+  @ViewChildren(EditGroupComponent) groupViews: QueryList<EditGroupComponent>;
 
   pageSize: {};
 
@@ -39,7 +39,7 @@ export class PageComponent implements OnInit {
   fieldActive(fieldName: string) {
     // const activeFields = this.fieldViews.filter(field => field.active);
     // // field.active = true;
-  
+
     // for (const activeField of activeFields) {
     //   activeField.active = false;
     //   console.log('Deactivated field:' + activeField.formField.name);
@@ -49,7 +49,7 @@ export class PageComponent implements OnInit {
 
     // if (currentField.length > 0) {
     //   // TODO: This will only work if the field name is unique. If ther is multiple fields.
-    //   //       with the same name, it may fail. 
+    //   //       with the same name, it may fail.
     //   currentField[0].active = true;
     //   console.log('Activated field:' + currentField[0].formField.name);
     // }

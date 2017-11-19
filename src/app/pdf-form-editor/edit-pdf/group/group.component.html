@@ -1,9 +1,9 @@
 <!-- <div [ngStyle]="locationStyle" [formFieldStyle]="color" [tabindex]="formField.location.tabOrder" (focus)="gotFocus()" (blur)="lostFocus()"> -->
 <div>
     <div *ngIf="active" [ngStyle]="editingStyle">
-        <!-- <form-field *ngFor="let formField of this.formGroup.fields" [formField]="formField" [class.active]="this.formGroup.active"
+        <!-- <edit-field *ngFor="let field of this.editGroup.fields" [editField]="field" [class.active]="this.editGroup.active"
             (fieldActive)="fieldActive($event)">
-        </form-field> -->
+        </edit-field> -->
     </div>
 </div>
 

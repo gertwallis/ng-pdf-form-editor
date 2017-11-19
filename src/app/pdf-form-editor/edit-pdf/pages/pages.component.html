@@ -34,17 +34,17 @@
   <div class="panel-body">
     <div class="tab-content">
       <div class="formView">
-        <form-page  *ngFor="let page of document.pages" 
-          [formPage]="page" 
+        <edit-page  *ngFor="let page of editDocument.pages" 
+          [editPage]="page" 
           [class.active]="false"
-          ></form-page>
+          ></edit-page>
       </div>
       <div class="pdfView">
-        <form-pdf #viewer 
+        <edit-pdf-viewer #viewer 
              [zoom]="1" 
              [showAll]="false" 
              (scaleChange)="setScale($event)">
-            ></form-pdf>
+            ></edit-pdf-viewer>
       </div>
     </div>
   </div>

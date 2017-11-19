@@ -1,15 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Form } from './../../model/Form';
+import { Edit } from './../../model/Edit';
 
 @Component({
-  selector: 'form-navigation',
+  selector: 'edit-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
 
-  @Input() document: Form.Document;
+  @Input() editDocument: Edit.Document;
 
   constructor() {
   }

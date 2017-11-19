@@ -3,24 +3,24 @@ import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList,
 
 import { TabComponent } from './../tab/tab.component';
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
-import { PageComponent } from './../page/page.component';
+import { EditPageComponent } from './../page/page.component';
 
 import { DocumentBase } from './../../model/DocumentBase';
-import { Form } from './../../model/Form';
+import { Edit } from './../../model/Edit';
 
 // Models
 import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
-  selector: 'form-pages',
+  selector: 'edit-pages',
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.css']
 })
-export class PagesComponent implements AfterContentInit {
+export class EditPagesComponent implements AfterContentInit {
 
-  @Input() document: Form.Document = null;
+  @Input() editDocument: Edit.Document = null;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
-  @ViewChildren(PageComponent) pageViews: QueryList<PageComponent>;
+  @ViewChildren(EditPageComponent) pageViews: QueryList<EditPageComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
 
   currentPageNo: number;
@@ -33,12 +33,12 @@ export class PagesComponent implements AfterContentInit {
 
 
   public ngAfterContentInit(): void {
-    this.viewer.pdfSrc = this.document.url;
+    this.viewer.pdfSrc = this.editDocument.url;
   }
 
   nextPage() {
     this.viewer.incrementPage(1);
-    this.currentPageNo = (this.currentPageNo === this.document.pages.length) ? 1 : this.currentPageNo + 1;
+    this.currentPageNo = (this.currentPageNo === this.editDocument.pages.length) ? 1 : this.currentPageNo + 1;
     this.setPage(this.currentPageNo);
   }
 
@@ -52,28 +52,28 @@ export class PagesComponent implements AfterContentInit {
 
   previousPage() {
     this.viewer.incrementPage(-1);
-    this.currentPageNo = (this.currentPageNo === 1) ? this.document.pages.length : this.currentPageNo - 1;
+    this.currentPageNo = (this.currentPageNo === 1) ? this.editDocument.pages.length : this.currentPageNo - 1;
     this.setPage(this.currentPageNo);
   }
 
   setPage(no: number) {
     this.currentPageNo = no;
     const TabComponent = this.tabs.filter(page => page.pageNo === this.currentPageNo);
-    const PageComponent = this.pageViews.filter(x => x.formPage.pageNo === this.currentPageNo);
+    const EditPageComponent = this.pageViews.filter(x => x.editPage.pageNo === this.currentPageNo);
 
-    if (TabComponent.length === 1 && PageComponent.length === 1) {
-      this.selectPage(TabComponent[0], PageComponent[0]);
+    if (TabComponent.length === 1 && EditPageComponent.length === 1) {
+      this.selectPage(TabComponent[0], EditPageComponent[0]);
     }
   }
 
-  selectPage(newTab: TabComponent, newPage: PageComponent) {
+  selectPage(newTab: TabComponent, newPage: EditPageComponent) {
     // deactivate all page tabs
     this.tabs.toArray().forEach(page => page.active = false);
-    this.pageViews.toArray().forEach(page => page.formPage.active = false);
+    this.pageViews.toArray().forEach(page => page.editPage.active = false);
 
     // activate the tab the user has clicked on.
     newTab.active = true;
-    newPage.formPage.active = true;
+    newPage.editPage.active = true;
 
     this.viewer.goToPage(newTab.pageNo);
   }
@@ -84,8 +84,8 @@ export class PagesComponent implements AfterContentInit {
       this.currentZoom = this.viewer.zoom;
 
       const scale = new UI.Scale();
-      scale.horiz = size.width / this.document.pageSize.width;
-      scale.vertical = size.height / this.document.pageSize.height;
+      scale.horiz = size.width / this.editDocument.pageSize.width;
+      scale.vertical = size.height / this.editDocument.pageSize.height;
 
       this.pageViews.forEach(page => {
         page.setScale(size.width, size.height, scale);

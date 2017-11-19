@@ -16,18 +16,17 @@ import { PdfEditComponent } from './edit-pdf.component';
 
 // Page Navigation
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
-import { PagesComponent } from './edit-pdf/pages/pages.component';
 import { TabComponent } from './edit-pdf/tab/tab.component';
 
 // Editing
-import { PageComponent } from './edit-pdf/page/page.component';
-import { GroupComponent } from './edit-pdf/group/group.component';
-import { FieldComponent } from './edit-pdf/field/field.component';
-import { TextComponent } from './edit-pdf/field/text/text.component';
+import { EditPagesComponent } from './edit-pdf/pages/pages.component';
+import { EditPageComponent } from './edit-pdf/page/page.component';
+import { EditGroupComponent } from './edit-pdf/group/group.component';
+import { EditFieldComponent } from './edit-pdf/field/field.component';
+import { EditTextComponent } from './edit-pdf/field/text/text.component';
 
 // Display of PDF
 import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
-
 
 @NgModule({
   imports: [
@@ -43,13 +42,13 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
   ],
   declarations: [
     NavigationComponent,
-    PageComponent,
-    PagesComponent,
+    EditPageComponent,
+    EditPagesComponent,
     TabComponent,
     PdfEditComponent,
-    GroupComponent,
-    FieldComponent,
-    TextComponent,
+    EditGroupComponent,
+    EditFieldComponent,
+    EditTextComponent,
     DisplayPdfComponent,
     FieldStyleDirective,
     PositionDirective,

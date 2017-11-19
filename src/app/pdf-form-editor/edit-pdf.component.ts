@@ -5,22 +5,22 @@ import { NavigationComponent } from './edit-pdf/navigation/navigation.component'
 
 import { DocumentBase } from './model/DocumentBase';
 import { PDF } from './model/PDF';
-import { Form } from './model/Form';
+import { Edit } from './model/Edit';
 
 @Component({
-  selector: 'form-edit',
+  selector: 'edit-form',
   templateUrl: './edit-pdf.component.html',
   styleUrls: ['./edit-pdf.component.css']
 })
 export class PdfEditComponent implements OnInit {
 
   // @Input() private pdfForm: PdfForm;
-  private document: Form.Document;
+  private editDocument: Edit.Document;
 
   setDocument(pdfDocument: PDF.Document) {
 
     // Copy the PDF document into the Form document.
-    const formDocument = new Form.Document();
+    const formDocument = new Edit.Document();
     formDocument.description = pdfDocument.description;
     formDocument.id = pdfDocument.id;
     formDocument.pdfBytes = pdfDocument.pdfBytes;
@@ -29,7 +29,7 @@ export class PdfEditComponent implements OnInit {
     formDocument.pageSize = pdfDocument.pageSize;
 
     for (const pdfPage of pdfDocument.pages) {
-      const formPage = new Form.Page();
+      const formPage = new Edit.Page();
 
       formPage.pageNo = pdfPage.pageNo;
       formPage.active = (pdfPage.pageNo === 1);
@@ -68,12 +68,12 @@ export class PdfEditComponent implements OnInit {
       formDocument.addPage(formPage);
     }
 
-    this.document = formDocument;
+    this.editDocument = formDocument;
   }
 
-  getFieldData(pdfData: DocumentBase.Field[], dataFieldName: string): Form.Field {
+  getFieldData(pdfData: DocumentBase.Field[], dataFieldName: string): Edit.Field {
     const fields = pdfData.filter(x => x.name === dataFieldName);
-    const formField = new Form.Field();
+    const formField = new Edit.Field();
     formField.name = dataFieldName;
     // Expecting to find only one but if more - return first.
     if (fields.length > 0) {

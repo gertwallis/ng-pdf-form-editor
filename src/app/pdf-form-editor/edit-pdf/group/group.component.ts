@@ -1,21 +1,21 @@
 import { Component, Input, OnInit, ViewChild, ViewChildren, QueryList, ElementRef } from '@angular/core';
 
-import { FieldComponent } from './../field/field.component';
+import { EditFieldComponent } from './../field/field.component';
 
 import { DocumentBase } from './../../model/DocumentBase';
-import { Form } from './../../model/Form';
+import { Edit } from './../../model/Edit';
 import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
-  selector: 'form-group',
+  selector: 'edit-group',
   templateUrl: './group.component.html',
   styleUrls: ['./group.component.css']
 })
-export class GroupComponent implements OnInit {
+export class EditGroupComponent implements OnInit {
 
   @Input() active = true;
-  @Input() formGroup: Form.Group;
-  @ViewChildren(FieldComponent) fieldViews: QueryList<FieldComponent>;
+  @Input() editGroup: Edit.Group;
+  @ViewChildren(EditFieldComponent) fieldViews: QueryList<EditFieldComponent>;
 
   // @Output() fieldEvent = new EventEmitter<UI.EditEvent>();
 
@@ -72,10 +72,10 @@ export class GroupComponent implements OnInit {
   // }
 
   setScale(scale: UI.Scale) {
-    this.left = this.formGroup.left * scale.horiz;
-    this.top = this.formGroup.top * scale.vertical;
-    this.width = this.formGroup.width * scale.horiz;
-    this.height = this.formGroup.height * scale.vertical;
+    this.left = this.editGroup.left * scale.horiz;
+    this.top = this.editGroup.top * scale.vertical;
+    this.width = this.editGroup.width * scale.horiz;
+    this.height = this.editGroup.height * scale.vertical;
     // this.pageSize = {
     //   'width': width + 'px',
     //   'height': height + 'px',

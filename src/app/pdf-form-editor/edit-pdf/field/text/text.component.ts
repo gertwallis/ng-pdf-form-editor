@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, Output, ViewChild, ElementRef, AfterVie
 import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
-  selector: 'form-text',
+  selector: 'edit-text',
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
-export class TextComponent implements AfterViewInit {
+export class EditTextComponent implements AfterViewInit {
 
   @Input() name: string;
   @Input() value: string;

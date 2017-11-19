@@ -1,19 +1,19 @@
-import { TextComponent } from './text/text.component';
+import { EditTextComponent } from './text/text.component';
 import { Component, Input, OnInit, ViewChild, Output, EventEmitter, ElementRef } from '@angular/core';
 
 import { DocumentBase } from './../../model/DocumentBase';
-import { Form } from './../../model/Form';
+import { Edit } from './../../model/Edit';
 import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
-  selector: 'form-field',
+  selector: 'edit-field',
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.css']
 })
-export class FieldComponent implements OnInit {
+export class EditFieldComponent implements OnInit {
 
   @Input() active: boolean;
-  @Input() formField: Form.Field;
+  @Input() editField: Edit.Field;
 
   @Output() fieldEvent = new EventEmitter<UI.EditEvent>();
 
@@ -40,11 +40,11 @@ export class FieldComponent implements OnInit {
   }
 
   gotFocus() {
-    console.log('Got Focus:' + this.formField.name);
+    console.log('Got Focus:' + this.editField.name);
 
     const editEvent = new UI.EditEvent();
     editEvent.type = UI.EventType.Enter;
-    editEvent.name = this.formField.name;
+    editEvent.name = this.editField.name;
     this.fieldEvent.emit(editEvent);
     // this.childEditField.nativeElement.focus();
 
@@ -56,16 +56,16 @@ export class FieldComponent implements OnInit {
   }
 
   lostFocus() {
-    console.log('Lost Focus:' + this.formField.name);
+    console.log('Lost Focus:' + this.editField.name);
   }
 
   doneEditing(value: UI.EditEvent) {
     console.log('Done  editing:' + value);
 
     this.active = false;
-    if (value.value !== this.formField.value) {
-      this.formField.value = value.value;
-      this.formField.state = DocumentBase.DisplayState.EditedValue;
+    if (value.value !== this.editField.value) {
+      this.editField.value = value.value;
+      this.editField.state = DocumentBase.DisplayState.EditedValue;
       this.setStyle();
     }
 
@@ -74,17 +74,17 @@ export class FieldComponent implements OnInit {
   }
 
   setScale(scale: UI.Scale) {
-    this.left = this.formField.location.left * scale.horiz;
-    this.top = this.formField.location.top * scale.vertical;
-    this.width = this.formField.location.width * scale.horiz;
-    this.height = this.formField.location.height * scale.vertical;
+    this.left = this.editField.location.left * scale.horiz;
+    this.top = this.editField.location.top * scale.vertical;
+    this.width = this.editField.location.width * scale.horiz;
+    this.height = this.editField.location.height * scale.vertical;
 
     this.setStyle();
-    
+
   }
 
   private setStyle() {
-    switch (this.formField.state) {
+    switch (this.editField.state) {
       case DocumentBase.DisplayState.NoValue:
         this.locationStyle = {
           'position': 'absolute',
