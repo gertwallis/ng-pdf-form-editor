@@ -56,7 +56,7 @@ export class EditFieldComponent implements OnInit {
       'left': this.left + 'px',
       'top': this.top + 'px',
       'border': '1px solid green'
-    }
+    };
     this.editingStyle = {
       'width': this.width + 'px',
       'height': this.height + 'px'
@@ -65,24 +65,24 @@ export class EditFieldComponent implements OnInit {
   /*
     gotFocus() {
       console.log('Got Focus:' + this.editField.name);
-  
+
       const editEvent = new UI.EditEvent();
       editEvent.type = UI.EventType.Enter;
       editEvent.name = this.editField.name;
       this.fieldEvent.emit(editEvent);
       // this.childEditField.nativeElement.focus();
-  
+
       this.editingStyle = {
         'display': 'block',
         'width': this.width + 'px',
         'height': this.height + 'px'
       };
     }
-  
+
     lostFocus() {
       console.log('Lost Focus:' + this.editField.name);
     }
-  
+
     private setStyle() {
       switch (this.editField.state) {
         case DocumentBase.DisplayState.NoValue:
@@ -95,7 +95,7 @@ export class EditFieldComponent implements OnInit {
             'background-color': 'lightpink'
           };
           break;
-  
+
         case DocumentBase.DisplayState.EditedValue:
           this.locationStyle = {
             'position': 'absolute',
@@ -106,7 +106,7 @@ export class EditFieldComponent implements OnInit {
             'background-color': 'lightgreen'
           };
           break;
-  
+
         case DocumentBase.DisplayState.SavedValue:
           this.locationStyle = {
             'position': 'absolute',

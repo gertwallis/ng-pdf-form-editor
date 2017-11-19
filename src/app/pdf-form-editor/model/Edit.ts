@@ -14,7 +14,7 @@ export namespace Edit {
     }
 
     export enum GroupType {
-        None = 0,
+        Root = 0,
         XBox = 1,
         Entity = 2,
         Other = 3
@@ -38,6 +38,10 @@ export namespace Edit {
                 let right = 0;
                 let bottom = 0;
 
+                // Want to give the groups border of about 10px to give some space between
+                // the group and the actual component. 
+                const border = 100;
+
                 // Set the top left of the group
                 for (const formField of this.fields) {
                     this.top = (formField.location.top < this.top) ? formField.location.top : this.top;
@@ -50,8 +54,10 @@ export namespace Edit {
                         bottom;
                 }
 
-                this.width = right - this.left;
-                this.height = bottom - this.top;
+                this.top -= border;
+                this.left -= border;
+                this.width = (right - this.left) + border * 2;
+                this.height = (bottom - this.top) + border * 2;
 
                 // Make all the fields relative to group position.
                 for (const formField of this.fields) {
