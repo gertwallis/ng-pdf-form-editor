@@ -22,6 +22,8 @@ export class TextComponent implements AfterViewInit {
       (keyCode.which === 9 && keyCode.shiftKey)) {
       // Enter key presed - done editing
       const editEvent = new UI.EditEvent();
+      editEvent.type = UI.EventType.Exit;
+      editEvent.name = this.name;
       editEvent.value = this.value;
       editEvent.keyCode = keyCode.keyCode;
       keyCode.preventDefault();
@@ -37,6 +39,7 @@ export class TextComponent implements AfterViewInit {
     console.log('Test blur function called');
     const editEvent = new UI.EditEvent();
     editEvent.value = this.value;
+    editEvent.name = this.name;
     this.doneEditing.emit(editEvent);
   }
 

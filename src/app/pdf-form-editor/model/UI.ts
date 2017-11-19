@@ -2,7 +2,7 @@ export namespace UI {
     export enum EventType {
         Enter = 1,
         Exit = 2,
-    }      name: string;
+    }
 
 
     // Class to communicate fields from the entry field to the page component to
