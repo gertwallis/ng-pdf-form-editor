@@ -13,6 +13,11 @@ export namespace Form {
         location: DocumentBase.Location = new DocumentBase.Location();
     }
 
+    
+    export class Group {
+
+    }
+
     export class Page {
         active: boolean;
         pageNo: number;

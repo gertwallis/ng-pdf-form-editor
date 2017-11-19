@@ -43,8 +43,9 @@ export class FieldComponent implements OnInit {
     console.log('Got Focus:' + this.formField.name);
 
     const editEvent = new UI.EditEvent();
+    editEvent.type = UI.EventType.Enter;
     editEvent.name = this.formField.name;
-    this.fieldEvent.emit(this.formField.name);
+    this.fieldEvent.emit(editEvent);
     // this.childEditField.nativeElement.focus();
 
     this.editingStyle = {
