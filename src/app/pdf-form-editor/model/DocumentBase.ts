@@ -9,7 +9,7 @@ export namespace DocumentBase {
         Unknown = 0,
         AlphaNumeric = 1,
         Integer = 2,
-        CheckBox = 3,
+        XBox = 3,
         TextArea = 4,
         Date = 5,
         Dollar = 6,
@@ -25,6 +25,7 @@ export namespace DocumentBase {
         state: DisplayState;
         format: Format;
         maxChar: number;
+        groupName: string;
     }
 
     export enum DisplayState {
@@ -40,8 +41,8 @@ export namespace DocumentBase {
     }
 
     interface FixedPosition {
-        x: number;
-        y: number;
+        top: number;
+        left: number;
     }
 
     export class DataValue {
@@ -51,8 +52,8 @@ export namespace DocumentBase {
 
     export class Location implements FixedSize, FixedPosition {
         tabOrder: number;
-        x: number;
-        y: number;
+        top: number;
+        left: number;
         width: number;
         height: number;
     }

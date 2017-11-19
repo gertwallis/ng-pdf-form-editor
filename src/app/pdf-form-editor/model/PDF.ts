@@ -3,10 +3,11 @@ import { DocumentBase } from './DocumentBase';
 // Retrieved through service
 export namespace PDF {
 
-    // Can have multiple locations for every data field. 
+    // Can have multiple locations for every data field.
     export class Location extends DocumentBase.Location {
         // Corresponds to Data.Name
         name: string;
+        groupName: string;
     }
 
     export class Page {

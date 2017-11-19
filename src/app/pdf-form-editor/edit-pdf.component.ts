@@ -35,7 +35,7 @@ export class PdfEditComponent implements OnInit {
       formPage.active = (pdfPage.pageNo === 1);
 
       for (const pdfLocation of pdfPage.locations) {
-        // Some pages may not have fields. 
+        // Some pages may not have fields.
         if (pdfDocument.fields) {
           const formField = this.getFieldData(pdfDocument.fields, pdfLocation.name);
 
@@ -46,8 +46,9 @@ export class PdfEditComponent implements OnInit {
             formField.location.height = pdfLocation.height;
             formField.location.tabOrder = pdfLocation.tabOrder;
             formField.location.width = pdfLocation.width;
-            formField.location.x = pdfLocation.x;
-            formField.location.y = pdfLocation.y;
+            formField.location.left = pdfLocation.left;
+            formField.location.top = pdfLocation.top;
+            formField.groupName = pdfLocation.groupName;
 
             // Set the data value if it exist in the pdf
             if (pdfDocument.data) {
@@ -58,13 +59,13 @@ export class PdfEditComponent implements OnInit {
                 formField.state = DocumentBase.DisplayState.SavedValue;
               }
             }
-            
-            formPage.fields.push(formField);
+
+            formPage.addField(formField);
           }
         }
       }
 
-      formDocument.pages.push(formPage);
+      formDocument.addPage(formPage);
     }
 
     this.document = formDocument;

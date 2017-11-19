@@ -21,8 +21,9 @@ import { TabComponent } from './edit-pdf/tab/tab.component';
 
 // Editing
 import { PageComponent } from './edit-pdf/page/page.component';
-import { TextComponent } from './edit-pdf/field/text/text.component';
+import { GroupComponent } from './edit-pdf/group/group.component';
 import { FieldComponent } from './edit-pdf/field/field.component';
+import { TextComponent } from './edit-pdf/field/text/text.component';
 
 // Display of PDF
 import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
@@ -46,6 +47,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     PagesComponent,
     TabComponent,
     PdfEditComponent,
+    GroupComponent,
     FieldComponent,
     TextComponent,
     DisplayPdfComponent,

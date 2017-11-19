@@ -21,8 +21,8 @@ export class FieldComponent implements OnInit {
 
   tabIndex = 0;
 
-  private x = 0;
-  private y = 0;
+  private left = 0;
+  private top = 0;
   private width = 0;
   private height = 0;
 
@@ -73,14 +73,14 @@ export class FieldComponent implements OnInit {
     //  this.divRef.nativeElement.nextSibling.focus();
   }
 
-
-  setLocation(x: number, y: number, width: number, height: number) {
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
+  setScale(scale: UI.Scale) {
+    this.left = this.formField.location.left * scale.horiz;
+    this.top = this.formField.location.top * scale.vertical;
+    this.width = this.formField.location.width * scale.horiz;
+    this.height = this.formField.location.height * scale.vertical;
 
     this.setStyle();
+    
   }
 
   private setStyle() {
@@ -88,8 +88,8 @@ export class FieldComponent implements OnInit {
       case DocumentBase.DisplayState.NoValue:
         this.locationStyle = {
           'position': 'absolute',
-          'left': this.x + 'px',
-          'top': this.y + 'px',
+          'left': this.left + 'px',
+          'top': this.top + 'px',
           'width': this.width + 'px',
           'height': this.height + 'px',
           'background-color': 'lightpink'
@@ -99,8 +99,8 @@ export class FieldComponent implements OnInit {
       case DocumentBase.DisplayState.EditedValue:
         this.locationStyle = {
           'position': 'absolute',
-          'left': this.x + 'px',
-          'top': this.y + 'px',
+          'left': this.left + 'px',
+          'top': this.top + 'px',
           'width': this.width + 'px',
           'height': this.height + 'px',
           'background-color': 'lightgreen'
@@ -110,8 +110,8 @@ export class FieldComponent implements OnInit {
       case DocumentBase.DisplayState.SavedValue:
         this.locationStyle = {
           'position': 'absolute',
-          'left': this.x + 'px',
-          'top': this.y + 'px',
+          'left': this.left + 'px',
+          'top': this.top + 'px',
           'width': this.width + 'px',
           'height': this.height + 'px',
           'background-color': 'lightgrey',

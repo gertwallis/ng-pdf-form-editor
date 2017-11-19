@@ -4,6 +4,10 @@ export namespace UI {
         Exit = 2,
     }
 
+    export class Scale {
+        horiz:number;
+        vertical: number;
+    }
 
     // Class to communicate fields from the entry field to the page component to
     // place focus at the correct value.

@@ -1,0 +1,11 @@
+<!-- <div [ngStyle]="locationStyle" [formFieldStyle]="color" [tabindex]="formField.location.tabOrder" (focus)="gotFocus()" (blur)="lostFocus()"> -->
+<div>
+    <div *ngIf="active" [ngStyle]="editingStyle">
+        <!-- <form-field *ngFor="let formField of this.formGroup.fields" [formField]="formField" [class.active]="this.formGroup.active"
+            (fieldActive)="fieldActive($event)">
+        </form-field> -->
+    </div>
+</div>
+
+<!-- <span class="helpIcon glyphicon glyphicon-question-sign" title="What is this?" [ngStyle]="editingStyle"></span>
+<span class="helpIcon glyphicon glyphicon-wrench" title="Debug Information" [ngStyle]="editingStyle"></span> -->

@@ -83,18 +83,12 @@ export class PagesComponent implements AfterContentInit {
     if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
       this.currentZoom = this.viewer.zoom;
 
-      const horiz = size.width / this.document.pageSize.width;
-      const vertical = size.height / this.document.pageSize.height;
+      const scale = new UI.Scale();
+      scale.horiz = size.width / this.document.pageSize.width;
+      scale.vertical = size.height / this.document.pageSize.height;
 
       this.pageViews.forEach(page => {
-        page.setPageSize(size.width, size.height);
-        page.fieldViews.forEach(field => {
-          field.setLocation(
-            field.formField.location.x * horiz,
-            field.formField.location.y * vertical,
-            field.formField.location.width * horiz,
-            field.formField.location.height * vertical);
-        });
+        page.setScale(size.width, size.height, scale);
       });
     }
   }
