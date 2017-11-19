@@ -26,15 +26,10 @@ export class EditGroupComponent implements OnInit {
 
   locationStyle: {};
 
-  editingStyle: {};
-
   constructor(private divRef: ElementRef) {
   }
 
   ngOnInit() {
-    this.editingStyle = {
-      'display': 'none',
-    };
   }
 
   // gotFocus() {
@@ -72,19 +67,25 @@ export class EditGroupComponent implements OnInit {
   // }
 
   setScale(scale: UI.Scale) {
-    this.left = this.editGroup.left * scale.horiz;
-    this.top = this.editGroup.top * scale.vertical;
-    this.width = this.editGroup.width * scale.horiz;
-    this.height = this.editGroup.height * scale.vertical;
-    // this.pageSize = {
-    //   'width': width + 'px',
-    //   'height': height + 'px',
-    // };
+    this.left = Math.round(this.editGroup.left * scale.horiz * 10) / 10;
+    this.top = Math.round(this.editGroup.top * scale.vertical * 10) / 10;
+    this.width = Math.round(this.editGroup.width * scale.horiz * 10) / 10;
+    this.height = Math.round(this.editGroup.height * scale.vertical * 10) / 10;
 
     this.fieldViews.forEach(field => {
       field.setScale(scale);
     });
+
+    this.locationStyle = {
+         'position': 'absolute',
+          'left': this.left + 'px',
+          'top': this.top + 'px',
+          'width': this.width + 'px',
+          'height': this.height + 'px',
+          'border': '1px solid red'
+    };
   }
+
 
   // setLocation(x: number, y: number, width: number, height: number) {
   //   this.left = x;

@@ -1,17 +1,17 @@
-<div class="debugStyle"> 
-<!-- <div [ngStyle]="locationStyle" 
+<div [ngStyle]="locationStyle"> 
+<!-- <div  
     [formFieldStyle]="color" 
     [tabindex]="editField.location.tabOrder" 
     (focus)="gotFocus()" 
     (blur)="lostFocus()" 
     title="editField.name"> -->
     <div *ngIf="active" [ngStyle]="editingStyle" >
-        <!-- <edit-text 
+        <edit-text 
             [name]="editField.name" 
             [value]="editField.value" 
-            (doneEditing)="doneEditing($event)"></edit-text> -->
+            (doneEditing)="doneEditing($event)"></edit-text>
     </div>
-    {{formField.value}}
+    <!-- {{editField.value}} -->
     <div >
         
     </div>

@@ -1,12 +1,10 @@
 <!-- <div [ngStyle]="locationStyle" [formFieldStyle]="color" [tabindex]="formField.location.tabOrder" (focus)="gotFocus()" (blur)="lostFocus()"> -->
-<div>
-        <div class="groupStyle">
-        <!-- <edit-field *ngFor="let field of editGroup.fields" 
-            [editField]="field" 
-            [class.active]="editGroup.active"
-            (fieldActive)="fieldActive($event)">
-        </edit-field> -->
-    </div>
+<div [ngStyle]="locationStyle" >
+    <edit-field *ngFor="let editField of editGroup.fields" 
+        [editField]="editField" 
+        [class.active]="editGroup.active"
+        (fieldActive)="fieldActive($event)">
+    </edit-field>
 </div>
 
 <!-- <span class="helpIcon glyphicon glyphicon-question-sign" title="What is this?" [ngStyle]="editingStyle"></span>
