@@ -1,4 +1,4 @@
 <edit-pages [editDocument] = "editDocument">
-   <edit-tab *ngFor="let page of document.pages" [pageNo]="page.pageNo" [active]="page.active">
+   <edit-tab *ngFor="let page of editDocument.pages" [pageNo]="page.pageNo" [active]="page.active">
    </edit-tab>
 </edit-pages>

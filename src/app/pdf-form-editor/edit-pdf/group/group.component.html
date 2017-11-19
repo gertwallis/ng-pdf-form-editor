@@ -1,7 +1,9 @@
 <!-- <div [ngStyle]="locationStyle" [formFieldStyle]="color" [tabindex]="formField.location.tabOrder" (focus)="gotFocus()" (blur)="lostFocus()"> -->
 <div>
-    <div *ngIf="active" [ngStyle]="editingStyle">
-        <!-- <edit-field *ngFor="let field of this.editGroup.fields" [editField]="field" [class.active]="this.editGroup.active"
+        <div class="groupStyle">
+        <!-- <edit-field *ngFor="let field of editGroup.fields" 
+            [editField]="field" 
+            [class.active]="editGroup.active"
             (fieldActive)="fieldActive($event)">
         </edit-field> -->
     </div>

@@ -1,5 +1,5 @@
-<div class="formContainer" [hidden]="!formPage.active">
-  <div *ngIf="this.documentPage.groups.length > 0" [ngStyle]="pageSize">
-    <edit-group [editGroup]="this.documentPage.groups[0]"></edit-group>
+<div class="formContainer" [hidden]="!editPage.active">
+  <div *ngIf="this.editPage.groups.length > 0" [ngStyle]="pageSize">
+    <edit-group [editGroup]="this.editPage.groups[0]"></edit-group>
   </div>
 </div>

@@ -12,7 +12,7 @@ import { UI } from 'app/pdf-form-editor/model/UI';
 })
 export class EditFieldComponent implements OnInit {
 
-  @Input() active: boolean;
+  @Input() active = true;
   @Input() editField: Edit.Field;
 
   @Output() fieldEvent = new EventEmitter<UI.EditEvent>();
@@ -74,10 +74,10 @@ export class EditFieldComponent implements OnInit {
   }
 
   setScale(scale: UI.Scale) {
-    this.left = this.editField.location.left * scale.horiz;
-    this.top = this.editField.location.top * scale.vertical;
-    this.width = this.editField.location.width * scale.horiz;
-    this.height = this.editField.location.height * scale.vertical;
+    // this.left = this.editField.location.left * scale.horiz;
+    // this.top = this.editField.location.top * scale.vertical;
+    // this.width = this.editField.location.width * scale.horiz;
+    // this.height = this.editField.location.height * scale.vertical;
 
     this.setStyle();
 

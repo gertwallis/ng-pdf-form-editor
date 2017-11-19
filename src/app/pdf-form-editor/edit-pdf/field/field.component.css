@@ -1,3 +1,7 @@
+.debugStyle {
+    background-color: blue,    
+}
+
 .editStyle {
     display: block;
     background-color: lightcoral,

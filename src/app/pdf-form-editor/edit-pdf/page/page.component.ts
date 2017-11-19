@@ -12,6 +12,7 @@ import { UI } from 'app/pdf-form-editor/model/UI';
 })
 export class EditPageComponent implements OnInit {
 
+  @Input() active: boolean;
   @Input() editPage: Edit.Page;
 
   @ViewChildren(EditGroupComponent) groupViews: QueryList<EditGroupComponent>;

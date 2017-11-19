@@ -33,18 +33,17 @@ export namespace Edit {
 
             // This funcion should be called once after all the fields are set
             // Safty check to make sure you don't do it twice.
-            if (this.top === 0 && this.left === 0) {
+            if (!this.top && !this.left) {
+                this.left = this.top = 99999;
+                this.width = this.height = 0;
+
                 // Set the top left of the group
                 for (const formField of this.fields) {
-                    this.top = (formField.location.top > this.top) ? formField.location.top : this.top;
-                    this.left = (formField.location.left > this.left) ? formField.location.left : this.left;
+                    this.top = (formField.location.top < this.top) ? formField.location.top : this.top;
+                    this.left = (formField.location.left < this.left) ? formField.location.left : this.left;
                     this.width = (formField.location.width > this.width) ? formField.location.width : this.width;
                     this.height = (formField.location.height > this.height) ? formField.location.height : this.height;
                 }
-
-                // Was in abs location - convert to width
-                this.height -= this.top;
-                this.width -= this.left;
 
                 // Make all the fields relative to group position.
                 for (const formField of this.fields) {
@@ -95,8 +94,8 @@ export namespace Edit {
         pages: Page[] = [];
 
         addPage(page: Page) {
+            page.setOffset();
             this.pages.push(page);
-
         }
 
     }

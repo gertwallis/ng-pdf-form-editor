@@ -19,7 +19,7 @@
     padding: 5px;
 }
 
-.formView {
+.editView {
     position: absolute;
     z-index: 99;
 }
