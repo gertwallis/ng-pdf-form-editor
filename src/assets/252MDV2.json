@@ -1,994 +1,994 @@
 {
   "fields": [
     {
-      "state": 0,
       "description": "Type of charter for a financial institution",
       "format": 1,
+      "hidden": false,
       "label": "Institution Type",
       "maxChar": 0,
       "name": "_InstitutionType",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount of the decal/sticker fee.  Enter the dollar amount without commas, (e.g. \"1000.20\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the amount of the decal/sticker fee.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_DecalFee",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates the name of the vessel that was documented by the United States Coast Guard.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the name of the vessel that was documented by the United States Coast Guard.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_DocumentedVesselName",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates that the application is for the renewal of documented vessel decal only.",
       "format": 3,
+      "hidden": false,
       "label": "Check this box if the application is for the renewal of documented vessel decal only.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_DocVesselDecalOnly",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates that the application is for documented vessel tax payment purposes only.",
       "format": 3,
+      "hidden": false,
       "label": "Check this box if the application is for documented vessel tax payment purposes only.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_DocVesselTaxPymtOnly",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "Enter the make/manufacturer of the first vehicle engine or vessel outboard motor.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the make/manufacturer of the first vehicle engine or vessel outboard motor.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Engine1MakeManufacturer",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the horsepower of the first vehicle engine or first vessel motor.",
       "format": 8,
+      "hidden": false,
       "label": "Enter the horsepower of the first vehicle engine or first vessel motor.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_EngineMotor1Horsepower",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the serial number of the first vehicle engine or first vessel motor.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the serial number of the first vehicle engine or first vessel motor.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_EngineMotor1SerialNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount of the excise tax.  Enter the dollar amount without commas, (e.g. \"1000.20\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the excise tax amount.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_ExciseTaxAmount",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount for the filing fee.",
       "format": 6,
+      "hidden": false,
       "label": "Enter the filing fee.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_FilingFee",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the fuel type is diesel.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the fuel type is diesel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_FuelTypeDiesel",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the fuel (power) type is electric.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the fuel (power) type is electric.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_FuelTypeElectric",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that that the fuel type is gasoline.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the fuel type is gasoline.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_FuelTypeGas",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the fuel type is a type other than the choices listed on the form.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the fuel type is a type other than the choices listed on the form.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_FuelTypeOther",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the hull identification number (HIN).",
       "format": 1,
+      "hidden": false,
       "label": "Enter the hull identification number (HIN).",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_HullIdentificationNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the hull is constructed of aluminum.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the hull is constructed of aluminum.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_HullMaterialAluminum",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the hull is constructed of fiberglass.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the hull is constructed of fiberglass.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_HullMaterialFiberglass",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates that the hull material used on the vessel is flexible fabric.",
       "format": 3,
+      "hidden": false,
       "label": "Check this box if the hull material used on the vessel is flexible fabric.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_HullMaterialFlexFabric",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the hull is constructed of a material other than the choices listed on the form.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the hull is constructed of a material other than the choices listed on the form.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_HullMaterialOther",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the hull is constructed of steel.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the hull is constructed of steel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_HullMaterialSteel",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the hull is constructed of wood.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the hull is constructed of wood.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_HullMaterialWood",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount of the interest for the sale of the vehicle.  Enter the dollar amount without commas, (e.g. \"1000.20\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the dollar amount of the interest for the sale of the vehicle.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Interest",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the length in feet of the vehicle/vessel/mobile unit.",
       "format": 8,
+      "hidden": false,
       "label": "Enter the length in feet of the vehicle/vessel/mobile unit.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_LengthFeet",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the amount of inches (in addition to the footage) that make up the length of the vehicle/vessel/mobile unit.",
       "format": 8,
+      "hidden": false,
       "label": "Enter the amount of inches (in addition to the footage) that make up the length of the vehicle/vessel/mobile unit.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_LengthInches",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount that was secured by the first lien.  Enter the dollar amount without commas, (e.g. \"25000\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the amount secured by the first lien.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Lien1Amount",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount for the net excise tax amount due..  Enter the dollar amount without commas, (e.g. \"1000.20\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the net excise tax amount due.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_NetExciseTaxAmount",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the net purchase price of the vessel.  Enter the dollar amount without commas, (e.g. \"25300.01\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the net purchase price of the vessel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_NetPurchasePriceVessel",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows an explaination in regards as to why the vessel is not registered.",
       "format": 1,
+      "hidden": false,
       "label": "Enter an explaination in regards as to why the vessel is not registered.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_NotRegisteredExplaination",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This this field shows the state where the driver's license of the first owner was issued.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the state where the driver's license of the first owner was issued.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner1DriverLicenseIssueState",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the driver's license number of the first owner.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the driver's license number of the first owner.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner1DriverLicenseNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the first owner is a female.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the first owner is a female.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner1Female",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the first owner is a male.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the first owner is a male.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner1Male",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the area code and telephone number of the first owner.",
       "format": 9,
+      "hidden": false,
       "label": "Enter the telephone number of the first owner.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner1PhoneNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the social security number for the first owner.",
       "format": 11,
+      "hidden": false,
       "label": "Enter the social security number for the first owner.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner1SocialSecurityNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the state where the driver's license of the second owner was issued.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the state where the driver's license of the second owner was issued.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner2DriverLicenseIssueState",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the driver's license number of the second owner.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the driver's license number of the second owner.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner2DriverLicenseNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the second owner is a female.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the second owner is a female.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner2Female",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the second owner is a male.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the second owner is a male.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner2Male",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the area code and telephone number of the second owner.",
       "format": 9,
+      "hidden": false,
       "label": "Enter the telephone number of the second owner.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner2PhoneNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the social security number for the second owner.",
       "format": 11,
+      "hidden": false,
       "label": "Enter the social security number for the second owner.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_Owner2SocialSecurityNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount of the penalty fee.  Enter the dollar amount without commas (e.g. \"1000.50\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the dollar amount of the penalty fee.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_PenaltyFee",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel propulsion type is an inboard motor.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel propulsion type is an inboard motor.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_PropulsionTypeInboard",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel propulsion type is an inboard/outboard motor.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel propulsion type is an inboard/outboard motor.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_PropulsionTypeInboardOutboard",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel  has a propulsion type other than the choices listed on the form.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel has a propulsion type other than the choices listed on the form.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_PropulsionTypeOther",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel propulsion type is an outboard motor.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel propulsion type is an outboard motor.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_PropulsionTypeOutboard",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel propulsion type is an inboard sail.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel propulsion type is an inboard sail.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_PropulsionTypeSailInboard",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel propulsion type is an outboard sail.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel propulsion type is an outboard sail.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_PropulsionTypeSailOutboard",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the purchase price of the vessel.  Enter the dollar amount without commas, (e.g. \"25000.50\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the purchase price of the vessel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_PurchasePriceVessel",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount for the registration fee.  Enter the dollar amount without commas, (e.g., \"1000.50\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the registration fee amount.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_RegistrationFee",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the request is for a registration renewal.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the request is for a registration renewal.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_RegistrationRenewal",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount of tax credit owed to the party applying for title/registration.  Enter the dollar amount without commas, (e.g \"1000.50\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the dollar amount of tax credit owed to the party applying for title/registration.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_TaxCredit",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the documented vessel application is for tax payment and decal.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the documented vessel application is for tax payment and decal.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_TaxPaymentDecal",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount for the title fee.  Enter the dollar amount without commas, (e.g., \"1000.50\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the amount of title fee.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_TitleFee",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the request is for an original certificate of title only.  Indicate this by checking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the request is for an original certificate of title only.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_TitleOnly",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the request is for title and registration.  Indicate this by marking the box with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the request is for title and registration.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_TitleRegistration",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount of the total fees due, including taxes.  Enter the dollar amount without commas, (e.g \"1000\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the amount of the total fees due.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_TotalFees",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the dollar amount that the vehicle/vessel/outboard motor trade-in is worth.  Enter the dollar amount without commas, (e.g. \"10000\").",
       "format": 6,
+      "hidden": false,
       "label": "Enter the amount that the vehicle/vessel/outboard motor trade-in is worth.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_TradeInAmount",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vehicle or vessel is government owned/used.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vehicle or vessel is government owned/used.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VehicleVesselUseGovernment",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the model of the vessel engine.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the model of the vessel engine.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselEngineModel",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates where the vessel is located or docked.  The answer will include river, creek, lake, etc.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the location of the vessel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselLocation",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the model of the vessel.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the model of the vessel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselModel",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates that the vessel associated with this application is new.",
       "format": 3,
+      "hidden": false,
       "label": "Check this box if the vessel associated with this application is new.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselNew",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the state registration number for the vessel.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the state registration number for the vessel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselRegistrationNumber",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates that there is a trailer which goes with the vessel.",
       "format": 3,
+      "hidden": false,
       "label": "Check this box if there is a trailer with the vessel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselTrailered",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel type is a cabin vessel.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel type is a cabin vessel.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselTypeCabin",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel type is a houseboat.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel type is a houseboat.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselTypeHouseboat",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel type is an inflatable watercraft.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel type is an inflatable watercraft.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselTypeInflatable",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel type is an open bow.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel type is an open bow.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselTypeOpen",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel is a type other than the choices listed on the form.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel is a type other than the choices listed on the form.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselTypeOther",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel type is a personal watercraft.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel type is a personal watercraft.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselTypePersonal",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel is used for commercial fishing.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel is used for commercial fishing.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUseCommercialFishing",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel is used for commercial passenger purposes.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel is used for commercial passenger purposes.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUseCommercialPassenger",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates that the vessel associated with this application is a used vessel.",
       "format": 3,
+      "hidden": false,
       "label": "Check this box if the vessel associated with this application is a used vessel..",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUsed",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel is used for dealer/demonstration purposes.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel is used for dealer/demonstration purposes.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUseDealer",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel is used for diplomat purposes.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel is used for diplomat purposes.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUseDiplomat",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This indicates that the vessel will be used for emergency rescue purposes only.",
       "format": 3,
+      "hidden": false,
       "label": "Check this box if the vessel is going to be used for emergency rescue.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUseEmergencyRescue",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel is used for a purpose other than the choices listed in the form.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel is used for a purpose other than the choices listed in the form.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUseOther",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel is for personal/pleasure use.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel is for personal/pleasure use.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUsePersonal",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows that the vessel is used as a rental.  Indicate this by marking the field with an \"X\".",
       "format": 3,
+      "hidden": false,
       "label": "Check this box to indicate that the vessel is used as a rental.",
       "maxChar": 0,
       "name": "L_GNL_ADDL_TITL_VesselUseRental",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the street address, city, state and ZIP code of the first lienholder.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the first lienholder's address.",
       "maxChar": 0,
       "name": "L_GNL_ADDR_TITL_Lienholder1Address",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the first owner's city, state and ZIP code.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the first owner's city, state and ZIP code.",
       "maxChar": 0,
       "name": "L_GNL_ADDR_TITL_Owner1CityStateZIP",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the county where the first owner resides.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the county where the first owner resides.",
       "maxChar": 0,
       "name": "L_GNL_ADDR_TITL_Owner1County",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the street address of the first owner.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the street address of the first owner.",
       "maxChar": 0,
       "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the second owner's city, state and ZIP code.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the second owner's city, state and ZIP code.",
       "maxChar": 0,
       "name": "L_GNL_ADDR_TITL_Owner2CityStateZIP",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the county where the second owner/lessee resides.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the county where the second owner/lessee resides.",
       "maxChar": 0,
       "name": "L_GNL_ADDR_TITL_Owner2County",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the street address of the second owner.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the street address of the second owner.",
       "maxChar": 0,
       "name": "L_GNL_ADDR_TITL_Owner2StreetAddress",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the county where the boat is docked/kept.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the county where the boat is docked/kept.",
       "maxChar": 0,
       "name": "L_GNL_ADDR_TITL_VesselMoorageCounty",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the month, day and year that the vehicle or vessel entered the state.",
       "format": 5,
+      "hidden": false,
       "label": "Enter the date that the vehicle or vessel entered the state.",
       "maxChar": 0,
       "name": "L_GNL_DATE_TITL_DateVehicleVesselEnteredState",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the year that the first vehicle engine or first vessel/boat motor was manufactured.",
       "format": 8,
+      "hidden": false,
       "label": "Enter the year that the first vehicle engine or first vessel/boat motor was manufactured.",
       "maxChar": 0,
       "name": "L_GNL_DATE_TITL_EngineMotor1Year",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the date of the first lien.  Enter the month, day and year that the lien began on.",
       "format": 5,
+      "hidden": false,
       "label": "Enter the date of the first lien.",
       "maxChar": 0,
       "name": "L_GNL_DATE_TITL_LienDate1",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the date of birth for the first owner.",
       "format": 5,
+      "hidden": false,
       "label": "Enter the date of birth for the first owner.",
       "maxChar": 0,
       "name": "L_GNL_DATE_TITL_Owner1DateOfBirth",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the date of birth for the second owner.",
       "format": 5,
+      "hidden": false,
       "label": "Enter the date of birth for the second owner.",
       "maxChar": 0,
       "name": "L_GNL_DATE_TITL_Owner2DateOfBirth",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the date that the owner purchased the vehicle/vessel/manufactured unit.",
       "format": 5,
+      "hidden": false,
       "label": "Enter the date that the owner purchased the vehicle/vessel/manufactured unit.",
       "maxChar": 0,
       "name": "L_GNL_DATE_TITL_PurchaseDate",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the year that the vessel/outboard motor was manufactured/model year.",
       "format": 8,
+      "hidden": false,
       "label": "Enter the year that the vessel/outboard motor was manufactured/model year.",
       "maxChar": 0,
       "name": "L_GNL_DATE_TITL_VesselYear",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "Used for Digital Signature.",
       "format": 10,
+      "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
       "name": "L_GNL_MISC_SIGN_eSignatureLienholder1",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "Used for Digital Signature.",
       "format": 10,
+      "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
       "name": "L_GNL_MISC_SIGN_eSignatureLienholder2",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "Used for Digital Signature.",
       "format": 10,
+      "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
       "name": "L_GNL_MISC_SIGN_eSignatureOwner1",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "Used for Digital Signature.",
       "format": 10,
+      "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
       "name": "L_GNL_MISC_SIGN_eSignatureOwner2",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the make/manufacturer of the vessel.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the make/manufacturer of the vessel.",
       "maxChar": 0,
       "name": "L_GNL_NAME_MISC_VesselMakeManufacturer",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the name of the first lien holder.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the name of the first lien holder.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Lienholder1Name",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "This field shows the first name of the first owner.",
       "format": 1,
+      "hidden": true,
       "label": "Enter the first name of the first owner.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner1FirstName",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the full name or business name of the first owner/lessee.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the full name or company name of the first owner/lessee.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner1FullNameorBusinessName",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "This field shows the last name of the first owner.",
       "format": 1,
+      "hidden": true,
       "label": "Enter the last name of the first owner.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner1LastName",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "This field shows the middle initial/name of the first owner.",
       "format": 1,
+      "hidden": true,
       "label": "Enter the middle initial/name of the first owner.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "This field shows the suffix name (e.g., \"Jr.,\" \"III,\" \"M.D.,\" etc.), if applicable, for the first owner.",
       "format": 1,
+      "hidden": true,
       "label": "Enter the suffix name, if applicable, for the first owner.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner1SuffixName",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "This field shows the first name of the second owner.",
       "format": 1,
+      "hidden": true,
       "label": "Enter the first name of the second owner.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner2FirstName",
-      "value": null
+      "state": 0
     },
     {
-      "state": 0,
       "description": "This field shows the full name or company name of the second owner/lessee.",
       "format": 1,
+      "hidden": false,
       "label": "Enter the full name or company name of the second owner/lessee.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner2FullNameorBusinessName",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "This field shows the last name of the second owner.",
       "format": 1,
+      "hidden": true,
       "label": "Enter the last name of the second owner.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner2LastName",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "This field shows the middle initial/name of the second owner.",
       "format": 1,
+      "hidden": true,
       "label": "Enter the middle initial/name of the second owner.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
-      "value": null
+      "state": 0
     },
     {
-      "state": 3,
       "description": "This field shows the suffix name, (e.g., \"Jr.\", \"III\", \"M.D.\", etc.), if applicable, for the second owner.",
       "format": 1,
+      "hidden": true,
       "label": "Enter the suffix name, if applicable, for the second owner.",
       "maxChar": 0,
       "name": "L_GNL_NAME_TITL_Owner2SuffixName",
-      "value": null
+      "state": 0
     }
   ],
   "data": [
@@ -1002,11 +1002,11 @@
     },
     {
       "name": "L_GNL_ADDL_TITL_DocVesselDecalOnly",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_DocVesselTaxPymtOnly",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_Engine1MakeManufacturer",
@@ -1029,48 +1029,32 @@
       "value": "999.99"
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypeDiesel",
-      "value": "left"
-    },
-    {
-      "name": "L_GNL_ADDL_TITL_FuelTypeElectric",
-      "value": "left"
-    },
-    {
-      "name": "L_GNL_ADDL_TITL_FuelTypeGas",
-      "value": "left"
-    },
-    {
-      "name": "L_GNL_ADDL_TITL_FuelTypeOther",
-      "value": "left"
-    },
-    {
       "name": "L_GNL_ADDL_TITL_HullIdentificationNumber",
       "value": "L_GNL_ADDL_TITL_HullIdentificationNumber"
     },
     {
       "name": "L_GNL_ADDL_TITL_HullMaterialAluminum",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_HullMaterialFiberglass",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_HullMaterialFlexFabric",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_HullMaterialOther",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_HullMaterialSteel",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_HullMaterialWood",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_Interest",
@@ -1101,27 +1085,27 @@
       "value": "L_GNL_ADDL_TITL_NotRegisteredExplaination"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Owner1DriverLicenseIssueState",
-      "value": "L_GNL_ADDL_TITL_Owner1DriverLicenseIssueState"
+      "name": "L_GNL_ADDL_TITL_Owner2DriverLicenseIssueState",
+      "value": "L_GNL_ADDL_TITL_Owner2DriverLicenseIssueState"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Owner1DriverLicenseNumber",
-      "value": "L_GNL_ADDL_TITL_Owner1DriverLicenseNumber"
+      "name": "L_GNL_ADDL_TITL_Owner2DriverLicenseNumber",
+      "value": "L_GNL_ADDL_TITL_Owner2DriverLicenseNumber"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Owner1Female",
-      "value": "left"
+      "name": "L_GNL_ADDL_TITL_Owner2Female",
+      "value": "x"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Owner1Male",
-      "value": "left"
+      "name": "L_GNL_ADDL_TITL_Owner2Male",
+      "value": "x"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Owner1PhoneNumber",
+      "name": "L_GNL_ADDL_TITL_Owner2PhoneNumber",
       "value": "(616) 830-4567"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Owner1SocialSecurityNumber",
+      "name": "L_GNL_ADDL_TITL_Owner2SocialSecurityNumber",
       "value": "777-88-9999"
     },
     {
@@ -1130,27 +1114,27 @@
     },
     {
       "name": "L_GNL_ADDL_TITL_PropulsionTypeInboard",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_PropulsionTypeInboardOutboard",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_PropulsionTypeOther",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_PropulsionTypeOutboard",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_PropulsionTypeSailInboard",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_PropulsionTypeSailOutboard",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_PurchasePriceVessel",
@@ -1162,7 +1146,7 @@
     },
     {
       "name": "L_GNL_ADDL_TITL_RegistrationRenewal",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_TaxCredit",
@@ -1170,7 +1154,7 @@
     },
     {
       "name": "L_GNL_ADDL_TITL_TaxPaymentDecal",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_TitleFee",
@@ -1178,11 +1162,11 @@
     },
     {
       "name": "L_GNL_ADDL_TITL_TitleOnly",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_TitleRegistration",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_TotalFees",
@@ -1194,7 +1178,7 @@
     },
     {
       "name": "L_GNL_ADDL_TITL_VehicleVesselUseGovernment",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselEngineModel",
@@ -1210,7 +1194,7 @@
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselNew",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselRegistrationNumber",
@@ -1218,83 +1202,83 @@
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselTrailered",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselTypeCabin",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselTypeHouseboat",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselTypeInflatable",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselTypeOpen",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselTypeOther",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselTypePersonal",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUseCommercialFishing",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUseCommercialPassenger",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUsed",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUseDealer",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUseDiplomat",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUseEmergencyRescue",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUseOther",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUsePersonal",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDL_TITL_VesselUseRental",
-      "value": "left"
+      "value": "x"
     },
     {
       "name": "L_GNL_ADDR_TITL_Lienholder1Address",
       "value": "L_GNL_ADDR_TITL_Lienholder1Address"
     },
     {
-      "name": "L_GNL_ADDR_TITL_Owner1CityStateZIP",
-      "value": "L_GNL_ADDR_TITL_Owner1CityStateZIP"
+      "name": "L_GNL_ADDR_TITL_Owner2CityStateZIP",
+      "value": "L_GNL_ADDR_TITL_Owner2CityStateZIP"
     },
     {
-      "name": "L_GNL_ADDR_TITL_Owner1County",
-      "value": "L_GNL_ADDR_TITL_Owner1County"
+      "name": "L_GNL_ADDR_TITL_Owner2County",
+      "value": "L_GNL_ADDR_TITL_Owner2County"
     },
     {
-      "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
-      "value": "L_GNL_ADDR_TITL_Owner1StreetAddress"
+      "name": "L_GNL_ADDR_TITL_Owner2StreetAddress",
+      "value": "L_GNL_ADDR_TITL_Owner2StreetAddress"
     },
     {
       "name": "L_GNL_ADDR_TITL_VesselMoorageCounty",
@@ -1310,10 +1294,6 @@
     },
     {
       "name": "L_GNL_DATE_TITL_LienDate1",
-      "value": "1/6/1980"
-    },
-    {
-      "name": "L_GNL_DATE_TITL_Owner1DateOfBirth",
       "value": "1/6/1980"
     },
     {
@@ -1337,10 +1317,6 @@
       "value": "L_GNL_NAME_TITL_Lienholder1Name"
     },
     {
-      "name": "L_GNL_NAME_TITL_Owner1FullNameorBusinessName",
-      "value": "L_GNL_NAME_TITL_Owner1FullNameorBusinessName"
-    },
-    {
       "name": "L_GNL_NAME_TITL_Owner2FullNameorBusinessName",
       "value": "L_GNL_NAME_TITL_Owner2FullNameorBusinessName"
     }
@@ -1358,24 +1334,25 @@
         {
           "height": 166.0,
           "name": "L_GNL_DATE_TITL_PurchaseDate",
+          "groupName": null,
           "tabOrder": 74,
           "width": 1350.0,
           "left": 4289.0,
           "top": 5072.0
         },
         {
-          "groupName": "Owner1",
           "height": 138.0,
           "name": "L_GNL_MISC_SIGN_eSignatureOwner1",
+          "groupName": "Owner1",
           "tabOrder": 101,
           "width": 2847.0,
           "left": 4610.0,
           "top": 8983.0
         },
         {
-          "groupName": "Owner2",
           "height": 138.0,
           "name": "L_GNL_MISC_SIGN_eSignatureOwner2",
+          "groupName": "Owner2",
           "tabOrder": 103,
           "width": 2847.0,
           "left": 4610.0,
@@ -1384,6 +1361,7 @@
         {
           "height": 138.0,
           "name": "L_GNL_MISC_SIGN_eSignatureLienholder1",
+          "groupName": null,
           "tabOrder": 104,
           "width": 2847.0,
           "left": 4610.0,
@@ -1392,6 +1370,7 @@
         {
           "height": 138.0,
           "name": "L_GNL_MISC_SIGN_eSignatureLienholder2",
+          "groupName": null,
           "tabOrder": 105,
           "width": 2847.0,
           "left": 4610.0,
@@ -1400,6 +1379,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Lien1Amount",
+          "groupName": null,
           "tabOrder": 91,
           "width": 1099.0,
           "left": 2316.0,
@@ -1408,6 +1388,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_DATE_TITL_LienDate1",
+          "groupName": null,
           "tabOrder": 90,
           "width": 1291.0,
           "left": 311.0,
@@ -1416,6 +1397,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_EngineMotor1Horsepower",
+          "groupName": null,
           "tabOrder": 82,
           "width": 1185.0,
           "left": 4289.0,
@@ -1424,6 +1406,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_HullIdentificationNumber",
+          "groupName": null,
           "tabOrder": 43,
           "width": 2182.0,
           "left": 301.0,
@@ -1432,6 +1415,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_LengthFeet",
+          "groupName": null,
           "tabOrder": 70,
           "width": 265.0,
           "left": 1298.0,
@@ -1440,6 +1424,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_LengthInches",
+          "groupName": null,
           "tabOrder": 71,
           "width": 265.0,
           "left": 2133.0,
@@ -1448,25 +1433,25 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_EngineMotor1SerialNumber",
+          "groupName": null,
           "tabOrder": 83,
           "width": 1515.0,
           "left": 5690.0,
           "top": 5631.0
         },
         {
-          "groupName": "Owner1",
-          
           "height": 166.0,
           "name": "L_GNL_DATE_TITL_Owner1DateOfBirth",
+          "groupName": "Owner1",
           "tabOrder": 24,
           "width": 1265.0,
           "left": 1738.0,
           "top": 2437.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_DATE_TITL_Owner2DateOfBirth",
+          "groupName": "Owner2",
           "tabOrder": 25,
           "width": 1432.0,
           "left": 5022.0,
@@ -1475,33 +1460,34 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Engine1MakeManufacturer",
+          "groupName": null,
           "tabOrder": 80,
           "width": 2182.0,
           "left": 840.0,
           "top": 5631.0
         },
         {
-          "groupName": "Vessel",          
           "height": 166.0,
           "name": "L_GNL_DATE_TITL_VesselYear",
+          "groupName": null,
           "tabOrder": 69,
           "width": 431.0,
           "left": 301.0,
           "top": 4896.0
         },
         {
-          "groupName": "Vessel",          
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_VesselModel",
+          "groupName": null,
           "tabOrder": 64,
           "width": 2515.0,
           "left": 301.0,
           "top": 4602.0
         },
         {
-          "groupName": "Vessel",          
           "height": 166.0,
           "name": "L_GNL_NAME_MISC_VesselMakeManufacturer",
+          "groupName": null,
           "tabOrder": 54,
           "width": 2515.0,
           "left": 301.0,
@@ -1510,6 +1496,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_DATE_TITL_DateVehicleVesselEnteredState",
+          "groupName": null,
           "tabOrder": 78,
           "width": 1350.0,
           "left": 4289.0,
@@ -1518,6 +1505,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_TitleOnly",
+          "groupName": null,
           "tabOrder": 1,
           "width": 125.0,
           "left": 3811.0,
@@ -1526,6 +1514,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_TitleRegistration",
+          "groupName": null,
           "tabOrder": 0,
           "width": 125.0,
           "left": 2380.0,
@@ -1534,6 +1523,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_DocVesselDecalOnly",
+          "groupName": null,
           "tabOrder": 4,
           "width": 125.0,
           "left": 3811.0,
@@ -1542,6 +1532,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_TaxPaymentDecal",
+          "groupName": null,
           "tabOrder": 3,
           "width": 125.0,
           "left": 2380.0,
@@ -1550,16 +1541,16 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_DocVesselTaxPymtOnly",
+          "groupName": null,
           "tabOrder": 5,
           "width": 125.0,
           "left": 4722.0,
           "top": 872.0
         },
         {
-          "groupName": "Owner1",
-          
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Owner1SocialSecurityNumber",
+          "groupName": "Owner1",
           "tabOrder": 30,
           "width": 1265.0,
           "left": 1738.0,
@@ -1568,181 +1559,178 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_RegistrationRenewal",
+          "groupName": null,
           "tabOrder": 2,
           "width": 125.0,
           "left": 4722.0,
           "top": 654.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Owner2SocialSecurityNumber",
+          "groupName": "Owner2",
           "tabOrder": 31,
           "width": 1269.0,
           "left": 5022.0,
           "top": 2877.0
         },
         {
-          "groupName": "Owner1",
-          
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Owner1DriverLicenseNumber",
+          "groupName": "Owner1",
           "tabOrder": 32,
           "width": 2032.0,
           "left": 1738.0,
           "top": 3094.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Owner2DriverLicenseNumber",
+          "groupName": "Owner2",
           "tabOrder": 33,
           "width": 2116.0,
           "left": 5022.0,
           "top": 3094.0
         },
         {
-          "groupName": "Owner1",
-          
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner1FullNameorBusinessName",
+          "groupName": "Owner1",
           "tabOrder": 6,
           "width": 3098.0,
           "left": 1738.0,
           "top": 1397.0
         },
         {
-          "groupName": "Owner1",
-          
           "height": 166.0,
           "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
+          "groupName": "Owner1",
           "tabOrder": 16,
           "width": 3098.0,
           "left": 1738.0,
           "top": 1603.0
         },
         {
-          "groupName": "Owner1",
-          
           "height": 166.0,
           "name": "L_GNL_ADDR_TITL_Owner1CityStateZIP",
+          "groupName": "Owner1",
           "tabOrder": 18,
           "width": 3098.0,
           "left": 1738.0,
           "top": 1819.0
         },
         {
-          "groupName": "Owner1",
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Owner1PhoneNumber",
+          "groupName": "Owner1",
           "tabOrder": 22,
           "width": 1524.0,
           "left": 1738.0,
           "top": 2231.0
         },
         {
-          "groupName": "Owner1",
           "height": 166.0,
           "name": "L_GNL_ADDR_TITL_Owner1County",
+          "groupName": "Owner1",
           "tabOrder": 20,
           "width": 3098.0,
           "left": 1738.0,
           "top": 2020.0
         },
         {
-          "groupName": "Owner1",
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Owner1DriverLicenseIssueState",
+          "groupName": "Owner1",
           "tabOrder": 34,
           "width": 203.0,
           "left": 1738.0,
           "top": 3293.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner2FullNameorBusinessName",
+          "groupName": "Owner2",
           "tabOrder": 7,
           "width": 3098.0,
           "left": 5034.0,
           "top": 1397.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Owner2DriverLicenseIssueState",
+          "groupName": "Owner2",
           "tabOrder": 35,
           "width": 264.0,
           "left": 5022.0,
           "top": 3293.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_ADDR_TITL_Owner2StreetAddress",
+          "groupName": "Owner2",
           "tabOrder": 17,
           "width": 3098.0,
           "left": 5022.0,
           "top": 1603.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_ADDR_TITL_Owner2CityStateZIP",
+          "groupName": "Owner2",
           "tabOrder": 19,
           "width": 3098.0,
           "left": 5022.0,
           "top": 1819.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_ADDR_TITL_Owner2County",
+          "groupName": "Owner2",
           "tabOrder": 21,
           "width": 3098.0,
           "left": 5022.0,
           "top": 2020.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Owner2PhoneNumber",
+          "groupName": "Owner2",
           "tabOrder": 23,
           "width": 1514.0,
           "left": 5022.0,
           "top": 2242.0
         },
         {
-          "groupName": "Owner1Sex",
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_Owner1Male",
+          "groupName": "Owner1",
           "tabOrder": 26,
           "width": 125.0,
           "left": 1889.0,
           "top": 2658.0
         },
         {
-          "groupName": "Owner1Sex",
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_Owner1Female",
+          "groupName": "Owner1",
           "tabOrder": 27,
           "width": 125.0,
           "left": 2850.0,
           "top": 2658.0
         },
         {
-          "groupName": "Owner2Sex",
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_Owner2Male",
+          "groupName": "Owner2",
           "tabOrder": 28,
           "width": 125.0,
           "left": 5200.0,
           "top": 2658.0
         },
         {
-          "groupName": "Owner2Sex",
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_Owner2Female",
+          "groupName": "Owner2",
           "tabOrder": 29,
           "width": 125.0,
           "left": 6200.0,
@@ -1751,6 +1739,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselTypeOpen",
+          "groupName": "VesselType",
           "tabOrder": 39,
           "width": 125.0,
           "left": 4068.0,
@@ -1759,6 +1748,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselTypeCabin",
+          "groupName": "VesselType",
           "tabOrder": 45,
           "width": 125.0,
           "left": 4068.0,
@@ -1767,6 +1757,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselTypeHouseboat",
+          "groupName": "VesselType",
           "tabOrder": 50,
           "width": 125.0,
           "left": 4068.0,
@@ -1775,6 +1766,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselTypeInflatable",
+          "groupName": "VesselType",
           "tabOrder": 56,
           "width": 125.0,
           "left": 4068.0,
@@ -1783,6 +1775,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselTypePersonal",
+          "groupName": "VesselType",
           "tabOrder": 66,
           "width": 125.0,
           "left": 4068.0,
@@ -1791,6 +1784,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselTypeOther",
+          "groupName": "VesselType",
           "tabOrder": 61,
           "width": 125.0,
           "left": 4068.0,
@@ -1799,6 +1793,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUsePersonal",
+          "groupName": "VesselUse",
           "tabOrder": 38,
           "width": 125.0,
           "left": 2866.0,
@@ -1807,6 +1802,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUseRental",
+          "groupName": "VesselUse",
           "tabOrder": 77,
           "width": 125.0,
           "left": 2867.0,
@@ -1815,6 +1811,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUseDealer",
+          "groupName": "VesselUse",
           "tabOrder": 60,
           "width": 125.0,
           "left": 2867.0,
@@ -1823,6 +1820,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUseCommercialPassenger",
+          "groupName": "VesselUse",
           "tabOrder": 55,
           "width": 125.0,
           "left": 2867.0,
@@ -1831,6 +1829,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUseCommercialFishing",
+          "groupName": "VesselUse",
           "tabOrder": 44,
           "width": 125.0,
           "left": 2867.0,
@@ -1839,6 +1838,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUseEmergencyRescue",
+          "groupName": "VesselUse",
           "tabOrder": 72,
           "width": 125.0,
           "left": 2867.0,
@@ -1847,6 +1847,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VehicleVesselUseGovernment",
+          "groupName": "VesselUse",
           "tabOrder": 75,
           "width": 125.0,
           "left": 2867.0,
@@ -1855,6 +1856,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUseOther",
+          "groupName": "VesselUse",
           "tabOrder": 49,
           "width": 125.0,
           "left": 2867.0,
@@ -1863,6 +1865,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUseDiplomat",
+          "groupName": "VesselUse",
           "tabOrder": 65,
           "width": 125.0,
           "left": 2867.0,
@@ -1871,6 +1874,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselNew",
+          "groupName": null,
           "tabOrder": 36,
           "width": 125.0,
           "left": 783.0,
@@ -1879,6 +1883,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselUsed",
+          "groupName": "VesselUse",
           "tabOrder": 37,
           "width": 125.0,
           "left": 1802.0,
@@ -1887,6 +1892,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_VesselRegistrationNumber",
+          "groupName": null,
           "tabOrder": 73,
           "width": 1350.0,
           "left": 6549.0,
@@ -1895,6 +1901,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_NotRegisteredExplaination",
+          "groupName": null,
           "tabOrder": 79,
           "width": 2371.0,
           "left": 5690.0,
@@ -1903,6 +1910,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_TaxCredit",
+          "groupName": null,
           "tabOrder": 96,
           "width": 860.0,
           "left": 3129.0,
@@ -1911,6 +1919,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_PurchasePriceVessel",
+          "groupName": null,
           "tabOrder": 92,
           "width": 1183.0,
           "left": 411.0,
@@ -1919,6 +1928,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_TradeInAmount",
+          "groupName": null,
           "tabOrder": 93,
           "width": 1183.0,
           "left": 411.0,
@@ -1927,6 +1937,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_NetPurchasePriceVessel",
+          "groupName": null,
           "tabOrder": 94,
           "width": 1183.0,
           "left": 411.0,
@@ -1935,6 +1946,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_HullMaterialWood",
+          "groupName": "HullMaterial",
           "tabOrder": 67,
           "width": 125.0,
           "left": 4930.0,
@@ -1943,6 +1955,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_HullMaterialSteel",
+          "groupName": "HullMaterial",
           "tabOrder": 62,
           "width": 125.0,
           "left": 4930.0,
@@ -1951,6 +1964,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_HullMaterialAluminum",
+          "groupName": "HullMaterial",
           "tabOrder": 46,
           "width": 125.0,
           "left": 4930.0,
@@ -1959,6 +1973,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_HullMaterialFiberglass",
+          "groupName": "HullMaterial",
           "tabOrder": 40,
           "width": 125.0,
           "left": 4930.0,
@@ -1967,6 +1982,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_HullMaterialFlexFabric",
+          "groupName": "HullMaterial",
           "tabOrder": 51,
           "width": 125.0,
           "left": 4930.0,
@@ -1975,6 +1991,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_HullMaterialOther",
+          "groupName": "HullMaterial",
           "tabOrder": 57,
           "width": 125.0,
           "left": 4930.0,
@@ -1983,6 +2000,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_PropulsionTypeInboard",
+          "groupName": "PropulsionType",
           "tabOrder": 47,
           "width": 125.0,
           "left": 6062.0,
@@ -1991,6 +2009,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_PropulsionTypeOutboard",
+          "groupName": "PropulsionType",
           "tabOrder": 41,
           "width": 125.0,
           "left": 6062.0,
@@ -1999,6 +2018,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_PropulsionTypeInboardOutboard",
+          "groupName": "PropulsionType",
           "tabOrder": 52,
           "width": 125.0,
           "left": 6062.0,
@@ -2007,6 +2027,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_PropulsionTypeSailInboard",
+          "groupName": "PropulsionType",
           "tabOrder": 63,
           "width": 125.0,
           "left": 6062.0,
@@ -2015,6 +2036,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_PropulsionTypeSailOutboard",
+          "groupName": "PropulsionType",
           "tabOrder": 68,
           "width": 125.0,
           "left": 6062.0,
@@ -2023,6 +2045,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_PropulsionTypeOther",
+          "groupName": "PropulsionType",
           "tabOrder": 58,
           "width": 125.0,
           "left": 6062.0,
@@ -2031,6 +2054,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_FuelTypeGas",
+          "groupName": "FuelType",
           "tabOrder": 42,
           "width": 125.0,
           "left": 7298.0,
@@ -2039,6 +2063,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_FuelTypeDiesel",
+          "groupName": "FuelType",
           "tabOrder": 48,
           "width": 125.0,
           "left": 7298.0,
@@ -2047,6 +2072,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_FuelTypeElectric",
+          "groupName": "FuelType",
           "tabOrder": 53,
           "width": 125.0,
           "left": 7298.0,
@@ -2055,6 +2081,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_FuelTypeOther",
+          "groupName": "FuelType",
           "tabOrder": 59,
           "width": 125.0,
           "left": 7298.0,
@@ -2063,6 +2090,7 @@
         {
           "height": 148.0,
           "name": "L_GNL_ADDL_TITL_VesselTrailered",
+          "groupName": null,
           "tabOrder": 85,
           "width": 125.0,
           "left": 1004.0,
@@ -2071,6 +2099,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_VesselLocation",
+          "groupName": null,
           "tabOrder": 86,
           "width": 4098.0,
           "left": 1486.0,
@@ -2079,6 +2108,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDR_TITL_VesselMoorageCounty",
+          "groupName": null,
           "tabOrder": 87,
           "width": 2182.0,
           "left": 5690.0,
@@ -2087,6 +2117,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_DocumentedVesselName",
+          "groupName": null,
           "tabOrder": 76,
           "width": 2515.0,
           "left": 301.0,
@@ -2095,6 +2126,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_VesselEngineModel",
+          "groupName": null,
           "tabOrder": 81,
           "width": 1185.0,
           "left": 3049.0,
@@ -2103,6 +2135,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_DATE_TITL_EngineMotor1Year",
+          "groupName": null,
           "tabOrder": 84,
           "width": 538.0,
           "left": 7387.0,
@@ -2111,6 +2144,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_ExciseTaxAmount",
+          "groupName": null,
           "tabOrder": 95,
           "width": 860.0,
           "left": 3129.0,
@@ -2119,6 +2153,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_TitleFee",
+          "groupName": null,
           "tabOrder": 98,
           "width": 860.0,
           "left": 3129.0,
@@ -2127,6 +2162,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_RegistrationFee",
+          "groupName": null,
           "tabOrder": 99,
           "width": 860.0,
           "left": 3129.0,
@@ -2135,6 +2171,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_DecalFee",
+          "groupName": null,
           "tabOrder": 100,
           "width": 860.0,
           "left": 3129.0,
@@ -2143,6 +2180,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_FilingFee",
+          "groupName": null,
           "tabOrder": 102,
           "width": 860.0,
           "left": 3129.0,
@@ -2151,6 +2189,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_PenaltyFee",
+          "groupName": null,
           "tabOrder": 106,
           "width": 860.0,
           "left": 3129.0,
@@ -2159,6 +2198,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_Interest",
+          "groupName": null,
           "tabOrder": 107,
           "width": 860.0,
           "left": 3129.0,
@@ -2167,6 +2207,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_TotalFees",
+          "groupName": null,
           "tabOrder": 108,
           "width": 860.0,
           "left": 3129.0,
@@ -2175,6 +2216,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDL_TITL_NetExciseTaxAmount",
+          "groupName": null,
           "tabOrder": 97,
           "width": 1183.0,
           "left": 3129.0,
@@ -2183,6 +2225,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_ADDR_TITL_Lienholder1Address",
+          "groupName": null,
           "tabOrder": 89,
           "width": 4183.0,
           "left": 3941.0,
@@ -2191,69 +2234,70 @@
         {
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Lienholder1Name",
+          "groupName": null,
           "tabOrder": 88,
           "width": 3599.0,
           "left": 312.0,
           "top": 6462.0
         },
         {
-          "groupName": "Owner1",
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner1FirstName",
+          "groupName": "Owner1",
           "tabOrder": 8,
           "width": 1265.0,
           "left": 1763.0,
           "top": 1407.0
         },
         {
-          "groupName": "Owner1",
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner1LastName",
+          "groupName": "Owner1",
           "tabOrder": 10,
           "width": 1347.0,
           "left": 3135.0,
           "top": 1407.0
         },
         {
-          "groupName": "Owner1",
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
+          "groupName": "Owner1",
           "tabOrder": 9,
           "width": 101.0,
           "left": 3008.0,
           "top": 1407.0
         },
         {
-          "groupName": "Owner1",
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner1SuffixName",
+          "groupName": "Owner1",
           "tabOrder": 11,
           "width": 348.0,
           "left": 4481.0,
           "top": 1407.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner2FirstName",
+          "groupName": "Owner2",
           "tabOrder": 12,
           "width": 1180.0,
           "left": 5060.0,
           "top": 1407.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner2LastName",
+          "groupName": "Owner2",
           "tabOrder": 14,
           "width": 1432.0,
           "left": 6379.0,
           "top": 1407.0
         },
         {
-          "groupName": "Owner2",
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
+          "groupName": "Owner2",
           "tabOrder": 13,
           "width": 105.0,
           "left": 6251.0,
@@ -2262,6 +2306,7 @@
         {
           "height": 166.0,
           "name": "L_GNL_NAME_TITL_Owner2SuffixName",
+          "groupName": "Owner2",
           "tabOrder": 15,
           "width": 347.0,
           "left": 7785.0,

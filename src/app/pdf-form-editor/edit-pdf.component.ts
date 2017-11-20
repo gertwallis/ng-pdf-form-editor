@@ -80,14 +80,19 @@ export class PdfEditComponent implements OnInit {
   getFieldData(pdfData: PDF.Field[], dataFieldName: string): Edit.Field {
     const fields = pdfData.filter(x => x.name === dataFieldName);
 
+    if (fields[0].hidden) {
+      console.log('Hidden field: ' + fields[0].name);
+    }
     // Expecting to find only one but if more - return first.
-    if (fields.length > 0 && fields[0].hidden) {
+    if (fields.length > 0 && !fields[0].hidden) {
       const formField = new Edit.Field();
       formField.description = fields[0].description;
       formField.format = fields[0].format;
       formField.label = fields[0].label;
       formField.maxChar = fields[0].maxChar;
       formField.name = fields[0].name;
+
+      return formField;
     }
 
     return undefined;
@@ -96,9 +101,10 @@ export class PdfEditComponent implements OnInit {
   constructor(private pdfService: PdfService) { }
 
   ngOnInit() {
-    // 018BAV2  247ORV2 247WIV2 251NVV2 252ORV2 252MDV2
-    this.pdfService.loadDocument('252MDV2')
-      .subscribe(doc =>
-        this.setDocument(doc));
+    if (this.documentId) {
+      this.pdfService.loadDocument(this.documentId)
+        .subscribe(doc =>
+          this.setDocument(doc));
+    }
   }
 }
