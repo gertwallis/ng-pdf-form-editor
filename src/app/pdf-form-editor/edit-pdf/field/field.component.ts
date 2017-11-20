@@ -122,7 +122,7 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
     console.log('FIELD:  Activate ' + this.editField.name);
     this.active = true;
     this.editTextView.active = true;
-    // this.editTextView.focus();
+    this.editTextView.focus();
 
     // this.tabIndex = -1;
     // this.editTextView.childEditField.nativeElement.tabIndex = this.editField.location.tabOrder;

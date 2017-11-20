@@ -21,7 +21,6 @@ import { UI } from 'app/pdf-form-editor/model/UI';
 export class EditTextComponent implements OnChanges{
 
   @Input() active = false;
-  @Input() tabIndex = false;
   @Input() name: string;
   @Input() value: string;
 
@@ -43,7 +42,8 @@ export class EditTextComponent implements OnChanges{
 
  focus() {
     console.log('TEXT: FOCUS ' + this.name);
-    this.elementRef.nativeElement.focus() ;
+    //this.elementRef.nativeElement.focus() ;
+    this.childEditField.nativeElement.focus();
  }
 
   keyPressHandler(keyCode: KeyboardEvent) {
