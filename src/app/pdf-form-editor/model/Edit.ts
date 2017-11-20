@@ -39,7 +39,7 @@ export namespace Edit {
                 let bottom = 0;
 
                 // Want to give the groups border of about 10px to give some space between
-                // the group and the actual component. 
+                // the group and the actual component.
                 const border = 100;
 
                 // Set the top left of the group

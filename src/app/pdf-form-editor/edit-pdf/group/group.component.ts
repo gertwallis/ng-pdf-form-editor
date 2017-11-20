@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild, ViewChildren, QueryList, ElementRef } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ViewChildren, QueryList, Output, EventEmitter } from '@angular/core';
 
 import { EditFieldComponent } from './../field/field.component';
 
@@ -17,7 +17,9 @@ export class EditGroupComponent implements OnInit {
   @Input() editGroup: Edit.Group;
   @ViewChildren(EditFieldComponent) fieldViews: QueryList<EditFieldComponent>;
 
-  // @Output() fieldEvent = new EventEmitter<UI.EditEvent>();
+  // Event propagation
+  @Output() bubbleLeaving = new EventEmitter<UI.LeaveFieldEvent>();
+  @Output() bubbleEdit = new EventEmitter<UI.EditValueEvent>();
 
   private left = 0;
   private top = 0;
@@ -26,45 +28,11 @@ export class EditGroupComponent implements OnInit {
 
   locationStyle: {};
 
-  constructor(private divRef: ElementRef) {
+  constructor() {
   }
 
   ngOnInit() {
   }
-
-  // gotFocus() {
-  //   console.log('Got Focus:' + this.formField.name);
-
-  //   const editEvent = new UI.EditEvent();
-  //   editEvent.type = UI.EventType.Enter;
-  //   editEvent.name = this.formField.name;
-  //   this.fieldEvent.emit(editEvent);
-  //   // this.childEditField.nativeElement.focus();
-
-  //   this.editingStyle = {
-  //     'display': 'block',
-  //     'width': this.width + 'px',
-  //     'height': this.height + 'px'
-  //   };
-  // }
-
-  // lostFocus() {
-  //   console.log('Lost Focus:' + this.formField.name);
-  // }
-
-  // doneEditing(value: UI.EditEvent) {
-  //   console.log('Done  editing:' + value);
-
-  //   this.active = false;
-  //   if (value.value !== this.formField.value) {
-  //     this.formField.value = value.value;
-  //     this.formField.state = DocumentBase.DisplayState.EditedValue;
-  //     this.setStyle();
-  //   }
-
-  //   // Move focus to the next element
-  //   //  this.divRef.nativeElement.nextSibling.focus();
-  // }
 
   setScale(scale: UI.Scale) {
     this.left = Math.round(this.editGroup.left * scale.horiz * 10) / 10;
@@ -86,51 +54,13 @@ export class EditGroupComponent implements OnInit {
     };
   }
 
+  catchLeaving(leaveValue: UI.LeaveFieldEvent) {
+    console.log('GROUP: catch leaving:' + leaveValue.direction.toString());
+    this.bubbleLeaving.emit(leaveValue);
+   }
 
-  // setLocation(x: number, y: number, width: number, height: number) {
-  //   this.left = x;
-  //   this.top = y;
-  //   this.width = width;
-  //   this.height = height;
-
-  //   this.setStyle();
-  // }
-
-  private setStyle() {
-    // switch (this.formField.state) {
-    //   case DocumentBase.DisplayState.NoValue:
-    //     this.locationStyle = {
-    //       'position': 'absolute',
-    //       'left': this.left + 'px',
-    //       'top': this.top + 'px',
-    //       'width': this.width + 'px',
-    //       'height': this.height + 'px',
-    //       'background-color': 'lightpink'
-    //     };
-    //     break;
-
-    //   case DocumentBase.DisplayState.EditedValue:
-    //     this.locationStyle = {
-    //       'position': 'absolute',
-    //       'left': this.left + 'px',
-    //       'top': this.top + 'px',
-    //       'width': this.width + 'px',
-    //       'height': this.height + 'px',
-    //       'background-color': 'lightgreen'
-    //     };
-    //     break;
-
-    //   case DocumentBase.DisplayState.SavedValue:
-    //     this.locationStyle = {
-    //       'position': 'absolute',
-    //       'left': this.left + 'px',
-    //       'top': this.top + 'px',
-    //       'width': this.width + 'px',
-    //       'height': this.height + 'px',
-    //       'background-color': 'lightgrey',
-    //       'display': 'none'
-    //       // background: 'rgba(255, 255, 255, 0.5)'
-    //     };
-    //     break;
+  catchEdit(editValue: UI.EditValueEvent) {
+    console.log('GROUP Catch editing:' + editValue.name + ' = ' + editValue.value);
+    this.bubbleEdit.emit(editValue);
   }
 }

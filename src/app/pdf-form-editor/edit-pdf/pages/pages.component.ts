@@ -31,7 +31,6 @@ export class EditPagesComponent implements AfterContentInit {
     this.currentPageNo = 1;
   }
 
-
   public ngAfterContentInit(): void {
     this.viewer.pdfSrc = this.editDocument.url;
   }
@@ -91,5 +90,9 @@ export class EditPagesComponent implements AfterContentInit {
         page.setScale(size.width, size.height, scale);
       });
     }
+  }
+
+  catchEdit(editValue: UI.EditValueEvent) {
+    console.log('PAGES Catch editing:' + editValue.name + ' = ' + editValue.value);
   }
 }

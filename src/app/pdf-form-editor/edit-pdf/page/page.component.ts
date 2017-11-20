@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, Input, OnInit, QueryList, ViewChildren, Output, EventEmitter } from '@angular/core';
 
 import { EditGroupComponent } from './../group/group.component';
 
@@ -17,6 +17,8 @@ export class EditPageComponent implements OnInit {
 
   @ViewChildren(EditGroupComponent) groupViews: QueryList<EditGroupComponent>;
 
+  // Event propagation
+  @Output() bubbleEdit = new EventEmitter<UI.EditValueEvent>();
   pageSize: {};
 
   constructor() {
@@ -55,5 +57,10 @@ export class EditPageComponent implements OnInit {
     //   console.log('Activated field:' + currentField[0].formField.name);
     // }
 
+  }
+
+  catchEdit(editValue: UI.EditValueEvent) {
+    console.log('PAGE Catch editing:' + editValue.name + ' = ' + editValue.value);
+    this.bubbleEdit.emit(editValue);
   }
 }
