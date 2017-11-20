@@ -119,8 +119,11 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
 
 
   activate() {
-    // console.log('FIELD:  Focus' + this.editField.name);
-    // this.active = true;
+    console.log('FIELD:  Activate ' + this.editField.name);
+    this.active = true;
+    this.editTextView.active = true;
+    // this.editTextView.focus();
+
     // this.tabIndex = -1;
     // this.editTextView.childEditField.nativeElement.tabIndex = this.editField.location.tabOrder;
     
@@ -180,35 +183,9 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
   keyPressHandler(keyCode: KeyboardEvent) {
     console.log('FIELD: Key ' + keyCode.key);
     if (keyCode.keyCode === 9) {
-      
-      let nextField = this.findNextTabStop(this.divRef.nativeElement);
-
-      if (nextField) {
         keyCode.preventDefault();
         keyCode.stopPropagation();
         this.active = false;
-        nextField.focus();
-      }
-      //this.active = true;
-
     } 
    }
-
-  findNextTabStop(el) {
-    let universe = document.querySelectorAll('edit-field');
-    const test = this.tabIndex + 1;
-    const list = Array.prototype.filter.call(universe, function(item) 
-    {
-      if (item.childElementCount == 1 && item.childNodes[0].tabIndex === test) {
-        return true;
-      }
-    });
-
-    if (list.length == 1) {
-      return list[0];
-    }
-
-    return undefined;
-  }
-
 }

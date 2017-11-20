@@ -5,22 +5,16 @@
      (click)="activate()"
      (keydown)="keyPressHandler($event)"
      > 
-     <!-- <div [hidden]="!active">
-        <input #inputHtml 
-        [tabindex]="editField.location.tabOrder"
-        style="width:100%"
-        (keydown)="TEMPPressHandler($event)"
-        >
-        </div> -->
+  
 
-    <!-- <div [ngStyle]="editingStyle" [hidden]="!active">
+    <div [ngStyle]="editingStyle" [hidden]="!active">
         <edit-text 
             [name]="editField.name" 
             [value]="editValue" 
-            [tabindex]="editField.location.tabOrder"
+            [tabindex]="tabIndex"
             (bubbleLeaving)="catchLeaving($event)"
             (bubbleEdit)="catchEdit($event)"
             >
     </edit-text>     
-    </div> -->
+    </div>
 </div>

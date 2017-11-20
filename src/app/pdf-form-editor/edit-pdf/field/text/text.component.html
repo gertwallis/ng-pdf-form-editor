@@ -1,10 +1,18 @@
-<input #inputHtml 
+<!-- <input #inputHtml 
        [name]="name" 
        [(ngModel)]="value"       
        style="width:100%"
        (focus)="focusField()"
        (blur)="blurField()"
        (changed)="changed()"
-       (keydown)="keyPressHandler($event)">
+       (keydown)="keyPressHandler($event)"> -->
+
+       
+ <input #inputHtml 
+       [name]="name" 
+       [(ngModel)]="value"    
+       [tabindex]="tabIndex"   
+       style="width:100%"
+       >
 
        
