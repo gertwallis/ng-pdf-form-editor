@@ -4,20 +4,29 @@ import { DocumentBase } from './DocumentBase';
 // are duplicated for every location. Created from the Pdf model and used to capture fields.
 export namespace Edit {
 
-    // FormField combines the FieldData and Location into a single model.
-    //   including a location (name not duplicated in data and location).
-    export class Field extends DocumentBase.Field {
-        value: string;
-        // Flag set to true if the same name occurs in muleiple locations in the document (duplicated).
-        multipleLocations = false;
-        location: DocumentBase.Location = new DocumentBase.Location();
-    }
-
     export enum GroupType {
         Root = 0,
         XBox = 1,
         Entity = 2,
         Other = 3
+    }
+
+    export enum DisplayState {
+        NoValue = 0,
+        SavedValue = 1,
+        EditedValue = 2,
+        Hidden = 3
+    }
+
+    // FormField combines the FieldData and Location into a single model.
+    //   including a location (name not duplicated in data and location).
+    export class Field extends DocumentBase.Field {
+        value: string;
+        state: DisplayState;
+
+        // Flag set to true if the same name occurs in muleiple locations in the document (duplicated).
+        multipleLocations = false;
+        location: DocumentBase.Location = new DocumentBase.Location();
     }
 
     export class Group extends DocumentBase.Location {

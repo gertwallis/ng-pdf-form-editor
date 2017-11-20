@@ -1,5 +1,11 @@
 <h1>
   {{title}}
 </h1>
-<edit-form></edit-form>
+Select document: 
+<select [(ngModel)]="documentId">     
+  <option *ngFor="let document of documentList" [value]="document.id">{{document.id}}:  {{document.name}} [{{document.noOfPages}}]:</option>
+</select> 
+
+<edit-form *ngIf="documentId"></edit-form>
+
 <app-messages></app-messages>

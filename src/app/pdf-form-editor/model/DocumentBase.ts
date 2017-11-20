@@ -1,9 +1,4 @@
 export namespace DocumentBase {
-    export class Describe {
-        name: string;
-        label: string;
-        description: string;
-    }
 
     export enum Format {
         Unknown = 0,
@@ -21,18 +16,10 @@ export namespace DocumentBase {
         State = 12
     }
 
-    export class Field extends Describe {
-        state: DisplayState;
-        format: Format;
-        maxChar: number;
-        groupName: string;
-    }
-
-    export enum DisplayState {
-        NoValue = 0,
-        SavedValue = 1,
-        EditedValue = 2,
-        Hidden = 3
+    export class Describe {
+        name: string;
+        label: string;
+        description: string;
     }
 
     interface FixedSize {
@@ -43,6 +30,12 @@ export namespace DocumentBase {
     interface FixedPosition {
         top: number;
         left: number;
+    }
+
+    export class Field extends Describe {
+        format: Format;
+        maxChar: number;
+        groupName: string;
     }
 
     export class DataValue {

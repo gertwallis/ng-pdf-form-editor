@@ -26,6 +26,17 @@ export class PdfService {
       );
   }
 
+  getDocumentList(listName: string): Observable<PDF.DocumentList> {
+    
+        this.messageService.add('PdfService: Fetching ' + listName);
+        return this.http.get(this.pdfUrl + listName + ".json")
+          .map((response: Response) => <PDF.DocumentList>response.json())
+          .do(data =>
+            this.messageService.add('PdfService: Completed ' + listName)
+          // console.log(JSON.stringify(data))
+          );
+      }
+    
   update(name: string, value: string) {
 
   }

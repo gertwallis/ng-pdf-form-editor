@@ -14,7 +14,8 @@ import { Edit } from './model/Edit';
 })
 export class PdfEditComponent implements OnInit {
 
-  // @Input() private pdfForm: PdfForm;
+  @Input() documentId: string;
+
   private editDocument: Edit.Document;
 
   setDocument(pdfDocument: PDF.Document) {
@@ -40,7 +41,7 @@ export class PdfEditComponent implements OnInit {
           const formField = this.getFieldData(pdfDocument.fields, pdfLocation.name);
 
           // Only inlude non hidden fields.
-          if (formField.state !== DocumentBase.DisplayState.Hidden) {
+          if (formField) {
             formField.multipleLocations = pdfPage.locations.filter(x => x.name === pdfLocation.name).length > 1;
             formField.location = new DocumentBase.Location();
             formField.location.height = pdfLocation.height;
@@ -56,7 +57,12 @@ export class PdfEditComponent implements OnInit {
 
               if (dataValues.length > 0) {
                 formField.value = dataValues[0].value;
-                formField.state = DocumentBase.DisplayState.SavedValue;
+
+                if (formField.value) {
+                  formField.state = Edit.DisplayState.SavedValue;
+                } else {
+                  formField.state = Edit.DisplayState.NoValue;
+                }
               }
             }
 
@@ -71,25 +77,20 @@ export class PdfEditComponent implements OnInit {
     this.editDocument = formDocument;
   }
 
-  getFieldData(pdfData: DocumentBase.Field[], dataFieldName: string): Edit.Field {
+  getFieldData(pdfData: PDF.Field[], dataFieldName: string): Edit.Field {
     const fields = pdfData.filter(x => x.name === dataFieldName);
-    const formField = new Edit.Field();
-    formField.name = dataFieldName;
+
     // Expecting to find only one but if more - return first.
-    if (fields.length > 0) {
+    if (fields.length > 0 && fields[0].hidden) {
+      const formField = new Edit.Field();
       formField.description = fields[0].description;
       formField.format = fields[0].format;
       formField.label = fields[0].label;
       formField.maxChar = fields[0].maxChar;
       formField.name = fields[0].name;
-      formField.state = fields[0].state;
     }
 
-    // Returning an empty object - the use case is generally to display the data field.
-    // for a location. Bad data but returning an undefined will trow an error in the UI
-    // based on bad data. Should probably do avalidation check for good data. but don't want
-    // UI have to check for bad data.
-    return formField;
+    return undefined;
   }
 
   constructor(private pdfService: PdfService) { }
