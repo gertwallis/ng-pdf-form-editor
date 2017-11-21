@@ -1,14 +1,19 @@
-<div [ngStyle]="locationStyle"
-     [tabindex]="tabIndex"
-     (click)="moveTo()"
-     (keydown)="keyPressHandler($event)"
-     > 
+<div [ngStyle]="locationStyle" [tabindex]="tabIndex" (click)="moveTo()" (keydown)="keyPressHandler($event)">
 
     <div [ngStyle]="editingStyle" [hidden]="!active">
-        <edit-text 
+        <edit-text *ngIf="editField.format !== 4" 
             [name]="editField.name" 
             [value]="editValue" 
+            [format]="editField.format"
             >
-    </edit-text>     
+        </edit-text>
+        <edit-text-area *ngIf="editField.format === 4" 
+            [name]="editField.name" 
+            [value]="editValue" 
+            [width]="width"
+            [height]="height"
+            >
+        </edit-text-area>
+
     </div>
 </div>

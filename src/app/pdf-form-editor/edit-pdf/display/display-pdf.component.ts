@@ -58,18 +58,10 @@ export class DisplayPdfComponent {
     }
 
     pageChanged() {
-
-        let pageElement = document.getElementsByClassName('page');
-
-        // if (pageElement.length === 0)
-        // {
-        //     setTimeout(() => {
-        //         let pageElement = document.getElementsByClassName('page');
-        //   },150);
-        // }
+        const pageElement = document.getElementsByClassName('page');
 
         if (pageElement.length === 1) {
-          this.setPageSize(pageElement[0]);
+            this.setPageSize(pageElement[0]);
         }
     }
 
@@ -83,5 +75,10 @@ export class DisplayPdfComponent {
     }
     private afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
+        // Hate introducing delays, but we can't continue until the underlying pdf
+        // viewer has finished drawing the pdf.
+        setTimeout(() => {
+                this.pageChanged();
+          }, 150);
     }
 }

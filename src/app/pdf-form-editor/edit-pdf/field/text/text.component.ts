@@ -1,43 +1,60 @@
 import { AfterViewChecked } from '@angular/core/src/metadata/lifecycle_hooks';
-import { AfterViewInit, Component, DoCheck, ElementRef, Input, OnChanges, Output, Renderer, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 import { UI } from 'app/pdf-form-editor/model/UI';
+
+import { DocumentBase } from './../../../model/DocumentBase';
 
 @Component({
   selector: 'edit-text',
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
-export class EditTextComponent {
+export class EditTextComponent implements AfterContentInit{
 
   @Input() name: string;
   @Input() value: string;
   @Input() tabIndex: number;
+  @Input() format: DocumentBase.Format;
 
   @ViewChild('inputHtml') childEditField: ElementRef;
 
+  pattern: string;
+
   constructor() { }
 
+
   focus() {
-    // TODO: NEED TO MAKE SURE WE GET THE TEXT FOCUS.
-    // console.log('TEXT: FOCUS ' + this.name);
-    // this.childEditField.nativeElement.focus();
+    // Have to wait 200ms to allow angular construct to finish before
+    // the focus will activate.
     setTimeout(() => {
       this.childEditField.nativeElement.focus();
     }, 200);
   }
 
-
-
-  blurField() {
-    console.log('TEXT blur function called');
-    // this.fireLeaveEvent(UI.Direction.DontKnow);
-    // this.fireDataEvent();
+  getPattern() {
+    switch (this.format) {
+      case DocumentBase.Format.Date:
+        return '^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$';
+      case DocumentBase.Format.Dollar:
+        break;
+      case DocumentBase.Format.Integer:
+        break;
+      case DocumentBase.Format.Percent:
+        break;
+      case DocumentBase.Format.PhoneNumber:
+        break;
+      case DocumentBase.Format.SocialSecurityNumber:
+        break;
+      case DocumentBase.Format.SocialSecurityNumber:
+        break;
+    }
   }
 
-  changed() {
-    // console.log('changed function called');
-  }
+
+    public ngAfterContentInit(): void {
+      this.pattern = this.getPattern();
+    }
 }
 
 // Custom Controls

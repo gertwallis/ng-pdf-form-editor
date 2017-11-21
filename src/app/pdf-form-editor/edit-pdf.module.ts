@@ -26,6 +26,7 @@ import { EditPageComponent } from './edit-pdf/page/page.component';
 import { EditGroupComponent } from './edit-pdf/group/group.component';
 import { EditFieldComponent } from './edit-pdf/field/field.component';
 import { EditTextComponent } from './edit-pdf/field/text/text.component';
+import { EditTextAreaComponent } from './edit-pdf/field/text-area/text-area.component';
 
 // Display of PDF
 import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
@@ -52,6 +53,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     EditGroupComponent,
     EditFieldComponent,
     EditTextComponent,
+    EditTextAreaComponent,
     DisplayPdfComponent,
     FieldStyleDirective,
     PositionDirective,

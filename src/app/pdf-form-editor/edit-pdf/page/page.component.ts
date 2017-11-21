@@ -46,17 +46,17 @@ export class EditPageComponent implements OnInit, OnDestroy {
   }
 
   moveFromField(field: UI.LeaveField) {
-    if (field.tabIndex != this.currentTabIndex) {
-      console.log('PAGE: Move [' + field.tabIndex + '] ' + field.name);
-      const nextTabIndex =this.getNextTabIndex (field.tabIndex, field.direction);
+    if (field.tabIndex !== this.currentTabIndex) {
+      // console.log('PAGE: Move [' + field.tabIndex + '] ' + field.name);
+      const nextTabIndex = this.getNextTabIndex(field.tabIndex, field.direction);
       this.groupViews.forEach(group => {
         group.fieldViews.forEach(field => {
           if (field.tabIndex === nextTabIndex) {
-            console.log('PAGE: Ativating ' + field.tabIndex + ' ' + field.editField.name);
+            // console.log('PAGE: Ativating ' + field.tabIndex + ' ' + field.editField.name);
             field.activate();
           } else {
             if (field.active) {
-              console.log('PAGE: Deactivating ' + field.tabIndex + ' ' + field.editField.name);
+              // console.log('PAGE: Deactivating ' + field.tabIndex + ' ' + field.editField.name);
               field.deActivate();
             }
           }
@@ -65,31 +65,29 @@ export class EditPageComponent implements OnInit, OnDestroy {
     }
   }
 
-  getNextTabIndex (tabIndex, direction: UI.Direction) {
-    let nextTabIndex = 0;
-    
-          let index = this.editPage.tabs.indexOf(tabIndex);
-    
-          switch (direction) {
-            case UI.Direction.Forward:
-              index++;
-              if (index  >= this.editPage.tabs.length)  {
-                index = 0;
-              }
-              break;
-            case UI.Direction.BackWard:
-              index--;
-              if (index < 0) {
-                index = this.editPage.tabs.length - 1;
-              }
-              break;
-            case UI.Direction.Current:
-              // return the same one (clicked on).  
-              break;
-          }
-    
-          return this.editPage.tabs[index];
-        
+  getNextTabIndex(tabIndex, direction: UI.Direction) {
+    let index = this.editPage.tabs.indexOf(tabIndex);
+
+    switch (direction) {
+      case UI.Direction.Forward:
+        index++;
+        if (index >= this.editPage.tabs.length) {
+          index = 0;
+        }
+        break;
+      case UI.Direction.BackWard:
+        index--;
+        if (index < 0) {
+          index = this.editPage.tabs.length - 1;
+        }
+        break;
+      case UI.Direction.Current:
+        // return the same one (clicked on).
+        break;
+    }
+
+    return this.editPage.tabs[index];
+
   }
   setScale(size: UI.Size, scale: UI.Scale) {
 

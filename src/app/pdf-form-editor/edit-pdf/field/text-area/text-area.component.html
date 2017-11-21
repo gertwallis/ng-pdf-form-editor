@@ -1,11 +1,13 @@
 
-       <input #inputHtml 
+       <textarea #inputHtml 
        [name]="name" 
        [(ngModel)]="value"    
        [tabindex]=-1   
-       style="width:100%"
+       [ngStyle]="{ 'width': width + 'px', 'height': height + 'px'}"
        [pattern]="pattern"
        title="this is a message for anything going wrong"
        >
+       </textarea>
+
 
        

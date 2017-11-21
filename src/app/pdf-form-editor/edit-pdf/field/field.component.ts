@@ -1,8 +1,11 @@
-import { EditTextComponent } from './text/text.component';
 import { Component, Input, OnInit, ViewChild, Output, EventEmitter, ElementRef, AfterContentInit } from '@angular/core';
 
 // Service
 import { FieldChangeService } from '../../service/field-changed.service';
+
+import { EditTextComponent } from './text/text.component';
+import { EditTextAreaComponent } from './text-area/text-area.component';
+
 
 // Models
 import { DocumentBase } from './../../model/DocumentBase';
@@ -20,6 +23,7 @@ export class EditFieldComponent implements AfterContentInit {
   @Input() editField: Edit.Field;
 
   @ViewChild(EditTextComponent) editTextView: EditTextComponent;
+  @ViewChild(EditTextAreaComponent) editTextAreaView: EditTextAreaComponent;
 
   color: string;
   valueChanged = false;
@@ -42,98 +46,60 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   setScale(scale: UI.Scale) {
-    this.left = this.editField.location.left * scale.horiz;
-    this.top = this.editField.location.top * scale.vertical;
-    this.width = this.editField.location.width * scale.horiz;
-    this.height = this.editField.location.height * scale.vertical;
+    this.left = Math.round(this.editField.location.left * scale.horiz * 10) / 10;
+    this.top = Math.round(this.editField.location.top * scale.vertical * 10) / 10;
+    this.width = Math.round(this.editField.location.width * scale.horiz * 10) / 10;
+    this.height = Math.round(this.editField.location.height * scale.vertical * 10) / 10;
 
     this.setStyle();
 
   }
 
   private setStyle() {
+    switch (this.editField.state) {
+      case Edit.DisplayState.NoValue:
+        break;
+
+      case Edit.DisplayState.EditedValue:
+            break;
+
+      case Edit.DisplayState.SavedValue:
+        break;
+    }
+
     this.locationStyle = {
       'position': 'absolute',
       'left': this.left + 'px',
       'top': this.top + 'px',
       'width': this.width + 'px',
       'height': this.height + 'px',
-      'border': '1px solid green'
+      'background-color': 'lightgreen'
+//      'border': '1px solid green'
     };
-    // this.editingStyle = {
-    // };
   }
 
-  /*
-    lostFocus() {
-      console.log('Lost Focus:' + this.editField.name);
-    }
-
-    private setStyle() {
-      switch (this.editField.state) {
-        case DocumentBase.DisplayState.NoValue:
-          this.locationStyle = {
-            'position': 'absolute',
-            'left': this.left + 'px',
-            'top': this.top + 'px',
-            'width': this.width + 'px',
-            'height': this.height + 'px',
-            'background-color': 'lightpink'
-          };
-          break;
-
-        case DocumentBase.DisplayState.EditedValue:
-          this.locationStyle = {
-            'position': 'absolute',
-            'left': this.left + 'px',
-            'top': this.top + 'px',
-            'width': this.width + 'px',
-            'height': this.height + 'px',
-            'background-color': 'lightgreen'
-          };
-          break;
-
-        case DocumentBase.DisplayState.SavedValue:
-          this.locationStyle = {
-            'position': 'absolute',
-            'left': this.left + 'px',
-            'top': this.top + 'px',
-            'width': this.width + 'px',
-            'height': this.height + 'px',
-            'background-color': 'lightgrey',
-            'display': 'none'
-            // background: 'rgba(255, 255, 255, 0.5)'
-          };
-          break;
-      }
-    }
-
-    // Move focus to the next element
-    //  this.divRef.nativeElement.nextSibling.focus();
-    */
-
   activate() {
-    console.log('FIELD: Ativate ' + this.tabIndex + ' ' + this.editField.name);
+    // console.log('FIELD: Ativate ' + this.tabIndex + ' ' + this.editField.name);
     this.active = true;
-   //  this.editTextView.active = true;
-    
-    this.editTextView.focus();
+    switch (this.editField.format) {
+      case DocumentBase.Format.TextArea:
+        this.editTextAreaView.focus();
+        break;
+      default:
+        this.editTextView.focus();
+        break;
+    }
   }
 
   deActivate() {
-    console.log('FIELD: De-ativate ' + this.tabIndex + ' ' + this.editField.name);
+    // console.log('FIELD: De-ativate ' + this.tabIndex + ' ' + this.editField.name);
     this.active = false;
-//    this.editTextView.active = false;
   }
 
-  moveTo(){
-    console.log('FIELD: MoveTo ' + this.tabIndex + ' ' + this.editField.name);
+  moveTo() {
+    // console.log('FIELD: MoveTo ' + this.tabIndex + ' ' + this.editField.name);
     this.moveField(UI.Direction.Current);
   }
-
-  // blurField() {
-  //   console.log('FIELD blur');
-  // }
 
   public ngAfterContentInit(): void {
     this.editValue = this.editField.value;
@@ -149,7 +115,7 @@ export class EditFieldComponent implements AfterContentInit {
       if (keyCode.which === 9 && keyCode.shiftKey) {
         this.moveField(UI.Direction.BackWard);
       } else {
-        this.moveField(UI.Direction.Forward)
+        this.moveField(UI.Direction.Forward);
       }
     }
   }
@@ -162,4 +128,5 @@ export class EditFieldComponent implements AfterContentInit {
     };
 
     this.moveService.exitField(field);
-  }}
+  }
+}

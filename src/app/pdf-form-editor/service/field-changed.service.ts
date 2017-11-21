@@ -10,12 +10,10 @@ export class FieldChangeService {
     FieldState = this.fieldSubject.asObservable();
 
     exitField(field: UI.LeaveField) {
-        console.log('EXIT FIELD: ' + field.name);
         this.fieldSubject.next(field);
     }
 
     nextField(): Observable<UI.LeaveField> {
-        console.log('ENEXT FIELD: ');
         return this.fieldSubject.asObservable();
     }
 }
