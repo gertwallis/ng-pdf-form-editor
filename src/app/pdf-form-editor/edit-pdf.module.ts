@@ -6,12 +6,12 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 // Services
 import { PdfService } from './service/pdf.service';
-import { FieldMovementService } from 'app/pdf-form-editor/service/field-movement.service';
+import { FieldChangeService } from './service/field-changed.service';
 
 // Directives
 import { FieldStyleDirective } from './directives/form-fieldstyle.directive';
 import { PositionDirective } from './directives/form-position.directive';
-import { SizeDirective } from './directives/form-size.directive';
+import { PageSizeDirective } from './directives/form-size.directive';
 
 // Main Component
 import { PdfEditComponent } from './edit-pdf.component';
@@ -38,7 +38,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
   ],
   providers: [
     PdfService,
-    FieldMovementService
+    FieldChangeService
   ],
   exports: [
     PdfEditComponent
@@ -55,7 +55,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     DisplayPdfComponent,
     FieldStyleDirective,
     PositionDirective,
-    SizeDirective
+    PageSizeDirective
   ]
 })
 export class PdfEditModule { }

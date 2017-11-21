@@ -1,14 +1,5 @@
 import { AfterViewChecked } from '@angular/core/src/metadata/lifecycle_hooks';
-import {
-  AfterViewInit,
-  Component,
-  DoCheck,
-  Input,
-  OnChanges,
-  Output,
-  Renderer,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, DoCheck, ElementRef, Input, OnChanges, Output, Renderer, ViewChild } from '@angular/core';
 
 import { UI } from 'app/pdf-form-editor/model/UI';
 
@@ -19,21 +10,24 @@ import { UI } from 'app/pdf-form-editor/model/UI';
 })
 export class EditTextComponent {
 
-  @Input() active = false;
   @Input() name: string;
   @Input() value: string;
   @Input() tabIndex: number;
 
-  // @ViewChild('inputHtml') childEditField: ElementRef;
+  @ViewChild('inputHtml') childEditField: ElementRef;
+
   constructor() { }
 
   focus() {
     // TODO: NEED TO MAKE SURE WE GET THE TEXT FOCUS.
     // console.log('TEXT: FOCUS ' + this.name);
     // this.childEditField.nativeElement.focus();
+    setTimeout(() => {
+      this.childEditField.nativeElement.focus();
+    }, 200);
   }
 
-  
+
 
   blurField() {
     console.log('TEXT blur function called');
@@ -44,8 +38,6 @@ export class EditTextComponent {
   changed() {
     // console.log('changed function called');
   }
-
-
 }
 
 // Custom Controls

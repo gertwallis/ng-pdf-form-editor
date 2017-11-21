@@ -1,7 +1,8 @@
+import { PageSizeDirective } from '../../directives/form-size.directive';
 import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Subscription } from 'rxjs/Rx';
 
-import { FieldMovementService } from 'app/pdf-form-editor/service/field-movement.service';
+import { FieldChangeService } from 'app/pdf-form-editor/service/field-changed.service';
 
 import { EditGroupComponent } from './../group/group.component';
 
@@ -12,7 +13,7 @@ import { UI } from 'app/pdf-form-editor/model/UI';
 @Component({
   selector: 'edit-page',
   templateUrl: './page.component.html',
-  styleUrls: ['./page.component.css']
+  styleUrls: ['./page.component.css'],
 })
 export class EditPageComponent implements OnInit, OnDestroy {
 
@@ -23,36 +24,84 @@ export class EditPageComponent implements OnInit, OnDestroy {
 
   fieldSubscription: Subscription;
 
+  size: UI.Size;
+  currentTabIndex = -1;
+
   pageSize: {};
 
-  constructor(private moveService: FieldMovementService) {
+  constructor(private moveService: FieldChangeService) {
+    this.fieldSubscription = this.moveService.FieldState
+      .subscribe((state: UI.LeaveField) => {
+        this.moveFromField(state);
+      });
   }
 
   ngOnInit() {
     // this.loaderService.show();
-    this.fieldSubscription = this.moveService.FieldState
-      .subscribe((state: UI.LeaveField) => {
-        this.moveField(state);
-      });
 
   }
+
   ngOnDestroy() {
     this.fieldSubscription.unsubscribe();
   }
 
-  moveField(currentField: UI.LeaveField) {
-    console.log('Page: Move focus [' + currentField.tabIndex + '] ' + currentField.name);
+  moveFromField(field: UI.LeaveField) {
+    if (field.tabIndex != this.currentTabIndex) {
+      console.log('PAGE: Move [' + field.tabIndex + '] ' + field.name);
+      const nextTabIndex =this.getNextTabIndex (field.tabIndex, field.direction);
+      this.groupViews.forEach(group => {
+        group.fieldViews.forEach(field => {
+          if (field.tabIndex === nextTabIndex) {
+            console.log('PAGE: Ativating ' + field.tabIndex + ' ' + field.editField.name);
+            field.activate();
+          } else {
+            if (field.active) {
+              console.log('PAGE: Deactivating ' + field.tabIndex + ' ' + field.editField.name);
+              field.deActivate();
+            }
+          }
+        });
+      });
+    }
   }
 
-  setScale(width: number, height: number, scale: UI.Scale) {
+  getNextTabIndex (tabIndex, direction: UI.Direction) {
+    let nextTabIndex = 0;
+    
+          let index = this.editPage.tabs.indexOf(tabIndex);
+    
+          switch (direction) {
+            case UI.Direction.Forward:
+              index++;
+              if (index  >= this.editPage.tabs.length)  {
+                index = 0;
+              }
+              break;
+            case UI.Direction.BackWard:
+              index--;
+              if (index < 0) {
+                index = this.editPage.tabs.length - 1;
+              }
+              break;
+            case UI.Direction.Current:
+              // return the same one (clicked on).  
+              break;
+          }
+    
+          return this.editPage.tabs[index];
+        
+  }
+  setScale(size: UI.Size, scale: UI.Scale) {
+
+    // this.size = size;
+
     this.pageSize = {
-      'width': width + 'px',
-      'height': height + 'px',
+      'width': size.width + 'px',
+      'height': size.height + 'px',
     };
 
     this.groupViews.forEach(group => {
       group.setScale(scale);
     });
   }
-
 }

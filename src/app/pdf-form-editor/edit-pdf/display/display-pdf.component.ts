@@ -59,17 +59,28 @@ export class DisplayPdfComponent {
 
     pageChanged() {
 
-        const pageElement = document.getElementsByClassName('page');
+        let pageElement = document.getElementsByClassName('page');
+
+        // if (pageElement.length === 0)
+        // {
+        //     setTimeout(() => {
+        //         let pageElement = document.getElementsByClassName('page');
+        //   },150);
+        // }
 
         if (pageElement.length === 1) {
-            const size = new UI.Size();
-            size.width = pageElement[0].clientWidth;
-            size.height = pageElement[0].clientHeight;
-
-            this.scaleChange.emit(size);
+          this.setPageSize(pageElement[0]);
         }
     }
 
+    private setPageSize(element) {
+        const size = new UI.Size();
+        size.width = element.clientWidth;
+        size.height = element.clientHeight;
+
+        this.scaleChange.emit(size);
+
+    }
     private afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
     }

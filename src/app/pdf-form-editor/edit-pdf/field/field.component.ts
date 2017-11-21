@@ -1,7 +1,8 @@
 import { EditTextComponent } from './text/text.component';
 import { Component, Input, OnInit, ViewChild, Output, EventEmitter, ElementRef, AfterContentInit } from '@angular/core';
 
-import { FieldMovementService } from 'app/pdf-form-editor/service/field-movement.service';
+// Service
+import { FieldChangeService } from '../../service/field-changed.service';
 
 // Models
 import { DocumentBase } from './../../model/DocumentBase';
@@ -13,7 +14,7 @@ import { UI } from 'app/pdf-form-editor/model/UI';
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.css']
 })
-export class EditFieldComponent implements OnInit, AfterContentInit {
+export class EditFieldComponent implements AfterContentInit {
 
   @Input() active = false;
   @Input() editField: Edit.Field;
@@ -37,13 +38,7 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
 
   editingStyle: {};
 
-  constructor(private moveService: FieldMovementService) {
-  }
-
-  ngOnInit() {
-    // this.editingStyle = {
-    //   'display': 'none',
-    // };
+  constructor(element: ElementRef, private moveService: FieldChangeService) {
   }
 
   setScale(scale: UI.Scale) {
@@ -57,7 +52,6 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
   }
 
   private setStyle() {
-
     this.locationStyle = {
       'position': 'absolute',
       'left': this.left + 'px',
@@ -69,6 +63,7 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
     // this.editingStyle = {
     // };
   }
+
   /*
     lostFocus() {
       console.log('Lost Focus:' + this.editField.name);
@@ -117,17 +112,28 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
     //  this.divRef.nativeElement.nextSibling.focus();
     */
 
-
   activate() {
-    console.log('FIELD:  Activate ' + this.editField.name);
+    console.log('FIELD: Ativate ' + this.tabIndex + ' ' + this.editField.name);
     this.active = true;
-    this.editTextView.active = true;
+   //  this.editTextView.active = true;
+    
     this.editTextView.focus();
   }
 
-  blurField() {
-    console.log('FIELD blur');
+  deActivate() {
+    console.log('FIELD: De-ativate ' + this.tabIndex + ' ' + this.editField.name);
+    this.active = false;
+//    this.editTextView.active = false;
   }
+
+  moveTo(){
+    console.log('FIELD: MoveTo ' + this.tabIndex + ' ' + this.editField.name);
+    this.moveField(UI.Direction.Current);
+  }
+
+  // blurField() {
+  //   console.log('FIELD blur');
+  // }
 
   public ngAfterContentInit(): void {
     this.editValue = this.editField.value;
@@ -139,10 +145,11 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
       keyCode.keyCode === 9 ||
       (keyCode.which === 9 && keyCode.shiftKey)) {
       keyCode.preventDefault();
+      keyCode.stopPropagation();
       if (keyCode.which === 9 && keyCode.shiftKey) {
         this.moveField(UI.Direction.BackWard);
       } else {
-        this.moveField(UI.Direction.BackWard)
+        this.moveField(UI.Direction.Forward)
       }
     }
   }

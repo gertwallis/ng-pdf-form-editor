@@ -11,7 +11,7 @@ export namespace UI {
     }
 
     export enum Direction {
-        AnyWhere = 0, // Click action
+        Current = 0, // Click action
         Forward = 1,
         BackWard = 2,
     }
@@ -35,4 +35,7 @@ export namespace UI {
         level: MessageLevel;
         text: string;
     }
+
+   
+
 }

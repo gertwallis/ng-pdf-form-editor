@@ -128,7 +128,7 @@
     },
     {
       "description": "This field shows a reason why the certificate of ownership for the manufactured home was not obtained/is not negotiable at the time of acquisition - line 1.",
-      "format": 1,
+      "format": 4,
       "hidden": false,
       "label": "Enter a reason why the certificate of ownership for the manufactured home was not obtained/is not negotiable at the time of acquisition - line 1.",
       "maxChar": 0,

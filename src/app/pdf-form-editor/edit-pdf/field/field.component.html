@@ -1,11 +1,8 @@
 <div [ngStyle]="locationStyle"
      [tabindex]="tabIndex"
-     (focus)="activate()" 
-     (blur)="blurField()"
-     (click)="activate()"
+     (click)="moveTo()"
      (keydown)="keyPressHandler($event)"
      > 
-  
 
     <div [ngStyle]="editingStyle" [hidden]="!active">
         <edit-text 

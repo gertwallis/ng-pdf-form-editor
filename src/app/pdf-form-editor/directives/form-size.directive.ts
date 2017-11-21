@@ -1,8 +1,17 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostBinding, Input } from '@angular/core';
+
+import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Directive({
-  selector: '[formSize]'
+  selector: '[editPageSize]'
 })
-export class SizeDirective {
+export class PageSizeDirective {
+  @Input('pageSize') size: UI.Size;
 
+  constructor(private element: ElementRef) { }
+
+  private setSize(size: UI.Size) {
+    this.element.nativeElement.style.width = size.width;
+    this.element.nativeElement.style.hight = size.height;
+  }
 }

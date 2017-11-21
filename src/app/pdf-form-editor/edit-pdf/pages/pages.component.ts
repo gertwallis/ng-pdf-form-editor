@@ -82,6 +82,7 @@ export class EditPagesComponent implements AfterContentInit {
   // Emmittor functions
   setScale(size: UI.Size) {
     if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
+
       this.pageSize = {
         'width': size.width + 'px',
         'height': size.height + 'px',
@@ -94,7 +95,7 @@ export class EditPagesComponent implements AfterContentInit {
       scale.vertical = size.height / this.editDocument.pageSize.height;
 
       this.pageViews.forEach(page => {
-        page.setScale(size.width, size.height, scale);
+        page.setScale(size, scale);
       });
     }
   }

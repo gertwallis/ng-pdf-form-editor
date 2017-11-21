@@ -5,7 +5,7 @@ import { Subject } from 'rxjs/Subject';
 import { UI } from './../model/UI';
 
 @Injectable()
-export class FieldMovementService {
+export class FieldChangeService {
     private fieldSubject = new Subject<UI.LeaveField>();
     FieldState = this.fieldSubject.asObservable();
 

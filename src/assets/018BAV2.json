@@ -497,7 +497,7 @@
     },
     {
       "description": "This section of the form provides space to show a description of any additional collateral that is being used to secure the commercial loan - line 1.",
-      "format": 1,
+      "format": 4,
       "hidden": false,
       "label": "Enter a description of any additional collateral that is being used to secure the commercial loan - line 1.",
       "maxChar": 0,
@@ -1119,7 +1119,7 @@
     {
       "description": "This field shows suffix (e.g. \"Jr.\". \"III\", etc.), if applicable, for the first Borrower, Guarantor, etc.",
       "format": 1,
-      "hidden": false,
+      "hidden": true,
       "label": "Enter suffix, if applicable, for the first Borrower, Guarantor, etc.",
       "maxChar": 0,
       "name": "L_GNL_NAME_BORR_Borrower1Suffix",
@@ -1155,7 +1155,7 @@
     {
       "description": "This field shows suffix (e.g. \"Jr.\". \"III\", etc.), if applicable, for the second Borrower, Guarantor, etc.",
       "format": 1,
-      "hidden": false,
+      "hidden": true,
       "label": "Enter suffix, if applicable, for the second Borrower, Guarantor, etc.",
       "maxChar": 0,
       "name": "L_GNL_NAME_BORR_Borrower2Suffix",

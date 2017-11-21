@@ -81,6 +81,7 @@ export namespace Edit {
         active: boolean;
         pageNo: number;
         groups: Group[] = [];
+        tabs: number[] = [];
 
         editable(): boolean {
             return this.groups.length > 0;
@@ -106,11 +107,33 @@ export namespace Edit {
         }
 
         setOffset() {
+
             // Set the top left of the group
             for (const group of this.groups) {
                 group.setOffset();
+
+                for (const field of group.fields) {
+                    this.tabs.push(field.location.tabOrder);
+                }
             }
+
+            // Need a sorted list of tab order numbers to determine next / previous tab
+            this.tabs.sort(this.compare);
+
         }
+
+        compare(a: number, b: number) {
+            if (a < b) {
+                return -1;
+            }
+
+            if (a > b) {
+                return 1;
+            }
+
+            return 0;
+        }
+
     }
 
     export class Document extends DocumentBase.Document {
