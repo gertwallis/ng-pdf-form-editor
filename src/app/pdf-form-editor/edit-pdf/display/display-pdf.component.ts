@@ -57,7 +57,7 @@ export class DisplayPdfComponent {
         this.rotation += angle;
     }
 
-    private pageChanged() {
+    pageChanged() {
 
         const pageElement = document.getElementsByClassName('page');
 

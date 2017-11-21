@@ -15,7 +15,7 @@ import { UI } from 'app/pdf-form-editor/model/UI';
   styleUrls: ['./page.component.css']
 })
 export class EditPageComponent implements OnInit, OnDestroy {
- 
+
   @Input() active: boolean;
   @Input() editPage: Edit.Page;
 
@@ -31,15 +31,19 @@ export class EditPageComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // this.loaderService.show();
     this.fieldSubscription = this.moveService.FieldState
-        .subscribe((state: UI.LeaveField) => {
-           // this.products = state.products;
-            console.log('Field move event !!!!!!');
-        });
+      .subscribe((state: UI.LeaveField) => {
+        this.moveField(state);
+      });
 
-}
-ngOnDestroy() {
+  }
+  ngOnDestroy() {
     this.fieldSubscription.unsubscribe();
-}
+  }
+
+  moveField(currentField: UI.LeaveField) {
+    console.log('Page: Move focus [' + currentField.tabIndex + '] ' + currentField.name);
+  }
+
   setScale(width: number, height: number, scale: UI.Scale) {
     this.pageSize = {
       'width': width + 'px',
