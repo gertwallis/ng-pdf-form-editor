@@ -81,10 +81,6 @@ export class EditPagesComponent implements AfterContentInit {
 
   // Emmittor functions
   setScale(size: UI.Size) {
-    console.log ("SETTING SCALE ....");
-
-
-
     if (this.pageViews && this.currentZoom !== this.viewer.zoom)
     {
       this.pageSize = {

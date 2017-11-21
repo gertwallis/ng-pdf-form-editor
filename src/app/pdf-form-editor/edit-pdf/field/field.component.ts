@@ -5,6 +5,7 @@ import { FieldChangeService } from '../../service/field-changed.service';
 
 import { EditTextComponent } from './text/text.component';
 import { EditTextAreaComponent } from './text-area/text-area.component';
+import { EditXBoxComponent } from './xbox/xbox.component';
 
 
 // Models
@@ -24,7 +25,8 @@ export class EditFieldComponent implements AfterContentInit {
 
   @ViewChild(EditTextComponent) editTextView: EditTextComponent;
   @ViewChild(EditTextAreaComponent) editTextAreaView: EditTextAreaComponent;
-
+  @ViewChild(EditXBoxComponent) editXBoxView: EditXBoxComponent;
+  
   color: string;
   valueChanged = false;
   // value updated by text edit.
@@ -82,6 +84,9 @@ export class EditFieldComponent implements AfterContentInit {
     // console.log('FIELD: Ativate ' + this.tabIndex + ' ' + this.editField.name);
     this.active = true;
     switch (this.editField.format) {
+      case DocumentBase.Format.XBox:
+        this.editXBoxView.focus();
+      break;
       case DocumentBase.Format.TextArea:
         this.editTextAreaView.focus();
         break;

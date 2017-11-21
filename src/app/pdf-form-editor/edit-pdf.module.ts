@@ -27,6 +27,7 @@ import { EditGroupComponent } from './edit-pdf/group/group.component';
 import { EditFieldComponent } from './edit-pdf/field/field.component';
 import { EditTextComponent } from './edit-pdf/field/text/text.component';
 import { EditTextAreaComponent } from './edit-pdf/field/text-area/text-area.component';
+import { EditXBoxComponent } from './edit-pdf/field/xbox/xbox.component'
 
 // Display of PDF
 import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
@@ -54,6 +55,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     EditFieldComponent,
     EditTextComponent,
     EditTextAreaComponent,
+    EditXBoxComponent,
     DisplayPdfComponent,
     FieldStyleDirective,
     PositionDirective,

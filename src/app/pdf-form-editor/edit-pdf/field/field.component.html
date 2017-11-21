@@ -1,6 +1,13 @@
 <div [ngStyle]="locationStyle" [tabindex]="tabIndex" (click)="moveTo()" (keydown)="keyPressHandler($event)">
 
     <div [ngStyle]="editingStyle" [hidden]="!active" [ngSwitch]="editField.format">
+        <edit-xbox *ngSwitchCase="3" 
+            [name]="editField.name" 
+            [value]="editValue" 
+            [width]="width"
+            [height]="height"
+            >
+        </edit-xbox>
         <edit-text-area *ngSwitchCase="4" 
             [name]="editField.name" 
             [value]="editValue" 
