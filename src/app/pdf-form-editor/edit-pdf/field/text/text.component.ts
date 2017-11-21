@@ -10,7 +10,6 @@ import {
   ViewChild,
 } from '@angular/core';
 
-import { FieldMovementService } from 'app/pdf-form-editor/service/field-movement.service';
 import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
@@ -18,7 +17,7 @@ import { UI } from 'app/pdf-form-editor/model/UI';
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
-export class EditTextComponent implements OnChanges {
+export class EditTextComponent {
 
   @Input() active = false;
   @Input() name: string;
@@ -26,45 +25,15 @@ export class EditTextComponent implements OnChanges {
   @Input() tabIndex: number;
 
   // @ViewChild('inputHtml') childEditField: ElementRef;
-  constructor(private moveService: FieldMovementService) { }
-
-  ngOnChanges() {
-    console.log('TEXT: Changes ' + this.name);
-
-    if (this.active) {
-      console.log('TEXT: Active ' + this.name);
-      this.focus();
-    }
-  }
+  constructor() { }
 
   focus() {
-    console.log('TEXT: FOCUS ' + this.name);
+    // TODO: NEED TO MAKE SURE WE GET THE TEXT FOCUS.
+    // console.log('TEXT: FOCUS ' + this.name);
     // this.childEditField.nativeElement.focus();
   }
 
-  keyPressHandler(keyCode: KeyboardEvent) {
-    console.log('TEXT: Key ' + keyCode.key);
-    if (keyCode.keyCode === 13 ||
-      keyCode.keyCode === 9 ||
-      (keyCode.which === 9 && keyCode.shiftKey)) {
-      keyCode.preventDefault();
-      if (keyCode.which === 9 && keyCode.shiftKey) {
-        this.moveField(UI.Direction.BackWard);
-      } else {
-        this.moveField(UI.Direction.BackWard)
-      }
-    }
-  }
-
-  moveField(direction: UI.Direction) {
-    const field: UI.LeaveField = {
-      direction: direction,
-      name: this.name,
-      tabIndex: this.tabIndex
-    };
-
-    this.moveService.exitField(field);
-  }
+  
 
   blurField() {
     console.log('TEXT blur function called');

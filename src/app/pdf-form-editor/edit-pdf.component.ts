@@ -80,9 +80,6 @@ export class PdfEditComponent implements OnInit {
   getFieldData(pdfData: PDF.Field[], dataFieldName: string): Edit.Field {
     const fields = pdfData.filter(x => x.name === dataFieldName);
 
-    if (fields[0].hidden) {
-      console.log('Hidden field: ' + fields[0].name);
-    }
     // Expecting to find only one but if more - return first.
     if (fields.length > 0 && !fields[0].hidden) {
       const formField = new Edit.Field();

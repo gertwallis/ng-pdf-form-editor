@@ -7,13 +7,15 @@ import { UI } from './../model/UI';
 @Injectable()
 export class FieldMovementService {
     private fieldSubject = new Subject<UI.LeaveField>();
-    // LeaveField = this.fieldSubject.asObservable();
+    FieldState = this.fieldSubject.asObservable();
 
     exitField(field: UI.LeaveField) {
+        console.log('EXIT FIELD: ' + field.name);
         this.fieldSubject.next(field);
     }
 
     nextField(): Observable<UI.LeaveField> {
+        console.log('ENEXT FIELD: ');
         return this.fieldSubject.asObservable();
     }
 }

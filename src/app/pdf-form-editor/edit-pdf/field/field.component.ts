@@ -1,6 +1,9 @@
 import { EditTextComponent } from './text/text.component';
 import { Component, Input, OnInit, ViewChild, Output, EventEmitter, ElementRef, AfterContentInit } from '@angular/core';
 
+import { FieldMovementService } from 'app/pdf-form-editor/service/field-movement.service';
+
+// Models
 import { DocumentBase } from './../../model/DocumentBase';
 import { Edit } from './../../model/Edit';
 import { UI } from 'app/pdf-form-editor/model/UI';
@@ -34,7 +37,7 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
 
   editingStyle: {};
 
-  constructor(private divRef: ElementRef) {
+  constructor(private moveService: FieldMovementService) {
   }
 
   ngOnInit() {
@@ -126,18 +129,30 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
     console.log('FIELD blur');
   }
 
-
   public ngAfterContentInit(): void {
     this.editValue = this.editField.value;
     this.tabIndex = this.editField.location.tabOrder;
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {
-    console.log('FIELD: Key ' + keyCode.key);
-    if (keyCode.keyCode === 9) {
+    if (keyCode.keyCode === 13 ||
+      keyCode.keyCode === 9 ||
+      (keyCode.which === 9 && keyCode.shiftKey)) {
       keyCode.preventDefault();
-      keyCode.stopPropagation();
-      this.active = false;
+      if (keyCode.which === 9 && keyCode.shiftKey) {
+        this.moveField(UI.Direction.BackWard);
+      } else {
+        this.moveField(UI.Direction.BackWard)
+      }
     }
   }
-}
+
+  moveField(direction: UI.Direction) {
+    const field: UI.LeaveField = {
+      direction: direction,
+      name: this.editField.name,
+      tabIndex: this.tabIndex
+    };
+
+    this.moveService.exitField(field);
+  }}
