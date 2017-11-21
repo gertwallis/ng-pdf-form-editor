@@ -27,6 +27,8 @@ export class EditPagesComponent implements AfterContentInit {
   editMode = false;
   currentZoom = 0;
 
+  pageSize: {};
+
   constructor() {
     this.currentPageNo = 1;
   }
@@ -80,6 +82,11 @@ export class EditPagesComponent implements AfterContentInit {
   // Emmittor functions
   setScale(size: UI.Size) {
     if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
+      this.pageSize = {
+        'width': size.width + 'px',
+        'height': size.height + 'px',
+      };
+  
       this.currentZoom = this.viewer.zoom;
 
       const scale = new UI.Scale();

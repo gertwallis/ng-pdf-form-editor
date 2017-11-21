@@ -22,7 +22,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
   @ViewChildren(EditGroupComponent) groupViews: QueryList<EditGroupComponent>;
 
   fieldSubscription: Subscription;
-  
+
   pageSize: {};
 
   constructor(private moveService: FieldMovementService) {
