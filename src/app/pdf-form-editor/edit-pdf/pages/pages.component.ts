@@ -91,8 +91,4 @@ export class EditPagesComponent implements AfterContentInit {
       });
     }
   }
-
-  catchEdit(editValue: UI.EditValueEvent) {
-    console.log('PAGES Catch editing:' + editValue.name + ' = ' + editValue.value);
-  }
 }

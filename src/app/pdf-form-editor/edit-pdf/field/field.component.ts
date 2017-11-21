@@ -15,9 +15,6 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
   @Input() active = false;
   @Input() editField: Edit.Field;
 
-  @Output() bubbleLeaving = new EventEmitter<UI.LeaveFieldEvent>();
-  @Output() bubbleEdit = new EventEmitter<UI.EditValueEvent>();
-
   @ViewChild(EditTextComponent) editTextView: EditTextComponent;
 
   color: string;
@@ -123,58 +120,13 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
     this.active = true;
     this.editTextView.active = true;
     this.editTextView.focus();
-
-    // this.tabIndex = -1;
-    // this.editTextView.childEditField.nativeElement.tabIndex = this.editField.location.tabOrder;
-    
-    // Pass the focus to the edit field
-    // this.editTextView.childEditField.nativeElement.focus();
-
-    // const editEvent = new UI.EditEvent();
-    // editEvent.type = UI.EventType.Enter;
-    // editEvent.name = this.editField.name;
-    // this.fieldEvent.emit(editEvent);
-    // // this.childEditField.nativeElement.focus();
-
-    // this.editingStyle = {
-    //   'display': 'block',
-    //   'width': this.width + 'px',
-    //   'height': this.height + 'px'
-    // };
   }
 
   blurField() {
     console.log('FIELD blur');
- }
-
-  catchLeaving(leaveValue: UI.LeaveFieldEvent) {
-    console.log('FIELD: catch leaving:' + leaveValue.direction.toString());
-    this.active = false;
-    // this.tabIndex = this.editField.location.tabOrder;
-    // this.editTextView.childEditField.nativeElement.tabIndex = 0;
-
-    this.bubbleLeaving.emit(leaveValue);
   }
 
-  catchEdit(editValue: UI.EditValueEvent) {
-    /*
-    console.log('FIELD: editValue' + editValue.value);
-    console.log('FIELD: current ' + this.rememberedValue);
-    if (editValue.value !== this.rememberedValue) {
-      console.log('FIELD: CHANGED');
-      this.rememberedValue = editValue.value;
-      // Changed again -- bubble up to higher level.
-      this.bubbleEdit.emit(editValue);
-    }
 
-    if (editValue.value !== this.editField.value) {
-      this.valueChanged = true;
-    }
-    */
-  }
-
-  
-  
   public ngAfterContentInit(): void {
     this.editValue = this.editField.value;
     this.tabIndex = this.editField.location.tabOrder;
@@ -183,9 +135,9 @@ export class EditFieldComponent implements OnInit, AfterContentInit {
   keyPressHandler(keyCode: KeyboardEvent) {
     console.log('FIELD: Key ' + keyCode.key);
     if (keyCode.keyCode === 9) {
-        keyCode.preventDefault();
-        keyCode.stopPropagation();
-        this.active = false;
-    } 
-   }
+      keyCode.preventDefault();
+      keyCode.stopPropagation();
+      this.active = false;
+    }
+  }
 }

@@ -1,5 +1,22 @@
 <div *ngIf="messageService.messages.length">
     <h2>Messages</h2>
     <button class="clear" (click)="messageService.clear()">clear</button>
-    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+    <div *ngFor='let message of messageService.messages'>
+        
+        <div *ngIf='message.level === 0' class="alert-success">
+            <strong>Success!</strong> {{message.text}}
+        </div>
+
+        <div *ngIf='message.level === 1'  class="alert-info">
+            <strong>Info!</strong> {{message.text}}
+        </div>
+
+        <div *ngIf='message.level === 2'  class="alert-warning">
+            <strong>Warning!</strong> {{message.text}}
+        </div>
+
+        <div *ngIf='message.level === 3'  class="alert-danger">
+            <strong>Danger!</strong> {{message.text}}
+        </div>
+    </div>
 </div>

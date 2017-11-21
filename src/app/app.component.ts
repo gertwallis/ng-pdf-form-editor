@@ -27,3 +27,7 @@ export class AppComponent {
         this.setDocument(docList));
   }
 }
+
+
+// https://github.com/cornflourblue/angular2-communicating-between-components/blob/master/app/app.component.ts
+// https://blog.cloudboost.io/build-simple-shopping-cart-with-angular-4-observables-subject-subscription-part-2-2d3735cde5f

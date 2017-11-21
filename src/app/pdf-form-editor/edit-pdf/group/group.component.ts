@@ -17,10 +17,6 @@ export class EditGroupComponent implements OnInit {
   @Input() editGroup: Edit.Group;
   @ViewChildren(EditFieldComponent) fieldViews: QueryList<EditFieldComponent>;
 
-  // Event propagation
-  @Output() bubbleLeaving = new EventEmitter<UI.LeaveFieldEvent>();
-  @Output() bubbleEdit = new EventEmitter<UI.EditValueEvent>();
-
   private left = 0;
   private top = 0;
   private width = 0;
@@ -52,15 +48,5 @@ export class EditGroupComponent implements OnInit {
           'height': this.height + 'px',
           'border': '1px solid red'
     };
-  }
-
-  catchLeaving(leaveValue: UI.LeaveFieldEvent) {
-    console.log('GROUP: catch leaving:' + leaveValue.direction.toString());
-    this.bubbleLeaving.emit(leaveValue);
-   }
-
-  catchEdit(editValue: UI.EditValueEvent) {
-    console.log('GROUP Catch editing:' + editValue.name + ' = ' + editValue.value);
-    this.bubbleEdit.emit(editValue);
   }
 }

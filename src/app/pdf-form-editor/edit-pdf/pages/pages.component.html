@@ -37,7 +37,6 @@
         <edit-page  *ngFor="let page of editDocument.pages" 
           [editPage]="page" 
           [class.active]="false"
-          (bubbleEdit)="catchEdit($event)"
           ></edit-page>
       </div>
       <div class="pdfView">

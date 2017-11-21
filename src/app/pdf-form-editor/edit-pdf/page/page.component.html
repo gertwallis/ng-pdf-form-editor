@@ -2,7 +2,6 @@
   <div *ngIf="this.editPage.groups.length > 0" [ngStyle]="pageSize">
       <edit-group *ngFor="let editGroup of this.editPage.groups"
         [editGroup]="editGroup"
-        (bubbleEdit)="catchEdit($event)"
 >
       </edit-group>
       

@@ -3,9 +3,6 @@
     <edit-field *ngFor="let editField of editGroup.fields" 
         [editField]="editField" 
         [class.active]="editGroup.active"
-        (fieldActive)="fieldActive($event)"
-        (bubbleLeaving)="catchLeaving($event)"
-        (bubbleEdit)="catchEdit($event)"
    >
     </edit-field>
 </div>

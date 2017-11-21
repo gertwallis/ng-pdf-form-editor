@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
+// Services
 import { PdfService } from './service/pdf.service';
+import { FieldMovementService } from 'app/pdf-form-editor/service/field-movement.service';
 
 // Directives
 import { FieldStyleDirective } from './directives/form-fieldstyle.directive';
@@ -35,7 +37,8 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     PdfViewerModule,
   ],
   providers: [
-    PdfService
+    PdfService,
+    FieldMovementService
   ],
   exports: [
     PdfEditComponent

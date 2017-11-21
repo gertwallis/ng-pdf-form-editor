@@ -1,16 +1,16 @@
 import { AfterViewChecked } from '@angular/core/src/metadata/lifecycle_hooks';
 import {
-    AfterViewInit,
-    Component,
-    DoCheck,
-    ElementRef,
-    EventEmitter,
-    Input,
-    OnChanges,
-    Output,
-    Renderer,
-    ViewChild,
+  AfterViewInit,
+  Component,
+  DoCheck,
+  Input,
+  OnChanges,
+  Output,
+  Renderer,
+  ViewChild,
 } from '@angular/core';
+
+import { FieldMovementService } from 'app/pdf-form-editor/service/field-movement.service';
 import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
@@ -18,52 +18,53 @@ import { UI } from 'app/pdf-form-editor/model/UI';
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
-export class EditTextComponent implements OnChanges{
+export class EditTextComponent implements OnChanges {
 
   @Input() active = false;
   @Input() name: string;
   @Input() value: string;
+  @Input() tabIndex: number;
 
-  @Output() bubbleLeaving = new EventEmitter<UI.LeaveFieldEvent>();
-  @Output() bubbleEdit = new EventEmitter<UI.EditValueEvent>();
-
-  @ViewChild('inputHtml') childEditField: ElementRef;
-  constructor(private elementRef: ElementRef,
-    private renderer: Renderer) { }
+  // @ViewChild('inputHtml') childEditField: ElementRef;
+  constructor(private moveService: FieldMovementService) { }
 
   ngOnChanges() {
     console.log('TEXT: Changes ' + this.name);
-    
+
     if (this.active) {
       console.log('TEXT: Active ' + this.name);
       this.focus();
     }
   }
 
- focus() {
+  focus() {
     console.log('TEXT: FOCUS ' + this.name);
-    //this.elementRef.nativeElement.focus() ;
-    this.childEditField.nativeElement.focus();
- }
+    // this.childEditField.nativeElement.focus();
+  }
 
   keyPressHandler(keyCode: KeyboardEvent) {
     console.log('TEXT: Key ' + keyCode.key);
-    // if (keyCode.keyCode === 13 ||
-    //   keyCode.keyCode === 9 ||
-    //   (keyCode.which === 9 && keyCode.shiftKey)) {
-    //   keyCode.preventDefault();
-    //   // Enter key presed - done editing
-    //   if (keyCode.keyCode === 13 || keyCode.keyCode === 9) {
-    //     this.fireLeaveEvent(UI.Direction.Forward);
-    //   } else {
-    //     // Shift tab
-    //     this.fireLeaveEvent(UI.Direction.BackWard);
-    //   }
-
-    //   this.fireDataEvent();
-    // }
+    if (keyCode.keyCode === 13 ||
+      keyCode.keyCode === 9 ||
+      (keyCode.which === 9 && keyCode.shiftKey)) {
+      keyCode.preventDefault();
+      if (keyCode.which === 9 && keyCode.shiftKey) {
+        this.moveField(UI.Direction.BackWard);
+      } else {
+        this.moveField(UI.Direction.BackWard)
+      }
+    }
   }
 
+  moveField(direction: UI.Direction) {
+    const field: UI.LeaveField = {
+      direction: direction,
+      name: this.name,
+      tabIndex: this.tabIndex
+    };
+
+    this.moveService.exitField(field);
+  }
 
   blurField() {
     console.log('TEXT blur function called');
@@ -75,19 +76,13 @@ export class EditTextComponent implements OnChanges{
     // console.log('changed function called');
   }
 
-  fireLeaveEvent(direction: UI.Direction) {
-    // console.log('Text: Fire leave event');
-    // const leaveEvent = new UI.LeaveFieldEvent();
-    // leaveEvent.direction = direction;
-    // this.bubbleLeaving.emit(leaveEvent);
-  }
-
-  fireDataEvent() {
-    // console.log('Text: Fire data event');
-    // const editEvent = new UI.EditValueEvent();
-    // editEvent.name = this.name;
-    // editEvent.value = this.value;
-    // this.bubbleEdit.emit(editEvent);
-  }
 
 }
+
+// Custom Controls
+// https://blog.thoughtram.io/angular/2016/07/27/custom-form-controls-in-angular-2.html
+// Validators
+// https://codecraft.tv/courses/angular/advanced-topics/configurable-custom-validators/
+// Tooltip
+// https://webdesign.tutsplus.com/tutorials/css-tooltip-magic--cms-28082
+// https://github.com/ng2-ui/tooltip

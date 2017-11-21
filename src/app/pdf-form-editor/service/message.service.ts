@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
 
+import { UI } from './../model/UI';
+
 @Injectable()
 export class MessageService {
- messages: string[] = [];
+  messages: UI.Message[] = [];
 
- add(message: string) {
-   this.messages.push(message);
- }
+  add(level: UI.MessageLevel, text: string) {
+    const message: UI.Message = {
+      level: level,
+      text: text
+    };
+    this.messages.push(message);
+  }
 
- clear() {
-   this.messages.length = 0;
- }
+  clear() {
+    this.messages.length = 0;
+  }
 }
