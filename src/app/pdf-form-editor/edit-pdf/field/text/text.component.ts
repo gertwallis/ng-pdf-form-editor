@@ -37,7 +37,6 @@ export class EditTextComponent implements AfterContentInit {
 
   validate(): boolean {
     if (this.validateRegEx) {
-      console.log('this.value = ' + this.value);
       return this.validateRegEx.test(this.value);
     }
 
@@ -52,7 +51,7 @@ export class EditTextComponent implements AfterContentInit {
 
   keyPressHandler(keyCode: KeyboardEvent) {
     this.valid = this.validate();
-    console.log("Valid = " + this.valid);
+    console.log(this.valid + ': /' + this.pattern + '/.test(' + this.value);
   }    
 }
 

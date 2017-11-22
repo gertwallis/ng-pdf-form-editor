@@ -40,6 +40,8 @@ export class EditFieldComponent implements AfterContentInit {
   private width = 0;
   private height = 0;
 
+  locked = true;
+
   locationStyle: {};
 
   editingStyle: {};
@@ -60,24 +62,52 @@ export class EditFieldComponent implements AfterContentInit {
   private setStyle() {
     switch (this.editField.state) {
       case Edit.DisplayState.NoValue:
+        this.locationStyle = {
+          'position': 'absolute',
+          'left': this.left + 'px',
+          'top': this.top + 'px',
+          'width': this.width + 'px',
+          'height': this.height + 'px',
+          'background-color': 'lightyellow'
+          //      'border': '1px solid green'
+        };
         break;
 
       case Edit.DisplayState.EditedValue:
+        this.locationStyle = {
+          'position': 'absolute',
+          'left': this.left + 'px',
+          'top': this.top + 'px',
+          'width': this.width + 'px',
+          'height': this.height + 'px',
+          'background-color': 'white',
+          'border': '1px solid #ddd'
+          //      'border': '1px solid green'
+        };
         break;
 
       case Edit.DisplayState.SavedValue:
+        if (this.locked) {
+          this.locationStyle = {
+            'display': 'none'
+            //      'border': '1px solid green'
+          }
+        }
+        else {
+          this.locationStyle = {
+            'position': 'absolute',
+            'left': this.left + 'px',
+            'top': this.top + 'px',
+            'width': this.width + 'px',
+            'height': this.height + 'px',
+            'background-color': 'lightgreen',
+            'border': '1px solid #ddd'
+            //      'border': '1px solid green'
+          }
+
+        }
         break;
     }
-
-    this.locationStyle = {
-      'position': 'absolute',
-      'left': this.left + 'px',
-      'top': this.top + 'px',
-      'width': this.width + 'px',
-      'height': this.height + 'px',
-      'background-color': 'lightgreen'
-      //      'border': '1px solid green'
-    };
   }
 
   activate() {
@@ -120,12 +150,12 @@ export class EditFieldComponent implements AfterContentInit {
       case DocumentBase.Format.PhoneNumber:
         return '\\d{3}[\-]\\d{3}[\-]\\d{4}';
       case DocumentBase.Format.SocialSecurityNumber:
-        return '(^\d{3}-?\d{2}-?\d{4}$|^XXX-XX-XXXX$)';
+        return '(^\\d{3}-?\\d{2}-?\\d{4}$|^XXX-XX-XXXX$)';
       case DocumentBase.Format.State:
         // list would probably faster and better but ...
         return '(AL|AK|AR|AZ|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|‌​MA|MD|ME|MI|MN|MO|MS‌​|MT|NC|ND|NE|NH|NJ|N‌​M|NV|NY|OH|OK|OR|PA|‌​RI|SC|SD|TN|TX|UT|VA‌​|VT|WA|WI|WV|WY)';
       // case DocumentBase.Format.ZipCode:
-      //   return'(\d{5}([\-]\d{4})?)'
+      //   return'(\\d{5}([\\-]\\d{4})?)'
     }
   }
 

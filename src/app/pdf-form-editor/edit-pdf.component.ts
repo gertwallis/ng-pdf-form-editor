@@ -55,14 +55,13 @@ export class PdfEditComponent implements OnInit {
             if (pdfDocument.data) {
               const dataValues = pdfDocument.data.filter(x => x.name === pdfLocation.name);
 
+              formField.state = Edit.DisplayState.NoValue;
               if (dataValues.length > 0) {
                 formField.value = dataValues[0].value;
 
                 if (formField.value) {
                   formField.state = Edit.DisplayState.SavedValue;
-                } else {
-                  formField.state = Edit.DisplayState.NoValue;
-                }
+                } 
               }
             }
 
