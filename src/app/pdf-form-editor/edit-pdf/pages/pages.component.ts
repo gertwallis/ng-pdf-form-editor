@@ -5,7 +5,7 @@ import { TabComponent } from './../tab/tab.component';
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
 import { EditPageComponent } from './../page/page.component';
 
-import { DocumentBase } from './../../model/DocumentBase';
+import { Base } from './../../model/Base';
 import { Edit } from './../../model/Edit';
 
 // Models

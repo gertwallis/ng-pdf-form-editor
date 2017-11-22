@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
 
-import { DocumentBase } from './model/DocumentBase';
+import { Base } from './model/Base';
 import { PDF } from './model/PDF';
 import { Edit } from './model/Edit';
 
@@ -43,7 +43,7 @@ export class PdfEditComponent implements OnInit {
           // Only inlude non hidden fields.
           if (formField) {
             formField.multipleLocations = pdfPage.locations.filter(x => x.name === pdfLocation.name).length > 1;
-            formField.location = new DocumentBase.Location();
+            formField.location = new Base.Location();
             formField.location.height = pdfLocation.height;
             formField.location.tabOrder = pdfLocation.tabOrder;
             formField.location.width = pdfLocation.width;

@@ -3,7 +3,7 @@ import { Component, ElementRef, Input, ViewChild, AfterContentInit } from '@angu
 
 import { UI } from 'app/pdf-form-editor/model/UI';
 
-import { DocumentBase } from './../../../model/DocumentBase';
+import { Base } from './../../../model/Base';
 
 @Component({
   selector: 'edit-xbox',

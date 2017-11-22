@@ -3,7 +3,7 @@ import { AfterContentInit, Component, ElementRef, Input, ViewChild } from '@angu
 
 import { UI } from 'app/pdf-form-editor/model/UI';
 
-import { DocumentBase } from './../../../model/DocumentBase';
+import { Base } from './../../../model/Base';
 
 @Component({
   selector: 'edit-text',

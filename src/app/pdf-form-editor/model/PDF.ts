@@ -1,14 +1,14 @@
-import { DocumentBase } from './DocumentBase';
+import { Base } from './Base';
 
 // Retrieved through service
 export namespace PDF {
 
-    export class Field extends DocumentBase.Field {
+    export class Field extends Base.Field {
         hidden: boolean;
     }
 
     // Can have multiple locations for every data field.
-    export class Location extends DocumentBase.Location {
+    export class Location extends Base.Location {
         // Corresponds to Data.Name
         name: string;
         groupName: string;
@@ -20,10 +20,10 @@ export namespace PDF {
         locations: Location[] = [];
     }
 
-    export class Document extends DocumentBase.Document {
+    export class Document extends Base.Document {
         pages: Page[] = [];
         fields: Field[] = [];
-        data: DocumentBase.DataValue[] = [];
+        data: Base.DataValue[] = [];
         noOfPages: number;
     }
 

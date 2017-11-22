@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewChild, ViewChildren, QueryList, Output, E
 
 import { EditFieldComponent } from './../field/field.component';
 
-import { DocumentBase } from './../../model/DocumentBase';
+import { Base } from './../../model/Base';
 import { Edit } from './../../model/Edit';
 import { UI } from 'app/pdf-form-editor/model/UI';
 

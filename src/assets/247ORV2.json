@@ -1,21 +1,12 @@
 {
   "fields": [
     {
-      "description": "Type of charter for a financial institution",
-      "format": 1,
-      "hidden": false,
-      "label": "Institution Type",
-      "maxChar": 0,
-      "name": "_InstitutionType",
-      "state": 0
-    },
-    {
       "description": "This field shows the first part name and vehicle identification number of the vehicle component part.",
       "format": 1,
       "hidden": false,
       "label": "Enter the first part name and vehicle identification number of the vehicle component part.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Component1PartNameVIN",
+      "name": "Component1PartNameVIN",
       "state": 0
     },
     {
@@ -24,7 +15,7 @@
       "hidden": false,
       "label": "Enter the second part name and vehicle identification number of the vehicle component part.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Component2PartNameVIN",
+      "name": "Component2PartNameVIN",
       "state": 0
     },
     {
@@ -33,7 +24,7 @@
       "hidden": false,
       "label": "Enter the third part name and vehicle identification number of the vehicle component part.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Component3PartNameVIN",
+      "name": "Component3PartNameVIN",
       "state": 0
     },
     {
@@ -42,7 +33,7 @@
       "hidden": false,
       "label": "Enter the equipment number.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_EquipmentNumber",
+      "name": "EquipmentNumber",
       "state": 0
     },
     {
@@ -51,7 +42,7 @@
       "hidden": false,
       "label": "Enter the fleet account number.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FleetAccountNumber",
+      "name": "FleetAccountNumber",
       "state": 0
     },
     {
@@ -60,7 +51,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the fuel type is diesel.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypeDiesel",
+      "name": "FuelTypeDiesel",
       "state": 0
     },
     {
@@ -69,7 +60,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the fuel (power) type is electric.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypeElectric",
+      "name": "FuelTypeElectric",
       "state": 0
     },
     {
@@ -78,7 +69,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the fuel type is gasoline.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypeGas",
+      "name": "FuelTypeGas",
       "state": 0
     },
     {
@@ -87,7 +78,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the vehicle fuel type is hybrid.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypeHybrid",
+      "name": "FuelTypeHybrid",
       "state": 0
     },
     {
@@ -96,7 +87,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the fuel type is natural gas.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypeNaturalGas",
+      "name": "FuelTypeNaturalGas",
       "state": 0
     },
     {
@@ -105,7 +96,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the fuel type is a type other than the choices listed on the form.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypeOther",
+      "name": "FuelTypeOther",
       "state": 0
     },
     {
@@ -114,7 +105,7 @@
       "hidden": false,
       "label": "Enter a description of the fuel type.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypeOtherDescription",
+      "name": "FuelTypeOtherDescription",
       "state": 0
     },
     {
@@ -123,7 +114,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the vehicle fuel type is plug-in hybrid.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypePlugInHybrid",
+      "name": "FuelTypePlugInHybrid",
       "state": 0
     },
     {
@@ -132,7 +123,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the vehicle uses propane.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_FuelTypePropane",
+      "name": "FuelTypePropane",
       "state": 0
     },
     {
@@ -141,7 +132,7 @@
       "hidden": false,
       "label": "Enter the driver's license number, social security number, customer/account number or other applicable identification number of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_IdentificationNumber1",
+      "name": "IdentificationNumber1",
       "state": 0
     },
     {
@@ -150,7 +141,7 @@
       "hidden": false,
       "label": "Enter the driver's license number, social security number, customer/account number or other applicable identification number of the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_IdentificationNumber2",
+      "name": "IdentificationNumber2",
       "state": 0
     },
     {
@@ -159,7 +150,7 @@
       "hidden": false,
       "label": "Enter the driver's license number, social security number, customer/account number or other applicable identification number of the third owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_IdentificationNumber3",
+      "name": "IdentificationNumber3",
       "state": 0
     },
     {
@@ -168,7 +159,7 @@
       "hidden": false,
       "label": "Enter the insurance policy number.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_InsurancePolicyNumber",
+      "name": "InsurancePolicyNumber",
       "state": 0
     },
     {
@@ -177,7 +168,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the joint owners/lessees will agree that the title will not show joint ownership with right of survivorship.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipNo",
+      "name": "JointOwnershipSurvivorshipNo",
       "state": 0
     },
     {
@@ -186,7 +177,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the joint owners/lessees agree that the title will show joint ownership with right of survivorship.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipYes",
+      "name": "JointOwnershipSurvivorshipYes",
       "state": 0
     },
     {
@@ -195,7 +186,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the joint owners/lessees will agree that the title will not show joint security interest with right of survivorship.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_JointSecurityInterestSurvivorshipNo",
+      "name": "JointSecurityInterestSurvivorshipNo",
       "state": 0
     },
     {
@@ -204,7 +195,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the joint security interest holders will agree that the title will show joint security interest with right of survivorship.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_JointSecurityInterestSurvivorshipYes",
+      "name": "JointSecurityInterestSurvivorshipYes",
       "state": 0
     },
     {
@@ -213,7 +204,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the party is a lessee.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Lessee",
+      "name": "Lessee",
       "state": 0
     },
     {
@@ -222,7 +213,7 @@
       "hidden": false,
       "label": "Enter the driver's license number, identification number or customer number of the lessor.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_LessorIdentificationNumber",
+      "name": "LessorIdentificationNumber",
       "state": 0
     },
     {
@@ -231,7 +222,7 @@
       "hidden": false,
       "label": "Enter the telephone number of the lessor.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_LessorPhoneNumber",
+      "name": "LessorPhoneNumber",
       "state": 0
     },
     {
@@ -240,7 +231,7 @@
       "hidden": false,
       "label": "Enter the license plate number or tab number.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_LicensePlateNumber",
+      "name": "LicensePlateNumber",
       "state": 0
     },
     {
@@ -249,7 +240,7 @@
       "hidden": false,
       "label": "Enter the identification number of the first lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Lienholder1IdentificationNumber",
+      "name": "Lienholder1IdentificationNumber",
       "state": 0
     },
     {
@@ -258,7 +249,7 @@
       "hidden": false,
       "label": "Enter the telephone number of the first lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Lienholder1PhoneNumber",
+      "name": "Lienholder1PhoneNumber",
       "state": 0
     },
     {
@@ -267,7 +258,7 @@
       "hidden": false,
       "label": "Enter the identification number of the second lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Lienholder2IdentificationNumber",
+      "name": "Lienholder2IdentificationNumber",
       "state": 0
     },
     {
@@ -276,7 +267,7 @@
       "hidden": false,
       "label": "Enter the telephone number of the second lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Lienholder2PhoneNumber",
+      "name": "Lienholder2PhoneNumber",
       "state": 0
     },
     {
@@ -285,7 +276,7 @@
       "hidden": false,
       "label": "Enter the odometer reading.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_OdometerReading",
+      "name": "OdometerReading",
       "state": 0
     },
     {
@@ -294,7 +285,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the odometer reading reflects the amount of mileage in excess of its mechanical limits.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_OdometerReadingExceeds",
+      "name": "OdometerReadingExceeds",
       "state": 0
     },
     {
@@ -303,7 +294,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the odometer reading is not the actual mileage.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_OdometerReadingNotActual",
+      "name": "OdometerReadingNotActual",
       "state": 0
     },
     {
@@ -312,7 +303,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the party is the owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Owner",
+      "name": "Owner",
       "state": 0
     },
     {
@@ -321,7 +312,7 @@
       "hidden": false,
       "label": "Enter the telephone number of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Owner1PhoneNumber",
+      "name": "Owner1PhoneNumber",
       "state": 0
     },
     {
@@ -330,7 +321,7 @@
       "hidden": false,
       "label": "Enter the telephone number of the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Owner2PhoneNumber",
+      "name": "Owner2PhoneNumber",
       "state": 0
     },
     {
@@ -339,7 +330,7 @@
       "hidden": false,
       "label": "Enter any additional remarks in this area - line 1.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Remarks1",
+      "name": "Remarks1",
       "state": 0
     },
     {
@@ -348,7 +339,7 @@
       "hidden": false,
       "label": "Enter any additional remarks in this area - line 2.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Remarks2",
+      "name": "Remarks2",
       "state": 0
     },
     {
@@ -357,7 +348,7 @@
       "hidden": false,
       "label": "Enter any additional remarks in this area - line 3.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Remarks3",
+      "name": "Remarks3",
       "state": 0
     },
     {
@@ -366,7 +357,7 @@
       "hidden": false,
       "label": "Enter any additional remarks in this area - line 4.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Remarks4",
+      "name": "Remarks4",
       "state": 0
     },
     {
@@ -375,7 +366,7 @@
       "hidden": false,
       "label": "Enter the number on the certificate of title/electronic title for the vehicle/vessel/mobile unit.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_TitleNumber",
+      "name": "TitleNumber",
       "state": 0
     },
     {
@@ -384,7 +375,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the weight of the trailer is less than 8000 pounds.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_TrailerLessThan8000LBS",
+      "name": "TrailerLessThan8000LBS",
       "state": 0
     },
     {
@@ -393,7 +384,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the weight of the trailer  is over 8000 pounds.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_TrailerOver8000LBS",
+      "name": "TrailerOver8000LBS",
       "state": 0
     },
     {
@@ -402,7 +393,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the vehicle is assembled and does not resemble any particular year model/make of the vehicle.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleAssembled",
+      "name": "VehicleAssembled",
       "state": 0
     },
     {
@@ -411,7 +402,7 @@
       "hidden": false,
       "label": "Enter the vehicle's farm identification number.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleFarmIDNumber",
+      "name": "VehicleFarmIDNumber",
       "state": 0
     },
     {
@@ -420,7 +411,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the gross vehicle weight is less than 26,000 pounds.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleGreaterThan26KNo",
+      "name": "VehicleGreaterThan26KNo",
       "state": 0
     },
     {
@@ -429,7 +420,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the gross vehicle weight is greater than 26,000 pounds.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleGreaterThan26KYes",
+      "name": "VehicleGreaterThan26KYes",
       "state": 0
     },
     {
@@ -438,7 +429,7 @@
       "hidden": false,
       "label": "Enter the vehicle identification number (VIN) of the first vehicle.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleIdentificationNumber",
+      "name": "VehicleIdentificationNumber",
       "state": 0
     },
     {
@@ -447,7 +438,7 @@
       "hidden": false,
       "label": "Enter the make/manufacturer of the first vehicle.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleMake",
+      "name": "VehicleMake",
       "state": 0
     },
     {
@@ -456,7 +447,7 @@
       "hidden": false,
       "label": "Enter the body style of the vehicle or vessel.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleVesselBodyStyle",
+      "name": "VehicleVesselBodyStyle",
       "state": 0
     },
     {
@@ -465,7 +456,7 @@
       "hidden": false,
       "label": "Check this box to indicate that the vehicle or vessell has been specially constructed/reconstruction.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleVesselReconstructedYes",
+      "name": "VehicleVesselReconstructedYes",
       "state": 0
     },
     {
@@ -474,7 +465,7 @@
       "hidden": false,
       "label": "Check this field to indicate that the vehicle or vessel is a replica.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleVesselReplica",
+      "name": "VehicleVesselReplica",
       "state": 0
     },
     {
@@ -483,7 +474,7 @@
       "hidden": false,
       "label": "Enter the weight and length of the vehicle or unit.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_VehicleWeightLength",
+      "name": "VehicleWeightLength",
       "state": 0
     },
     {
@@ -492,7 +483,7 @@
       "hidden": false,
       "label": "Enter the address of the lessor.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_LessorAddress",
+      "name": "LessorAddress",
       "state": 0
     },
     {
@@ -501,7 +492,7 @@
       "hidden": false,
       "label": "Enter the first lienholder's address.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Lienholder1Address",
+      "name": "Lienholder1Address",
       "state": 0
     },
     {
@@ -510,7 +501,7 @@
       "hidden": false,
       "label": "Enter the second lienholder's address.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Lienholder2Address",
+      "name": "Lienholder2Address",
       "state": 0
     },
     {
@@ -519,7 +510,7 @@
       "hidden": false,
       "label": "Enter the city, state and ZIP code that the owner/lessee would like the documents to be sent to.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_OneTimeCityStateZIP",
+      "name": "OneTimeCityStateZIP",
       "state": 0
     },
     {
@@ -528,7 +519,7 @@
       "hidden": false,
       "label": "Check this box if the owner/lessee would like the documents to be sent to the both one time only street address.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressBoth",
+      "name": "OneTimeMailingAddressBoth",
       "state": 0
     },
     {
@@ -537,7 +528,7 @@
       "hidden": false,
       "label": "Check this box if the owner/lessee would like the documents to be sent to the regular one time only street address.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressRegular",
+      "name": "OneTimeMailingAddressRegular",
       "state": 0
     },
     {
@@ -546,7 +537,7 @@
       "hidden": false,
       "label": "Check this box if the owner/lessee would like the documents to be sent to the title one time only street address.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressTitle",
+      "name": "OneTimeMailingAddressTitle",
       "state": 0
     },
     {
@@ -555,7 +546,7 @@
       "hidden": false,
       "label": "Enter the street address that the owner/lessee would like the documents to be sent to.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_OneTimeStreetAddress",
+      "name": "OneTimeStreetAddress",
       "state": 0
     },
     {
@@ -564,7 +555,7 @@
       "hidden": false,
       "label": "Enter the first owner's city, state and ZIP code.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1CityStateZIP",
+      "name": "Owner1CityStateZIP",
       "state": 0
     },
     {
@@ -573,7 +564,7 @@
       "hidden": false,
       "label": "Enter the county where the first owner resides.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1County",
+      "name": "Owner1County",
       "state": 0
     },
     {
@@ -582,7 +573,7 @@
       "hidden": false,
       "label": "Enter the mailing city, state and ZIP code of the first owner's address, if different than the residential city, state and ZIP code.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1MailingCityStateZIP",
+      "name": "Owner1MailingCityStateZIP",
       "state": 0
     },
     {
@@ -591,7 +582,7 @@
       "hidden": false,
       "label": "Enter the mailing street address of the first owner if different from the residential street address.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1MailingStreetAddress",
+      "name": "Owner1MailingStreetAddress",
       "state": 0
     },
     {
@@ -600,7 +591,7 @@
       "hidden": false,
       "label": "Enter the street address of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
+      "name": "Owner1StreetAddress",
       "state": 0
     },
     {
@@ -609,7 +600,7 @@
       "hidden": false,
       "label": "Enter the mailing county of the owner/lessee if different that the residential county.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_OwnerMailingCounty",
+      "name": "OwnerMailingCounty",
       "state": 0
     },
     {
@@ -618,7 +609,7 @@
       "hidden": false,
       "label": "Enter the city, state and ZIP code where the vehicle will be stored or the actual location of the manufactured structure.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_VehicleCityStateZIP",
+      "name": "VehicleCityStateZIP",
       "state": 0
     },
     {
@@ -627,7 +618,7 @@
       "hidden": false,
       "label": "Enter the county of the where the vehicle is kept or the actual location of the manufactured structure.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_VehicleCounty",
+      "name": "VehicleCounty",
       "state": 0
     },
     {
@@ -636,7 +627,7 @@
       "hidden": false,
       "label": "Enter the street address where the vehicle is stored or the actual location of the manufactured structure.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_VehicleStreetAddress",
+      "name": "VehicleStreetAddress",
       "state": 0
     },
     {
@@ -645,7 +636,7 @@
       "hidden": false,
       "label": "Enter the date of birth for the lessor.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_LessorDateOfBirth",
+      "name": "LessorDateOfBirth",
       "state": 0
     },
     {
@@ -654,7 +645,7 @@
       "hidden": false,
       "label": "Enter the date that the authorized lessor representative is signing the document.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_LessorSignatureDate",
+      "name": "LessorSignatureDate",
       "state": 0
     },
     {
@@ -663,7 +654,7 @@
       "hidden": false,
       "label": "Enter the date of birth for the first lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_Lienholder1DateOfBirth",
+      "name": "Lienholder1DateOfBirth",
       "state": 0
     },
     {
@@ -672,7 +663,7 @@
       "hidden": false,
       "label": "Enter the date of birth for the second lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_Lienholder2DateOfBirth",
+      "name": "Lienholder2DateOfBirth",
       "state": 0
     },
     {
@@ -681,7 +672,7 @@
       "hidden": false,
       "label": "Enter the date that the odometer reading was recorded.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_OdometerReadingDate",
+      "name": "OdometerReadingDate",
       "state": 0
     },
     {
@@ -690,7 +681,7 @@
       "hidden": false,
       "label": "Enter the date of birth for the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_Owner1DateOfBirth",
+      "name": "Owner1DateOfBirth",
       "state": 0
     },
     {
@@ -699,7 +690,7 @@
       "hidden": false,
       "label": "Enter the date that the first owner is signing the document.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_Owner1SignatureDate",
+      "name": "Owner1SignatureDate",
       "state": 0
     },
     {
@@ -708,7 +699,7 @@
       "hidden": false,
       "label": "Enter the date of birth for the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_Owner2DateOfBirth",
+      "name": "Owner2DateOfBirth",
       "state": 0
     },
     {
@@ -717,7 +708,7 @@
       "hidden": false,
       "label": "Enter the date of birth for the third owner.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_Owner3DateOfBirth",
+      "name": "Owner3DateOfBirth",
       "state": 0
     },
     {
@@ -726,7 +717,7 @@
       "hidden": false,
       "label": "Enter the year the vehicle was manufactured/model year.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_VehicleYear",
+      "name": "VehicleYear",
       "state": 0
     },
     {
@@ -735,7 +726,7 @@
       "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
-      "name": "L_GNL_MISC_SIGN_eSignatureLienholder1",
+      "name": "eSignatureLienholder1",
       "state": 0
     },
     {
@@ -744,7 +735,7 @@
       "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
-      "name": "L_GNL_MISC_SIGN_eSignatureOwner1",
+      "name": "eSignatureOwner1",
       "state": 0
     },
     {
@@ -753,7 +744,7 @@
       "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
-      "name": "L_GNL_MISC_SIGN_eSignatureVeteranOwner",
+      "name": "eSignatureVeteranOwner",
       "state": 0
     },
     {
@@ -762,7 +753,7 @@
       "hidden": false,
       "label": "Enter the business name of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+      "name": "Owner1BusinessName",
       "state": 0
     },
     {
@@ -771,7 +762,7 @@
       "hidden": false,
       "label": "Enter the business name of the second additional owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+      "name": "Owner2BusinessName",
       "state": 0
     },
     {
@@ -780,7 +771,7 @@
       "hidden": false,
       "label": "Enter the business name of the third owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_BSNE_Owner3BusinessName",
+      "name": "Owner3BusinessName",
       "state": 0
     },
     {
@@ -789,7 +780,7 @@
       "hidden": true,
       "label": "Enter the first name of the first individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort1FirstName",
+      "name": "Consort1FirstName",
       "state": 0
     },
     {
@@ -798,7 +789,7 @@
       "hidden": false,
       "label": "Enter the full name of the first individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort1FullName",
+      "name": "Consort1FullName",
       "state": 0
     },
     {
@@ -807,7 +798,7 @@
       "hidden": true,
       "label": "Enter the last name of the first individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort1LastName",
+      "name": "Consort1LastName",
       "state": 0
     },
     {
@@ -816,7 +807,7 @@
       "hidden": false,
       "label": "Enter the middle name of the first individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort1MiddleName",
+      "name": "Consort1MiddleName",
       "state": 0
     },
     {
@@ -825,7 +816,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, of the first individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort1SuffixName",
+      "name": "Consort1SuffixName",
       "state": 0
     },
     {
@@ -834,7 +825,7 @@
       "hidden": true,
       "label": "Enter the first name of the second individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort2FirstName",
+      "name": "Consort2FirstName",
       "state": 0
     },
     {
@@ -843,7 +834,7 @@
       "hidden": false,
       "label": "Enter the full name of the second individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort2FullName",
+      "name": "Consort2FullName",
       "state": 0
     },
     {
@@ -852,7 +843,7 @@
       "hidden": true,
       "label": "Enter the last name of the second individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort2LastName",
+      "name": "Consort2LastName",
       "state": 0
     },
     {
@@ -861,7 +852,7 @@
       "hidden": false,
       "label": "Enter the middle name of the second individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort2MiddleName",
+      "name": "Consort2MiddleName",
       "state": 0
     },
     {
@@ -870,7 +861,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, of the second individual who is the consort for the drug and alcohol testing certification.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Consort2SuffixName",
+      "name": "Consort2SuffixName",
       "state": 0
     },
     {
@@ -879,7 +870,7 @@
       "hidden": false,
       "label": "Enter the name of the insurance company.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_InsuranceCompanyName",
+      "name": "InsuranceCompanyName",
       "state": 0
     },
     {
@@ -888,7 +879,7 @@
       "hidden": true,
       "label": "Enter the first name of the lessor, if lessor is an individual.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_LessorFirstName",
+      "name": "LessorFirstName",
       "state": 0
     },
     {
@@ -897,7 +888,7 @@
       "hidden": true,
       "label": "Enter the last name of the lessor, if lessor is an individual.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_LessorLastName",
+      "name": "LessorLastName",
       "state": 0
     },
     {
@@ -906,7 +897,7 @@
       "hidden": false,
       "label": "Enter the middle name of the lessor, if lessor is an individual.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_LessorMiddleName",
+      "name": "LessorMiddleName",
       "state": 0
     },
     {
@@ -915,7 +906,7 @@
       "hidden": false,
       "label": "Enter the name of the lessor.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_LessorName",
+      "name": "LessorName",
       "state": 0
     },
     {
@@ -924,7 +915,7 @@
       "hidden": true,
       "label": "Enter the suffix name of the lessor, if lessor is an individual.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_LessorSuffixName",
+      "name": "LessorSuffixName",
       "state": 0
     },
     {
@@ -933,7 +924,7 @@
       "hidden": false,
       "label": "Enter the name of the first lien holder.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Lienholder1Name",
+      "name": "Lienholder1Name",
       "state": 0
     },
     {
@@ -942,7 +933,7 @@
       "hidden": false,
       "label": "Enter the name of the second lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Lienholder2Name",
+      "name": "Lienholder2Name",
       "state": 0
     },
     {
@@ -951,7 +942,7 @@
       "hidden": true,
       "label": "Enter the first name of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner1FirstName",
+      "name": "Owner1FirstName",
       "state": 0
     },
     {
@@ -960,7 +951,7 @@
       "hidden": true,
       "label": "Enter the last name of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner1LastName",
+      "name": "Owner1LastName",
       "state": 0
     },
     {
@@ -969,7 +960,7 @@
       "hidden": false,
       "label": "Enter the middle name of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner1MiddleName",
+      "name": "Owner1MiddleName",
       "state": 0
     },
     {
@@ -978,7 +969,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, for the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner1SuffixName",
+      "name": "Owner1SuffixName",
       "state": 0
     },
     {
@@ -987,7 +978,7 @@
       "hidden": true,
       "label": "Enter the first name of the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner2FirstName",
+      "name": "Owner2FirstName",
       "state": 0
     },
     {
@@ -996,7 +987,7 @@
       "hidden": true,
       "label": "Enter the last name of the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner2LastName",
+      "name": "Owner2LastName",
       "state": 0
     },
     {
@@ -1005,7 +996,7 @@
       "hidden": false,
       "label": "Enter the middle name of the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner2MiddleName",
+      "name": "Owner2MiddleName",
       "state": 0
     },
     {
@@ -1014,7 +1005,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, for the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner2SuffixName",
+      "name": "Owner2SuffixName",
       "state": 0
     },
     {
@@ -1023,7 +1014,7 @@
       "hidden": true,
       "label": "Enter the first name of the third owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner3FirstName",
+      "name": "Owner3FirstName",
       "state": 0
     },
     {
@@ -1032,7 +1023,7 @@
       "hidden": true,
       "label": "Enter the last name of the third owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner3LastName",
+      "name": "Owner3LastName",
       "state": 0
     },
     {
@@ -1041,7 +1032,7 @@
       "hidden": false,
       "label": "Enter the middle name of the third owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner3MiddleName",
+      "name": "Owner3MiddleName",
       "state": 0
     },
     {
@@ -1050,7 +1041,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, for the third owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner3SuffixName",
+      "name": "Owner3SuffixName",
       "state": 0
     },
     {
@@ -1059,7 +1050,7 @@
       "hidden": false,
       "label": "Enter the school district name(s) where the school bus will run.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_SchoolDistrictName",
+      "name": "SchoolDistrictName",
       "state": 0
     },
     {
@@ -1068,7 +1059,7 @@
       "hidden": true,
       "label": "Enter the first name of the veteran owner who is currently serving or has previously served in the United States military.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_VeteranOwnerFirstName",
+      "name": "VeteranOwnerFirstName",
       "state": 0
     },
     {
@@ -1077,7 +1068,7 @@
       "hidden": false,
       "label": "Enter the full name of the veteran owner who is currently serving or has previously served in the United States military.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_VeteranOwnerFullName",
+      "name": "VeteranOwnerFullName",
       "state": 0
     },
     {
@@ -1086,7 +1077,7 @@
       "hidden": true,
       "label": "Enter the last name of the veteran owner who is currently serving or has previously served in the United States military.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_VeteranOwnerLastName",
+      "name": "VeteranOwnerLastName",
       "state": 0
     },
     {
@@ -1095,7 +1086,7 @@
       "hidden": false,
       "label": "Enter the middle name or middle initial of the veteran owner who is currently serving or has previously served in the United States military.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_VeteranOwnerMiddleName",
+      "name": "VeteranOwnerMiddleName",
       "state": 0
     },
     {
@@ -1104,129 +1095,129 @@
       "hidden": true,
       "label": "Enter the suffix name (e.g., II, Sr., etc.) of the veteran owner who is currently serving or has previously served in the United States military.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_VeteranOwnerSuffixName",
+      "name": "VeteranOwnerSuffixName",
       "state": 0
     }
   ],
   "data": [
     {
-      "name": "L_GNL_ADDL_TITL_FleetAccountNumber",
+      "name": "FleetAccountNumber",
       "value": "ABCD-123-xyz"
     },
     {
-      "name": "L_GNL_ADDL_TITL_LicensePlateNumber",
+      "name": "LicensePlateNumber",
       "value": "ab-cd-de-fg"
     },
     {
-      "name": "L_GNL_ADDR_TITL_VehicleCounty",
+      "name": "VehicleCounty",
       "value": "Vehicle County"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Component1PartNameVIN",
+      "name": "Component1PartNameVIN",
       "value": "1234567890ABCDEFG"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Component2PartNameVIN",
+      "name": "Component2PartNameVIN",
       "value": "1234567890HIJKLMN"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Component3PartNameVIN",
+      "name": "Component3PartNameVIN",
       "value": "1234567890OPGRSTU"
     },
     {
-      "name": "L_GNL_ADDL_TITL_VehicleVesselReconstructedYes",
+      "name": "VehicleVesselReconstructedYes",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_VehicleAssembled",
+      "name": "VehicleAssembled",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_VehicleVesselReplica",
+      "name": "VehicleVesselReplica",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDR_TITL_Lienholder1Address",
+      "name": "Lienholder1Address",
       "value": "500 North Boulevard E, Some City, MI 49456"
     },
     {
-      "name": "L_GNL_ADDR_TITL_Lienholder2Address",
+      "name": "Lienholder2Address",
       "value": "16898 North Ave, Boulder, CO 12345"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Lienholder1IdentificationNumber",
+      "name": "Lienholder1IdentificationNumber",
       "value": "ID ONE"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Lienholder1PhoneNumber",
+      "name": "Lienholder1PhoneNumber",
       "value": "(616) 846-1234"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Lienholder2IdentificationNumber",
+      "name": "Lienholder2IdentificationNumber",
       "value": "ID TWO"
     },
     {
-      "name": "L_GNL_ADDL_TITL_Lienholder2PhoneNumber",
+      "name": "Lienholder2PhoneNumber",
       "value": "(843) 888-5678"
     },
     {
-      "name": "L_GNL_DATE_TITL_Lienholder1DateOfBirth",
+      "name": "Lienholder1DateOfBirth",
       "value": "1/2/1980"
     },
     {
-      "name": "L_GNL_NAME_TITL_Lienholder1Name",
+      "name": "Lienholder1Name",
       "value": "FIRST LIEN HOLDER"
     },
     {
-      "name": "L_GNL_NAME_TITL_Lienholder1Name",
+      "name": "Lienholder1Name",
       "value": "SECOND LIEN HOLDER "
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypeDiesel",
+      "name": "FuelTypeDiesel",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypeGas",
+      "name": "FuelTypeGas",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypeHybrid",
+      "name": "FuelTypeHybrid",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypeElectric",
+      "name": "FuelTypeElectric",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypeNaturalGas",
+      "name": "FuelTypeNaturalGas",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypeOther",
+      "name": "FuelTypeOther",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypePlugInHybrid",
+      "name": "FuelTypePlugInHybrid",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_FuelTypePropane",
+      "name": "FuelTypePropane",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipNo",
+      "name": "JointOwnershipSurvivorshipNo",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipYes",
+      "name": "JointOwnershipSurvivorshipYes",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_JointSecurityInterestSurvivorshipNo",
+      "name": "JointSecurityInterestSurvivorshipNo",
       "value": "X"
     },
     {
-      "name": "L_GNL_ADDL_TITL_JointSecurityInterestSurvivorshipYes",
+      "name": "JointSecurityInterestSurvivorshipYes",
       "value": "X"
     }
   ],
@@ -1262,7 +1253,7 @@
       "locations": [
         {
           "height": 206.0,
-          "name": "L_GNL_MISC_SIGN_eSignatureOwner1",
+          "name": "eSignatureOwner1",
           "groupName": null,
           "tabOrder": 96,
           "width": 2599.0,
@@ -1271,7 +1262,7 @@
         },
         {
           "height": 191.0,
-          "name": "L_GNL_MISC_SIGN_eSignatureLienholder1",
+          "name": "eSignatureLienholder1",
           "groupName": null,
           "tabOrder": 100,
           "width": 2599.0,
@@ -1280,7 +1271,7 @@
         },
         {
           "height": 191.0,
-          "name": "L_GNL_MISC_SIGN_eSignatureVeteranOwner",
+          "name": "eSignatureVeteranOwner",
           "groupName": null,
           "tabOrder": 69,
           "width": 2513.0,
@@ -1289,7 +1280,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleIdentificationNumber",
+          "name": "VehicleIdentificationNumber",
           "groupName": null,
           "tabOrder": 0,
           "width": 2016.0,
@@ -1298,7 +1289,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleMake",
+          "name": "VehicleMake",
           "groupName": null,
           "tabOrder": 6,
           "width": 516.0,
@@ -1307,7 +1298,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_VehicleYear",
+          "name": "VehicleYear",
           "groupName": null,
           "tabOrder": 5,
           "width": 433.0,
@@ -1316,7 +1307,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Lienholder1Address",
+          "name": "Lienholder1Address",
           "groupName": null,
           "tabOrder": 77,
           "width": 5931.0,
@@ -1325,7 +1316,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Lienholder2Address",
+          "name": "Lienholder2Address",
           "groupName": null,
           "tabOrder": 82,
           "width": 5931.0,
@@ -1334,7 +1325,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Lienholder1Name",
+          "name": "Lienholder1Name",
           "groupName": null,
           "tabOrder": 74,
           "width": 4616.0,
@@ -1343,7 +1334,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Lienholder2Name",
+          "name": "Lienholder2Name",
           "groupName": null,
           "tabOrder": 79,
           "width": 4616.0,
@@ -1352,7 +1343,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Owner2PhoneNumber",
+          "name": "Owner2PhoneNumber",
           "groupName": null,
           "tabOrder": 98,
           "width": 1285.0,
@@ -1361,7 +1352,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeNaturalGas",
+          "name": "FuelTypeNaturalGas",
           "groupName": null,
           "tabOrder": 17,
           "width": 125.0,
@@ -1370,7 +1361,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypePlugInHybrid",
+          "name": "FuelTypePlugInHybrid",
           "groupName": null,
           "tabOrder": 12,
           "width": 125.0,
@@ -1379,7 +1370,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_TitleNumber",
+          "name": "TitleNumber",
           "groupName": null,
           "tabOrder": 1,
           "width": 933.0,
@@ -1388,7 +1379,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_LicensePlateNumber",
+          "name": "LicensePlateNumber",
           "groupName": null,
           "tabOrder": 4,
           "width": 1349.0,
@@ -1397,7 +1388,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleVesselBodyStyle",
+          "name": "VehicleVesselBodyStyle",
           "groupName": null,
           "tabOrder": 7,
           "width": 199.0,
@@ -1406,7 +1397,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleWeightLength",
+          "name": "VehicleWeightLength",
           "groupName": null,
           "tabOrder": 8,
           "width": 933.0,
@@ -1415,7 +1406,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_VehicleGreaterThan26KYes",
+          "name": "VehicleGreaterThan26KYes",
           "groupName": null,
           "tabOrder": 2,
           "width": 125.0,
@@ -1424,7 +1415,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_VehicleGreaterThan26KNo",
+          "name": "VehicleGreaterThan26KNo",
           "groupName": null,
           "tabOrder": 3,
           "width": 125.0,
@@ -1433,7 +1424,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleFarmIDNumber",
+          "name": "VehicleFarmIDNumber",
           "groupName": null,
           "tabOrder": 19,
           "width": 1200.0,
@@ -1442,7 +1433,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_FleetAccountNumber",
+          "name": "FleetAccountNumber",
           "groupName": null,
           "tabOrder": 20,
           "width": 864.0,
@@ -1451,7 +1442,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_EquipmentNumber",
+          "name": "EquipmentNumber",
           "groupName": null,
           "tabOrder": 21,
           "width": 700.0,
@@ -1460,7 +1451,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeGas",
+          "name": "FuelTypeGas",
           "groupName": null,
           "tabOrder": 9,
           "width": 125.0,
@@ -1469,7 +1460,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeElectric",
+          "name": "FuelTypeElectric",
           "groupName": null,
           "tabOrder": 15,
           "width": 125.0,
@@ -1478,7 +1469,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeDiesel",
+          "name": "FuelTypeDiesel",
           "groupName": null,
           "tabOrder": 10,
           "width": 125.0,
@@ -1487,7 +1478,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypePropane",
+          "name": "FuelTypePropane",
           "groupName": null,
           "tabOrder": 16,
           "width": 125.0,
@@ -1496,7 +1487,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeHybrid",
+          "name": "FuelTypeHybrid",
           "groupName": null,
           "tabOrder": 11,
           "width": 125.0,
@@ -1505,7 +1496,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeOther",
+          "name": "FuelTypeOther",
           "groupName": null,
           "tabOrder": 18,
           "width": 125.0,
@@ -1514,7 +1505,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeOtherDescription",
+          "name": "FuelTypeOtherDescription",
           "groupName": null,
           "tabOrder": 22,
           "width": 515.0,
@@ -1523,7 +1514,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_OdometerReading",
+          "name": "OdometerReading",
           "groupName": null,
           "tabOrder": 24,
           "width": 933.0,
@@ -1532,7 +1523,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_OdometerReadingDate",
+          "name": "OdometerReadingDate",
           "groupName": null,
           "tabOrder": 25,
           "width": 1016.0,
@@ -1541,7 +1532,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_OdometerReadingExceeds",
+          "name": "OdometerReadingExceeds",
           "groupName": null,
           "tabOrder": 23,
           "width": 125.0,
@@ -1550,7 +1541,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_OdometerReadingNotActual",
+          "name": "OdometerReadingNotActual",
           "groupName": null,
           "tabOrder": 26,
           "width": 125.0,
@@ -1559,7 +1550,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+          "name": "Owner1BusinessName",
           "groupName": null,
           "tabOrder": 29,
           "width": 4600.0,
@@ -1568,7 +1559,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_Owner",
+          "name": "Owner",
           "groupName": null,
           "tabOrder": 27,
           "width": 125.0,
@@ -1577,7 +1568,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_Lessee",
+          "name": "Lessee",
           "groupName": null,
           "tabOrder": 28,
           "width": 125.0,
@@ -1586,7 +1577,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_IdentificationNumber1",
+          "name": "IdentificationNumber1",
           "groupName": null,
           "tabOrder": 34,
           "width": 1349.0,
@@ -1595,7 +1586,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_Owner1DateOfBirth",
+          "name": "Owner1DateOfBirth",
           "groupName": null,
           "tabOrder": 35,
           "width": 1016.0,
@@ -1604,7 +1595,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
+          "name": "Owner1StreetAddress",
           "groupName": null,
           "tabOrder": 36,
           "width": 3680.0,
@@ -1613,7 +1604,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1MailingStreetAddress",
+          "name": "Owner1MailingStreetAddress",
           "groupName": null,
           "tabOrder": 37,
           "width": 3516.0,
@@ -1622,7 +1613,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1CityStateZIP",
+          "name": "Owner1CityStateZIP",
           "groupName": null,
           "tabOrder": 38,
           "width": 2374.0,
@@ -1631,7 +1622,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1County",
+          "name": "Owner1County",
           "groupName": null,
           "tabOrder": 39,
           "width": 1200.0,
@@ -1640,7 +1631,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1MailingCityStateZIP",
+          "name": "Owner1MailingCityStateZIP",
           "groupName": null,
           "tabOrder": 40,
           "width": 2199.0,
@@ -1649,7 +1640,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_OwnerMailingCounty",
+          "name": "OwnerMailingCounty",
           "groupName": null,
           "tabOrder": 41,
           "width": 1349.0,
@@ -1658,7 +1649,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+          "name": "Owner2BusinessName",
           "groupName": null,
           "tabOrder": 42,
           "width": 4600.0,
@@ -1667,7 +1658,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_IdentificationNumber2",
+          "name": "IdentificationNumber2",
           "groupName": null,
           "tabOrder": 47,
           "width": 1349.0,
@@ -1676,7 +1667,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_Owner2DateOfBirth",
+          "name": "Owner2DateOfBirth",
           "groupName": null,
           "tabOrder": 48,
           "width": 1016.0,
@@ -1685,7 +1676,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner3BusinessName",
+          "name": "Owner3BusinessName",
           "groupName": null,
           "tabOrder": 49,
           "width": 4600.0,
@@ -1694,7 +1685,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_IdentificationNumber3",
+          "name": "IdentificationNumber3",
           "groupName": null,
           "tabOrder": 54,
           "width": 1349.0,
@@ -1703,7 +1694,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_Owner3DateOfBirth",
+          "name": "Owner3DateOfBirth",
           "groupName": null,
           "tabOrder": 55,
           "width": 1016.0,
@@ -1712,7 +1703,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeStreetAddress",
+          "name": "OneTimeStreetAddress",
           "groupName": null,
           "tabOrder": 58,
           "width": 3516.0,
@@ -1721,7 +1712,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeCityStateZIP",
+          "name": "OneTimeCityStateZIP",
           "groupName": null,
           "tabOrder": 61,
           "width": 3681.0,
@@ -1730,7 +1721,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_VehicleStreetAddress",
+          "name": "VehicleStreetAddress",
           "groupName": null,
           "tabOrder": 59,
           "width": 3199.0,
@@ -1739,7 +1730,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_VehicleCityStateZIP",
+          "name": "VehicleCityStateZIP",
           "groupName": null,
           "tabOrder": 62,
           "width": 2199.0,
@@ -1748,7 +1739,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_VehicleCounty",
+          "name": "VehicleCounty",
           "groupName": null,
           "tabOrder": 63,
           "width": 1349.0,
@@ -1757,7 +1748,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipYes",
+          "name": "JointOwnershipSurvivorshipYes",
           "groupName": null,
           "tabOrder": 70,
           "width": 125.0,
@@ -1766,7 +1757,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_JointOwnershipSurvivorshipNo",
+          "name": "JointOwnershipSurvivorshipNo",
           "groupName": null,
           "tabOrder": 71,
           "width": 125.0,
@@ -1775,7 +1766,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_JointSecurityInterestSurvivorshipYes",
+          "name": "JointSecurityInterestSurvivorshipYes",
           "groupName": null,
           "tabOrder": 72,
           "width": 125.0,
@@ -1784,7 +1775,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_JointSecurityInterestSurvivorshipNo",
+          "name": "JointSecurityInterestSurvivorshipNo",
           "groupName": null,
           "tabOrder": 73,
           "width": 125.0,
@@ -1793,7 +1784,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Lienholder1IdentificationNumber",
+          "name": "Lienholder1IdentificationNumber",
           "groupName": null,
           "tabOrder": 75,
           "width": 1349.0,
@@ -1802,7 +1793,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_Lienholder1DateOfBirth",
+          "name": "Lienholder1DateOfBirth",
           "groupName": null,
           "tabOrder": 76,
           "width": 1016.0,
@@ -1811,7 +1802,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Lienholder1PhoneNumber",
+          "name": "Lienholder1PhoneNumber",
           "groupName": null,
           "tabOrder": 78,
           "width": 1285.0,
@@ -1820,7 +1811,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Lienholder2IdentificationNumber",
+          "name": "Lienholder2IdentificationNumber",
           "groupName": null,
           "tabOrder": 80,
           "width": 1349.0,
@@ -1829,7 +1820,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_Lienholder2DateOfBirth",
+          "name": "Lienholder2DateOfBirth",
           "groupName": null,
           "tabOrder": 81,
           "width": 1016.0,
@@ -1838,7 +1829,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Lienholder2PhoneNumber",
+          "name": "Lienholder2PhoneNumber",
           "groupName": null,
           "tabOrder": 83,
           "width": 1285.0,
@@ -1847,7 +1838,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_LessorName",
+          "name": "LessorName",
           "groupName": null,
           "tabOrder": 84,
           "width": 3516.0,
@@ -1856,7 +1847,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_LessorIdentificationNumber",
+          "name": "LessorIdentificationNumber",
           "groupName": null,
           "tabOrder": 89,
           "width": 1349.0,
@@ -1865,7 +1856,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_LessorDateOfBirth",
+          "name": "LessorDateOfBirth",
           "groupName": null,
           "tabOrder": 90,
           "width": 1016.0,
@@ -1874,7 +1865,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_LessorAddress",
+          "name": "LessorAddress",
           "groupName": null,
           "tabOrder": 91,
           "width": 6015.0,
@@ -1883,7 +1874,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_LessorPhoneNumber",
+          "name": "LessorPhoneNumber",
           "groupName": null,
           "tabOrder": 92,
           "width": 1285.0,
@@ -1892,7 +1883,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_InsuranceCompanyName",
+          "name": "InsuranceCompanyName",
           "groupName": null,
           "tabOrder": 93,
           "width": 4683.0,
@@ -1901,7 +1892,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_InsurancePolicyNumber",
+          "name": "InsurancePolicyNumber",
           "groupName": null,
           "tabOrder": 94,
           "width": 1873.0,
@@ -1910,7 +1901,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_Owner1SignatureDate",
+          "name": "Owner1SignatureDate",
           "groupName": null,
           "tabOrder": 97,
           "width": 1016.0,
@@ -1919,7 +1910,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Owner1PhoneNumber",
+          "name": "Owner1PhoneNumber",
           "groupName": null,
           "tabOrder": 95,
           "width": 1285.0,
@@ -1928,7 +1919,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_LessorSignatureDate",
+          "name": "LessorSignatureDate",
           "groupName": null,
           "tabOrder": 99,
           "width": 1016.0,
@@ -1937,7 +1928,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_LessorLastName",
+          "name": "LessorLastName",
           "groupName": null,
           "tabOrder": 85,
           "width": 1360.0,
@@ -1946,7 +1937,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_LessorSuffixName",
+          "name": "LessorSuffixName",
           "groupName": null,
           "tabOrder": 86,
           "width": 265.0,
@@ -1955,7 +1946,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_LessorFirstName",
+          "name": "LessorFirstName",
           "groupName": null,
           "tabOrder": 87,
           "width": 1099.0,
@@ -1964,7 +1955,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_LessorMiddleName",
+          "name": "LessorMiddleName",
           "groupName": null,
           "tabOrder": 88,
           "width": 99.0,
@@ -1973,7 +1964,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressRegular",
+          "name": "OneTimeMailingAddressRegular",
           "groupName": null,
           "tabOrder": 56,
           "width": 97.0,
@@ -1982,7 +1973,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressTitle",
+          "name": "OneTimeMailingAddressTitle",
           "groupName": null,
           "tabOrder": 57,
           "width": 97.0,
@@ -1991,7 +1982,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressBoth",
+          "name": "OneTimeMailingAddressBoth",
           "groupName": null,
           "tabOrder": 60,
           "width": 97.0,
@@ -2000,7 +1991,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_TrailerOver8000LBS",
+          "name": "TrailerOver8000LBS",
           "groupName": null,
           "tabOrder": 13,
           "width": 125.0,
@@ -2009,7 +2000,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_TrailerLessThan8000LBS",
+          "name": "TrailerLessThan8000LBS",
           "groupName": null,
           "tabOrder": 14,
           "width": 125.0,
@@ -2018,7 +2009,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1FirstName",
+          "name": "Owner1FirstName",
           "groupName": null,
           "tabOrder": 31,
           "width": 1099.0,
@@ -2027,7 +2018,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1LastName",
+          "name": "Owner1LastName",
           "groupName": null,
           "tabOrder": 30,
           "width": 1360.0,
@@ -2036,7 +2027,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1MiddleName",
+          "name": "Owner1MiddleName",
           "groupName": null,
           "tabOrder": 32,
           "width": 99.0,
@@ -2045,7 +2036,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1SuffixName",
+          "name": "Owner1SuffixName",
           "groupName": null,
           "tabOrder": 33,
           "width": 265.0,
@@ -2054,7 +2045,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2FirstName",
+          "name": "Owner2FirstName",
           "groupName": null,
           "tabOrder": 45,
           "width": 1099.0,
@@ -2063,7 +2054,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2LastName",
+          "name": "Owner2LastName",
           "groupName": null,
           "tabOrder": 43,
           "width": 1360.0,
@@ -2072,7 +2063,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2MiddleName",
+          "name": "Owner2MiddleName",
           "groupName": null,
           "tabOrder": 46,
           "width": 99.0,
@@ -2081,7 +2072,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2SuffixName",
+          "name": "Owner2SuffixName",
           "groupName": null,
           "tabOrder": 44,
           "width": 265.0,
@@ -2090,7 +2081,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner3FirstName",
+          "name": "Owner3FirstName",
           "groupName": null,
           "tabOrder": 52,
           "width": 1099.0,
@@ -2099,7 +2090,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner3LastName",
+          "name": "Owner3LastName",
           "groupName": null,
           "tabOrder": 50,
           "width": 1360.0,
@@ -2108,7 +2099,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner3MiddleName",
+          "name": "Owner3MiddleName",
           "groupName": null,
           "tabOrder": 53,
           "width": 99.0,
@@ -2117,7 +2108,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner3SuffixName",
+          "name": "Owner3SuffixName",
           "groupName": null,
           "tabOrder": 51,
           "width": 265.0,
@@ -2126,7 +2117,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_VeteranOwnerFirstName",
+          "name": "VeteranOwnerFirstName",
           "groupName": null,
           "tabOrder": 64,
           "width": 1265.0,
@@ -2135,7 +2126,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_VeteranOwnerFullName",
+          "name": "VeteranOwnerFullName",
           "groupName": null,
           "tabOrder": 68,
           "width": 3120.0,
@@ -2144,7 +2135,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_VeteranOwnerLastName",
+          "name": "VeteranOwnerLastName",
           "groupName": null,
           "tabOrder": 66,
           "width": 1541.0,
@@ -2153,7 +2144,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_VeteranOwnerMiddleName",
+          "name": "VeteranOwnerMiddleName",
           "groupName": null,
           "tabOrder": 65,
           "width": 181.0,
@@ -2162,7 +2153,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_VeteranOwnerSuffixName",
+          "name": "VeteranOwnerSuffixName",
           "groupName": null,
           "tabOrder": 67,
           "width": 182.0,
@@ -2177,7 +2168,7 @@
       "locations": [
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleIdentificationNumber",
+          "name": "VehicleIdentificationNumber",
           "groupName": null,
           "tabOrder": 101,
           "width": 2016.0,
@@ -2186,7 +2177,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleMake",
+          "name": "VehicleMake",
           "groupName": null,
           "tabOrder": 107,
           "width": 516.0,
@@ -2195,7 +2186,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_VehicleYear",
+          "name": "VehicleYear",
           "groupName": null,
           "tabOrder": 106,
           "width": 433.0,
@@ -2204,7 +2195,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeNaturalGas",
+          "name": "FuelTypeNaturalGas",
           "groupName": null,
           "tabOrder": 117,
           "width": 125.0,
@@ -2213,7 +2204,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypePlugInHybrid",
+          "name": "FuelTypePlugInHybrid",
           "groupName": null,
           "tabOrder": 113,
           "width": 125.0,
@@ -2222,7 +2213,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_TitleNumber",
+          "name": "TitleNumber",
           "groupName": null,
           "tabOrder": 102,
           "width": 933.0,
@@ -2231,7 +2222,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_LicensePlateNumber",
+          "name": "LicensePlateNumber",
           "groupName": null,
           "tabOrder": 105,
           "width": 1349.0,
@@ -2240,7 +2231,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleVesselBodyStyle",
+          "name": "VehicleVesselBodyStyle",
           "groupName": null,
           "tabOrder": 108,
           "width": 199.0,
@@ -2249,7 +2240,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleWeightLength",
+          "name": "VehicleWeightLength",
           "groupName": null,
           "tabOrder": 109,
           "width": 933.0,
@@ -2258,7 +2249,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_VehicleGreaterThan26KYes",
+          "name": "VehicleGreaterThan26KYes",
           "groupName": null,
           "tabOrder": 103,
           "width": 125.0,
@@ -2267,7 +2258,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_VehicleGreaterThan26KNo",
+          "name": "VehicleGreaterThan26KNo",
           "groupName": null,
           "tabOrder": 104,
           "width": 125.0,
@@ -2276,7 +2267,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_VehicleFarmIDNumber",
+          "name": "VehicleFarmIDNumber",
           "groupName": null,
           "tabOrder": 120,
           "width": 1200.0,
@@ -2285,7 +2276,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_FleetAccountNumber",
+          "name": "FleetAccountNumber",
           "groupName": null,
           "tabOrder": 121,
           "width": 864.0,
@@ -2294,7 +2285,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_EquipmentNumber",
+          "name": "EquipmentNumber",
           "groupName": null,
           "tabOrder": 122,
           "width": 700.0,
@@ -2303,7 +2294,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeGas",
+          "name": "FuelTypeGas",
           "groupName": null,
           "tabOrder": 110,
           "width": 125.0,
@@ -2312,7 +2303,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeElectric",
+          "name": "FuelTypeElectric",
           "groupName": null,
           "tabOrder": 115,
           "width": 125.0,
@@ -2321,7 +2312,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeDiesel",
+          "name": "FuelTypeDiesel",
           "groupName": null,
           "tabOrder": 111,
           "width": 125.0,
@@ -2330,7 +2321,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypePropane",
+          "name": "FuelTypePropane",
           "groupName": null,
           "tabOrder": 116,
           "width": 125.0,
@@ -2339,7 +2330,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeHybrid",
+          "name": "FuelTypeHybrid",
           "groupName": null,
           "tabOrder": 112,
           "width": 125.0,
@@ -2348,7 +2339,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeOther",
+          "name": "FuelTypeOther",
           "groupName": null,
           "tabOrder": 118,
           "width": 125.0,
@@ -2357,7 +2348,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_FuelTypeOtherDescription",
+          "name": "FuelTypeOtherDescription",
           "groupName": null,
           "tabOrder": 123,
           "width": 515.0,
@@ -2366,7 +2357,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_OdometerReading",
+          "name": "OdometerReading",
           "groupName": null,
           "tabOrder": 125,
           "width": 933.0,
@@ -2375,7 +2366,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_OdometerReadingDate",
+          "name": "OdometerReadingDate",
           "groupName": null,
           "tabOrder": 126,
           "width": 1016.0,
@@ -2384,7 +2375,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_OdometerReadingExceeds",
+          "name": "OdometerReadingExceeds",
           "groupName": null,
           "tabOrder": 124,
           "width": 125.0,
@@ -2393,7 +2384,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_OdometerReadingNotActual",
+          "name": "OdometerReadingNotActual",
           "groupName": null,
           "tabOrder": 127,
           "width": 125.0,
@@ -2402,7 +2393,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+          "name": "Owner1BusinessName",
           "groupName": null,
           "tabOrder": 130,
           "width": 4600.0,
@@ -2411,7 +2402,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_Owner",
+          "name": "Owner",
           "groupName": null,
           "tabOrder": 128,
           "width": 125.0,
@@ -2420,7 +2411,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_Lessee",
+          "name": "Lessee",
           "groupName": null,
           "tabOrder": 129,
           "width": 125.0,
@@ -2429,7 +2420,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
+          "name": "Owner1StreetAddress",
           "groupName": null,
           "tabOrder": 135,
           "width": 3680.0,
@@ -2438,7 +2429,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1MailingStreetAddress",
+          "name": "Owner1MailingStreetAddress",
           "groupName": null,
           "tabOrder": 136,
           "width": 3516.0,
@@ -2447,7 +2438,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1CityStateZIP",
+          "name": "Owner1CityStateZIP",
           "groupName": null,
           "tabOrder": 137,
           "width": 2374.0,
@@ -2456,7 +2447,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1County",
+          "name": "Owner1County",
           "groupName": null,
           "tabOrder": 138,
           "width": 1200.0,
@@ -2465,7 +2456,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1MailingCityStateZIP",
+          "name": "Owner1MailingCityStateZIP",
           "groupName": null,
           "tabOrder": 139,
           "width": 2199.0,
@@ -2474,7 +2465,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_OwnerMailingCounty",
+          "name": "OwnerMailingCounty",
           "groupName": null,
           "tabOrder": 140,
           "width": 1349.0,
@@ -2483,7 +2474,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+          "name": "Owner2BusinessName",
           "groupName": null,
           "tabOrder": 141,
           "width": 4600.0,
@@ -2492,7 +2483,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner3BusinessName",
+          "name": "Owner3BusinessName",
           "groupName": null,
           "tabOrder": 146,
           "width": 4600.0,
@@ -2501,7 +2492,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeStreetAddress",
+          "name": "OneTimeStreetAddress",
           "groupName": null,
           "tabOrder": 153,
           "width": 3516.0,
@@ -2510,7 +2501,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeCityStateZIP",
+          "name": "OneTimeCityStateZIP",
           "groupName": null,
           "tabOrder": 156,
           "width": 3681.0,
@@ -2519,7 +2510,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_VehicleStreetAddress",
+          "name": "VehicleStreetAddress",
           "groupName": null,
           "tabOrder": 154,
           "width": 3199.0,
@@ -2528,7 +2519,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_VehicleCityStateZIP",
+          "name": "VehicleCityStateZIP",
           "groupName": null,
           "tabOrder": 157,
           "width": 2199.0,
@@ -2537,7 +2528,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_VehicleCounty",
+          "name": "VehicleCounty",
           "groupName": null,
           "tabOrder": 158,
           "width": 1349.0,
@@ -2546,7 +2537,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressRegular",
+          "name": "OneTimeMailingAddressRegular",
           "groupName": null,
           "tabOrder": 151,
           "width": 97.0,
@@ -2555,7 +2546,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressTitle",
+          "name": "OneTimeMailingAddressTitle",
           "groupName": null,
           "tabOrder": 152,
           "width": 97.0,
@@ -2564,7 +2555,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDR_TITL_OneTimeMailingAddressBoth",
+          "name": "OneTimeMailingAddressBoth",
           "groupName": null,
           "tabOrder": 155,
           "width": 97.0,
@@ -2573,7 +2564,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_TrailerOver8000LBS",
+          "name": "TrailerOver8000LBS",
           "groupName": null,
           "tabOrder": 114,
           "width": 125.0,
@@ -2582,7 +2573,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_TrailerLessThan8000LBS",
+          "name": "TrailerLessThan8000LBS",
           "groupName": null,
           "tabOrder": 119,
           "width": 125.0,
@@ -2591,7 +2582,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1FirstName",
+          "name": "Owner1FirstName",
           "groupName": null,
           "tabOrder": 132,
           "width": 1099.0,
@@ -2600,7 +2591,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1LastName",
+          "name": "Owner1LastName",
           "groupName": null,
           "tabOrder": 131,
           "width": 1360.0,
@@ -2609,7 +2600,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1MiddleName",
+          "name": "Owner1MiddleName",
           "groupName": null,
           "tabOrder": 133,
           "width": 99.0,
@@ -2618,7 +2609,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1SuffixName",
+          "name": "Owner1SuffixName",
           "groupName": null,
           "tabOrder": 134,
           "width": 265.0,
@@ -2627,7 +2618,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2FirstName",
+          "name": "Owner2FirstName",
           "groupName": null,
           "tabOrder": 144,
           "width": 1099.0,
@@ -2636,7 +2627,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2LastName",
+          "name": "Owner2LastName",
           "groupName": null,
           "tabOrder": 142,
           "width": 1360.0,
@@ -2645,7 +2636,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2MiddleName",
+          "name": "Owner2MiddleName",
           "groupName": null,
           "tabOrder": 145,
           "width": 99.0,
@@ -2654,7 +2645,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2SuffixName",
+          "name": "Owner2SuffixName",
           "groupName": null,
           "tabOrder": 143,
           "width": 265.0,
@@ -2663,7 +2654,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner3FirstName",
+          "name": "Owner3FirstName",
           "groupName": null,
           "tabOrder": 149,
           "width": 1099.0,
@@ -2672,7 +2663,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner3LastName",
+          "name": "Owner3LastName",
           "groupName": null,
           "tabOrder": 147,
           "width": 1360.0,
@@ -2681,7 +2672,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner3MiddleName",
+          "name": "Owner3MiddleName",
           "groupName": null,
           "tabOrder": 150,
           "width": 99.0,
@@ -2690,7 +2681,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner3SuffixName",
+          "name": "Owner3SuffixName",
           "groupName": null,
           "tabOrder": 148,
           "width": 265.0,
@@ -2705,7 +2696,7 @@
       "locations": [
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Remarks1",
+          "name": "Remarks1",
           "groupName": null,
           "tabOrder": 159,
           "width": 3598.0,
@@ -2714,7 +2705,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Remarks2",
+          "name": "Remarks2",
           "groupName": null,
           "tabOrder": 160,
           "width": 4098.0,
@@ -2723,7 +2714,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Remarks3",
+          "name": "Remarks3",
           "groupName": null,
           "tabOrder": 161,
           "width": 4098.0,
@@ -2732,7 +2723,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Remarks4",
+          "name": "Remarks4",
           "groupName": null,
           "tabOrder": 162,
           "width": 4098.0,
@@ -2741,7 +2732,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_VehicleVesselReconstructedYes",
+          "name": "VehicleVesselReconstructedYes",
           "groupName": null,
           "tabOrder": 163,
           "width": 125.0,
@@ -2750,7 +2741,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_VehicleAssembled",
+          "name": "VehicleAssembled",
           "groupName": null,
           "tabOrder": 164,
           "width": 125.0,
@@ -2759,7 +2750,7 @@
         },
         {
           "height": 148.0,
-          "name": "L_GNL_ADDL_TITL_VehicleVesselReplica",
+          "name": "VehicleVesselReplica",
           "groupName": null,
           "tabOrder": 165,
           "width": 125.0,
@@ -2768,7 +2759,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Component1PartNameVIN",
+          "name": "Component1PartNameVIN",
           "groupName": null,
           "tabOrder": 166,
           "width": 2514.0,
@@ -2777,7 +2768,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Component2PartNameVIN",
+          "name": "Component2PartNameVIN",
           "groupName": null,
           "tabOrder": 167,
           "width": 2514.0,
@@ -2786,7 +2777,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Component3PartNameVIN",
+          "name": "Component3PartNameVIN",
           "groupName": null,
           "tabOrder": 168,
           "width": 2514.0,
@@ -2795,7 +2786,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_SchoolDistrictName",
+          "name": "SchoolDistrictName",
           "groupName": null,
           "tabOrder": 169,
           "width": 7348.0,
@@ -2804,7 +2795,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort1FirstName",
+          "name": "Consort1FirstName",
           "groupName": null,
           "tabOrder": 171,
           "width": 1180.0,
@@ -2813,7 +2804,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort1MiddleName",
+          "name": "Consort1MiddleName",
           "groupName": null,
           "tabOrder": 172,
           "width": 1180.0,
@@ -2822,7 +2813,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort1LastName",
+          "name": "Consort1LastName",
           "groupName": null,
           "tabOrder": 173,
           "width": 1430.0,
@@ -2831,7 +2822,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort1SuffixName",
+          "name": "Consort1SuffixName",
           "groupName": null,
           "tabOrder": 174,
           "width": 278.0,
@@ -2840,7 +2831,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort1FullName",
+          "name": "Consort1FullName",
           "groupName": null,
           "tabOrder": 170,
           "width": 4516.0,
@@ -2849,7 +2840,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort2FirstName",
+          "name": "Consort2FirstName",
           "groupName": null,
           "tabOrder": 176,
           "width": 1180.0,
@@ -2858,7 +2849,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort2MiddleName",
+          "name": "Consort2MiddleName",
           "groupName": null,
           "tabOrder": 177,
           "width": 1180.0,
@@ -2867,7 +2858,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort2LastName",
+          "name": "Consort2LastName",
           "groupName": null,
           "tabOrder": 178,
           "width": 1430.0,
@@ -2876,7 +2867,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort2SuffixName",
+          "name": "Consort2SuffixName",
           "groupName": null,
           "tabOrder": 179,
           "width": 278.0,
@@ -2885,7 +2876,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Consort2FullName",
+          "name": "Consort2FullName",
           "groupName": null,
           "tabOrder": 175,
           "width": 4516.0,

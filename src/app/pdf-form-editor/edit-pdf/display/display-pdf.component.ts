@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 
 // Models
 import { UI } from 'app/pdf-form-editor/model/UI';
-import { DocumentBase } from 'app/pdf-form-editor/model/DocumentBase';
+import { Base } from 'app/pdf-form-editor/model/Base';
 
 @Component({
     'selector': 'edit-pdf-viewer',

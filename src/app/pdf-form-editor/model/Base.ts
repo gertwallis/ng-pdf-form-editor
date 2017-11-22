@@ -1,4 +1,4 @@
-export namespace DocumentBase {
+export namespace Base {
 
     export enum Format {
         Unknown = 0,

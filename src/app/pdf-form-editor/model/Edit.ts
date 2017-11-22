@@ -1,4 +1,4 @@
-import { DocumentBase } from './DocumentBase';
+import { Base } from './Base';
 
 // Form is similar to PDF - most notable difference are that the data fields
 // are duplicated for every location. Created from the Pdf model and used to capture fields.
@@ -20,16 +20,16 @@ export namespace Edit {
 
     // FormField combines the FieldData and Location into a single model.
     //   including a location (name not duplicated in data and location).
-    export class Field extends DocumentBase.Field {
+    export class Field extends Base.Field {
         value: string;
         state: DisplayState;
 
         // Flag set to true if the same name occurs in muleiple locations in the document (duplicated).
         multipleLocations = false;
-        location: DocumentBase.Location = new DocumentBase.Location();
+        location: Base.Location = new Base.Location();
     }
 
-    export class Group extends DocumentBase.Location {
+    export class Group extends Base.Location {
         type: GroupType;
         name: string;
 
@@ -136,7 +136,7 @@ export namespace Edit {
 
     }
 
-    export class Document extends DocumentBase.Document {
+    export class Document extends Base.Document {
         pages: Page[] = [];
 
         addPage(page: Page) {

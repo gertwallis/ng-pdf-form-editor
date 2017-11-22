@@ -1,21 +1,12 @@
 {
   "fields": [
     {
-      "description": "Type of charter for a financial institution",
-      "format": 1,
-      "hidden": false,
-      "label": "Institution Type",
-      "maxChar": 0,
-      "name": "_InstitutionType",
-      "state": 0
-    },
-    {
       "description": "This field shows the name of the county (or parish) in which the notary will perform and sign the acknowledgment.",
       "format": 1,
       "hidden": false,
       "label": "Enter the name of the county in which the acknowledgment will be performed.",
       "maxChar": 0,
-      "name": "C_GNL_ADDR_SIGN_NotaryCounty",
+      "name": "NotaryCounty",
       "state": 0
     },
     {
@@ -24,7 +15,7 @@
       "hidden": false,
       "label": "Enter the state for the Notary Public who is performing the acknowledgment.",
       "maxChar": 0,
-      "name": "C_GNL_ADDR_SIGN_NotaryState",
+      "name": "NotaryState",
       "state": 0
     },
     {
@@ -33,7 +24,7 @@
       "hidden": false,
       "label": "Enter the day on which the signature on the document is notarized by the notary.",
       "maxChar": 0,
-      "name": "C_GNL_DATE_SIGN_NotaryDay",
+      "name": "NotaryDay",
       "state": 0
     },
     {
@@ -42,7 +33,7 @@
       "hidden": false,
       "label": "Enter the month in which the signature on the document is notarized.",
       "maxChar": 0,
-      "name": "C_GNL_DATE_SIGN_NotaryMonth",
+      "name": "NotaryMonth",
       "state": 0
     },
     {
@@ -51,7 +42,7 @@
       "hidden": false,
       "label": "Enter the year in which the signature on the document is notarized.",
       "maxChar": 0,
-      "name": "C_GNL_DATE_SIGN_NotaryYear",
+      "name": "NotaryYear",
       "state": 0
     },
     {
@@ -60,7 +51,7 @@
       "hidden": true,
       "label": "Enter the first name of the Notary Public.",
       "maxChar": 0,
-      "name": "C_GNL_NAME_SIGN_NotaryFirstName",
+      "name": "NotaryFirstName",
       "state": 0
     },
     {
@@ -69,7 +60,7 @@
       "hidden": false,
       "label": "Enter the full name of the Notary Public.",
       "maxChar": 0,
-      "name": "C_GNL_NAME_SIGN_NotaryFullName",
+      "name": "NotaryFullName",
       "state": 0
     },
     {
@@ -78,7 +69,7 @@
       "hidden": true,
       "label": "Enter the last name of the Notary Public.",
       "maxChar": 0,
-      "name": "C_GNL_NAME_SIGN_NotaryLastName",
+      "name": "NotaryLastName",
       "state": 0
     },
     {
@@ -87,7 +78,7 @@
       "hidden": true,
       "label": "Enter the middle initial of the Notary Public.",
       "maxChar": 0,
-      "name": "C_GNL_NAME_SIGN_NotaryMiddleInitial",
+      "name": "NotaryMiddleInitial",
       "state": 0
     },
     {
@@ -96,7 +87,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, of the Notary Public.",
       "maxChar": 0,
-      "name": "C_GNL_NAME_SIGN_NotarySuffixName",
+      "name": "NotarySuffixName",
       "state": 0
     },
     {
@@ -105,7 +96,7 @@
       "hidden": false,
       "label": "Enter the make of the manufactured home.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_MISC_ManufacturedHomeMake",
+      "name": "ManufacturedHomeMake",
       "state": 0
     },
     {
@@ -114,7 +105,7 @@
       "hidden": false,
       "label": "Enter the serial number of the manufactured dwelling.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_MISC_ManufacturedHomeSerialNumber",
+      "name": "ManufacturedHomeSerialNumber",
       "state": 0
     },
     {
@@ -123,7 +114,7 @@
       "hidden": false,
       "label": "Enter the amount secured by the first lien.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_Lien1Amount",
+      "name": "Lien1Amount",
       "state": 0
     },
     {
@@ -132,7 +123,7 @@
       "hidden": false,
       "label": "Enter a reason why the certificate of ownership for the manufactured home was not obtained/is not negotiable at the time of acquisition - line 1.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_ManufacturedHomeOwnershipCertNotObtainedBlock",
+      "name": "ManufacturedHomeOwnershipCertNotObtainedBlock",
       "state": 0
     },
     {
@@ -141,7 +132,7 @@
       "hidden": false,
       "label": "Enter the size of the manufactured dwelling.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_ManufacturedHomeSize",
+      "name": "ManufacturedHomeSize",
       "state": 0
     },
     {
@@ -150,7 +141,7 @@
       "hidden": false,
       "label": "Enter a description of the model/type of manufactured dwelling.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_ManufacturedHomeType",
+      "name": "ManufacturedHomeType",
       "state": 0
     },
     {
@@ -159,7 +150,7 @@
       "hidden": false,
       "label": "Enter the model year of the manufactured home.",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_ManufacturedHomeYear",
+      "name": "ManufacturedHomeYear",
       "state": 0
     },
     {
@@ -168,7 +159,7 @@
       "hidden": false,
       "label": "Enter the vesting description of the manufactured home ownership such as \"or\", \"and\", \"jtwros\".",
       "maxChar": 0,
-      "name": "L_GNL_ADDL_TITL_TitleVestedOwnership",
+      "name": "TitleVestedOwnership",
       "state": 0
     },
     {
@@ -177,7 +168,7 @@
       "hidden": false,
       "label": "Enter the city of the first lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Lienholder1City",
+      "name": "Lienholder1City",
       "state": 0
     },
     {
@@ -186,7 +177,7 @@
       "hidden": false,
       "label": "Enter the state of the first lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Lienholder1State",
+      "name": "Lienholder1State",
       "state": 0
     },
     {
@@ -195,7 +186,7 @@
       "hidden": false,
       "label": "Enter the street address of the first lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Lienholder1StreetAddress",
+      "name": "Lienholder1StreetAddress",
       "state": 0
     },
     {
@@ -204,7 +195,7 @@
       "hidden": false,
       "label": "Enter the ZIP code of the first lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Lienholder1ZIPCode",
+      "name": "Lienholder1ZIPCode",
       "state": 0
     },
     {
@@ -213,7 +204,7 @@
       "hidden": false,
       "label": "Enter the city and/or county where the manufactured home is installed.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_ManufacturedHomeCityCounty",
+      "name": "ManufacturedHomeCityCounty",
       "state": 0
     },
     {
@@ -222,7 +213,7 @@
       "hidden": false,
       "label": "Enter the county where the manufactured home is kept.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_ManufacturedHomeCounty",
+      "name": "ManufacturedHomeCounty",
       "state": 0
     },
     {
@@ -231,7 +222,7 @@
       "hidden": false,
       "label": "Enter the state in which the certificate of ownership for the manufactured home was issued.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_ManufacturedHomeOwnershipCertStateIssued",
+      "name": "ManufacturedHomeOwnershipCertStateIssued",
       "state": 0
     },
     {
@@ -240,7 +231,7 @@
       "hidden": false,
       "label": "Enter the state name, where the manufactured home is installed.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_ManufacturedHomeState",
+      "name": "ManufacturedHomeState",
       "state": 0
     },
     {
@@ -249,7 +240,7 @@
       "hidden": false,
       "label": "Enter the street address where the manufactured home is installed.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_ManufacturedHomeStreetAddress",
+      "name": "ManufacturedHomeStreetAddress",
       "state": 0
     },
     {
@@ -258,7 +249,7 @@
       "hidden": false,
       "label": "Enter the zip code number, where the manufactured home is installed.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_ManufacturedHomeZipCode",
+      "name": "ManufacturedHomeZipCode",
       "state": 0
     },
     {
@@ -267,7 +258,7 @@
       "hidden": false,
       "label": "Enter the city, state and ZIP code of the new lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_NewLienholderCityStateZIP",
+      "name": "NewLienholderCityStateZIP",
       "state": 0
     },
     {
@@ -276,7 +267,7 @@
       "hidden": false,
       "label": "Enter the street address of the new lienholder.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_NewLienholderStreetAddress",
+      "name": "NewLienholderStreetAddress",
       "state": 0
     },
     {
@@ -285,7 +276,7 @@
       "hidden": false,
       "label": "Enter the city, state and ZIP code of the first new owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_NewOwner1CityStateZIP",
+      "name": "NewOwner1CityStateZIP",
       "state": 0
     },
     {
@@ -294,7 +285,7 @@
       "hidden": false,
       "label": "Enter the street address for the first new owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_NewOwner1StreetAddress",
+      "name": "NewOwner1StreetAddress",
       "state": 0
     },
     {
@@ -303,7 +294,7 @@
       "hidden": false,
       "label": "Enter the city of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1City",
+      "name": "Owner1City",
       "state": 0
     },
     {
@@ -312,7 +303,7 @@
       "hidden": false,
       "label": "Enter the state of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1State",
+      "name": "Owner1State",
       "state": 0
     },
     {
@@ -321,7 +312,7 @@
       "hidden": false,
       "label": "Enter the street address of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
+      "name": "Owner1StreetAddress",
       "state": 0
     },
     {
@@ -330,7 +321,7 @@
       "hidden": false,
       "label": "Enter the ZIP code of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Owner1ZIPCode",
+      "name": "Owner1ZIPCode",
       "state": 0
     },
     {
@@ -339,7 +330,7 @@
       "hidden": false,
       "label": "Enter the city of the first seller.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Seller1City",
+      "name": "Seller1City",
       "state": 0
     },
     {
@@ -348,7 +339,7 @@
       "hidden": false,
       "label": "Enter the state of the first seller.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Seller1State",
+      "name": "Seller1State",
       "state": 0
     },
     {
@@ -357,7 +348,7 @@
       "hidden": false,
       "label": "Enter the street address of the first seller.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Seller1StreetAddress",
+      "name": "Seller1StreetAddress",
       "state": 0
     },
     {
@@ -366,7 +357,7 @@
       "hidden": false,
       "label": "Enter the ZIP code of the seller.",
       "maxChar": 0,
-      "name": "L_GNL_ADDR_TITL_Seller1ZIPCode",
+      "name": "Seller1ZIPCode",
       "state": 0
     },
     {
@@ -375,7 +366,7 @@
       "hidden": false,
       "label": "Enter the day of the month (e.g \"15th\") on which the manufactured home was obtained by the current owners.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_ManufacturedHomeDayObtained",
+      "name": "ManufacturedHomeDayObtained",
       "state": 0
     },
     {
@@ -384,7 +375,7 @@
       "hidden": false,
       "label": "Enter the month in which the manufactured home was obtained by the current owners.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_ManufacturedHomeMonthObtained",
+      "name": "ManufacturedHomeMonthObtained",
       "state": 0
     },
     {
@@ -393,7 +384,7 @@
       "hidden": false,
       "label": "Enter the year in which the manufactured home was obtained by the current owners.",
       "maxChar": 0,
-      "name": "L_GNL_DATE_TITL_ManufacturedHomeYearObtained",
+      "name": "ManufacturedHomeYearObtained",
       "state": 0
     },
     {
@@ -402,7 +393,7 @@
       "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
-      "name": "L_GNL_MISC_SIGN_eSignatureClerk1",
+      "name": "eSignatureClerk1",
       "state": 0
     },
     {
@@ -411,7 +402,7 @@
       "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
-      "name": "L_GNL_MISC_SIGN_eSignatureNewLienholder",
+      "name": "eSignatureNewLienholder",
       "state": 0
     },
     {
@@ -420,7 +411,7 @@
       "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
-      "name": "L_GNL_MISC_SIGN_eSignatureNewOwner1",
+      "name": "eSignatureNewOwner1",
       "state": 0
     },
     {
@@ -429,7 +420,7 @@
       "hidden": true,
       "label": "Used for Digital Signature.",
       "maxChar": 0,
-      "name": "L_GNL_MISC_SIGN_eSignatureNotary1a",
+      "name": "eSignatureNotary1a",
       "state": 0
     },
     {
@@ -438,7 +429,7 @@
       "hidden": false,
       "label": "Enter the business name of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+      "name": "Owner1BusinessName",
       "state": 0
     },
     {
@@ -447,7 +438,7 @@
       "hidden": false,
       "label": "Enter the business name of the second additional owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+      "name": "Owner2BusinessName",
       "state": 0
     },
     {
@@ -456,7 +447,7 @@
       "hidden": false,
       "label": "Enter the business name of the first seller.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_BSNE_Seller1BusinessName",
+      "name": "Seller1BusinessName",
       "state": 0
     },
     {
@@ -465,7 +456,7 @@
       "hidden": true,
       "label": "Enter the first name of the first seller or transferor.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_MISC_Seller1FirstName",
+      "name": "Seller1FirstName",
       "state": 0
     },
     {
@@ -474,7 +465,7 @@
       "hidden": true,
       "label": "Enter the last name of the first seller or transferor.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_MISC_Seller1LastName",
+      "name": "Seller1LastName",
       "state": 0
     },
     {
@@ -483,7 +474,7 @@
       "hidden": true,
       "label": "Enter the middle initial of the first seller or transferor.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_MISC_Seller1MiddleInitial",
+      "name": "Seller1MiddleInitial",
       "state": 0
     },
     {
@@ -492,7 +483,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, of the first seller or transferor.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_MISC_Seller1SuffixName",
+      "name": "Seller1SuffixName",
       "state": 0
     },
     {
@@ -501,7 +492,7 @@
       "hidden": false,
       "label": "Enter the name of the first lien holder.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Lienholder1Name",
+      "name": "Lienholder1Name",
       "state": 0
     },
     {
@@ -510,7 +501,7 @@
       "hidden": false,
       "label": "Enter the name of the new or corrected name of lien holder.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_NewLienholderName",
+      "name": "NewLienholderName",
       "state": 0
     },
     {
@@ -519,7 +510,7 @@
       "hidden": true,
       "label": "Enter the first name of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner1FirstName",
+      "name": "Owner1FirstName",
       "state": 0
     },
     {
@@ -528,7 +519,7 @@
       "hidden": true,
       "label": "Enter the last name of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner1LastName",
+      "name": "Owner1LastName",
       "state": 0
     },
     {
@@ -537,7 +528,7 @@
       "hidden": true,
       "label": "Enter the middle initial/name of the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
+      "name": "Owner1MiddleInitial",
       "state": 0
     },
     {
@@ -546,7 +537,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, for the first owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner1SuffixName",
+      "name": "Owner1SuffixName",
       "state": 0
     },
     {
@@ -555,7 +546,7 @@
       "hidden": true,
       "label": "Enter the first name of the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner2FirstName",
+      "name": "Owner2FirstName",
       "state": 0
     },
     {
@@ -564,7 +555,7 @@
       "hidden": true,
       "label": "Enter the last name of the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner2LastName",
+      "name": "Owner2LastName",
       "state": 0
     },
     {
@@ -573,7 +564,7 @@
       "hidden": true,
       "label": "Enter the middle initial/name of the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
+      "name": "Owner2MiddleInitial",
       "state": 0
     },
     {
@@ -582,7 +573,7 @@
       "hidden": true,
       "label": "Enter the suffix name, if applicable, for the second owner.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Owner2SuffixName",
+      "name": "Owner2SuffixName",
       "state": 0
     },
     {
@@ -591,7 +582,7 @@
       "hidden": false,
       "label": "Enter the name of the first seller.",
       "maxChar": 0,
-      "name": "L_GNL_NAME_TITL_Seller1Name",
+      "name": "Seller1Name",
       "state": 0
     }
   ],
@@ -608,7 +599,7 @@
       "locations": [
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_Lien1Amount",
+          "name": "Lien1Amount",
           "groupName": null,
           "tabOrder": 48,
           "width": 1119.0,
@@ -617,7 +608,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_MISC_ManufacturedHomeSerialNumber",
+          "name": "ManufacturedHomeSerialNumber",
           "groupName": null,
           "tabOrder": 19,
           "width": 1766.0,
@@ -626,7 +617,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Lienholder1StreetAddress",
+          "name": "Lienholder1StreetAddress",
           "groupName": null,
           "tabOrder": 44,
           "width": 5849.0,
@@ -635,7 +626,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Lienholder1City",
+          "name": "Lienholder1City",
           "groupName": null,
           "tabOrder": 45,
           "width": 1766.0,
@@ -644,7 +635,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Lienholder1State",
+          "name": "Lienholder1State",
           "groupName": null,
           "tabOrder": 46,
           "width": 206.0,
@@ -653,7 +644,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Lienholder1Name",
+          "name": "Lienholder1Name",
           "groupName": null,
           "tabOrder": 43,
           "width": 7264.0,
@@ -662,7 +653,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Lienholder1ZIPCode",
+          "name": "Lienholder1ZIPCode",
           "groupName": null,
           "tabOrder": 47,
           "width": 958.0,
@@ -671,7 +662,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1StreetAddress",
+          "name": "Owner1StreetAddress",
           "groupName": null,
           "tabOrder": 11,
           "width": 3849.0,
@@ -680,7 +671,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1City",
+          "name": "Owner1City",
           "groupName": null,
           "tabOrder": 12,
           "width": 4766.0,
@@ -689,7 +680,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1State",
+          "name": "Owner1State",
           "groupName": null,
           "tabOrder": 14,
           "width": 266.0,
@@ -698,7 +689,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Owner1ZIPCode",
+          "name": "Owner1ZIPCode",
           "groupName": null,
           "tabOrder": 13,
           "width": 850.0,
@@ -707,7 +698,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+          "name": "Owner1BusinessName",
           "groupName": null,
           "tabOrder": 1,
           "width": 3016.0,
@@ -716,7 +707,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+          "name": "Owner2BusinessName",
           "groupName": null,
           "tabOrder": 6,
           "width": 3016.0,
@@ -725,7 +716,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Seller1StreetAddress",
+          "name": "Seller1StreetAddress",
           "groupName": null,
           "tabOrder": 29,
           "width": 2933.0,
@@ -734,7 +725,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Seller1City",
+          "name": "Seller1City",
           "groupName": null,
           "tabOrder": 30,
           "width": 1683.0,
@@ -743,7 +734,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Seller1State",
+          "name": "Seller1State",
           "groupName": null,
           "tabOrder": 31,
           "width": 187.0,
@@ -752,7 +743,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_Seller1ZIPCode",
+          "name": "Seller1ZIPCode",
           "groupName": null,
           "tabOrder": 32,
           "width": 850.0,
@@ -761,7 +752,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Seller1BusinessName",
+          "name": "Seller1BusinessName",
           "groupName": null,
           "tabOrder": 24,
           "width": 3016.0,
@@ -770,7 +761,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_MISC_Seller1FirstName",
+          "name": "Seller1FirstName",
           "groupName": null,
           "tabOrder": 25,
           "width": 1119.0,
@@ -779,7 +770,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_MISC_Seller1LastName",
+          "name": "Seller1LastName",
           "groupName": null,
           "tabOrder": 27,
           "width": 1766.0,
@@ -788,7 +779,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_MISC_Seller1MiddleInitial",
+          "name": "Seller1MiddleInitial",
           "groupName": null,
           "tabOrder": 26,
           "width": 107.0,
@@ -797,7 +788,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Seller1Name",
+          "name": "Seller1Name",
           "groupName": null,
           "tabOrder": 23,
           "width": 3016.0,
@@ -806,7 +797,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_MISC_Seller1SuffixName",
+          "name": "Seller1SuffixName",
           "groupName": null,
           "tabOrder": 28,
           "width": 347.0,
@@ -815,7 +806,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_ManufacturedHomeCounty",
+          "name": "ManufacturedHomeCounty",
           "groupName": null,
           "tabOrder": 0,
           "width": 1766.0,
@@ -824,7 +815,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_MISC_ManufacturedHomeMake",
+          "name": "ManufacturedHomeMake",
           "groupName": null,
           "tabOrder": 15,
           "width": 2183.0,
@@ -833,7 +824,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_ManufacturedHomeYear",
+          "name": "ManufacturedHomeYear",
           "groupName": null,
           "tabOrder": 17,
           "width": 433.0,
@@ -842,7 +833,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_ManufacturedHomeSize",
+          "name": "ManufacturedHomeSize",
           "groupName": null,
           "tabOrder": 18,
           "width": 766.0,
@@ -851,7 +842,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_ManufacturedHomeType",
+          "name": "ManufacturedHomeType",
           "groupName": null,
           "tabOrder": 16,
           "width": 2112.0,
@@ -860,7 +851,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_ManufacturedHomeDayObtained",
+          "name": "ManufacturedHomeDayObtained",
           "groupName": null,
           "tabOrder": 20,
           "width": 680.0,
@@ -869,7 +860,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_ManufacturedHomeMonthObtained",
+          "name": "ManufacturedHomeMonthObtained",
           "groupName": null,
           "tabOrder": 21,
           "width": 1349.0,
@@ -878,7 +869,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_DATE_TITL_ManufacturedHomeYearObtained",
+          "name": "ManufacturedHomeYearObtained",
           "groupName": null,
           "tabOrder": 22,
           "width": 433.0,
@@ -887,7 +878,7 @@
         },
         {
           "height": 679.0,
-          "name": "L_GNL_ADDL_TITL_ManufacturedHomeOwnershipCertNotObtainedBlock",
+          "name": "ManufacturedHomeOwnershipCertNotObtainedBlock",
           "groupName": null,
           "tabOrder": 33,
           "width": 7265.0,
@@ -896,7 +887,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_ManufacturedHomeOwnershipCertStateIssued",
+          "name": "ManufacturedHomeOwnershipCertStateIssued",
           "groupName": null,
           "tabOrder": 38,
           "width": 1183.0,
@@ -905,7 +896,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_ManufacturedHomeStreetAddress",
+          "name": "ManufacturedHomeStreetAddress",
           "groupName": null,
           "tabOrder": 39,
           "width": 4766.0,
@@ -914,7 +905,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_ManufacturedHomeCityCounty",
+          "name": "ManufacturedHomeCityCounty",
           "groupName": null,
           "tabOrder": 40,
           "width": 2765.0,
@@ -923,7 +914,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_ManufacturedHomeState",
+          "name": "ManufacturedHomeState",
           "groupName": null,
           "tabOrder": 41,
           "width": 1619.0,
@@ -932,7 +923,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_ManufacturedHomeZipCode",
+          "name": "ManufacturedHomeZipCode",
           "groupName": null,
           "tabOrder": 42,
           "width": 1097.0,
@@ -941,7 +932,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1FirstName",
+          "name": "Owner1FirstName",
           "groupName": null,
           "tabOrder": 2,
           "width": 1099.0,
@@ -950,7 +941,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1LastName",
+          "name": "Owner1LastName",
           "groupName": null,
           "tabOrder": 4,
           "width": 1349.0,
@@ -959,7 +950,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
+          "name": "Owner1MiddleInitial",
           "groupName": null,
           "tabOrder": 3,
           "width": 99.0,
@@ -968,7 +959,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1SuffixName",
+          "name": "Owner1SuffixName",
           "groupName": null,
           "tabOrder": 5,
           "width": 350.0,
@@ -977,7 +968,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2FirstName",
+          "name": "Owner2FirstName",
           "groupName": null,
           "tabOrder": 7,
           "width": 1099.0,
@@ -986,7 +977,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2LastName",
+          "name": "Owner2LastName",
           "groupName": null,
           "tabOrder": 9,
           "width": 1349.0,
@@ -995,7 +986,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
+          "name": "Owner2MiddleInitial",
           "groupName": null,
           "tabOrder": 8,
           "width": 99.0,
@@ -1004,7 +995,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2SuffixName",
+          "name": "Owner2SuffixName",
           "groupName": null,
           "tabOrder": 10,
           "width": 350.0,
@@ -1019,7 +1010,7 @@
       "locations": [
         {
           "height": 250.0,
-          "name": "L_GNL_MISC_SIGN_eSignatureClerk1",
+          "name": "eSignatureClerk1",
           "groupName": null,
           "tabOrder": 88,
           "width": 2599.0,
@@ -1028,7 +1019,7 @@
         },
         {
           "height": 250.0,
-          "name": "L_GNL_MISC_SIGN_eSignatureNotary1a",
+          "name": "eSignatureNotary1a",
           "groupName": null,
           "tabOrder": 87,
           "width": 2599.0,
@@ -1037,7 +1028,7 @@
         },
         {
           "height": 250.0,
-          "name": "L_GNL_MISC_SIGN_eSignatureNewLienholder",
+          "name": "eSignatureNewLienholder",
           "groupName": null,
           "tabOrder": 66,
           "width": 2599.0,
@@ -1046,7 +1037,7 @@
         },
         {
           "height": 250.0,
-          "name": "L_GNL_MISC_SIGN_eSignatureNewOwner1",
+          "name": "eSignatureNewOwner1",
           "groupName": null,
           "tabOrder": 65,
           "width": 2599.0,
@@ -1055,7 +1046,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_NewLienholderStreetAddress",
+          "name": "NewLienholderStreetAddress",
           "groupName": null,
           "tabOrder": 62,
           "width": 3016.0,
@@ -1064,7 +1055,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_NewLienholderCityStateZIP",
+          "name": "NewLienholderCityStateZIP",
           "groupName": null,
           "tabOrder": 64,
           "width": 3016.0,
@@ -1073,7 +1064,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_NewLienholderName",
+          "name": "NewLienholderName",
           "groupName": null,
           "tabOrder": 50,
           "width": 3016.0,
@@ -1082,7 +1073,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_NAME_SIGN_NotaryFullName",
+          "name": "NotaryFullName",
           "groupName": null,
           "tabOrder": 69,
           "width": 2602.0,
@@ -1091,7 +1082,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_NAME_SIGN_NotaryFirstName",
+          "name": "NotaryFirstName",
           "groupName": null,
           "tabOrder": 70,
           "width": 954.0,
@@ -1100,7 +1091,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_NAME_SIGN_NotaryLastName",
+          "name": "NotaryLastName",
           "groupName": null,
           "tabOrder": 72,
           "width": 1180.0,
@@ -1109,7 +1100,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_NAME_SIGN_NotaryMiddleInitial",
+          "name": "NotaryMiddleInitial",
           "groupName": null,
           "tabOrder": 71,
           "width": 100.0,
@@ -1118,7 +1109,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_NAME_SIGN_NotarySuffixName",
+          "name": "NotarySuffixName",
           "groupName": null,
           "tabOrder": 73,
           "width": 266.0,
@@ -1127,7 +1118,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+          "name": "Owner1BusinessName",
           "groupName": null,
           "tabOrder": 49,
           "width": 3682.0,
@@ -1136,7 +1127,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner1BusinessName",
+          "name": "Owner1BusinessName",
           "groupName": null,
           "tabOrder": 77,
           "width": 3016.0,
@@ -1145,7 +1136,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+          "name": "Owner2BusinessName",
           "groupName": null,
           "tabOrder": 56,
           "width": 3682.0,
@@ -1154,7 +1145,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_BSNE_Owner2BusinessName",
+          "name": "Owner2BusinessName",
           "groupName": null,
           "tabOrder": 82,
           "width": 3016.0,
@@ -1163,7 +1154,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_ADDR_SIGN_NotaryCounty",
+          "name": "NotaryCounty",
           "groupName": null,
           "tabOrder": 68,
           "width": 1766.0,
@@ -1172,7 +1163,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_ADDR_SIGN_NotaryState",
+          "name": "NotaryState",
           "groupName": null,
           "tabOrder": 67,
           "width": 1766.0,
@@ -1181,7 +1172,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_DATE_SIGN_NotaryDay",
+          "name": "NotaryDay",
           "groupName": null,
           "tabOrder": 74,
           "width": 433.0,
@@ -1190,7 +1181,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_DATE_SIGN_NotaryMonth",
+          "name": "NotaryMonth",
           "groupName": null,
           "tabOrder": 75,
           "width": 1099.0,
@@ -1199,7 +1190,7 @@
         },
         {
           "height": 166.0,
-          "name": "C_GNL_DATE_SIGN_NotaryYear",
+          "name": "NotaryYear",
           "groupName": null,
           "tabOrder": 76,
           "width": 433.0,
@@ -1208,7 +1199,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_NewOwner1StreetAddress",
+          "name": "NewOwner1StreetAddress",
           "groupName": null,
           "tabOrder": 61,
           "width": 2600.0,
@@ -1217,7 +1208,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDR_TITL_NewOwner1CityStateZIP",
+          "name": "NewOwner1CityStateZIP",
           "groupName": null,
           "tabOrder": 63,
           "width": 2600.0,
@@ -1226,7 +1217,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_ADDL_TITL_TitleVestedOwnership",
+          "name": "TitleVestedOwnership",
           "groupName": null,
           "tabOrder": 55,
           "width": 3516.0,
@@ -1235,7 +1226,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1FirstName",
+          "name": "Owner1FirstName",
           "groupName": null,
           "tabOrder": 51,
           "width": 1347.0,
@@ -1244,7 +1235,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1FirstName",
+          "name": "Owner1FirstName",
           "groupName": null,
           "tabOrder": 78,
           "width": 1099.0,
@@ -1253,7 +1244,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1LastName",
+          "name": "Owner1LastName",
           "groupName": null,
           "tabOrder": 53,
           "width": 1600.0,
@@ -1262,7 +1253,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1LastName",
+          "name": "Owner1LastName",
           "groupName": null,
           "tabOrder": 80,
           "width": 1349.0,
@@ -1271,7 +1262,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
+          "name": "Owner1MiddleInitial",
           "groupName": null,
           "tabOrder": 52,
           "width": 121.0,
@@ -1280,7 +1271,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1MiddleInitial",
+          "name": "Owner1MiddleInitial",
           "groupName": null,
           "tabOrder": 79,
           "width": 99.0,
@@ -1289,7 +1280,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1SuffixName",
+          "name": "Owner1SuffixName",
           "groupName": null,
           "tabOrder": 54,
           "width": 363.0,
@@ -1298,7 +1289,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner1SuffixName",
+          "name": "Owner1SuffixName",
           "groupName": null,
           "tabOrder": 81,
           "width": 350.0,
@@ -1307,7 +1298,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2FirstName",
+          "name": "Owner2FirstName",
           "groupName": null,
           "tabOrder": 57,
           "width": 1350.0,
@@ -1316,7 +1307,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2FirstName",
+          "name": "Owner2FirstName",
           "groupName": null,
           "tabOrder": 83,
           "width": 1099.0,
@@ -1325,7 +1316,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2LastName",
+          "name": "Owner2LastName",
           "groupName": null,
           "tabOrder": 59,
           "width": 1599.0,
@@ -1334,7 +1325,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2LastName",
+          "name": "Owner2LastName",
           "groupName": null,
           "tabOrder": 85,
           "width": 1349.0,
@@ -1343,7 +1334,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
+          "name": "Owner2MiddleInitial",
           "groupName": null,
           "tabOrder": 58,
           "width": 121.0,
@@ -1352,7 +1343,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2MiddleInitial",
+          "name": "Owner2MiddleInitial",
           "groupName": null,
           "tabOrder": 84,
           "width": 99.0,
@@ -1361,7 +1352,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2SuffixName",
+          "name": "Owner2SuffixName",
           "groupName": null,
           "tabOrder": 60,
           "width": 364.0,
@@ -1370,7 +1361,7 @@
         },
         {
           "height": 166.0,
-          "name": "L_GNL_NAME_TITL_Owner2SuffixName",
+          "name": "Owner2SuffixName",
           "groupName": null,
           "tabOrder": 86,
           "width": 350.0,

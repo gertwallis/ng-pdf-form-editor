@@ -9,7 +9,7 @@ import { EditXBoxComponent } from './xbox/xbox.component';
 
 
 // Models
-import { DocumentBase } from './../../model/DocumentBase';
+import { Base } from './../../model/Base';
 import { Edit } from './../../model/Edit';
 import { UI } from 'app/pdf-form-editor/model/UI';
 
@@ -114,10 +114,10 @@ export class EditFieldComponent implements AfterContentInit {
     // console.log('FIELD: Ativate ' + this.tabIndex + ' ' + this.editField.name);
     this.active = true;
     switch (this.editField.format) {
-      case DocumentBase.Format.XBox:
+      case Base.Format.XBox:
         this.editXBoxView.focus();
         break;
-      case DocumentBase.Format.TextArea:
+      case Base.Format.TextArea:
         this.editTextAreaView.focus();
         break;
       default:
@@ -133,7 +133,7 @@ export class EditFieldComponent implements AfterContentInit {
 
   clicked() {
     // console.log('FIELD: MoveTo ' + this.tabIndex + ' ' + this.editField.name);
-    if (this.editField.format === DocumentBase.Format.XBox) {
+    if (this.editField.format === Base.Format.XBox) {
       this.editXBoxView.toggleValue();
     }
 
@@ -143,22 +143,22 @@ export class EditFieldComponent implements AfterContentInit {
   getPattern() {
     // TODO: Not working yet.
     switch (this.editField.format) {
-      case DocumentBase.Format.Date:
+      case Base.Format.Date:
         return '^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\d{4}$';
-      case DocumentBase.Format.Dollar:
+      case Base.Format.Dollar:
         return '\\d+(\\.\\d{2})?';
-      case DocumentBase.Format.Integer:
+      case Base.Format.Integer:
         return '[-+]?[0-9]*';
-      case DocumentBase.Format.Percent:
+      case Base.Format.Percent:
         return '[-+]?[0-9]*[.]?[0-9]+';
-      case DocumentBase.Format.PhoneNumber:
+      case Base.Format.PhoneNumber:
         return '\\d{3}[\-]\\d{3}[\-]\\d{4}';
-      case DocumentBase.Format.SocialSecurityNumber:
+      case Base.Format.SocialSecurityNumber:
         return '(^\\d{3}-?\\d{2}-?\\d{4}$|^XXX-XX-XXXX$)';
-      case DocumentBase.Format.State:
+      case Base.Format.State:
         // list would probably faster and better but ...
         return '(AL|AK|AR|AZ|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|‌​MA|MD|ME|MI|MN|MO|MS‌​|MT|NC|ND|NE|NH|NJ|N‌​M|NV|NY|OH|OK|OR|PA|‌​RI|SC|SD|TN|TX|UT|VA‌​|VT|WA|WI|WV|WY)';
-      // case DocumentBase.Format.ZipCode:
+      // case Base.Format.ZipCode:
       //   return'(\\d{5}([\\-]\\d{4})?)'
     }
   }
