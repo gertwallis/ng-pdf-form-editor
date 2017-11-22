@@ -1,18 +1,19 @@
 import { PdfService } from './service/pdf.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
 
 import { Base } from './model/Base';
 import { PDF } from './model/PDF';
 import { Edit } from './model/Edit';
+import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'edit-form',
   templateUrl: './edit-pdf.component.html',
   styleUrls: ['./edit-pdf.component.css']
 })
-export class PdfEditComponent implements OnInit {
+export class PdfEditComponent implements OnChanges {
 
   @Input() documentId: string;
 
@@ -96,11 +97,14 @@ export class PdfEditComponent implements OnInit {
 
   constructor(private pdfService: PdfService) { }
 
-  ngOnInit() {
-    if (this.documentId) {
+  private loadDocument(documentId: string) {
+    if (documentId) {
       this.pdfService.loadDocument(this.documentId)
-        .subscribe(doc =>
-          this.setDocument(doc));
+        .subscribe(doc => this.setDocument(doc));
     }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.loadDocument(this.documentId);
   }
 }

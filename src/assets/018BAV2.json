@@ -2085,7 +2085,7 @@
         {
           "height": 166.0,
           "name": "Borrower1StreetAddress",
-          "groupName": "Borrower1",
+          "groupName": "Borrower",
           "tabOrder": 12,
           "width": 3516.0,
           "left": 440.0,
@@ -2094,7 +2094,7 @@
         {
           "height": 166.0,
           "name": "Borrower1OptionalStreetAddress",
-          "groupName": "Borrower1",
+          "groupName": "Borrower",
           "tabOrder": 14,
           "width": 3516.0,
           "left": 440.0,
@@ -2103,7 +2103,7 @@
         {
           "height": 166.0,
           "name": "Borrower1CityStateZIP",
-          "groupName": "Borrower1",
+          "groupName": "Borrower",
           "tabOrder": 16,
           "width": 3516.0,
           "left": 440.0,
@@ -2112,7 +2112,7 @@
         {
           "height": 166.0,
           "name": "Borrower1BusinessName",
-          "groupName": "Borrower1",
+          "groupName": "Borrower",
           "tabOrder": 4,
           "width": 3516.0,
           "left": 440.0,
@@ -2121,7 +2121,7 @@
         {
           "height": 166.0,
           "name": "Borrower2BusinessName",
-          "groupName": "Borrower2",
+          "groupName": "Borrower",
           "tabOrder": 10,
           "width": 3516.0,
           "left": 440.0,
@@ -2130,7 +2130,7 @@
         {
           "height": 166.0,
           "name": "Borrower1FirstName",
-          "groupName": "Borrower1",
+          "groupName": "Borrower",
           "tabOrder": 0,
           "width": 1200.0,
           "left": 430.0,
@@ -2139,7 +2139,7 @@
         {
           "height": 166.0,
           "name": "Borrower2FirstName",
-          "groupName": "Borrower2",
+          "groupName": "Borrower",
           "tabOrder": 6,
           "width": 1200.0,
           "left": 426.0,
@@ -2148,7 +2148,7 @@
         {
           "height": 166.0,
           "name": "Borrower1LastName",
-          "groupName": "Borrower1",
+          "groupName": "Borrower",
           "tabOrder": 2,
           "width": 1700.0,
           "left": 1805.0,
@@ -2157,7 +2157,7 @@
         {
           "height": 166.0,
           "name": "Borrower2LastName",
-          "groupName": "Borrower2",
+          "groupName": "Borrower",
           "tabOrder": 8,
           "width": 1700.0,
           "left": 1801.0,
@@ -2166,7 +2166,7 @@
         {
           "height": 166.0,
           "name": "Borrower1MiddleInitial",
-          "groupName": "Borrower1",
+          "groupName": "Borrower",
           "tabOrder": 1,
           "width": 99.0,
           "left": 1655.0,
@@ -2175,7 +2175,7 @@
         {
           "height": 166.0,
           "name": "Borrower2MiddleInitial",
-          "groupName": "Borrower2",
+          "groupName": "Borrower",
           "tabOrder": 7,
           "width": 99.0,
           "left": 1651.0,
@@ -2184,7 +2184,7 @@
         {
           "height": 166.0,
           "name": "Borrower1Suffix",
-          "groupName": "Borrower1",
+          "groupName": "Borrower",
           "tabOrder": 3,
           "width": 350.0,
           "left": 3530.0,

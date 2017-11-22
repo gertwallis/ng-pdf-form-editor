@@ -72,7 +72,8 @@ export class EditFieldComponent implements AfterContentInit {
           'top': this.style.top + 'px',
           'width': this.style.width + 'px',
           'height': this.style.height + 'px',
-          'background-color': 'lightyellow'
+          'background-color': 'lightyellow',
+          // 'z-index': '99'
           //      'border': '1px solid green'
         };
         break;
@@ -85,7 +86,8 @@ export class EditFieldComponent implements AfterContentInit {
           'width': this.style.width + 'px',
           'height': this.style.height + 'px',
           'background-color': 'white',
-          'border': '1px solid #ddd'
+          'border': '1px solid #ddd',
+          // 'z-index': '99'
           //      'border': '1px solid green'
         };
         break;
@@ -105,7 +107,8 @@ export class EditFieldComponent implements AfterContentInit {
             'width': this.style.width + 'px',
             'height': this.style.height + 'px',
             'background-color': 'lightgreen',
-            'border': '1px solid #ddd'
+            'border': '1px solid #ddd',
+            // 'z-index': '99'
             //      'border': '1px solid green'
           }
 

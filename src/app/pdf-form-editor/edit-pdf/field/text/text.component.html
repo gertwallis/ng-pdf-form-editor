@@ -1,12 +1,12 @@
 
        <input #inputHtml 
-       [name]="name" 
-       [(ngModel)]="value"    
-       [tabindex]=-1   
-       style="width:100%"
-       [pattern]="pattern"
-       (keyup)="keyPressHandler($event)"
-       [title]="title"
+        [name]="name" 
+        [(ngModel)]="value"    
+        [tabindex]=-1   
+        style="width:100%; position: relative; z-index: 99;"
+        [pattern]="pattern"
+        (keyup)="keyPressHandler($event)"
+        [title]="title"
        >
 
        

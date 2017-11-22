@@ -1,7 +1,8 @@
 <div [ngStyle]="locationStyle" [tabindex]="tabIndex" 
      (click)="clicked()" 
      (keydown)="keyPressHandler($event)"
-     [title]= "editField.description">
+     [title]="editField.description"
+     >
 
     <div [ngStyle]="editingStyle" [hidden]="!active" [ngSwitch]="editField.format">
         <edit-xbox *ngSwitchCase="3" 
