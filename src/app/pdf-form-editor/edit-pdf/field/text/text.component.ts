@@ -1,4 +1,3 @@
-import { AfterViewChecked } from '@angular/core/src/metadata/lifecycle_hooks';
 import { AfterContentInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 import { UI } from 'app/pdf-form-editor/model/UI';
@@ -16,13 +15,12 @@ export class EditTextComponent implements AfterContentInit {
   @Input() value: string;
   @Input() title: string;
   @Input() tabIndex: number;
-  @Input() pattern: string;
+  @Input() format: number;
 
   validateRegEx: RegExp;
   valid: boolean;
 
   @ViewChild('inputHtml') childEditField: ElementRef;
-
 
   constructor() { }
 
@@ -44,15 +42,42 @@ export class EditTextComponent implements AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
-    if (this.pattern) {
-      this.validateRegEx = new RegExp(this.pattern);
+    console.log(this.name + " : " + this.format  + " : " + this.getPattern());
+    const pattern = this.getPattern();
+    if (this.format) {
+      this.validateRegEx = new RegExp(pattern);
     }
+  }
+
+  getPattern() {
+    // TODO: Not working yet.
+    switch (this.format) {
+      case Base.Format.Date:
+        return '^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\d{4}$';
+      case Base.Format.Dollar:
+        return '^\\d+(\\.\\d{2})?$';
+      case Base.Format.Integer:
+        return '^[-+]?[0-9]*$';
+      case Base.Format.Percent:
+        return '^[-+]?[0-9]*[.]?[0-9]+$';
+      case Base.Format.PhoneNumber:
+        return '^\\d{3}[\-]\\d{3}[\-]\\d{4}$';
+      case Base.Format.SocialSecurityNumber:
+        return '^\\d{3}-?\\d{2}-?\\d{4}$|^XXX-XX-XXXX$';
+      case Base.Format.State:
+        // list would probably faster and better but ...
+        return '(AL|AK|AR|AZ|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|‌​MA|MD|ME|MI|MN|MO|MS‌​|MT|NC|ND|NE|NH|NJ|N‌​M|NV|NY|OH|OK|OR|PA|‌​RI|SC|SD|TN|TX|UT|VA‌​|VT|WA|WI|WV|WY)';
+      // case Base.Format.ZipCode:
+      //   return'(\\d{5}([\\-]\\d{4})?)'
+    }
+
+    return undefined;
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {
     this.valid = this.validate();
-    console.log(this.valid + ': /' + this.pattern + '/.test(' + this.value);
-  }    
+    // console.log(this.valid + ': /' + this.getPattern() + '/.test(' + this.value);
+  }
 }
 
 // Custom Controls

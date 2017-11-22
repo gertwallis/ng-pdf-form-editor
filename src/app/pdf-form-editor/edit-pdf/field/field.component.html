@@ -24,7 +24,7 @@
         <edit-text *ngSwitchDefault 
             [name]="editField.name" 
             [value]="editValue" 
-            [pattern]="getPattern()"
+            [format]="editField.format"
             [title] = "editField.description"
             >
         </edit-text>
