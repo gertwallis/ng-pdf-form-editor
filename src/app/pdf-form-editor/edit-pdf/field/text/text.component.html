@@ -5,9 +5,9 @@
         [tabindex]=-1   
         [pattern]="pattern"
         [title]="title"
-        (blur)="blurredHandler()"
-        style="width:100%"
+        [ngStyle]="{ 'width': width + 'px', 'height': height + 'px'}"
         [maxlength]="maxlength"   
+        (blur)="blurredHandler()"        
         >
         <!-- style="width:100%; position: absolute; z-index: 99;" -->
         

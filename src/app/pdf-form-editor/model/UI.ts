@@ -22,7 +22,8 @@ export namespace UI {
         Locked = 0,  // Value from server don't edit.
         Saved = 1,   // Value from server - editable.
         Changed = 2, // Changed value in edit session.
-        NoValue = 3  // No value supplied
+        NoValue = 3,  // No value supplied,
+        Invalid = 4  // Has a value but failed validation.
     }
 
     export class FieldStyle extends Base.Location {

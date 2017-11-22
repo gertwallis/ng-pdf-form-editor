@@ -50,7 +50,7 @@ export class EditXBoxComponent implements AfterContentInit {
     if (this.initialValue !== this.value) {
       const changed: UI.FieldChanged = {
         updatedValue: this.value,
-        valid: undefined
+        valid: true
       };
 
       this.dataChanged.emit(changed);

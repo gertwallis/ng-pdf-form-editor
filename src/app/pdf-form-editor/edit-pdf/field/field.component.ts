@@ -11,7 +11,7 @@ import { EditXBoxComponent } from './xbox/xbox.component';
 // Models
 import { Base } from './../../model/Base';
 import { Edit } from './../../model/Edit';
-import { UI } from 'app/pdf-form-editor/model/UI';
+import { UI } from './../..//model/UI';
 
 @Component({
   selector: 'edit-field',
@@ -32,10 +32,6 @@ export class EditFieldComponent implements AfterContentInit {
   tabIndex = 0;
 
   private style: UI.FieldStyle;
-  // private left = 0;
-  // private top = 0;
-  // private width = 0;
-  // private height = 0;
 
   locked = true;
 
@@ -60,25 +56,24 @@ export class EditFieldComponent implements AfterContentInit {
     // TODO: Need to move all this mess to a directive
     let backgroundColor: string;
 
-    if (this.style.valid !== undefined && !this.style) {
-      backgroundColor = 'lightpink';
-    } else {
-      switch (this.style.state) {
-        case UI.DisplayState.Changed:
-          backgroundColor = 'lightgreen';
-          break;
-        case UI.DisplayState.Saved:
-          backgroundColor = 'white';
-          break;
-        case UI.DisplayState.NoValue:
-          backgroundColor = 'lightyellow';
-          break;
-        case UI.DisplayState.Locked:
-          this.locationStyle = {
-            'display': 'none'
-          };
-          return;
-      }
+    switch (this.style.state) {
+      case UI.DisplayState.Changed:
+        backgroundColor = 'lightgreen';
+        break;
+      case UI.DisplayState.Saved:
+        backgroundColor = 'white';
+        break;
+      case UI.DisplayState.NoValue:
+        backgroundColor = 'lightyellow';
+        break;
+      case UI.DisplayState.Invalid:
+        backgroundColor = 'lightpink';
+        break;
+      case UI.DisplayState.Locked:
+        this.locationStyle = {
+          'display': 'none'
+        };
+        return;
     }
 
     this.locationStyle = {
@@ -91,53 +86,6 @@ export class EditFieldComponent implements AfterContentInit {
       // 'z-index': '99'
       //      'border': '1px solid green'
     };
-
-    /*
-        switch (this.editField.state) {
-          case Edit.DisplayState.NoValue:
-            this.locationStyle = {
-              'position': 'absolute',
-              'left': this.style.left + 'px',
-              'top': this.style.top + 'px',
-              'width': this.style.width + 'px',
-              'height': this.style.height + 'px',
-              'background-color': 'lightyellow',
-              // 'z-index': '99'
-              //      'border': '1px solid green'
-            };
-            break;
-          case Edit.DisplayState.EditedValue:
-            this.locationStyle = {
-              'position': 'absolute',
-              'left': this.style.left + 'px',
-              'top': this.style.top + 'px',
-              'width': this.style.width + 'px',
-              'height': this.style.height + 'px',
-              'background-color': 'white',
-              'border': '1px solid #ddd',
-              // 'z-index': '99'
-              //      'border': '1px solid green'
-            };
-            break;
-          case Edit.DisplayState.SavedValue:
-            if (this.locked) {
-            }
-            else {
-              this.locationStyle = {
-                'position': 'absolute',
-                'left': this.style.left + 'px',
-                'top': this.style.top + 'px',
-                'width': this.style.width + 'px',
-                'height': this.style.height + 'px',
-                'background-color': 'lightgreen',
-                'border': '1px solid #ddd',
-                // 'z-index': '99'
-                //      'border': '1px solid green'
-              }
-            }
-            break;
-        }
-        */
   }
 
   activate() {
@@ -162,9 +110,13 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   clicked() {
-    // console.log('FIELD: MoveTo ' + this.tabIndex + ' ' + this.editField.name);
     if (this.editField.format === Base.Format.XBox) {
       this.editXBoxView.toggleValue();
+      const changed: UI.FieldChanged = {
+        updatedValue: this.editXBoxView.value,
+        valid: true
+      };
+      this.handleChange(changed);
     }
 
     this.moveField(UI.Direction.Current);
@@ -205,17 +157,19 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   handleChange(updateEvent: UI.FieldChanged) {
-    if (updateEvent.updatedValue) {
+    if (updateEvent.updatedValue != undefined) {
       this.style.state = UI.DisplayState.Changed;
       this.editField.value = updateEvent.updatedValue;
     }
 
     if (updateEvent.valid) {
       this.style.valid = updateEvent.valid;
+    } else {
+      this.style.state = UI.DisplayState.Invalid;
     }
 
     this.setStyle();
 
-    console.log('Updated: ' + this.editField.name + ' (' + updateEvent.valid + ') ' + updateEvent.updatedValue);
+    // console.log('Updated: ' + this.editField.name + ' (' + updateEvent.valid + ') ' + updateEvent.updatedValue);
   }
 }

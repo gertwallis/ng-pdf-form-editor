@@ -29,6 +29,8 @@
             [name]="editField.name" 
             [value]="editField.value" 
             [format]="editField.format"
+            [width]="style.width"
+            [height]="style.height"
             [title] = "editField.description"
             (dataChanged)="handleChange($event)"
             >

@@ -14,14 +14,14 @@ export class EditTextComponent implements AfterContentInit {
   @Input() name: string;
   @Input() value: string;
   @Input() title: string;
-  @Input() tabIndex: number;
+  @Input() width: number;
+  @Input() height: number;
   @Input() format: number;
 
   @Output() dataChanged = new EventEmitter<UI.FieldChanged>();
 
   initialValue: string;
   initialValidation: boolean;
-  currentValidation: boolean;
   maxLength: number;
 
   validateRegEx: RegExp;
@@ -38,13 +38,13 @@ export class EditTextComponent implements AfterContentInit {
     }, 200);
 
     // Keep track of changes to the value during this editing session.
-    this.initialValidation = this.validate();
+    this.initialValidation = this.validate( this.value);
     this.initialValue = this.value;
   }
 
-  validate(): boolean {
+  validate(value: string): boolean {
     if (this.validateRegEx) {
-      return this.validateRegEx.test(this.value);
+      return this.validateRegEx.test(value);
     }
 
     return true;
@@ -62,7 +62,7 @@ export class EditTextComponent implements AfterContentInit {
       case Base.Format.Percent:
         return '^[-+]?[0-9]*[.]?[0-9]+$';
       case Base.Format.PhoneNumber:
-        return '^\\d{3}[\-]\\d{3}[\-]\\d{4}$';
+        return '^(\\([0-9]{3}\\)( |-)?|[0-9]{3}-)[0-9]{3}-[0-9]{4}$';
       case Base.Format.SocialSecurityNumber:
         return '^\\d{3}-?\\d{2}-?\\d{4}$|^XXX-XX-XXXX$';
       case Base.Format.State:
@@ -75,21 +75,15 @@ export class EditTextComponent implements AfterContentInit {
     return undefined;
   }
 
-
   blurredHandler() {
-      console.log('BLURRED:' + this.name + ': ' +  this.value + ' : ' + this.currentValidation);
+    // console.log('BLURRED:' + this.name + ': ' + this.value + ' : ' + validation);
 
     // Notify if the value has chaned during this session.
-    if (this.initialValue !== this.value || this.initialValidation !== this.currentValidation) {
+    if (this.initialValue !== this.value) {
 
-      const changed = new  UI.FieldChanged();
-
-      if (this.initialValidation !== this.currentValidation) {
-        changed.valid = this.currentValidation;
-      }
-
-      if (this.initialValue !== this.value) {
-         changed.updatedValue = this.value;
+      const changed: UI.FieldChanged = {
+        valid: this.validate(this.value),
+        updatedValue: this.value
       }
 
       this.dataChanged.emit(changed);
