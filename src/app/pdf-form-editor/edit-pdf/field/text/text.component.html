@@ -3,11 +3,13 @@
         [name]="name" 
         [(ngModel)]="value"    
         [tabindex]=-1   
-        style="width:100%; position: absolute; z-index: 99;"
         [pattern]="pattern"
         [title]="title"
-        (keyup)="keyPressHandler($event)"
         (blur)="blurredHandler()"
+        style="width:100%"
+        [maxlength]="maxlength"   
         >
+        <!-- style="width:100%; position: absolute; z-index: 99;" -->
+        
 
        

@@ -2,12 +2,12 @@ import { Base } from './Base';
 
 export namespace UI {
 
-    export class Scale{
+    export class Scale {
         horiz: number;
         vertical: number;
     }
 
-    export class Size{
+    export class Size {
         width: number;
         height: number;
     }
@@ -28,8 +28,9 @@ export namespace UI {
     export class FieldStyle extends Base.Location {
         locked: boolean;
         state: DisplayState;
+        valid: boolean;
     }
-    
+
     // Class to communicate field movement
     //  to place focus at the correct next.
     export class LeaveField {
@@ -55,11 +56,11 @@ export namespace UI {
         text: string;
     }
 
-   export class Preferences {
-       locked: boolean;
-       defaultZoom = 1.2;
-       zoomIncrement = 0.2;
-       shade = false;
-   }
+    export class Preferences {
+        locked: boolean;
+        defaultZoom = 1.2;
+        zoomIncrement = 0.2;
+        shade = false;
+    }
 
 }

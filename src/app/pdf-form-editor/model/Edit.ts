@@ -11,18 +11,10 @@ export namespace Edit {
         Other = 3
     }
 
-    export enum DisplayState {
-        NoValue = 0,
-        SavedValue = 1,
-        EditedValue = 2,
-        Hidden = 3
-    }
-
     // FormField combines the FieldData and Location into a single model.
     //   including a location (name not duplicated in data and location).
     export class Field extends Base.Field {
         value: string;
-        state: DisplayState;
 
         // Flag set to true if the same name occurs in muleiple locations in the document (duplicated).
         multipleLocations = false;

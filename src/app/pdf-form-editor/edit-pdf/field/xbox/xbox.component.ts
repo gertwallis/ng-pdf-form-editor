@@ -1,5 +1,5 @@
 import { AfterViewChecked } from '@angular/core/src/metadata/lifecycle_hooks';
-import { Component, ElementRef, Input, ViewChild, AfterContentInit } from '@angular/core';
+import { AfterContentInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 import { UI } from 'app/pdf-form-editor/model/UI';
 
@@ -19,7 +19,10 @@ export class EditXBoxComponent implements AfterContentInit {
   @Input() height: number;
   @Input() tabIndex: number;
 
+  @Output() dataChanged = new EventEmitter<UI.FieldChanged>();
+
   valid: boolean;
+  initialValue: string;
 
   @ViewChild('inputHtml') childEditField: ElementRef;
 
@@ -39,6 +42,19 @@ export class EditXBoxComponent implements AfterContentInit {
     setTimeout(() => {
       this.childEditField.nativeElement.focus();
     }, 200);
+
+    this.initialValue = this.value;
+  }
+
+  blurredHandler() {
+    if (this.initialValue !== this.value) {
+      const changed: UI.FieldChanged = {
+        updatedValue: this.value,
+        valid: undefined
+      };
+
+      this.dataChanged.emit(changed);
+    }
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {
@@ -55,8 +71,7 @@ export class EditXBoxComponent implements AfterContentInit {
 
     if (this.value === 'X') {
       this.valid = true;
-    }
-    else {
+    } else {
       this.valid = false;
     }
   }

@@ -56,13 +56,8 @@ export class PdfEditComponent implements OnChanges {
             if (pdfDocument.data) {
               const dataValues = pdfDocument.data.filter(x => x.name === pdfLocation.name);
 
-              formField.state = Edit.DisplayState.NoValue;
               if (dataValues.length > 0) {
                 formField.value = dataValues[0].value;
-
-                if (formField.value) {
-                  formField.state = Edit.DisplayState.SavedValue;
-                } 
               }
             }
 

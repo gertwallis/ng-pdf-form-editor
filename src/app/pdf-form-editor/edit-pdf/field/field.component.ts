@@ -41,8 +41,6 @@ export class EditFieldComponent implements AfterContentInit {
 
   locationStyle: {};
 
-  editingStyle: {};
-
   constructor(element: ElementRef, private moveService: FieldChangeService) {
     this.style = new UI.FieldStyle();
   }
@@ -59,58 +57,87 @@ export class EditFieldComponent implements AfterContentInit {
 
   private setStyle() {
 
-    // TODO: Need to move all this mess to a directive 
-    switch (this.editField.state) {
-      case Edit.DisplayState.NoValue:
-        this.locationStyle = {
-          'position': 'absolute',
-          'left': this.style.left + 'px',
-          'top': this.style.top + 'px',
-          'width': this.style.width + 'px',
-          'height': this.style.height + 'px',
-          'background-color': 'lightyellow',
-          // 'z-index': '99'
-          //      'border': '1px solid green'
-        };
-        break;
+    // TODO: Need to move all this mess to a directive
+    let backgroundColor: string;
 
-      case Edit.DisplayState.EditedValue:
-        this.locationStyle = {
-          'position': 'absolute',
-          'left': this.style.left + 'px',
-          'top': this.style.top + 'px',
-          'width': this.style.width + 'px',
-          'height': this.style.height + 'px',
-          'background-color': 'white',
-          'border': '1px solid #ddd',
-          // 'z-index': '99'
-          //      'border': '1px solid green'
-        };
-        break;
-
-      case Edit.DisplayState.SavedValue:
-        if (this.locked) {
+    if (this.style.valid !== undefined && !this.style) {
+      backgroundColor = 'lightpink';
+    } else {
+      switch (this.style.state) {
+        case UI.DisplayState.Changed:
+          backgroundColor = 'lightgreen';
+          break;
+        case UI.DisplayState.Saved:
+          backgroundColor = 'white';
+          break;
+        case UI.DisplayState.NoValue:
+          backgroundColor = 'lightyellow';
+          break;
+        case UI.DisplayState.Locked:
           this.locationStyle = {
             'display': 'none'
-            //      'border': '1px solid green'
-          }
-        }
-        else {
-          this.locationStyle = {
-            'position': 'absolute',
-            'left': this.style.left + 'px',
-            'top': this.style.top + 'px',
-            'width': this.style.width + 'px',
-            'height': this.style.height + 'px',
-            'background-color': 'lightgreen',
-            'border': '1px solid #ddd',
-            // 'z-index': '99'
-            //      'border': '1px solid green'
-          }
-
-        }
-        break;
+          };
+          return;
+      }
     }
+
+    this.locationStyle = {
+      'position': 'absolute',
+      'left': this.style.left + 'px',
+      'top': this.style.top + 'px',
+      'width': this.style.width + 'px',
+      'height': this.style.height + 'px',
+      'background-color': backgroundColor
+      // 'z-index': '99'
+      //      'border': '1px solid green'
+    };
+
+    /*
+        switch (this.editField.state) {
+          case Edit.DisplayState.NoValue:
+            this.locationStyle = {
+              'position': 'absolute',
+              'left': this.style.left + 'px',
+              'top': this.style.top + 'px',
+              'width': this.style.width + 'px',
+              'height': this.style.height + 'px',
+              'background-color': 'lightyellow',
+              // 'z-index': '99'
+              //      'border': '1px solid green'
+            };
+            break;
+          case Edit.DisplayState.EditedValue:
+            this.locationStyle = {
+              'position': 'absolute',
+              'left': this.style.left + 'px',
+              'top': this.style.top + 'px',
+              'width': this.style.width + 'px',
+              'height': this.style.height + 'px',
+              'background-color': 'white',
+              'border': '1px solid #ddd',
+              // 'z-index': '99'
+              //      'border': '1px solid green'
+            };
+            break;
+          case Edit.DisplayState.SavedValue:
+            if (this.locked) {
+            }
+            else {
+              this.locationStyle = {
+                'position': 'absolute',
+                'left': this.style.left + 'px',
+                'top': this.style.top + 'px',
+                'width': this.style.width + 'px',
+                'height': this.style.height + 'px',
+                'background-color': 'lightgreen',
+                'border': '1px solid #ddd',
+                // 'z-index': '99'
+                //      'border': '1px solid green'
+              }
+            }
+            break;
+        }
+        */
   }
 
   activate() {
@@ -144,8 +171,13 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
- //   this.editValue = this.editField.value;
     this.tabIndex = this.editField.location.tabOrder;
+
+    if (this.editField.value) {
+      this.style.state = UI.DisplayState.Saved;
+    } else {
+      this.style.state = UI.DisplayState.NoValue;
+    }
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {
@@ -173,6 +205,17 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   handleChange(updateEvent: UI.FieldChanged) {
-    console.log('Updated: ' + this.editField.name + ' (' + updateEvent.valid +') ' + updateEvent.updatedValue);
+    if (updateEvent.updatedValue) {
+      this.style.state = UI.DisplayState.Changed;
+      this.editField.value = updateEvent.updatedValue;
+    }
+
+    if (updateEvent.valid) {
+      this.style.valid = updateEvent.valid;
+    }
+
+    this.setStyle();
+
+    console.log('Updated: ' + this.editField.name + ' (' + updateEvent.valid + ') ' + updateEvent.updatedValue);
   }
 }

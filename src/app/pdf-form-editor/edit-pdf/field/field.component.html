@@ -3,32 +3,35 @@
      (keydown)="keyPressHandler($event)"
      [title]="editField.description"
      >
-
-    <div [ngStyle]="editingStyle" [hidden]="!active" [ngSwitch]="editField.format">
+    <div [ngStyle]="{ 'position': 'absolute'}"> {{editField.value}}</div>
+    <div [ngStyle]="{ 'position': 'absolute'}" 
+         [hidden]="!active" 
+         [ngSwitch]="editField.format">
         <edit-xbox *ngSwitchCase="3" 
             [name]="editField.name" 
-            [value]="editValue" 
+            [value]="editField.value" 
             [width]="style.width"
             [height]="style.height"
             [title] = "editField.description"
+            (dataChanged)="handleChange($event)"
             >
         </edit-xbox>
         <edit-text-area *ngSwitchCase="4" 
             [name]="editField.name" 
-            [value]="editValue" 
+            [value]="editField.value" 
             [width]="style.width"
             [height]="style.height"
             [title] = "editField.description"
+            (dataChanged)="handleChange($event)"
             >
         </edit-text-area>
         <edit-text *ngSwitchDefault 
             [name]="editField.name" 
-            [value]="editValue" 
+            [value]="editField.value" 
             [format]="editField.format"
             [title] = "editField.description"
             (dataChanged)="handleChange($event)"
             >
         </edit-text>
-
     </div>
 </div>

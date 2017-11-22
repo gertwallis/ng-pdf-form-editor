@@ -19,9 +19,10 @@ export class EditTextComponent implements AfterContentInit {
 
   @Output() dataChanged = new EventEmitter<UI.FieldChanged>();
 
-  startValue: string;
-  startValidation: boolean;
+  initialValue: string;
+  initialValidation: boolean;
   currentValidation: boolean;
+  maxLength: number;
 
   validateRegEx: RegExp;
 
@@ -29,13 +30,16 @@ export class EditTextComponent implements AfterContentInit {
 
   constructor() { }
 
-
   focus() {
     // Have to wait 200ms to allow angular construct to finish before
     // the focus will activate.
     setTimeout(() => {
       this.childEditField.nativeElement.focus();
     }, 200);
+
+    // Keep track of changes to the value during this editing session.
+    this.initialValidation = this.validate();
+    this.initialValue = this.value;
   }
 
   validate(): boolean {
@@ -71,30 +75,25 @@ export class EditTextComponent implements AfterContentInit {
     return undefined;
   }
 
-  keyPressHandler(keyCode: KeyboardEvent) {
-    const validation = this.validate();
-
-    // Only notify if the validation has changed.
-    if (validation !== this.currentValidation) {
-      const changed: UI.FieldChanged = {
-        updatedValue: undefined,
-        valid: validation
-      }
-
-      this.currentValidation = validation;
-      this.dataChanged.emit(changed);
-    }
-    // console.log(this.valid + ': /' + this.getPattern() + '/.test(' + this.value);
-  }
 
   blurredHandler() {
-    // Notify this 
-    const changed: UI.FieldChanged = {
-      updatedValue: this.value,
-      valid: undefined
-    }
+      console.log('BLURRED:' + this.name + ': ' +  this.value + ' : ' + this.currentValidation);
 
-    this.dataChanged.emit(changed);
+    // Notify if the value has chaned during this session.
+    if (this.initialValue !== this.value || this.initialValidation !== this.currentValidation) {
+
+      const changed = new  UI.FieldChanged();
+
+      if (this.initialValidation !== this.currentValidation) {
+        changed.valid = this.currentValidation;
+      }
+
+      if (this.initialValue !== this.value) {
+         changed.updatedValue = this.value;
+      }
+
+      this.dataChanged.emit(changed);
+    }
   }
 
   public ngAfterContentInit(): void {
@@ -103,10 +102,7 @@ export class EditTextComponent implements AfterContentInit {
       this.validateRegEx = new RegExp(pattern);
     }
 
-    this.startValidation = this.validate();
-    this.startValue = this.value;
-
-    console.log('START:' + this.name + ': ' + this.format  + ' : ' + this.getPattern() + ': ' + this.startValidation );
+    // console.log('START:' + this.name + ': ' + this.format + ' : ' + this.getPattern() + ': ' + this.initialValidation);
   }
 }
 

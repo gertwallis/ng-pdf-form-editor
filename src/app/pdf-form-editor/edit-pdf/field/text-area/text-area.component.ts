@@ -1,5 +1,5 @@
 import { AfterViewChecked } from '@angular/core/src/metadata/lifecycle_hooks';
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 import { UI } from 'app/pdf-form-editor/model/UI';
 
@@ -18,8 +18,11 @@ export class EditTextAreaComponent {
   @Input() height: number;
   @Input() title: string;
 
+  @Output() dataChanged = new EventEmitter<UI.FieldChanged>();
+
   @ViewChild('inputHtml') childEditField: ElementRef;
 
+  initialValue: string;
 
   constructor() { }
 
@@ -29,5 +32,18 @@ export class EditTextAreaComponent {
     setTimeout(() => {
       this.childEditField.nativeElement.focus();
     }, 200);
+
+    this.initialValue = this.value;
+  }
+
+  blurredHandler() {
+    if (this.initialValue !== this.value) {
+      const changed: UI.FieldChanged = {
+        updatedValue: this.value,
+        valid: undefined
+      };
+
+      this.dataChanged.emit(changed);
+    }
   }
 }
