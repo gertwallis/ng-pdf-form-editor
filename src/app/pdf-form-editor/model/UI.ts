@@ -18,8 +18,16 @@ export namespace UI {
         BackWard = 2,
     }
 
+    export enum DisplayState {
+        Locked = 0,  // Value from server don't edit.
+        Saved = 1,   // Value from server - editable.
+        Changed = 2, // Changed value in edit session.
+        NoValue = 3  // No value supplied
+    }
+
     export class FieldStyle extends Base.Location {
-        
+        locked: boolean;
+        state: DisplayState;
     }
     
     // Class to communicate field movement
@@ -42,6 +50,10 @@ export namespace UI {
         text: string;
     }
 
-   
+   export class Preferences {
+       locked: boolean;
+       defaultZoom = 1.2;
+       zoomIncrement = 0.2;
+   }
 
 }

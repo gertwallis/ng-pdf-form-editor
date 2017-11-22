@@ -19,6 +19,8 @@ import { UI } from 'app/pdf-form-editor/model/UI';
 export class EditPagesComponent implements AfterContentInit {
 
   @Input() editDocument: Edit.Document = null;
+  @Input() locked = true; // Make values already entered unchangable.
+  
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChildren(EditPageComponent) pageViews: QueryList<EditPageComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
