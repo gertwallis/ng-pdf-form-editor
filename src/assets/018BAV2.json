@@ -1266,7 +1266,7 @@
         {
           "height": 166.0,
           "name": "Seller1FullName",
-          "groupName": "Seller1",
+          "groupName": "Seller",
           "tabOrder": 29,
           "width": 3516.0,
           "left": 4340.0,
@@ -1275,7 +1275,7 @@
         {
           "height": 166.0,
           "name": "Seller2FullName",
-          "groupName": "Seller2",
+          "groupName": "Seller",
           "tabOrder": 31,
           "width": 3516.0,
           "left": 4340.0,
@@ -1284,7 +1284,7 @@
         {
           "height": 166.0,
           "name": "Seller1StreetAddress",
-          "groupName": "Seller1",
+          "groupName": "Seller",
           "tabOrder": 38,
           "width": 3516.0,
           "left": 4340.0,
@@ -1293,7 +1293,7 @@
         {
           "height": 166.0,
           "name": "Seller1OptionalStreetAddress",
-          "groupName": "Seller1",
+          "groupName": "Seller",
           "tabOrder": 40,
           "width": 3516.0,
           "left": 4340.0,
@@ -1302,7 +1302,7 @@
         {
           "height": 166.0,
           "name": "Seller1CityStateZIP",
-          "groupName": "Seller1",
+          "groupName": "Seller",
           "tabOrder": 42,
           "width": 3516.0,
           "left": 4340.0,
@@ -2337,7 +2337,7 @@
         {
           "height": 166.0,
           "name": "Seller1FirstName",
-          "groupName": "Seller1",
+          "groupName": "Seller",
           "tabOrder": 25,
           "width": 1200.0,
           "left": 4370.0,
@@ -2346,7 +2346,7 @@
         {
           "height": 166.0,
           "name": "Seller2FirstName",
-          "groupName": "Seller2",
+          "groupName": "Seller",
           "tabOrder": 32,
           "width": 1200.0,
           "left": 4370.0,
@@ -2355,7 +2355,7 @@
         {
           "height": 166.0,
           "name": "Seller1LastName",
-          "groupName": "Seller1",
+          "groupName": "Seller",
           "tabOrder": 27,
           "width": 1700.0,
           "left": 5745.0,
@@ -2364,7 +2364,7 @@
         {
           "height": 166.0,
           "name": "Seller2LastName",
-          "groupName": "Seller2",
+          "groupName": "Seller",
           "tabOrder": 34,
           "width": 1700.0,
           "left": 5745.0,
@@ -2373,7 +2373,7 @@
         {
           "height": 166.0,
           "name": "Seller1MiddleInitial",
-          "groupName": "Seller1",
+          "groupName": "Seller",
           "tabOrder": 26,
           "width": 99.0,
           "left": 5595.0,
@@ -2382,7 +2382,7 @@
         {
           "height": 166.0,
           "name": "Seller2MiddleInitial",
-          "groupName": "Seller2",
+          "groupName": "Seller",
           "tabOrder": 33,
           "width": 99.0,
           "left": 5595.0,
@@ -2391,7 +2391,7 @@
         {
           "height": 166.0,
           "name": "Seller1SuffixName",
-          "groupName": "Seller1",
+          "groupName": "Seller",
           "tabOrder": 28,
           "width": 350.0,
           "left": 7470.0,
@@ -2400,7 +2400,7 @@
         {
           "height": 166.0,
           "name": "Seller2SuffixName",
-          "groupName": "Seller2",
+          "groupName": "Seller",
           "tabOrder": 35,
           "width": 350.0,
           "left": 7470.0,

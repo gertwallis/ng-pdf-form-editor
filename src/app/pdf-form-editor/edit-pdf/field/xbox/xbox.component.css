@@ -1,3 +1,5 @@
 .xboxstyle {
     background-color: white;
+    position: relative; 
+    z-index: 99
 }
