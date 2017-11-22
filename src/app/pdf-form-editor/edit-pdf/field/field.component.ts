@@ -171,4 +171,8 @@ export class EditFieldComponent implements AfterContentInit {
 
     this.moveService.exitField(field);
   }
+
+  handleChange(updateEvent: UI.FieldChanged) {
+    console.log('Updated: ' + this.editField.name + ' (' + updateEvent.valid +') ' + updateEvent.updatedValue);
+  }
 }

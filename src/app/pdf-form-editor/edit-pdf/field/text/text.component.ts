@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 import { UI } from 'app/pdf-form-editor/model/UI';
 
@@ -17,8 +17,13 @@ export class EditTextComponent implements AfterContentInit {
   @Input() tabIndex: number;
   @Input() format: number;
 
+  @Output() dataChanged = new EventEmitter<UI.FieldChanged>();
+
+  startValue: string;
+  startValidation: boolean;
+  currentValidation: boolean;
+
   validateRegEx: RegExp;
-  valid: boolean;
 
   @ViewChild('inputHtml') childEditField: ElementRef;
 
@@ -39,14 +44,6 @@ export class EditTextComponent implements AfterContentInit {
     }
 
     return true;
-  }
-
-  public ngAfterContentInit(): void {
-    console.log(this.name + " : " + this.format  + " : " + this.getPattern());
-    const pattern = this.getPattern();
-    if (this.format) {
-      this.validateRegEx = new RegExp(pattern);
-    }
   }
 
   getPattern() {
@@ -75,8 +72,41 @@ export class EditTextComponent implements AfterContentInit {
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {
-    this.valid = this.validate();
+    const validation = this.validate();
+
+    // Only notify if the validation has changed.
+    if (validation !== this.currentValidation) {
+      const changed: UI.FieldChanged = {
+        updatedValue: undefined,
+        valid: validation
+      }
+
+      this.currentValidation = validation;
+      this.dataChanged.emit(changed);
+    }
     // console.log(this.valid + ': /' + this.getPattern() + '/.test(' + this.value);
+  }
+
+  blurredHandler() {
+    // Notify this 
+    const changed: UI.FieldChanged = {
+      updatedValue: this.value,
+      valid: undefined
+    }
+
+    this.dataChanged.emit(changed);
+  }
+
+  public ngAfterContentInit(): void {
+    const pattern = this.getPattern();
+    if (this.format) {
+      this.validateRegEx = new RegExp(pattern);
+    }
+
+    this.startValidation = this.validate();
+    this.startValue = this.value;
+
+    console.log('START:' + this.name + ': ' + this.format  + ' : ' + this.getPattern() + ': ' + this.startValidation );
   }
 }
 

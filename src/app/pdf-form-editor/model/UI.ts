@@ -38,6 +38,11 @@ export namespace UI {
         tabIndex: number;
     }
 
+    export class FieldChanged {
+        updatedValue: string;
+        valid: boolean;
+    }
+
     export enum MessageLevel {
         success = 0,
         info = 1,

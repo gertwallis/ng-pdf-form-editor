@@ -26,6 +26,7 @@
             [value]="editValue" 
             [format]="editField.format"
             [title] = "editField.description"
+            (dataChanged)="handleChange($event)"
             >
         </edit-text>
 
