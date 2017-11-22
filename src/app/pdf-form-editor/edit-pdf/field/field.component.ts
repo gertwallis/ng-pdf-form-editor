@@ -35,10 +35,11 @@ export class EditFieldComponent implements AfterContentInit {
 
   tabIndex = 0;
 
-  private left = 0;
-  private top = 0;
-  private width = 0;
-  private height = 0;
+  private style: UI.FieldStyle;
+  // private left = 0;
+  // private top = 0;
+  // private width = 0;
+  // private height = 0;
 
   locked = true;
 
@@ -47,27 +48,30 @@ export class EditFieldComponent implements AfterContentInit {
   editingStyle: {};
 
   constructor(element: ElementRef, private moveService: FieldChangeService) {
+    this.style = new UI.FieldStyle();
   }
 
   setScale(scale: UI.Scale) {
-    this.left = Math.round(this.editField.location.left * scale.horiz * 10) / 10;
-    this.top = Math.round(this.editField.location.top * scale.vertical * 10) / 10;
-    this.width = Math.round(this.editField.location.width * scale.horiz * 10) / 10;
-    this.height = Math.round(this.editField.location.height * scale.vertical * 10) / 10;
+    this.style.left = Math.round(this.editField.location.left * scale.horiz * 10) / 10;
+    this.style.top = Math.round(this.editField.location.top * scale.vertical * 10) / 10;
+    this.style.width = Math.round(this.editField.location.width * scale.horiz * 10) / 10;
+    this.style.height = Math.round(this.editField.location.height * scale.vertical * 10) / 10;
 
     this.setStyle();
 
   }
 
   private setStyle() {
+
+    // TODO: Need to move all this mess to a directive 
     switch (this.editField.state) {
       case Edit.DisplayState.NoValue:
         this.locationStyle = {
           'position': 'absolute',
-          'left': this.left + 'px',
-          'top': this.top + 'px',
-          'width': this.width + 'px',
-          'height': this.height + 'px',
+          'left': this.style.left + 'px',
+          'top': this.style.top + 'px',
+          'width': this.style.width + 'px',
+          'height': this.style.height + 'px',
           'background-color': 'lightyellow'
           //      'border': '1px solid green'
         };
@@ -76,10 +80,10 @@ export class EditFieldComponent implements AfterContentInit {
       case Edit.DisplayState.EditedValue:
         this.locationStyle = {
           'position': 'absolute',
-          'left': this.left + 'px',
-          'top': this.top + 'px',
-          'width': this.width + 'px',
-          'height': this.height + 'px',
+          'left': this.style.left + 'px',
+          'top': this.style.top + 'px',
+          'width': this.style.width + 'px',
+          'height': this.style.height + 'px',
           'background-color': 'white',
           'border': '1px solid #ddd'
           //      'border': '1px solid green'
@@ -96,10 +100,10 @@ export class EditFieldComponent implements AfterContentInit {
         else {
           this.locationStyle = {
             'position': 'absolute',
-            'left': this.left + 'px',
-            'top': this.top + 'px',
-            'width': this.width + 'px',
-            'height': this.height + 'px',
+            'left': this.style.left + 'px',
+            'top': this.style.top + 'px',
+            'width': this.style.width + 'px',
+            'height': this.style.height + 'px',
             'background-color': 'lightgreen',
             'border': '1px solid #ddd'
             //      'border': '1px solid green'

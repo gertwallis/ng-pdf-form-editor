@@ -7,16 +7,16 @@
         <edit-xbox *ngSwitchCase="3" 
             [name]="editField.name" 
             [value]="editValue" 
-            [width]="width"
-            [height]="height"
+            [width]="style.width"
+            [height]="style.height"
             [title] = "editField.description"
             >
         </edit-xbox>
         <edit-text-area *ngSwitchCase="4" 
             [name]="editField.name" 
             [value]="editValue" 
-            [width]="width"
-            [height]="height"
+            [width]="style.width"
+            [height]="style.height"
             [title] = "editField.description"
             >
         </edit-text-area>
