@@ -20,6 +20,7 @@ export class EditPagesComponent implements AfterContentInit {
 
   @Input() editDocument: Edit.Document = null;
   @Input() locked = true; // Make values already entered unchangable.
+  @Input() shade = true; // Make background 50% transparent to highlight fields.
   
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChildren(EditPageComponent) pageViews: QueryList<EditPageComponent>;
@@ -79,6 +80,14 @@ export class EditPagesComponent implements AfterContentInit {
     newPage.editPage.active = true;
 
     this.viewer.goToPage(newTab.pageNo);
+  }
+
+  toggleLock() {
+    this.locked = ! this.locked;
+  }
+
+  toggleShade() {
+    this.shade = ! this.shade;
   }
 
   // Emmittor functions

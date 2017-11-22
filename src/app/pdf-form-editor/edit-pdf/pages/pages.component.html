@@ -14,10 +14,16 @@
         </button>
       </div>
 
-      <div class="btn-group pull-right" role="zoom">
-          <button type="button" (click)="locked" class="btn btn-primary btn-round"> 
-            <span class="glyphicon glyphicon-zoom-out"></span>
+      <div class="btn-group pull-left" role="preferences">
+          <button type="button" (click)="toggleLock()" class="btn btn-primary btn-round">
+            Lock 
+            <span class="glyphicon glyphicon-lock"></span>
           </button>
+          <button type="button" (click)="toggleShade()" class="btn btn-primary btn-round">
+              Lock 
+              <span class="glyphicon glyphicon-modal-window"></span>
+            </button>
+            
       </div>  
 
       <div class="btn-group pull-right" role="zoom">

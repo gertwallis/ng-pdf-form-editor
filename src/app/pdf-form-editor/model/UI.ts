@@ -54,6 +54,7 @@ export namespace UI {
        locked: boolean;
        defaultZoom = 1.2;
        zoomIncrement = 0.2;
+       shade = false;
    }
 
 }
