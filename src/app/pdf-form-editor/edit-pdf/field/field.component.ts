@@ -26,7 +26,7 @@ export class EditFieldComponent implements AfterContentInit {
   @ViewChild(EditTextComponent) editTextView: EditTextComponent;
   @ViewChild(EditTextAreaComponent) editTextAreaView: EditTextAreaComponent;
   @ViewChild(EditXBoxComponent) editXBoxView: EditXBoxComponent;
-  
+
   color: string;
   valueChanged = false;
   // value updated by text edit.
@@ -63,7 +63,7 @@ export class EditFieldComponent implements AfterContentInit {
         break;
 
       case Edit.DisplayState.EditedValue:
-            break;
+        break;
 
       case Edit.DisplayState.SavedValue:
         break;
@@ -76,7 +76,7 @@ export class EditFieldComponent implements AfterContentInit {
       'width': this.width + 'px',
       'height': this.height + 'px',
       'background-color': 'lightgreen'
-//      'border': '1px solid green'
+      //      'border': '1px solid green'
     };
   }
 
@@ -86,7 +86,7 @@ export class EditFieldComponent implements AfterContentInit {
     switch (this.editField.format) {
       case DocumentBase.Format.XBox:
         this.editXBoxView.focus();
-      break;
+        break;
       case DocumentBase.Format.TextArea:
         this.editTextAreaView.focus();
         break;
@@ -105,6 +105,30 @@ export class EditFieldComponent implements AfterContentInit {
     // console.log('FIELD: MoveTo ' + this.tabIndex + ' ' + this.editField.name);
     this.moveField(UI.Direction.Current);
   }
+
+  getPattern() {
+    // TODO: Not working yet.
+    switch (this.editField.format) {
+      case DocumentBase.Format.Date:
+        return '^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\d{4}$';
+      case DocumentBase.Format.Dollar:
+        return '\\d+(\\.\\d{2})?';
+      case DocumentBase.Format.Integer:
+        return '[-+]?[0-9]*';
+      case DocumentBase.Format.Percent:
+        return '[-+]?[0-9]*[.]?[0-9]+';
+      case DocumentBase.Format.PhoneNumber:
+        return '\\d{3}[\-]\\d{3}[\-]\\d{4}';
+      case DocumentBase.Format.SocialSecurityNumber:
+        return '(^\d{3}-?\d{2}-?\d{4}$|^XXX-XX-XXXX$)';
+      case DocumentBase.Format.State:
+        // list would probably faster and better but ...
+        return '(AL|AK|AR|AZ|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|‌​MA|MD|ME|MI|MN|MO|MS‌​|MT|NC|ND|NE|NH|NJ|N‌​M|NV|NY|OH|OK|OR|PA|‌​RI|SC|SD|TN|TX|UT|VA‌​|VT|WA|WI|WV|WY)';
+      // case DocumentBase.Format.ZipCode:
+      //   return'(\d{5}([\-]\d{4})?)'
+    }
+  }
+
 
   public ngAfterContentInit(): void {
     this.editValue = this.editField.value;

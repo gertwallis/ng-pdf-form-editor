@@ -16,12 +16,10 @@ export class EditTextAreaComponent {
   @Input() value: string;
   @Input() width: number;
   @Input() height: number;
-  @Input() tabIndex: number;
-  @Input() format: DocumentBase.Format;
+  @Input() title: string;
 
   @ViewChild('inputHtml') childEditField: ElementRef;
 
-  pattern: string;
 
   constructor() { }
 

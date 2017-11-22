@@ -10,16 +10,19 @@ import { DocumentBase } from './../../../model/DocumentBase';
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
-export class EditTextComponent implements AfterContentInit{
+export class EditTextComponent implements AfterContentInit {
 
   @Input() name: string;
   @Input() value: string;
+  @Input() title: string;
   @Input() tabIndex: number;
-  @Input() format: DocumentBase.Format;
+  @Input() pattern: string;
+
+  validateRegEx: RegExp;
+  valid: boolean;
 
   @ViewChild('inputHtml') childEditField: ElementRef;
 
-  pattern: string;
 
   constructor() { }
 
@@ -32,31 +35,25 @@ export class EditTextComponent implements AfterContentInit{
     }, 200);
   }
 
-  getPattern() {
+  validate(): boolean {
+    if (this.validateRegEx) {
+      console.log('this.value = ' + this.value);
+      return this.validateRegEx.test(this.value);
+    }
 
-    // TODO: Not working yet.
-    switch (this.format) {
-      case DocumentBase.Format.Date:
-        return '^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$';
-      case DocumentBase.Format.Dollar:
-        break;
-      case DocumentBase.Format.Integer:
-        break;
-      case DocumentBase.Format.Percent:
-        break;
-      case DocumentBase.Format.PhoneNumber:
-        break;
-      case DocumentBase.Format.SocialSecurityNumber:
-        break;
-      case DocumentBase.Format.SocialSecurityNumber:
-        break;
+    return true;
+  }
+
+  public ngAfterContentInit(): void {
+    if (this.pattern) {
+      this.validateRegEx = new RegExp(this.pattern);
     }
   }
 
-
-    public ngAfterContentInit(): void {
-      this.pattern = this.getPattern();
-    }
+  keyPressHandler(keyCode: KeyboardEvent) {
+    this.valid = this.validate();
+    console.log("Valid = " + this.valid);
+  }    
 }
 
 // Custom Controls

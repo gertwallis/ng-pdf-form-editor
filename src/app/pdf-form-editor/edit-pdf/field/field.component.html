@@ -1,4 +1,7 @@
-<div [ngStyle]="locationStyle" [tabindex]="tabIndex" (click)="moveTo()" (keydown)="keyPressHandler($event)">
+<div [ngStyle]="locationStyle" [tabindex]="tabIndex" 
+     (click)="moveTo()" 
+     (keydown)="keyPressHandler($event)"
+     [title]= "editField.description">
 
     <div [ngStyle]="editingStyle" [hidden]="!active" [ngSwitch]="editField.format">
         <edit-xbox *ngSwitchCase="3" 
@@ -6,6 +9,7 @@
             [value]="editValue" 
             [width]="width"
             [height]="height"
+            [title] = "editField.description"
             >
         </edit-xbox>
         <edit-text-area *ngSwitchCase="4" 
@@ -13,12 +17,14 @@
             [value]="editValue" 
             [width]="width"
             [height]="height"
+            [title] = "editField.description"
             >
         </edit-text-area>
         <edit-text *ngSwitchDefault 
             [name]="editField.name" 
             [value]="editValue" 
-            [format]="editField.format"
+            [pattern]="getPattern()"
+            [title] = "editField.description"
             >
         </edit-text>
 

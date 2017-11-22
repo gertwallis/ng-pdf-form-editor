@@ -5,7 +5,8 @@
        [tabindex]=-1   
        style="width:100%"
        [pattern]="pattern"
-       title="this is a message for anything going wrong"
+       (keyup)="keyPressHandler($event)"
+       [title]="title"
        >
 
        

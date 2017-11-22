@@ -14,6 +14,7 @@ export class EditXBoxComponent {
 
   @Input() name: string;
   @Input() value: string;
+  @Input() title: string;
   @Input() width: number;
   @Input() height: number;
   @Input() tabIndex: number;
