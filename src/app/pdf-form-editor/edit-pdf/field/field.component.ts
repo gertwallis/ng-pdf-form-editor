@@ -131,8 +131,12 @@ export class EditFieldComponent implements AfterContentInit {
     this.active = false;
   }
 
-  moveTo() {
+  clicked() {
     // console.log('FIELD: MoveTo ' + this.tabIndex + ' ' + this.editField.name);
+    if (this.editField.format === DocumentBase.Format.XBox) {
+      this.editXBoxView.toggleValue();
+    }
+
     this.moveField(UI.Direction.Current);
   }
 

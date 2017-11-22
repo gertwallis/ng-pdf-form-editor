@@ -1,5 +1,9 @@
 <div #inputHtml 
+    class="xboxstyle"
     [tabindex]=-1 
     [title]="title"    
-    [ngStyle]="{ 'width': width + 'px', 'height': height + 'px'}">
+    [ngStyle]="{ 'width': width + 'px', 'height': height + 'px'}"
+    (keydown)="keyPressHandler($event)"
+>
+    {{value}}
 </div>
