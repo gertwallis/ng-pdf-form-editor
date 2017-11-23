@@ -83,6 +83,7 @@ export class PdfEditComponent implements OnChanges {
       formField.label = fields[0].label;
       formField.maxChar = fields[0].maxChar;
       formField.name = fields[0].name;
+      formField.required = fields[0].required;
 
       return formField;
     }

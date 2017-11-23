@@ -1,37 +1,37 @@
 <div [ngStyle]="locationStyle" [tabindex]="tabIndex" 
      (click)="clicked()" 
      (keydown)="keyPressHandler($event)"
-     [title]="editField.description"
+     [title]="model.description"
      >
-    <div [ngStyle]="{ 'position': 'absolute'}"> {{editField.value}}</div>
+    <div [ngStyle]="{ 'position': 'absolute'}"> {{model.value}}</div>
     <div [ngStyle]="{ 'position': 'absolute'}" 
          [hidden]="!active" 
-         [ngSwitch]="editField.format">
+         [ngSwitch]="model.format">
         <edit-xbox *ngSwitchCase="3" 
-            [name]="editField.name" 
-            [value]="editField.value" 
+            [name]="model.name" 
+            [value]="model.value" 
             [width]="style.width"
             [height]="style.height"
-            [title] = "editField.description"
+            [title] = "model.description"
             (leaveEdit)="handleChange($event)"
             >
         </edit-xbox>
         <edit-text-area *ngSwitchCase="4" 
-            [name]="editField.name" 
-            [value]="editField.value" 
+            [name]="model.name" 
+            [value]="model.value" 
             [width]="style.width"
             [height]="style.height"
-            [title] = "editField.description"
+            [title] = "model.description"
             (leaveEdit)="handleChange($event)"
             >
         </edit-text-area>
         <edit-text *ngSwitchDefault 
-            [name]="editField.name" 
-            [value]="editField.value" 
-            [format]="editField.format"
+            [name]="model.name" 
+            [value]="model.value" 
+            [format]="model.format"
             [width]="style.width"
             [height]="style.height"
-            [title] = "editField.description"
+            [title] = "model.description"
             (leaveEdit)="handleChange($event)"
             >
         </edit-text>

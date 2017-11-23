@@ -47,8 +47,8 @@ export class EditPageComponent implements OnInit, OnDestroy {
 
   moveFromField(field: UI.LeaveField) {
     if (field.tabIndex !== this.currentTabIndex) {
-      // console.log('PAGE: Move [' + field.tabIndex + '] ' + field.name);
       const nextTabIndex = this.getNextTabIndex(field.tabIndex, field.direction);
+      console.log('PAGE: Move from [' + field.tabIndex + '] to [' + nextTabIndex + ']');
       this.groupViews.forEach(group => {
         group.fieldViews.forEach(field => {
           if (field.tabIndex === nextTabIndex) {
@@ -67,6 +67,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
 
   getNextTabIndex(tabIndex, direction: UI.Direction) {
     let index = this.editPage.tabs.indexOf(tabIndex);
+console.log('INDEX: ' + index);
 
     switch (direction) {
       case UI.Direction.Forward:

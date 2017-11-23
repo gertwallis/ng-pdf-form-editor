@@ -36,6 +36,7 @@ export namespace Base {
         format: Format;
         maxChar: number;
         groupName: string;
+        required: false;
     }
 
     export class DataValue {

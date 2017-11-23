@@ -31,6 +31,7 @@ export class EditTextComponent {
     // the focus will activate.
     setTimeout(() => {
       this.childEditField.nativeElement.focus();
+      this.childEditField.nativeElement.select();
     }, 200);
   }
 

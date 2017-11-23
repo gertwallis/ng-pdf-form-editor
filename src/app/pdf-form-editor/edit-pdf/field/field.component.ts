@@ -31,7 +31,7 @@ import { UI } from './../..//model/UI';
 export class EditFieldComponent implements AfterContentInit {
 
   @Input() active = false;
-  @Input() editField: Edit.Field;
+  @Input() model: Edit.Field;
 
   @ViewChild(EditTextComponent) editTextView: EditTextComponent;
   @ViewChild(EditTextAreaComponent) editTextAreaView: EditTextAreaComponent;
@@ -51,10 +51,10 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   setScale(scale: UI.Scale) {
-    this.style.left = Math.round(this.editField.location.left * scale.horiz * 10) / 10;
-    this.style.top = Math.round(this.editField.location.top * scale.vertical * 10) / 10;
-    this.style.width = Math.round(this.editField.location.width * scale.horiz * 10) / 10;
-    this.style.height = Math.round(this.editField.location.height * scale.vertical * 10) / 10;
+    this.style.left = Math.round(this.model.location.left * scale.horiz * 10) / 10;
+    this.style.top = Math.round(this.model.location.top * scale.vertical * 10) / 10;
+    this.style.width = Math.round(this.model.location.width * scale.horiz * 10) / 10;
+    this.style.height = Math.round(this.model.location.height * scale.vertical * 10) / 10;
 
     this.setStyle();
 
@@ -98,9 +98,9 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   activate() {
-    // console.log('FIELD: Ativate ' + this.tabIndex + ' ' + this.editField.name);
+    // console.log('FIELD: Ativate ' + this.tabIndex + ' ' + this.model.name);
     this.active = true;
-    switch (this.editField.format) {
+    switch (this.model.format) {
       case Base.Format.XBox:
         this.editXBoxView.focus();
         break;
@@ -114,25 +114,38 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   deActivate() {
-    // console.log('FIELD: De-ativate ' + this.tabIndex + ' ' + this.editField.name);
+    // console.log('FIELD: De-ativate ' + this.tabIndex + ' ' + this.model.name);
     this.active = false;
   }
 
-  validate(value: string): boolean {
-    if (this.validateRegEx) {
-      return this.validateRegEx.test(value);
-    }
+  validate(): boolean {
+    if (!this.model.value) {
+      return !this.model.required;
+    } else {
+      if (!this.validateRegEx) {
+        const pattern = this.getPattern(this.model.format);
+        if (pattern) {
+          this.validateRegEx = new RegExp(pattern);
+        }
+      }
 
-    return true;
+      if (!this.validateRegEx) {
+        console.log('hi');
+      }
+      return this.validateRegEx.test(this.model.value);
+    }
   }
 
   getPattern(format) {
     // TODO: Not working yet.
     switch (format) {
+      case Base.Format.AlphaNumeric:
+        return '.*';
       case Base.Format.Date:
         return '^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$';
       case Base.Format.Dollar:
         return '^\\d+(\\.\\d{2})?$';
+      case Base.Format.Number:
       case Base.Format.Integer:
         return '^[-+]?[0-9]*$';
       case Base.Format.Percent:
@@ -144,6 +157,9 @@ export class EditFieldComponent implements AfterContentInit {
       case Base.Format.State:
         // list would probably faster and better but ...
         return '(AL|AK|AR|AZ|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|‌​MA|MD|ME|MI|MN|MO|MS‌​|MT|NC|ND|NE|NH|NJ|N‌​M|NV|NY|OH|OK|OR|PA|‌​RI|SC|SD|TN|TX|UT|VA‌​|VT|WA|WI|WV|WY)';
+      case Base.Format.XBox:
+        // empty string or capital X
+        return '^$|(X){1}?';
       // case Base.Format.ZipCode:
       //   return'(\\d{5}([\\-]\\d{4})?)'
     }
@@ -152,7 +168,7 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   clicked() {
-    if (this.editField.format === Base.Format.XBox) {
+    if (this.model.format === Base.Format.XBox) {
       this.editXBoxView.toggleValue();
       const changed: UI.FieldEdited = {
         value: this.editXBoxView.value,
@@ -164,26 +180,23 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
-    this.tabIndex = this.editField.location.tabOrder;
+    this.tabIndex = this.model.location.tabOrder;
 
-    if (this.editField.value) {
+    if (this.model.value) {
       this.style.state = UI.DisplayState.Saved;
     } else {
       this.style.state = UI.DisplayState.NoValue;
     }
 
-    const pattern = this.getPattern(this.editField.format);
-    if (pattern) {
-      this.validateRegEx = new RegExp(pattern);
-      if (!this.validate(this.editField.value)) {
-        this.style.state = UI.DisplayState.Invalid;
-      };
+    this.initialValue = this.model.value;
 
-    }
+    if (!this.validate()) {
+      this.style.state = UI.DisplayState.Invalid;
+    };
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {
-    // Move to the next field if it is enter or tab 
+    // Move to the next field if it is enter or tab
     if (keyCode.keyCode === 13 ||
       keyCode.keyCode === 9 ||
       (keyCode.which === 9 && keyCode.shiftKey)) {
@@ -200,7 +213,7 @@ export class EditFieldComponent implements AfterContentInit {
   moveField(direction: UI.Direction) {
     const field: UI.LeaveField = {
       direction: direction,
-      name: this.editField.name,
+      name: this.model.name,
       tabIndex: this.tabIndex
     };
 
@@ -211,16 +224,16 @@ export class EditFieldComponent implements AfterContentInit {
 
     if (updateEvent.value !== this.initialValue) {
       this.style.state = UI.DisplayState.Changed;
-      this.editField.value = updateEvent.value;
+      this.model.value = updateEvent.value;
     }
 
-    this.style.valid = this.validate(updateEvent.value);
+    this.style.valid = this.validate();
     if (!this.style.valid) {
       this.style.state = UI.DisplayState.Invalid;
     }
 
     this.setStyle();
 
-    // console.log('Updated: ' + this.editField.name + ' (' + updateEvent.valid + ') ' + updateEvent.value);
+    // console.log('Updated: ' + this.model.name + ' (' + updateEvent.valid + ') ' + updateEvent.value);
   }
 }
