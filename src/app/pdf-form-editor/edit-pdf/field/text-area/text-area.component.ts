@@ -18,11 +18,9 @@ export class EditTextAreaComponent {
   @Input() height: number;
   @Input() title: string;
 
-  @Output() dataChanged = new EventEmitter<UI.FieldChanged>();
+  @Output() leaveEdit = new EventEmitter<UI.FieldEdited>();
 
   @ViewChild('inputHtml') childEditField: ElementRef;
-
-  initialValue: string;
 
   constructor() { }
 
@@ -33,17 +31,13 @@ export class EditTextAreaComponent {
       this.childEditField.nativeElement.focus();
     }, 200);
 
-    this.initialValue = this.value;
   }
 
   blurredHandler() {
-    if (this.initialValue !== this.value) {
-      const changed: UI.FieldChanged = {
-        updatedValue: this.value,
-        valid: undefined
-      };
+    const changed: UI.FieldEdited = {
+      value: this.value,
+    };
 
-      this.dataChanged.emit(changed);
-    }
+    this.leaveEdit.emit(changed);
   }
 }

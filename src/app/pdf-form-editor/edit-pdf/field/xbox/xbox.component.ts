@@ -19,10 +19,7 @@ export class EditXBoxComponent implements AfterContentInit {
   @Input() height: number;
   @Input() tabIndex: number;
 
-  @Output() dataChanged = new EventEmitter<UI.FieldChanged>();
-
-  valid: boolean;
-  initialValue: string;
+  @Output() leaveEdit = new EventEmitter<UI.FieldEdited>();
 
   @ViewChild('inputHtml') childEditField: ElementRef;
 
@@ -42,19 +39,14 @@ export class EditXBoxComponent implements AfterContentInit {
     setTimeout(() => {
       this.childEditField.nativeElement.focus();
     }, 200);
-
-    this.initialValue = this.value;
   }
 
   blurredHandler() {
-    if (this.initialValue !== this.value) {
-      const changed: UI.FieldChanged = {
-        updatedValue: this.value,
-        valid: true
-      };
+    const changed: UI.FieldEdited = {
+      value: this.value,
+    };
 
-      this.dataChanged.emit(changed);
-    }
+    this.leaveEdit.emit(changed);
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {
@@ -67,12 +59,6 @@ export class EditXBoxComponent implements AfterContentInit {
   public ngAfterContentInit(): void {
     if (this.value === 'x') {
       this.value = 'X';
-    }
-
-    if (this.value === 'X') {
-      this.valid = true;
-    } else {
-      this.valid = false;
     }
   }
 }

@@ -1,4 +1,14 @@
-import { Component, Input, OnInit, ViewChild, Output, EventEmitter, ElementRef, AfterContentInit } from '@angular/core';
+import { AfterViewChecked } from '@angular/core/src/metadata/lifecycle_hooks';
+import {
+  AfterContentInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 // Service
 import { FieldChangeService } from '../../service/field-changed.service';
@@ -28,14 +38,13 @@ export class EditFieldComponent implements AfterContentInit {
   @ViewChild(EditXBoxComponent) editXBoxView: EditXBoxComponent;
 
   color: string;
-
   tabIndex = 0;
-
   private style: UI.FieldStyle;
-
   locked = true;
-
+  initialValue: string;
   locationStyle: {};
+  validateRegEx: RegExp;
+
 
   constructor(element: ElementRef, private moveService: FieldChangeService) {
     this.style = new UI.FieldStyle();
@@ -109,12 +118,44 @@ export class EditFieldComponent implements AfterContentInit {
     this.active = false;
   }
 
+  validate(value: string): boolean {
+    if (this.validateRegEx) {
+      return this.validateRegEx.test(value);
+    }
+
+    return true;
+  }
+
+  getPattern(format) {
+    // TODO: Not working yet.
+    switch (format) {
+      case Base.Format.Date:
+        return '^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$';
+      case Base.Format.Dollar:
+        return '^\\d+(\\.\\d{2})?$';
+      case Base.Format.Integer:
+        return '^[-+]?[0-9]*$';
+      case Base.Format.Percent:
+        return '^[-+]?[0-9]*[.]?[0-9]+$';
+      case Base.Format.PhoneNumber:
+        return '^(\\([0-9]{3}\\)( |-)?|[0-9]{3}-)[0-9]{3}-[0-9]{4}$';
+      case Base.Format.SocialSecurityNumber:
+        return '^\\d{3}-?\\d{2}-?\\d{4}$|^XXX-XX-XXXX$';
+      case Base.Format.State:
+        // list would probably faster and better but ...
+        return '(AL|AK|AR|AZ|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|‌​MA|MD|ME|MI|MN|MO|MS‌​|MT|NC|ND|NE|NH|NJ|N‌​M|NV|NY|OH|OK|OR|PA|‌​RI|SC|SD|TN|TX|UT|VA‌​|VT|WA|WI|WV|WY)';
+      // case Base.Format.ZipCode:
+      //   return'(\\d{5}([\\-]\\d{4})?)'
+    }
+
+    return undefined;
+  }
+
   clicked() {
     if (this.editField.format === Base.Format.XBox) {
       this.editXBoxView.toggleValue();
-      const changed: UI.FieldChanged = {
-        updatedValue: this.editXBoxView.value,
-        valid: true
+      const changed: UI.FieldEdited = {
+        value: this.editXBoxView.value,
       };
       this.handleChange(changed);
     }
@@ -130,9 +171,19 @@ export class EditFieldComponent implements AfterContentInit {
     } else {
       this.style.state = UI.DisplayState.NoValue;
     }
+
+    const pattern = this.getPattern(this.editField.format);
+    if (pattern) {
+      this.validateRegEx = new RegExp(pattern);
+      if (!this.validate(this.editField.value)) {
+        this.style.state = UI.DisplayState.Invalid;
+      };
+
+    }
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {
+    // Move to the next field if it is enter or tab 
     if (keyCode.keyCode === 13 ||
       keyCode.keyCode === 9 ||
       (keyCode.which === 9 && keyCode.shiftKey)) {
@@ -156,20 +207,20 @@ export class EditFieldComponent implements AfterContentInit {
     this.moveService.exitField(field);
   }
 
-  handleChange(updateEvent: UI.FieldChanged) {
-    if (updateEvent.updatedValue != undefined) {
+  handleChange(updateEvent: UI.FieldEdited) {
+
+    if (updateEvent.value !== this.initialValue) {
       this.style.state = UI.DisplayState.Changed;
-      this.editField.value = updateEvent.updatedValue;
+      this.editField.value = updateEvent.value;
     }
 
-    if (updateEvent.valid) {
-      this.style.valid = updateEvent.valid;
-    } else {
+    this.style.valid = this.validate(updateEvent.value);
+    if (!this.style.valid) {
       this.style.state = UI.DisplayState.Invalid;
     }
 
     this.setStyle();
 
-    // console.log('Updated: ' + this.editField.name + ' (' + updateEvent.valid + ') ' + updateEvent.updatedValue);
+    // console.log('Updated: ' + this.editField.name + ' (' + updateEvent.valid + ') ' + updateEvent.value);
   }
 }

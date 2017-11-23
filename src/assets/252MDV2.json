@@ -1013,11 +1013,11 @@
     },
     {
       "name": "ExciseTaxAmount",
-      "value": "999.99"
+      "value": "99.a"
     },
     {
       "name": "FilingFee",
-      "value": "999.99"
+      "value": "7.99"
     },
     {
       "name": "HullIdentificationNumber",
@@ -1053,7 +1053,7 @@
     },
     {
       "name": "LengthFeet",
-      "value": "456"
+      "value": "456ft"
     },
     {
       "name": "LengthInches",
@@ -2131,7 +2131,7 @@
         {
           "height": 166.0,
           "name": "ExciseTaxAmount",
-          "groupName": "Amounts",
+          "groupName": "Fees",
           "tabOrder": 95,
           "width": 860.0,
           "left": 3129.0,

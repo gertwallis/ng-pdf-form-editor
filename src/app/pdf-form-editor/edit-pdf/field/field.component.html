@@ -13,7 +13,7 @@
             [width]="style.width"
             [height]="style.height"
             [title] = "editField.description"
-            (dataChanged)="handleChange($event)"
+            (leaveEdit)="handleChange($event)"
             >
         </edit-xbox>
         <edit-text-area *ngSwitchCase="4" 
@@ -22,7 +22,7 @@
             [width]="style.width"
             [height]="style.height"
             [title] = "editField.description"
-            (dataChanged)="handleChange($event)"
+            (leaveEdit)="handleChange($event)"
             >
         </edit-text-area>
         <edit-text *ngSwitchDefault 
@@ -32,7 +32,7 @@
             [width]="style.width"
             [height]="style.height"
             [title] = "editField.description"
-            (dataChanged)="handleChange($event)"
+            (leaveEdit)="handleChange($event)"
             >
         </edit-text>
     </div>
