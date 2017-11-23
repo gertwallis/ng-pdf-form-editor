@@ -160,19 +160,27 @@ export namespace Edit {
             }
 
             if (rootTabOrder) {
-                for (const tabOrder of groupTabOrder) {
-                    for (const rootOrder of rootTabOrder) {
-                        if (rootOrder > groupTabOrder[0]) {
-                            const index = rootTabOrder.indexOf(rootOrder);
-                            this.tabs.concat(rootTabOrder.splice(0, index));
-                            this.tabs.concat(groupTabOrder);
-                            break;
+                for (const groupOrder of groupTabOrder) {
+                    if (rootTabOrder.length > 0) {
+                        if (rootTabOrder[rootTabOrder.length - 1] < groupOrder[0]) {
+                            // all of the root calues greater than the first group element
+                            this.tabs = this.tabs.concat(rootTabOrder);
+                            rootTabOrder = [];
+                        } else {
+                            for (const rootOrder of rootTabOrder) {
+                                if (rootOrder > groupOrder[0]) {
+                                    const index = rootTabOrder.indexOf(rootOrder);
+                                    this.tabs = this.tabs.concat(rootTabOrder.splice(0, index));
+                                    break;
+                                }
+                            }
                         }
                     }
-                    this.tabs = this.tabs.concat(tabOrder);
+                    this.tabs = this.tabs.concat(groupOrder);
                 }
-            }
-            else {
+
+                this.tabs = this.tabs.concat(rootTabOrder);
+            } else {
                 for (const tabOrder of groupTabOrder) {
                     this.tabs = this.tabs.concat(tabOrder);
                 }
@@ -191,7 +199,6 @@ export namespace Edit {
 
             return 0;
         }
-
     }
 
     export class Document extends Base.Document {
