@@ -1507,7 +1507,7 @@
         {
           "height": 148.0,
           "name": "TitleRegistration",
-          // "groupName": "Titles",
+          "groupName": "Titles",
           "tabOrder": 0,
           "width": 125.0,
           "left": 2380.0,
@@ -1516,7 +1516,7 @@
         {
           "height": 148.0,
           "name": "DocVesselDecalOnly",
-          // "groupName": "Titles",
+          "groupName": "Titles",
           "tabOrder": 4,
           "width": 125.0,
           "left": 3811.0,
