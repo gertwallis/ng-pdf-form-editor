@@ -8,6 +8,9 @@ import { PDF } from './model/PDF';
 import { Edit } from './model/Edit';
 import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
+// model
+import { UI } from './model/UI';
+
 @Component({
   selector: 'edit-form',
   templateUrl: './edit-pdf.component.html',
@@ -18,6 +21,12 @@ export class PdfEditComponent implements OnChanges {
   @Input() documentId: string;
 
   private editDocument: Edit.Document;
+  private preferences: UI.Preferences;
+
+  constructor(private pdfService: PdfService) {
+    this.preferences = new UI.Preferences();
+  }
+
 
   setDocument(pdfDocument: PDF.Document) {
 
@@ -27,6 +36,7 @@ export class PdfEditComponent implements OnChanges {
     formDocument.id = pdfDocument.id;
     formDocument.pdfBytes = pdfDocument.pdfBytes;
     formDocument.title = pdfDocument.title;
+    formDocument.noOfPages = pdfDocument.noOfPages;
     formDocument.url = pdfDocument.url;
     formDocument.pageSize = pdfDocument.pageSize;
 
@@ -90,8 +100,6 @@ export class PdfEditComponent implements OnChanges {
 
     return undefined;
   }
-
-  constructor(private pdfService: PdfService) { }
 
   private loadDocument(documentId: string) {
     if (documentId) {

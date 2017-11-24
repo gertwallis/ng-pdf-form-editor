@@ -57,6 +57,7 @@ export namespace Base {
         title: string;
         description: string;
         url?: string;
+        noOfPages: number;
         pdfBytes?: string;
         pageSize?: FixedSize;
     }

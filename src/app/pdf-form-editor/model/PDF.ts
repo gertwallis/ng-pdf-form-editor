@@ -24,7 +24,6 @@ export namespace PDF {
         pages: Page[] = [];
         fields: Field[] = [];
         data: Base.DataValue[] = [];
-        noOfPages: number;
     }
 
     export class DocumentId {

@@ -187,7 +187,7 @@ export namespace Edit {
             }
         }
 
-        // Sort an array based on the first value of the array. 
+        // Sort an array based on the first value of the array.
         compareArray(a: number[], b: number[]) {
             if (a[0] < b[0]) {
                 return -1;
@@ -204,6 +204,9 @@ export namespace Edit {
     export class Document extends Base.Document {
         pages: Page[] = [];
 
+        // noOfPages(): number {
+        //   return this.pages.length;
+        // }
         addPage(page: Page) {
             page.initialize();
             this.pages.push(page);

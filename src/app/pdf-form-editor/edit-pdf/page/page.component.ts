@@ -50,14 +50,14 @@ export class EditPageComponent implements OnInit, OnDestroy {
       const nextTabIndex = this.getNextTabIndex(field.tabIndex, field.direction);
       // console.log('PAGE: Move from [' + field.tabIndex + '] to [' + nextTabIndex + ']');
       this.groupViews.forEach(group => {
-        group.fieldViews.forEach(field => {
-          if (field.tabIndex === nextTabIndex) {
+        group.fieldViews.forEach(groupField => {
+          if (groupField.tabIndex === nextTabIndex) {
             // console.log('PAGE: Ativating ' + field.tabIndex + ' ' + field.editField.name);
-            field.activate();
+            groupField.activate();
           } else {
-            if (field.active) {
+            if (groupField.active) {
               // console.log('PAGE: Deactivating ' + field.tabIndex + ' ' + field.editField.name);
-              field.deActivate();
+              groupField.deActivate();
             }
           }
         });
@@ -89,6 +89,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
     return this.editPage.tabs[index];
 
   }
+
   setScale(size: UI.Size, scale: UI.Scale) {
 
     // this.size = size;
