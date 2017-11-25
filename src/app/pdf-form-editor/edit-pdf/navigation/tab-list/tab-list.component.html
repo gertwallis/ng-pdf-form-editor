@@ -1,0 +1,11 @@
+<!-- <ul class="nav nav-tabs">
+  <li *ngFor="let pageNo of pageNos" (click)="selectPage(pageNo)" [class.active]="true">
+    <a href="#">{{pageNo}}</a>
+  </li>
+</ul> -->
+
+<ul class="nav nav-tabs">
+  <li *ngFor="let tab of tabs" (click)="goToPage(tab.pageNo)" [class.active]="true">
+    <a href="#">{{tab.pageNo}}</a>
+  </li>
+</ul>

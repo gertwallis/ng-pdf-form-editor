@@ -29,10 +29,13 @@ export class DisplayPdfComponent {
     constructor() {
     }
 
+    zoomIn(newZoom: number): void {
+        this.zoom = newZoom;
+    }
+
     setSource(url: string) {
         this.pdfSrc = url;
     }
-
 
     goToPage(pageNumber) {
         this.page = pageNumber;
@@ -45,6 +48,7 @@ export class DisplayPdfComponent {
         return 0;
     }
 
+    /*
     incrementPage(amount: number) {
         this.page += amount;
     }
@@ -52,10 +56,11 @@ export class DisplayPdfComponent {
     incrementZoom(amount: number) {
         this.zoom += amount;
     }
-
+  
     rotate(angle: number) {
         this.rotation += angle;
     }
+    */
 
     pageChanged() {
         const pageElement = document.getElementsByClassName('page');
@@ -71,14 +76,14 @@ export class DisplayPdfComponent {
         size.height = element.clientHeight;
 
         this.scaleChange.emit(size);
-
     }
+
     private afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
         // Hate introducing delays, but we can't continue until the underlying pdf
         // viewer has finished drawing the pdf.
         setTimeout(() => {
-                this.pageChanged();
-          }, 150);
+            this.pageChanged();
+        }, 150);
     }
 }

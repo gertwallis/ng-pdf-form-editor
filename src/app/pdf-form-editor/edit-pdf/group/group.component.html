@@ -1,7 +1,7 @@
 <!-- <div [ngStyle]="locationStyle" [formFieldStyle]="color" [tabindex]="formField.location.tabOrder" (focus)="gotFocus()" (blur)="lostFocus()"> -->
 <div [ngStyle]="locationStyle" >
-    <edit-field *ngFor="let editField of editGroup.fields" 
-        [editField]="editField" 
+    <edit-field *ngFor="let model of editGroup.fields" 
+        [model]="model" 
         [class.active]="editGroup.active"
    >
     </edit-field>

@@ -40,9 +40,8 @@ export namespace UI {
         tabIndex: number;
     }
 
-    export class FieldChanged {
-        updatedValue: string;
-        valid: boolean;
+    export class FieldEdited {
+        value: string;
     }
 
     export enum MessageLevel {

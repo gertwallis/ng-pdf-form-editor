@@ -1,3 +1,11 @@
 <div *ngIf="editDocument != null" class="pdfeditor">
-    <edit-navigation [editDocument]="editDocument"></edit-navigation>
+    <div class="panel with-nav-tabs panel-default">
+        <div class="panel-heading">
+            <edit-navigation [editDocument]="editDocument" [noOfPages]="editDocument.pages.length" [preferences]="preferences"></edit-navigation>
+        </div>
+        <div class="panel-body">
+            <edit-pages [editDocument]="editDocument">
+            </edit-pages>
+        </div>
+    </div>
 </div>

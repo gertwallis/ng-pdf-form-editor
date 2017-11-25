@@ -36,6 +36,7 @@ export namespace Base {
         format: Format;
         maxChar: number;
         groupName: string;
+        required: false;
     }
 
     export class DataValue {
@@ -56,6 +57,7 @@ export namespace Base {
         title: string;
         description: string;
         url?: string;
+        noOfPages: number;
         pdfBytes?: string;
         pageSize?: FixedSize;
     }

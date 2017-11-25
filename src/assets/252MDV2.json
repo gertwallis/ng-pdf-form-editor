@@ -211,6 +211,7 @@
       "description": "This field shows the dollar amount that was secured by the first lien.  Enter the dollar amount without commas, (e.g. \"25000\").",
       "format": 6,
       "hidden": false,
+      "required": true,
       "label": "Enter the amount secured by the first lien.",
       "maxChar": 0,
       "name": "Lien1Amount",
@@ -292,6 +293,7 @@
       "description": "This field shows the social security number for the first owner.",
       "format": 11,
       "hidden": false,
+      "required": true,
       "label": "Enter the social security number for the first owner.",
       "maxChar": 0,
       "name": "Owner1SocialSecurityNumber",
@@ -984,6 +986,14 @@
   ],
   "data": [
     {
+      "name": "",
+      "value": ""
+    },
+    {
+      "name": "Owner1Male",
+      "value": ""
+    },
+    {
       "name": "DecalFee",
       "value": "999.99"
     },
@@ -993,11 +1003,11 @@
     },
     {
       "name": "DocVesselDecalOnly",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "DocVesselTaxPymtOnly",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "Engine1MakeManufacturer",
@@ -1013,11 +1023,11 @@
     },
     {
       "name": "ExciseTaxAmount",
-      "value": "999.99"
+      "value": "99.a"
     },
     {
       "name": "FilingFee",
-      "value": "999.99"
+      "value": "7.99"
     },
     {
       "name": "HullIdentificationNumber",
@@ -1025,27 +1035,27 @@
     },
     {
       "name": "HullMaterialAluminum",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "HullMaterialFiberglass",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "HullMaterialFlexFabric",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "HullMaterialOther",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "HullMaterialSteel",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "HullMaterialWood",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "Interest",
@@ -1053,15 +1063,11 @@
     },
     {
       "name": "LengthFeet",
-      "value": "456"
+      "value": "456ft"
     },
     {
       "name": "LengthInches",
       "value": "456"
-    },
-    {
-      "name": "Lien1Amount",
-      "value": "999.99"
     },
     {
       "name": "NetExciseTaxAmount",
@@ -1101,27 +1107,27 @@
     },
     {
       "name": "PropulsionTypeInboard",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "PropulsionTypeInboardOutboard",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "PropulsionTypeOther",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "PropulsionTypeOutboard",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "PropulsionTypeSailInboard",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "PropulsionTypeSailOutboard",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "PurchasePriceVessel",
@@ -1133,7 +1139,7 @@
     },
     {
       "name": "RegistrationRenewal",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "TaxCredit",
@@ -1141,7 +1147,7 @@
     },
     {
       "name": "TaxPaymentDecal",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "TitleFee",
@@ -1149,11 +1155,11 @@
     },
     {
       "name": "TitleOnly",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "TitleRegistration",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "TotalFees",
@@ -1165,7 +1171,7 @@
     },
     {
       "name": "VehicleVesselUseGovernment",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselEngineModel",
@@ -1181,7 +1187,7 @@
     },
     {
       "name": "VesselNew",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselRegistrationNumber",
@@ -1189,67 +1195,67 @@
     },
     {
       "name": "VesselTrailered",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselTypeCabin",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselTypeHouseboat",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselTypeInflatable",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselTypeOpen",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselTypeOther",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselTypePersonal",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUseCommercialFishing",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUseCommercialPassenger",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUsed",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUseDealer",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUseDiplomat",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUseEmergencyRescue",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUseOther",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUsePersonal",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "VesselUseRental",
-      "value": "x"
+      "value": "X"
     },
     {
       "name": "Lienholder1Address",
@@ -2131,7 +2137,7 @@
         {
           "height": 166.0,
           "name": "ExciseTaxAmount",
-          "groupName": "Amounts",
+          "groupName": "Fees",
           "tabOrder": 95,
           "width": 860.0,
           "left": 3129.0,
