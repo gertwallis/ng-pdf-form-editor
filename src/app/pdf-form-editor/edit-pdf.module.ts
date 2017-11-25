@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+// Externals 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Services
 import { PdfService } from './service/pdf.service';
@@ -20,7 +22,7 @@ import { PdfEditComponent } from './edit-pdf.component';
 // Page Navigation
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
 import { NavTabComponent } from './edit-pdf/navigation/tab/tab.component';
-import {NavTabListComponent} from './edit-pdf/navigation/tab-list/tab-list.component';
+import { NavTabListComponent } from './edit-pdf/navigation/tab-list/tab-list.component';
 // Editing
 import { EditPagesComponent } from './edit-pdf/pages/pages.component';
 import { EditPageComponent } from './edit-pdf/page/page.component';
@@ -38,6 +40,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     FormsModule,
     CommonModule,
     PdfViewerModule,
+    NgbModule.forRoot()
   ],
   providers: [
     PdfService,

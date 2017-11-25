@@ -36,9 +36,8 @@
     </button>
   </div>
 </div>
-<h1>No Of pages:{{noOfPages}}</h1>
-<edit-tab-list #tabList>
-  <edit-tab edit-tab *ngFor="let pageNo of pageNos">
-    <!-- <h1>Page No: {{pageNo}}</h1> -->
-  </edit-tab>
-</edit-tab-list>
+<ngb-tabset #tabSet (tabChange)="beforeChange($event)">
+    <ngb-tab *ngFor="let pageNo of pageNos" [id]="pageNo" [title]="pageNo">
+        <ng-template ngbTabContent></ng-template>
+      </ngb-tab>
+</ngb-tabset>

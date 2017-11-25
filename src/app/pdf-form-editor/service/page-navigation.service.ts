@@ -28,8 +28,9 @@ export class PageNavigationService {
         this.zoomSubject.next(zoom);
     }
 
-    gotoPage(page: number) {
-        this.pageSubject.next(page);
+    gotoPage(pageNo: number) {
+        console.log('SERVICE GOTOPAGE' + pageNo);
+        this.pageSubject.next(pageNo);
     }
 
     nextLock(): Observable<boolean> {

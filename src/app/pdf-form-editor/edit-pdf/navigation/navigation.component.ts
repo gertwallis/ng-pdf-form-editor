@@ -1,9 +1,11 @@
 import { AfterContentInit, Component, ContentChild, ContentChildren, Input, OnInit, QueryList, ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core/src/linker/element_ref';
 
+import { NgbTabset } from '@ng-bootstrap/ng-bootstrap';
+
 import { PageNavigationService } from './../../service/page-navigation.service';
 
-import { NavTabListComponent } from './tab-list/tab-list.component';
+// import { NavTabListComponent } from './tab-list/tab-list.component';
 
 import { Edit } from './../../model/Edit';
 import { UI } from 'app/pdf-form-editor/model/UI';
@@ -19,14 +21,16 @@ export class NavigationComponent implements OnInit, AfterContentInit {
   @Input() editDocument: Edit.Document;
   @Input() noOfPages: number;
 
-  @ViewChild('tabList') tabList: NavTabListComponent;
+  // @ViewChild('tabList') tabList: NavTabListComponent;
 
+  @ViewChild('tabSet') tabSet: NgbTabset;
 
   private lock: boolean;
   private shade: boolean;
 
   private zoom: number;
   private pageNos: number[] = [];
+  private currentPage: number;
 
   constructor(private navigationService: PageNavigationService) {
   }
@@ -36,8 +40,8 @@ export class NavigationComponent implements OnInit, AfterContentInit {
 
   movePage(direction: boolean) {
 
-    // Forwared
-    var newPageNo = this.tabList.currentPage;
+    // Forwarded
+    let newPageNo = this.currentPage;
     if (direction) {
       newPageNo++;
       if (newPageNo > this.noOfPages) {
@@ -49,8 +53,15 @@ export class NavigationComponent implements OnInit, AfterContentInit {
         newPageNo = this.noOfPages;
       }
     }
-    
-    this.tabList.goToPage(newPageNo);
+
+    this.goToPage(newPageNo);
+  }
+
+  goToPage(pageNo: number) {
+    console.log('NAV GO TO PAGE' + pageNo)
+    this.currentPage = pageNo;
+    this.navigationService.gotoPage(pageNo);
+
   }
 
   toggleLock() {
@@ -83,5 +94,12 @@ export class NavigationComponent implements OnInit, AfterContentInit {
     for (let i = 1; i <= this.noOfPages; i++) {
       this.pageNos.push(i);
     }
+  }
+
+  /// TESTING
+  beforeChange($event) {
+    console.log('BEFORECHANGE');
+    this.goToPage($event.nextId);
+    // this.tabSet.select($event.nextId);
   }
 }

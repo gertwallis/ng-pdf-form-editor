@@ -78,12 +78,14 @@ export class EditPagesComponent implements AfterContentInit, OnDestroy {
     console.log('SHADE PAGES' + shade);
   }
 
-  goToPage(pageNo: number) {
-    console.log('PAGE NO' + pageNo);
-  }
+  // goToPage(pageNo: number) {
+  //   console.log('PAGE NO' + pageNo);
+  //   this.setPage(pageNo);
+  // }
 
   zoomTo(zoomNo: number) {
     console.log('ZOOM NO' + zoomNo);
+    this.viewer.zoom = zoomNo;
   }
 
   public ngAfterContentInit(): void {
@@ -113,37 +115,37 @@ export class EditPagesComponent implements AfterContentInit, OnDestroy {
   //   this.setPage(this.currentPageNo);
   // }
 
-  setPage(no: number) {
-    this.currentPageNo = no;
-    // const TabComponent = this.tabs.filter(page => page.pageNo === this.currentPageNo);
-    const EditPageComponent = this.pageViews.filter(x => x.editPage.pageNo === this.currentPageNo);
+  goToPage(pageNo: number) {
 
-    if (/*TabComponent.length === 1 && */ EditPageComponent.length === 1) {
-      this.selectPage(/*TabComponent[0],*/ EditPageComponent[0]);
-    }
+    console.log('GO TO PAGE' + pageNo);
+    this.viewer.goToPage(pageNo);
+
+    this.currentPageNo = pageNo;
+    this.selectPage(pageNo);
   }
 
-  selectPage(/*newTab: TabComponent, */newPage: EditPageComponent) {
-    // deactivate all page tabs
-   // this.tabs.toArray().forEach(page => page.active = false);
-    this.pageViews.toArray().forEach(page => page.editPage.active = false);
+  selectPage(pageNo: number) {
 
-    // activate the tab the user has clicked on.
-    // newTab.active = true;
-    newPage.editPage.active = true;
+    this.pageViews.forEach(page => {
+      page.editPage.active = false;
+    });
 
-    this.viewer.goToPage(newPage.editPage.pageNo);
+    const newPage = this.pageViews.filter(x => x.editPage.pageNo === pageNo);
+    // activate the page the user has clicked on.
+    // newPage.first .active = true;
+    newPage[0].active = true;
   }
 
   // Emmittor function
   setScale(size: UI.Size) {
-    if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
+    // if (this.pageViews && this.currentZoom !== this.viewer.zoom)
+     {
       this.pageSize = {
         'width': size.width + 'px',
         'height': size.height + 'px',
       };
 
-      this.currentZoom = this.viewer.zoom;
+      // this.currentZoom = this.viewer.zoom;
 
       const scale = new UI.Scale();
       scale.horiz = size.width / this.editDocument.pageSize.width;
