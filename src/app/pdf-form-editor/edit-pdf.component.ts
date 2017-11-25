@@ -10,6 +10,7 @@ import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 // model
 import { UI } from './model/UI';
+import { formDirectiveProvider } from '@angular/forms/src/directives/ng_form';
 
 @Component({
   selector: 'edit-form',
@@ -23,6 +24,8 @@ export class PdfEditComponent implements OnChanges {
   private editDocument: Edit.Document;
   private preferences: UI.Preferences;
 
+  noOfPages: number;
+  
   constructor(private pdfService: PdfService) {
     this.preferences = new UI.Preferences();
   }
@@ -80,6 +83,7 @@ export class PdfEditComponent implements OnChanges {
     }
 
     this.editDocument = formDocument;
+    this.noOfPages = formDocument.noOfPages;
   }
 
   getFieldData(pdfData: PDF.Field[], dataFieldName: string): Edit.Field {

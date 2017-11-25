@@ -1,6 +1,9 @@
-import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
+import { AfterContentInit, Component, ContentChild, ContentChildren, Input, OnInit, QueryList, ViewChild } from '@angular/core';
+import { ElementRef } from '@angular/core/src/linker/element_ref';
 
 import { PageNavigationService } from './../../service/page-navigation.service';
+
+import { NavTabListComponent } from './tab-list/tab-list.component';
 
 import { Edit } from './../../model/Edit';
 import { UI } from 'app/pdf-form-editor/model/UI';
@@ -14,34 +17,39 @@ export class NavigationComponent implements OnInit, AfterContentInit {
 
   @Input() preferences: UI.Preferences;
   @Input() editDocument: Edit.Document;
+  @Input() noOfPages: number;
+
+  @ViewChild('tabList') tabList: NavTabListComponent;
+
 
   private lock: boolean;
   private shade: boolean;
-  private currentPage: number;
+  // private currentPage: number;
   private zoom: number;
+  private pageNos: number[] = [];
 
-  constructor(private navigationService:  PageNavigationService) {
+  constructor(private navigationService: PageNavigationService) {
   }
 
   ngOnInit() {
   }
 
   movePage(direction: boolean) {
-    console.log('NEXTPAGE' + direction);
+    // console.log('NEXTPAGE' + direction + ' ' + this.currentPage);
     // Forwared
     if (direction) {
-      this.currentPage++;
-      if (this.currentPage > this.editDocument.noOfPages) {
-        this.currentPage = 1;
+      this.tabList.currentPage++;
+      if (this.tabList.currentPage > this.noOfPages) {
+        this.tabList.currentPage = 1;
       }
     } else {
-      this.currentPage--;
-      if (this.currentPage === 0) {
-        this.currentPage = this.editDocument.noOfPages;
+      this.tabList.currentPage--;
+      if (this.tabList.currentPage === 0) {
+        this.tabList.currentPage = this.noOfPages;
       }
     }
 
-    this.navigationService.gotoPage(this.currentPage);
+    this.navigationService.gotoPage(this.tabList.currentPage);
   }
 
   toggleLock() {
@@ -51,7 +59,7 @@ export class NavigationComponent implements OnInit, AfterContentInit {
 
   toggleShade() {
     console.log('TOGGLESHADE');
-    this.shade = ! this.shade;
+    this.shade = !this.shade;
     this.navigationService.lock(this.shade);
   }
 
@@ -66,13 +74,24 @@ export class NavigationComponent implements OnInit, AfterContentInit {
     this.navigationService.zoomIn(this.zoom);
   }
 
-  setPage(pageNo) {
-    console.log('SETPAGE' + pageNo);
-    this.currentPage = pageNo;
-    this.navigationService.gotoPage(pageNo);
+  resetZoom() {
+    this.navigationService.zoomIn(this.preferences.defaultZoom);
   }
+
+
+  // setPage(pageNo) {
+  //   console.log('SETPAGE' + pageNo);
+  //   this.currentPage = pageNo;
+  //   this.navigationService.gotoPage(pageNo);
+  // }
 
   public ngAfterContentInit(): void {
     this.zoom = this.preferences.defaultZoom;
+
+    // this.pageNos = Array.apply(null, {length: this.noOfPages}).map(Number.call, Number)
+    for (let i = 1; i <= this.noOfPages; i++) {
+      this.pageNos.push(i);
+    }
+
   }
 }
