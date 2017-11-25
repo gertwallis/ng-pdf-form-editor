@@ -18,18 +18,20 @@ export class NavTabListComponent implements OnInit, AfterContentInit {
   constructor(private navigationService: PageNavigationService) { }
 
 
-  selectPage(newPage: NavTabComponent) {
-    // deactivate all tabs
-    this.tabs.toArray().forEach(page => page.active = false);
-
-    // activate the tab the user has clicked on.
-    newPage.active = true;
-
-    this.gotoPage(newPage.pageNo);
-  }
-
-  gotoPage (pageNo) {
+  goToPage (pageNo) {
     this.currentPage = pageNo;
+
+    // deactivate all tabs
+    this.tabs.forEach(tab => {
+      tab.active = false;
+    })
+
+    const navTab = this.tabs.find(page => page.pageNo === pageNo);
+
+    if (navTab){
+      navTab.active = true;
+    }
+
     this.navigationService.gotoPage(pageNo);
 
   }
@@ -45,6 +47,6 @@ export class NavTabListComponent implements OnInit, AfterContentInit {
       tabsArray[i].pageNo = i + 1;
     }
 
-    this.selectPage(this.tabs.first);
+    this.goToPage(1);
   }
 }

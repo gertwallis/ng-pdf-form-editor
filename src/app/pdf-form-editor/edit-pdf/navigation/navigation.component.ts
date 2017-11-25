@@ -24,7 +24,7 @@ export class NavigationComponent implements OnInit, AfterContentInit {
 
   private lock: boolean;
   private shade: boolean;
-  // private currentPage: number;
+
   private zoom: number;
   private pageNos: number[] = [];
 
@@ -35,21 +35,22 @@ export class NavigationComponent implements OnInit, AfterContentInit {
   }
 
   movePage(direction: boolean) {
-    // console.log('NEXTPAGE' + direction + ' ' + this.currentPage);
+
     // Forwared
+    var newPageNo = this.tabList.currentPage;
     if (direction) {
-      this.tabList.currentPage++;
-      if (this.tabList.currentPage > this.noOfPages) {
-        this.tabList.currentPage = 1;
+      newPageNo++;
+      if (newPageNo > this.noOfPages) {
+        newPageNo = 1;
       }
     } else {
-      this.tabList.currentPage--;
-      if (this.tabList.currentPage === 0) {
-        this.tabList.currentPage = this.noOfPages;
+      newPageNo--;
+      if (newPageNo === 0) {
+        newPageNo = this.noOfPages;
       }
     }
-
-    this.navigationService.gotoPage(this.tabList.currentPage);
+    
+    this.tabList.goToPage(newPageNo);
   }
 
   toggleLock() {
@@ -58,7 +59,6 @@ export class NavigationComponent implements OnInit, AfterContentInit {
   }
 
   toggleShade() {
-    console.log('TOGGLESHADE');
     this.shade = !this.shade;
     this.navigationService.lock(this.shade);
   }
@@ -70,7 +70,6 @@ export class NavigationComponent implements OnInit, AfterContentInit {
       this.zoom -= this.preferences.zoomIncrement;
     }
 
-    console.log('INCREMENTZOOM: ' + this.zoom);
     this.navigationService.zoomIn(this.zoom);
   }
 
@@ -78,20 +77,11 @@ export class NavigationComponent implements OnInit, AfterContentInit {
     this.navigationService.zoomIn(this.preferences.defaultZoom);
   }
 
-
-  // setPage(pageNo) {
-  //   console.log('SETPAGE' + pageNo);
-  //   this.currentPage = pageNo;
-  //   this.navigationService.gotoPage(pageNo);
-  // }
-
   public ngAfterContentInit(): void {
     this.zoom = this.preferences.defaultZoom;
 
-    // this.pageNos = Array.apply(null, {length: this.noOfPages}).map(Number.call, Number)
     for (let i = 1; i <= this.noOfPages; i++) {
       this.pageNos.push(i);
     }
-
   }
 }
