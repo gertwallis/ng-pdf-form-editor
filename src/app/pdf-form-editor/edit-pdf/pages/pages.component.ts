@@ -29,15 +29,12 @@ export class EditPagesComponent implements AfterContentInit {
   currentPageNo: number;
   editMode = false;
   currentZoom = 0;
-
+  noOfPages: number;
+  
   pageSize: {};
 
   constructor() {
     this.currentPageNo = 1;
-  }
-
-  public ngAfterContentInit(): void {
-    this.viewer.pdfSrc = this.editDocument.url;
   }
 
   nextPage() {
@@ -109,5 +106,10 @@ export class EditPagesComponent implements AfterContentInit {
         page.setScale(size, scale);
       });
     }
+  }
+
+  public ngAfterContentInit(): void {
+    this.viewer.pdfSrc = this.editDocument.url;
+    this.noOfPages = this.editDocument.pages.length;
   }
 }
