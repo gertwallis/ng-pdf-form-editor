@@ -72,6 +72,11 @@ export class DisplayPdfComponent {
 
         this.scaleChange.emit(size);
 
+        // var xxx = element.getElementsByClassName('textLayer');
+        // if (xxx) {
+        //     element.remove(xxx);
+        // }
+
     }
     private afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
