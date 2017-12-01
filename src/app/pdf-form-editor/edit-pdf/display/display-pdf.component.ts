@@ -2,8 +2,8 @@
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 // Models
-import { UI } from 'app/pdf-form-editor/model/UI';
-import { Base } from 'app/pdf-form-editor/model/Base';
+import { UI } from './../../model/UI';
+import { Base } from './../../model/Base';
 
 @Component({
     'selector': 'edit-pdf-viewer',

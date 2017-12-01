@@ -89,7 +89,6 @@ export namespace Edit {
 
             return 0;
         }
-
     }
 
     export class Page {

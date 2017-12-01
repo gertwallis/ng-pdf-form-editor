@@ -5,11 +5,10 @@ import { TabComponent } from './../tab/tab.component';
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
 import { EditPageComponent } from './../page/page.component';
 
+// Models
+import { UI } from './../../model/UI';
 import { Base } from './../../model/Base';
 import { Edit } from './../../model/Edit';
-
-// Models
-import { UI } from 'app/pdf-form-editor/model/UI';
 
 @Component({
   selector: 'edit-pages',

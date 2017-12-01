@@ -1,6 +1,6 @@
 import { AfterContentInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
-import { UI } from 'app/pdf-form-editor/model/UI';
+import { UI } from './../../../model/UI';
 
 import { Base } from './../../../model/Base';
 

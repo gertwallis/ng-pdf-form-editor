@@ -4,7 +4,7 @@ import { EditFieldComponent } from './../field/field.component';
 
 import { Base } from './../../model/Base';
 import { Edit } from './../../model/Edit';
-import { UI } from 'app/pdf-form-editor/model/UI';
+import { UI } from './../../model/UI';
 
 @Component({
   selector: 'edit-group',

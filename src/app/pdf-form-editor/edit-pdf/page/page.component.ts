@@ -2,13 +2,13 @@ import { PageSizeDirective } from '../../directives/form-size.directive';
 import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Subscription } from 'rxjs/Rx';
 
-import { FieldChangeService } from 'app/pdf-form-editor/service/field-changed.service';
+import { FieldChangeService } from './../../service/field-changed.service';
 
 import { EditGroupComponent } from './../group/group.component';
 
 // Models
 import { Edit } from './../../model/Edit';
-import { UI } from 'app/pdf-form-editor/model/UI';
+import { UI } from './../../model/UI';
 
 @Component({
   selector: 'edit-page',

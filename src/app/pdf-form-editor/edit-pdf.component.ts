@@ -1,12 +1,13 @@
 import { PdfService } from './service/pdf.service';
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
 
+// Models
 import { Base } from './model/Base';
 import { PDF } from './model/PDF';
 import { Edit } from './model/Edit';
-import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'edit-form',
@@ -17,7 +18,7 @@ export class PdfEditComponent implements OnChanges {
 
   @Input() documentId: string;
 
-  private editDocument: Edit.Document;
+  editDocument: Edit.Document;
 
   setDocument(pdfDocument: PDF.Document) {
 
@@ -93,7 +94,7 @@ export class PdfEditComponent implements OnChanges {
 
   constructor(private pdfService: PdfService) { }
 
-  private loadDocument(documentId: string) {
+  public loadDocument(documentId: string) {
     if (documentId) {
       this.pdfService.loadDocument(this.documentId)
         .subscribe(doc => this.setDocument(doc));

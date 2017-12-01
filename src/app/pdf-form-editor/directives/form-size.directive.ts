@@ -1,6 +1,6 @@
 import { Directive, ElementRef, HostBinding, Input } from '@angular/core';
 
-import { UI } from 'app/pdf-form-editor/model/UI';
+import { UI } from  './../model/UI';
 
 @Directive({
   selector: '[editPageSize]'
