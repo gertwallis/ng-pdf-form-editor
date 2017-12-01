@@ -5,8 +5,8 @@ import { MessageService } from './message.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
-import { PDF } from './../model/Pdf';
-import { UI } from './../model/UI';
+import { PDF } from './pdf-form-editor/model/Pdf';
+import { UI } from './pdf-form-editor/model/UI';
 
 
 @Injectable()
