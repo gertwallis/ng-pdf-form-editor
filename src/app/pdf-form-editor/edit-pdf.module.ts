@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 // Services
-import { PdfService } from './service/pdf.service';
+import { UpdateService } from './service/update.service';
 import { FieldChangeService } from './service/field-changed.service';
 
 // Directives
@@ -39,7 +39,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     PdfViewerModule,
   ],
   providers: [
-    PdfService,
+    UpdateService,
     FieldChangeService
   ],
   exports: [

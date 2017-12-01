@@ -1,4 +1,4 @@
-import { PdfService } from './pdf-form-editor/service/pdf.service';
+import { PdfService } from './pdf-load.service';
 import { Component } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 

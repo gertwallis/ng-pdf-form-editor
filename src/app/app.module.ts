@@ -10,8 +10,8 @@ import { PdfEditModule } from './pdf-form-editor/edit-pdf.module';
 import { PdfEditComponent } from './pdf-form-editor/edit-pdf.component';
 import { MessagesComponent } from './messages/messages.component';
 
-import { MessageService } from './pdf-form-editor/service/message.service';
-import { PdfService } from './pdf-form-editor/service/pdf.service';
+import { MessageService } from './message.service';
+import { PdfService } from './pdf-load.service';
 
 @NgModule({
   declarations: [

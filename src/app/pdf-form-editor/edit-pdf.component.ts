@@ -1,8 +1,10 @@
-import { PdfService } from './service/pdf.service';
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
+
+import { UpdateService } from './service/update.service';
+
 
 // Models
 import { Base } from './model/Base';
@@ -16,13 +18,14 @@ import { Edit } from './model/Edit';
 })
 export class PdfEditComponent implements OnChanges {
 
-  @Input() documentId: string;
+  // @Input() documentId: string;
 
-  editDocument: Edit.Document;
+  @Input() editDocument: Edit.Document;
 
   setDocument(pdfDocument: PDF.Document) {
 
     // Copy the PDF document into the Form document.
+    /*
     const formDocument = new Edit.Document();
     formDocument.description = pdfDocument.description;
     formDocument.id = pdfDocument.id;
@@ -71,6 +74,7 @@ export class PdfEditComponent implements OnChanges {
     }
 
     this.editDocument = formDocument;
+    */
   }
 
   getFieldData(pdfData: PDF.Field[], dataFieldName: string): Edit.Field {
@@ -92,16 +96,16 @@ export class PdfEditComponent implements OnChanges {
     return undefined;
   }
 
-  constructor(private pdfService: PdfService) { }
+  constructor(private updateService: UpdateService) { }
 
-  public loadDocument(documentId: string) {
-    if (documentId) {
-      this.pdfService.loadDocument(this.documentId)
-        .subscribe(doc => this.setDocument(doc));
-    }
-  }
+  // public loadDocument(documentId: string) {
+  //   if (documentId) {
+  //     this.pdfService.loadDocument(this.documentId)
+  //       .subscribe(doc => this.setDocument(doc));
+  //   }
+  // }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.loadDocument(this.documentId);
+  //  this.loadDocument(this.documentId);
   }
 }
