@@ -9,7 +9,7 @@ import { Edit } from './../../model/Edit';
 })
 export class NavigationComponent implements OnInit {
 
-  @Input() editDocument: Edit.Document;
+  @Input() documentModel: Edit.Document;
 
   constructor() {
   }

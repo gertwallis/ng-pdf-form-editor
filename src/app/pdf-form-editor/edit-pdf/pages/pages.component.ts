@@ -17,7 +17,7 @@ import { Edit } from './../../model/Edit';
 })
 export class EditPagesComponent implements AfterContentInit {
 
-  @Input() editDocument: Edit.Document = null;
+  @Input() documentModel: Edit.Document = null;
   @Input() locked = true; // Make values already entered unchangable.
   @Input() shade = true; // Make background 50% transparent to highlight fields.
   
@@ -38,7 +38,7 @@ export class EditPagesComponent implements AfterContentInit {
 
   nextPage() {
     this.viewer.incrementPage(1);
-    this.currentPageNo = (this.currentPageNo === this.editDocument.pages.length) ? 1 : this.currentPageNo + 1;
+    this.currentPageNo = (this.currentPageNo === this.documentModel.pages.length) ? 1 : this.currentPageNo + 1;
     this.setPage(this.currentPageNo);
   }
 
@@ -52,7 +52,7 @@ export class EditPagesComponent implements AfterContentInit {
 
   previousPage() {
     this.viewer.incrementPage(-1);
-    this.currentPageNo = (this.currentPageNo === 1) ? this.editDocument.pages.length : this.currentPageNo - 1;
+    this.currentPageNo = (this.currentPageNo === 1) ? this.documentModel.pages.length : this.currentPageNo - 1;
     this.setPage(this.currentPageNo);
   }
 
@@ -98,8 +98,8 @@ export class EditPagesComponent implements AfterContentInit {
       this.currentZoom = this.viewer.zoom;
 
       const scale = new UI.Scale();
-      scale.horiz = size.width / this.editDocument.pageSize.width;
-      scale.vertical = size.height / this.editDocument.pageSize.height;
+      scale.horiz = size.width / this.documentModel.pageSize.width;
+      scale.vertical = size.height / this.documentModel.pageSize.height;
 
       this.pageViews.forEach(page => {
         page.setScale(size, scale);
@@ -108,7 +108,7 @@ export class EditPagesComponent implements AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
-    this.viewer.pdfSrc = this.editDocument.url;
-    this.noOfPages = this.editDocument.pages.length;
+    this.viewer.pdfSrc = this.documentModel.url;
+    this.noOfPages = this.documentModel.pages.length;
   }
 }

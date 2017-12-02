@@ -16,11 +16,11 @@ import { Edit } from './model/Edit';
   templateUrl: './edit-pdf.component.html',
   styleUrls: ['./edit-pdf.component.css']
 })
-export class PdfEditComponent implements OnChanges {
+export class PdfEditComponent {
 
   // @Input() documentId: string;
 
-  @Input() documentModel: Edit.Document;
+  @Input() documentModel: string;
 
 //  setDocument(pdfDocument: PDF.Document) {
 
@@ -73,32 +73,28 @@ export class PdfEditComponent implements OnChanges {
       formDocument.addPage(formPage);
     }
 
-    this.editDocument = formDocument;
+    this.documentModel = formDocument;
     */
 //  }
 
-  getFieldData(pdfData: PDF.Field[], dataFieldName: string): Edit.Field {
-    const fields = pdfData.filter(x => x.name === dataFieldName);
+  // getFieldData(pdfData: PDF.Field[], dataFieldName: string): Edit.Field {
+  //   const fields = pdfData.filter(x => x.name === dataFieldName);
 
-    // Expecting to find only one but if more - return first.
-    if (fields.length > 0 && !fields[0].hidden) {
-      const formField = new Edit.Field();
-      formField.description = fields[0].description;
-      formField.format = fields[0].format;
-      formField.label = fields[0].label;
-      formField.maxChar = fields[0].maxChar;
-      formField.name = fields[0].name;
-      formField.required = fields[0].required;
+  //   // Expecting to find only one but if more - return first.
+  //   if (fields.length > 0 && !fields[0].hidden) {
+  //     const formField = new Edit.Field();
+  //     formField.description = fields[0].description;
+  //     formField.format = fields[0].format;
+  //     formField.label = fields[0].label;
+  //     formField.maxChar = fields[0].maxChar;
+  //     formField.name = fields[0].name;
+  //     formField.required = fields[0].required;
 
-      return formField;
-    }
+  //     return formField;
+  //   }
 
-    return undefined;
-  }
+  //   return undefined;
+  // }
 
-  constructor(private updateService: UpdateService) { }
-
-  ngOnChanges(changes: SimpleChanges): void {
-  //  this.loadDocument(this.documentId);
-  }
+  constructor() { }
 }

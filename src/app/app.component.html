@@ -6,6 +6,6 @@ Select document:
   <option *ngFor="let document of documentList"  [value]="document.id">{{document.id}}:  {{document.name}} [{{document.noOfPages}}]:</option>
 </select> 
 
-<edit-form *ngIf="documentModel === null" [documentModel]="documentModel"></edit-form>
+<edit-form [documentModel]="documentModel"></edit-form>
 
 <app-messages></app-messages>

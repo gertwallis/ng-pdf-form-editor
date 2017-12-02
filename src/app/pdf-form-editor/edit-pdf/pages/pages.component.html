@@ -47,7 +47,7 @@
   <div class="panel-body">
     <div class="tab-content">
       <div class="editView">
-        <edit-page  *ngFor="let page of editDocument.pages" 
+        <edit-page  *ngFor="let page of documentModel.pages" 
           [editPage]="page" 
           [class.active]="false"
           ></edit-page>
