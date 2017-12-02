@@ -2,10 +2,10 @@
   {{title}}
 </h1>
 Select document: 
-<select [(ngModel)]="documentId">     
-  <option *ngFor="let document of documentList" [value]="document.id">{{document.id}}:  {{document.name}} [{{document.noOfPages}}]:</option>
+<select [(ngModel)]="documentId" (change)="selectchange($event)">     
+  <option *ngFor="let document of documentList"  [value]="document.id">{{document.id}}:  {{document.name}} [{{document.noOfPages}}]:</option>
 </select> 
 
-<edit-form *ngIf="documentId" [documentId]="documentId"></edit-form>
+<edit-form *ngIf="documentModel === null" [documentModel]="documentModel"></edit-form>
 
 <app-messages></app-messages>

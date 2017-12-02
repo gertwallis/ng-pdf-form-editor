@@ -20,9 +20,9 @@ export class PdfEditComponent implements OnChanges {
 
   // @Input() documentId: string;
 
-  @Input() editDocument: Edit.Document;
+  @Input() documentModel: Edit.Document;
 
-  setDocument(pdfDocument: PDF.Document) {
+//  setDocument(pdfDocument: PDF.Document) {
 
     // Copy the PDF document into the Form document.
     /*
@@ -75,7 +75,7 @@ export class PdfEditComponent implements OnChanges {
 
     this.editDocument = formDocument;
     */
-  }
+//  }
 
   getFieldData(pdfData: PDF.Field[], dataFieldName: string): Edit.Field {
     const fields = pdfData.filter(x => x.name === dataFieldName);
@@ -97,13 +97,6 @@ export class PdfEditComponent implements OnChanges {
   }
 
   constructor(private updateService: UpdateService) { }
-
-  // public loadDocument(documentId: string) {
-  //   if (documentId) {
-  //     this.pdfService.loadDocument(this.documentId)
-  //       .subscribe(doc => this.setDocument(doc));
-  //   }
-  // }
 
   ngOnChanges(changes: SimpleChanges): void {
   //  this.loadDocument(this.documentId);

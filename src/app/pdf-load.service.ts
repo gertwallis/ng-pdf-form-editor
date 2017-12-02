@@ -5,6 +5,7 @@ import { MessageService } from './message.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
+import { Edit } from './pdf-form-editor/model/Edit';
 import { PDF } from './pdf-form-editor/model/Pdf';
 import { UI } from './pdf-form-editor/model/UI';
 
@@ -17,11 +18,11 @@ export class PdfService {
   constructor(private http: Http, private messageService: MessageService) {
   }
 
-  loadDocument(documentId: string): Observable<PDF.Document> {
+  loadDocument(documentId: string): Observable<Edit.Document> {
 
     this.messageService.add(UI.MessageLevel.info, 'Loading ' + documentId);
     return this.http.get(this.pdfUrl + documentId + '.json')
-      .map((response: Response) => <PDF.Document>response.json())
+      .map((response: Response) => <Edit.Document>response.json())
       .do(data =>
         this.messageService.add(UI.MessageLevel.success, 'Completed ' + documentId)
       // console.log(JSON.stringify(data))

@@ -1,8 +1,11 @@
+import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 import { PdfService } from './pdf-load.service';
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 import { PDF } from './pdf-form-editor/model/PDF';
+
+import { Edit } from './pdf-form-editor/model/Edit';
 
 @Component({
   selector: 'pdf-form',
@@ -13,18 +16,34 @@ export class AppComponent {
   title = 'Pdf EDITOR!';
 
   documentList: PDF.DocumentList ;
+  documentModel: Edit.Document;
   documentId: string;
 
   constructor(private pdfService: PdfService) { }
 
-  setDocument(list: PDF.DocumentList) {
-    this.documentList = list;
+  setDocument(document: Edit.Document) {
+    this.documentModel = document;
+  }
+
+  setDocumentList(documentList: PDF.DocumentList) {
+    this.documentList = documentList;
+  }
+
+   public loadDocument(documentId: string) {
+    if (documentId) {
+      this.pdfService.loadDocument(documentId)
+        .subscribe(doc => this.setDocument(doc));
+    }
+  }
+
+  selectchange($event) {
+    this.loadDocument($event.target.value);
   }
 
   ngOnInit() {
     this.pdfService.getDocumentList('SampleDocuments')
       .subscribe(docList =>
-        this.setDocument(docList));
+        this.setDocumentList(docList));
   }
 }
 
