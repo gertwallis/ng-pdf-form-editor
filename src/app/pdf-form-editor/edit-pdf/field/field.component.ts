@@ -131,10 +131,15 @@ export class EditFieldComponent implements AfterContentInit {
         }
       }
 
-      if (!this.validateRegEx) {
-        console.log('hi');
+      if (this.validateRegEx) {
+        return this.validateRegEx.test(this.model.value);
+      } else {
+        // Don't have a valid regular expression for this field ??
+        // Should try to have regexes for all field types  - maybe not for alphanumeric,
+        // but want to trap invalid ones for the time being. 
+        console.log('Don\'t have valid regular expression pattern for field: ' + this.model.format);
+        return true;
       }
-      return this.validateRegEx.test(this.model.value);
     }
   }
 
@@ -238,7 +243,7 @@ export class EditFieldComponent implements AfterContentInit {
     this.setStyle();
 
     // Notify the service that field has changed
-    this.updateService.changedField(updateEvent);
+    this.updateService.editedField(updateEvent);
 
     // console.log('Updated: ' + this.model.name + ' (' + updateEvent.valid + ') ' + updateEvent.value);
   }

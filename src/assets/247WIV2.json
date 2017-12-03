@@ -155,7 +155,7 @@
                 "groupName": null,
                 "height": 153,
                 "left": 439,
-                "name": "L_GNL_MISC_SIGN_eSignatureOwner1",
+                "name": "L_GNL_MISC_SIGN_eSignature",
                 "tabOrder": 86,
                 "top": 10294,
                 "width": 2599
@@ -165,7 +165,7 @@
               "hidden": true,
               "label": "Used for Digital Signature.",
               "maxChar": 0,
-              "name": "L_GNL_MISC_SIGN_eSignatureOwner1",
+              "name": "L_GNL_MISC_SIGN_eSignature",
               "state": 0,
               "value": null
             },
@@ -174,7 +174,7 @@
                 "groupName": null,
                 "height": 153,
                 "left": 4502,
-                "name": "L_GNL_MISC_SIGN_eSignatureOwner2",
+                "name": "L_GNL_MISC_SIGN_eSignature",
                 "tabOrder": 87,
                 "top": 10294,
                 "width": 2599
@@ -184,7 +184,7 @@
               "hidden": true,
               "label": "Used for Digital Signature.",
               "maxChar": 0,
-              "name": "L_GNL_MISC_SIGN_eSignatureOwner2",
+              "name": "L_GNL_MISC_SIGN_eSignature",
               "state": 0,
               "value": null
             },
@@ -1729,7 +1729,7 @@
                 "groupName": null,
                 "height": 138,
                 "left": 5889,
-                "name": "L_GNL_MISC_SIGN_eSignatureGuardianorParent",
+                "name": "L_GNL_MISC_SIGN_eSignature",
                 "tabOrder": 88,
                 "top": 604,
                 "width": 2286
@@ -1739,7 +1739,7 @@
               "hidden": true,
               "label": "Used for Digital Signature.",
               "maxChar": 0,
-              "name": "L_GNL_MISC_SIGN_eSignatureGuardianorParent",
+              "name": "L_GNL_MISC_SIGN_eSignature",
               "state": 0,
               "value": null
             },
@@ -1748,7 +1748,7 @@
                 "groupName": null,
                 "height": 155,
                 "left": 5889,
-                "name": "L_GNL_MISC_SIGN_eSignatureNotary1a",
+                "name": "L_GNL_MISC_SIGN_eSignature",
                 "tabOrder": 92,
                 "top": 849,
                 "width": 2286
@@ -1758,7 +1758,7 @@
               "hidden": true,
               "label": "Used for Digital Signature.",
               "maxChar": 0,
-              "name": "L_GNL_MISC_SIGN_eSignatureNotary1a",
+              "name": "L_GNL_MISC_SIGN_eSignature",
               "state": 0,
               "value": null
             },

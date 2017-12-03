@@ -40,7 +40,7 @@ export class DocumentService {
   }
 
   update(id: string, name: string, value: string) {
-
+    console.log('Updated Field  [' + id + ']:' + name + ' = ' + value);
   }
 }
 

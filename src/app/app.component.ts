@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
   constructor(private DocumentService: DocumentService) { }
 
   setDocument(document: Edit.Document) {
+    document.pages[0].active = true;
     this.documentModel = document;
   }
 
@@ -41,10 +42,9 @@ export class AppComponent implements OnInit {
     this.loadDocument($event.target.value);
   }
 
-  setFieldValue(changedField: UI.FieldEdited) {
-
-    // Do something with edited values
-    console.log('Updated Field: ' + changedField.name + ' = ' + changedField.value);
+  setFieldValue(changedField: UI.FieldChanged) {
+    // Notify the service field is changed
+    this.DocumentService.update(changedField.documentId, changedField.name, changedField.value);    
   }
 
   ngOnInit() {

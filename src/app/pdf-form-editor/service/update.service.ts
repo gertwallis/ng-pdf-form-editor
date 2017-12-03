@@ -7,10 +7,10 @@ import { UI } from './../model/UI';
 @Injectable()
 export class UpdateService {
     private fieldSubject = new Subject<UI.LeaveField>();
-    private changedSubject = new Subject<UI.FieldEdited>();
+    private editedSubject = new Subject<UI.FieldEdited>();
 
     FieldState = this.fieldSubject.asObservable();
-    FieldChanged = this.changedSubject.asObservable();
+    FieldEdited = this.editedSubject.asObservable();
 
     exitField(field: UI.LeaveField) {
         this.fieldSubject.next(field);
@@ -20,8 +20,8 @@ export class UpdateService {
         return this.fieldSubject.asObservable();
     }
 
-    changedField(field: UI.FieldEdited) {
-        this.changedSubject.next(field);
+    editedField(field: UI.FieldEdited) {
+        this.editedSubject.next(field);
     }
 
 }

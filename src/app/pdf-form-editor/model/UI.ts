@@ -45,6 +45,12 @@ export namespace UI {
         value: string;
     }
 
+    export class FieldChanged {
+        documentId: string;
+        name: string;
+        value: string;
+    }
+
     export enum MessageLevel {
         success = 0,
         info = 1,
