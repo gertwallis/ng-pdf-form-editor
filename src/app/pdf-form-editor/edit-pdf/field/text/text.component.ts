@@ -21,6 +21,7 @@ export class EditTextComponent {
   @Output() leaveEdit = new EventEmitter<UI.FieldEdited>();
 
   maxLength: number;
+  onFocusValue: string;
 
   @ViewChild('inputHtml') childEditField: ElementRef;
 
@@ -33,18 +34,23 @@ export class EditTextComponent {
       this.childEditField.nativeElement.focus();
       this.childEditField.nativeElement.select();
     }, 200);
+
+    this.onFocusValue = this.value;
   }
 
 
   blurredHandler() {
     // console.log('BLURRED:' + this.name + ': ' + this.value + ' : ' + validation);
 
-    // Notify if the value has chaned during this session.
-    const changed: UI.FieldEdited = {
-      value: this.value
-    };
+    if (this.onFocusValue !== this.value) {
+      // Notify if the value has changed during this session.
+      const changed: UI.FieldEdited = {
+        name: this.name,
+        value: this.value
+      };
 
-    this.leaveEdit.emit(changed);
+      this.leaveEdit.emit(changed);
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { UI } from './pdf-form-editor/model/UI';
+import { UI } from './../pdf-form-editor/model/UI';
 
 @Injectable()
 export class MessageService {

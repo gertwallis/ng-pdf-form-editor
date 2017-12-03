@@ -41,6 +41,7 @@ export namespace UI {
     }
 
     export class FieldEdited {
+        name: string;
         value: string;
     }
 

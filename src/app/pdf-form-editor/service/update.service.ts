@@ -1,18 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
+import { Subject } from 'rxjs/Subject';
+
+import { UI } from './../model/UI';
 
 @Injectable()
 export class UpdateService {
+    private fieldSubject = new Subject<UI.LeaveField>();
+    private changedSubject = new Subject<UI.FieldEdited>();
 
-  constructor(private http: Http, url: string) {
-  }
+    FieldState = this.fieldSubject.asObservable();
+    FieldChanged = this.changedSubject.asObservable();
 
-  update(id: string, name: string, value: string) {
+    exitField(field: UI.LeaveField) {
+        this.fieldSubject.next(field);
+    }
 
-  }
+    nextField(): Observable<UI.LeaveField> {
+        return this.fieldSubject.asObservable();
+    }
+
+    changedField(field: UI.FieldEdited) {
+        this.changedSubject.next(field);
+    }
+
 }
-
-

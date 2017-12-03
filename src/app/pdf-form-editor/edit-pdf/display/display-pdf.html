@@ -1,33 +1,3 @@
-﻿    <!-- 
-    <input type="checkbox" id="original-size" [checked]="originalSize" [(ngModel)]="originalSize" size="2">
-    <button (click)="incrementZoom(-0.1)">-</button>
-    <input [(ngModel)]="zoom" [value]="zoom" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="pdf-zoom" size="2">
-    <label for="pdf-zoom">Zoom</label>
-    <button (click)="incrementZoom(0.1)">+</button>
-    <input type="checkbox" id="stick-to-page" [checked]="stickToPage" [(ngModel)]="stickToPage">
-    <span>Stick to page</span>
-    <button (click)="incrementPage(-1)">Previous</button>
-    <input [(ngModel)]="page" [value]="page" type="number" id="pdf-page" size="2">
-    <label for="pdf-page">Page</label>
-    <span *ngIf="pdf">of {{ pdf.numPages }}</span>
-    <button (click)="incrementPage(1)" class="mdl-button mdl-js-button">Next</button>
-
-    <button (click)="rotate(-90)" class="mdl-button mdl-js-button">Rotate left</button>
-    <input [value]="rotation" class="mdl-textfield__input" type="number" disabled>
-    <label class="mdl-textfield__label" for="pdf-page">Angle</label>
-    <button (click)="rotate(90)" class="mdl-button mdl-js-button">Rotate right</button>
-
-    <input type="checkbox" id="render-text" class="mdl-switch__input" [checked]="renderText" [(ngModel)]="renderText">
-    <span>Render text layer</span>
-    -->
-
-    <pdf-viewer #pdfViewer [src]="pdfSrc" 
-        [(page)]="page" 
-        [rotation]="rotation" 
-        [original-size]="originalSize" 
-        [show-all]="showAll"
-        [zoom]="zoom" 
-        [render-text]="false"
-        (after-load-complete)="afterLoadComplete($event)" 
-        (pageChange)="pageChanged()">
-    </pdf-viewer>
+﻿<pdf-viewer #pdfViewer [src]="pdfSrc" [(page)]="page" [rotation]="rotation" [original-size]="originalSize" [show-all]="showAll"
+    [zoom]="zoom" [render-text]="false" (after-load-complete)="afterLoadComplete($event)" (pageChange)="pageChanged()">
+</pdf-viewer>

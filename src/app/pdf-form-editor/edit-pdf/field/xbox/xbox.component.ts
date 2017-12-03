@@ -23,6 +23,8 @@ export class EditXBoxComponent implements AfterContentInit {
 
   @ViewChild('inputHtml') childEditField: ElementRef;
 
+  onFocusValue: string;
+
   constructor() { }
 
   toggleValue() {
@@ -39,14 +41,19 @@ export class EditXBoxComponent implements AfterContentInit {
     setTimeout(() => {
       this.childEditField.nativeElement.focus();
     }, 200);
+
+    this.onFocusValue = this.value;
   }
 
   blurredHandler() {
-    const changed: UI.FieldEdited = {
-      value: this.value,
-    };
+    if (this.onFocusValue !== this.value) {
+      const changed: UI.FieldEdited = {
+        name: this.name,
+        value: this.value,
+      };
 
-    this.leaveEdit.emit(changed);
+      this.leaveEdit.emit(changed);
+    }
   }
 
   keyPressHandler(keyCode: KeyboardEvent) {

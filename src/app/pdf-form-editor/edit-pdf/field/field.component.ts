@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 
 // Service
-import { FieldChangeService } from '../../service/field-changed.service';
+import { UpdateService } from '../../service/update.service';
 
 import { EditTextComponent } from './text/text.component';
 import { EditTextAreaComponent } from './text-area/text-area.component';
@@ -46,7 +46,7 @@ export class EditFieldComponent implements AfterContentInit {
   validateRegEx: RegExp;
 
 
-  constructor(element: ElementRef, private moveService: FieldChangeService) {
+  constructor(element: ElementRef, private updateService: UpdateService) {
     this.style = new UI.FieldStyle();
   }
 
@@ -173,7 +173,8 @@ export class EditFieldComponent implements AfterContentInit {
     if (this.model.format === Base.Format.XBox) {
       this.editXBoxView.toggleValue();
       const changed: UI.FieldEdited = {
-        value: this.editXBoxView.value,
+        name: this.model.name,
+        value: this.editXBoxView.value
       };
       this.handleChange(changed);
     }
@@ -219,7 +220,7 @@ export class EditFieldComponent implements AfterContentInit {
       tabIndex: this.tabIndex
     };
 
-    this.moveService.exitField(field);
+    this.updateService.exitField(field);
   }
 
   handleChange(updateEvent: UI.FieldEdited) {
@@ -235,6 +236,9 @@ export class EditFieldComponent implements AfterContentInit {
     }
 
     this.setStyle();
+
+    // Notify the service that field has changed
+    this.updateService.changedField(updateEvent);
 
     // console.log('Updated: ' + this.model.name + ' (' + updateEvent.valid + ') ' + updateEvent.value);
   }

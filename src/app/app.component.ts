@@ -1,25 +1,26 @@
 import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
-import { PdfService } from './pdf-load.service';
-import { Component, SimpleChanges } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { Component, SimpleChanges, OnInit } from '@angular/core';
+// import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+
+import { DocumentService } from './services/document.service';
 
 import { PDF } from './model/PDF';
-
 import { Edit } from './pdf-form-editor/model/Edit';
+import { UI } from './pdf-form-editor/model/UI';
 
 @Component({
   selector: 'pdf-form',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Pdf EDITOR!';
 
-  documentList: PDF.DocumentList ;
+  documentList: PDF.DocumentList;
   documentModel: Edit.Document;
   documentId: string;
 
-  constructor(private pdfService: PdfService) { }
+  constructor(private DocumentService: DocumentService) { }
 
   setDocument(document: Edit.Document) {
     this.documentModel = document;
@@ -29,9 +30,9 @@ export class AppComponent {
     this.documentList = documentList;
   }
 
-   public loadDocument(documentId: string) {
+  public loadDocument(documentId: string) {
     if (documentId) {
-      this.pdfService.loadDocument(documentId)
+      this.DocumentService.loadDocument(documentId)
         .subscribe(doc => this.setDocument(doc));
     }
   }
@@ -40,12 +41,15 @@ export class AppComponent {
     this.loadDocument($event.target.value);
   }
 
+  setFieldValue(changedField: UI.FieldEdited) {
+
+    // Do something with edited values
+    console.log('Updated Field: ' + changedField.name + ' = ' + changedField.value);
+  }
+
   ngOnInit() {
-    this.pdfService.getDocumentList('SampleDocuments')
+    this.DocumentService.getDocumentList('SampleDocuments')
       .subscribe(docList =>
         this.setDocumentList(docList));
   }
 }
-
-// https://github.com/cornflourblue/angular2-communicating-between-components/blob/master/app/app.component.ts
-// https://blog.cloudboost.io/build-simple-shopping-cart-with-angular-4-observables-subject-subscription-part-2-2d3735cde5f

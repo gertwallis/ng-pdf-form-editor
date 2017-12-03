@@ -2,7 +2,7 @@ import { PageSizeDirective } from '../../directives/form-size.directive';
 import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren, AfterContentInit } from '@angular/core';
 import { Subscription } from 'rxjs/Rx';
 
-import { FieldChangeService } from './../../service/field-changed.service';
+import { UpdateService } from './../../service/update.service';
 
 import { EditGroupComponent } from './../group/group.component';
 
@@ -21,7 +21,7 @@ export class EditPageComponent implements OnInit, AfterContentInit, OnDestroy {
   @Input() editPage: Edit.Page;
 
   public tabOrder: number[] = [];
-  
+
   @ViewChildren(EditGroupComponent) groupViews: QueryList<EditGroupComponent>;
 
   fieldSubscription: Subscription;
@@ -31,7 +31,7 @@ export class EditPageComponent implements OnInit, AfterContentInit, OnDestroy {
 
   pageSize: {};
 
-  constructor(private moveService: FieldChangeService) {
+  constructor(private moveService: UpdateService) {
     this.fieldSubscription = this.moveService.FieldState
       .subscribe((state: UI.LeaveField) => {
         this.moveFromField(state);
@@ -99,21 +99,21 @@ export class EditPageComponent implements OnInit, AfterContentInit, OnDestroy {
 
     for (const group of this.editPage.groups) {
       for (const field of group.fields) {
-      this.tabOrder.push(field.location.tabOrder);
+        this.tabOrder.push(field.location.tabOrder);
+      }
     }
-  }
 
     // Need a sorted list of tab order numbers to determine next / previous tab
     this.tabOrder = this.tabOrder.sort(this.compare);
-}
+  }
 
   compare(a: number, b: number) {
     if (a < b) {
-        return -1;
+      return -1;
     }
 
     if (a > b) {
-        return 1;
+      return 1;
     }
 
     return 0;
@@ -128,7 +128,7 @@ export class EditPageComponent implements OnInit, AfterContentInit, OnDestroy {
     this.fieldSubscription.unsubscribe();
   }
 
-    public ngAfterContentInit(): void {
-      this.setTabOrder();
-    }
+  public ngAfterContentInit(): void {
+    this.setTabOrder();
+  }
 }

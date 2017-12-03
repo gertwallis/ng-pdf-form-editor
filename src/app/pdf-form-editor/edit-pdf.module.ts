@@ -6,7 +6,6 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 // Services
 import { UpdateService } from './service/update.service';
-import { FieldChangeService } from './service/field-changed.service';
 
 // Directives
 import { FieldStyleDirective } from './directives/form-fieldstyle.directive';
@@ -40,7 +39,7 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
   ],
   providers: [
     UpdateService,
-    FieldChangeService
+    UpdateService
   ],
   exports: [
     PdfEditComponent

@@ -5,12 +5,12 @@ import { MessageService } from './message.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
-import { Edit } from './pdf-form-editor/model/Edit';
-import { UI } from './pdf-form-editor/model/UI';
-import { PDF } from './model/Pdf';
+import { Edit } from './../pdf-form-editor/model/Edit';
+import { UI } from './../pdf-form-editor/model/UI';
+import { PDF } from './../model/Pdf';
 
 @Injectable()
-export class PdfService {
+export class DocumentService {
 
   private pdfUrl = '/assets/';
 
@@ -39,7 +39,7 @@ export class PdfService {
       );
   }
 
-  update(name: string, value: string) {
+  update(id: string, name: string, value: string) {
 
   }
 }
