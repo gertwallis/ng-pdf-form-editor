@@ -13,7 +13,7 @@ export class DisplayPdfComponent {
 
     @ViewChild('pdfViewer') pdfViewer: PdfViewerComponent;
 
-    @Input() public pdfSrc: string;
+    @Input() public pdfSrc: any;
     @Input() public page = 1;
     @Input() public zoom = 1.0;
 

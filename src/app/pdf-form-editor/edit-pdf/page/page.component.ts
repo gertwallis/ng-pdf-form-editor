@@ -1,5 +1,5 @@
 import { PageSizeDirective } from '../../directives/form-size.directive';
-import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren, AfterContentInit } from '@angular/core';
 import { Subscription } from 'rxjs/Rx';
 
 import { FieldChangeService } from './../../service/field-changed.service';
@@ -15,11 +15,13 @@ import { UI } from './../../model/UI';
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css'],
 })
-export class EditPageComponent implements OnInit, OnDestroy {
+export class EditPageComponent implements OnInit, AfterContentInit, OnDestroy {
 
   @Input() active: boolean;
   @Input() editPage: Edit.Page;
 
+  public tabOrder: number[] = [];
+  
   @ViewChildren(EditGroupComponent) groupViews: QueryList<EditGroupComponent>;
 
   fieldSubscription: Subscription;
@@ -34,15 +36,6 @@ export class EditPageComponent implements OnInit, OnDestroy {
       .subscribe((state: UI.LeaveField) => {
         this.moveFromField(state);
       });
-  }
-
-  ngOnInit() {
-    // this.loaderService.show();
-
-  }
-
-  ngOnDestroy() {
-    this.fieldSubscription.unsubscribe();
   }
 
   moveFromField(field: UI.LeaveField) {
@@ -66,19 +59,19 @@ export class EditPageComponent implements OnInit, OnDestroy {
   }
 
   getNextTabIndex(tabIndex, direction: UI.Direction) {
-    let index = this.editPage.tabs.indexOf(tabIndex);
+    let index = this.tabOrder.indexOf(tabIndex);
 
     switch (direction) {
       case UI.Direction.Forward:
         index++;
-        if (index >= this.editPage.tabs.length) {
+        if (index >= this.tabOrder.length) {
           index = 0;
         }
         break;
       case UI.Direction.BackWard:
         index--;
         if (index < 0) {
-          index = this.editPage.tabs.length - 1;
+          index = this.tabOrder.length - 1;
         }
         break;
       case UI.Direction.Current:
@@ -86,13 +79,11 @@ export class EditPageComponent implements OnInit, OnDestroy {
         break;
     }
 
-    return this.editPage.tabs[index];
+    return this.tabOrder[index];
 
   }
+
   setScale(size: UI.Size, scale: UI.Scale) {
-
-    // this.size = size;
-
     this.pageSize = {
       'width': size.width + 'px',
       'height': size.height + 'px',
@@ -102,4 +93,42 @@ export class EditPageComponent implements OnInit, OnDestroy {
       group.setScale(scale);
     });
   }
+
+  setTabOrder() {
+    this.tabOrder = [];
+
+    for (const group of this.editPage.groups) {
+      for (const field of group.fields) {
+      this.tabOrder.push(field.location.tabOrder);
+    }
+  }
+
+    // Need a sorted list of tab order numbers to determine next / previous tab
+    this.tabOrder = this.tabOrder.sort(this.compare);
+}
+
+  compare(a: number, b: number) {
+    if (a < b) {
+        return -1;
+    }
+
+    if (a > b) {
+        return 1;
+    }
+
+    return 0;
+  }
+
+  ngOnInit() {
+    // this.loaderService.show();
+
+  }
+
+  ngOnDestroy() {
+    this.fieldSubscription.unsubscribe();
+  }
+
+    public ngAfterContentInit(): void {
+      this.setTabOrder();
+    }
 }

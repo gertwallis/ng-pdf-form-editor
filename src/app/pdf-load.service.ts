@@ -6,9 +6,8 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 import { Edit } from './pdf-form-editor/model/Edit';
-import { PDF } from './pdf-form-editor/model/Pdf';
 import { UI } from './pdf-form-editor/model/UI';
-
+import { PDF } from './model/Pdf';
 
 @Injectable()
 export class PdfService {

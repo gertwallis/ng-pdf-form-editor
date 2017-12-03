@@ -3,7 +3,7 @@ import { PdfService } from './pdf-load.service';
 import { Component, SimpleChanges } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
-import { PDF } from './pdf-form-editor/model/PDF';
+import { PDF } from './model/PDF';
 
 import { Edit } from './pdf-form-editor/model/Edit';
 

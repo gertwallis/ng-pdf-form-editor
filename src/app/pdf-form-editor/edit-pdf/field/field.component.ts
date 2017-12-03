@@ -99,17 +99,19 @@ export class EditFieldComponent implements AfterContentInit {
 
   activate() {
     // console.log('FIELD: Ativate ' + this.tabIndex + ' ' + this.model.name);
-    this.active = true;
-    switch (this.model.format) {
-      case Base.Format.XBox:
-        this.editXBoxView.focus();
-        break;
-      case Base.Format.TextArea:
-        this.editTextAreaView.focus();
-        break;
-      default:
-        this.editTextView.focus();
-        break;
+    if (!this.active) {
+      this.active = true;
+      switch (this.model.format) {
+        case Base.Format.XBox:
+          this.editXBoxView.focus();
+          break;
+        case Base.Format.TextArea:
+          this.editTextAreaView.focus();
+          break;
+        default:
+          this.editTextView.focus();
+          break;
+      }
     }
   }
 

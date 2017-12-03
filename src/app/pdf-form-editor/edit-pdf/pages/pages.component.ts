@@ -20,7 +20,7 @@ export class EditPagesComponent implements AfterContentInit {
   @Input() documentModel: Edit.Document = null;
   @Input() locked = true; // Make values already entered unchangable.
   @Input() shade = true; // Make background 50% transparent to highlight fields.
-  
+
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChildren(EditPageComponent) pageViews: QueryList<EditPageComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
@@ -29,7 +29,7 @@ export class EditPagesComponent implements AfterContentInit {
   editMode = false;
   currentZoom = 0;
   noOfPages: number;
-  
+
   pageSize: {};
 
   constructor() {
@@ -79,17 +79,16 @@ export class EditPagesComponent implements AfterContentInit {
   }
 
   toggleLock() {
-    this.locked = ! this.locked;
+    this.locked = !this.locked;
   }
 
   toggleShade() {
-    this.shade = ! this.shade;
+    this.shade = !this.shade;
   }
 
   // Emmittor functions
   setScale(size: UI.Size) {
-    if (this.pageViews && this.currentZoom !== this.viewer.zoom)
-    {
+    if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
       this.pageSize = {
         'width': size.width + 'px',
         'height': size.height + 'px',
@@ -107,8 +106,24 @@ export class EditPagesComponent implements AfterContentInit {
     }
   }
 
+  base64ToArrayBuffer(base64) {
+    const binary_string = window.atob(base64);
+    const len = binary_string.length;
+    const bytes = new Uint8Array(len);
+    for (let i = 0; i < len; i++) {
+      bytes[i] = binary_string.charCodeAt(i);
+    }
+    return bytes.buffer;
+  }
+
   public ngAfterContentInit(): void {
-    this.viewer.pdfSrc = this.documentModel.url;
+    if (this.documentModel.pdfBytes) {
+      this.viewer.pdfSrc = this.base64ToArrayBuffer(this.documentModel.pdfBytes);
+    } else if (this.documentModel.url) {
+      this.viewer.pdfSrc = this.documentModel.url;
+    }
+
+    // this.viewer.pdfSrc = this.documentModel.url;
     this.noOfPages = this.documentModel.pages.length;
   }
 }
