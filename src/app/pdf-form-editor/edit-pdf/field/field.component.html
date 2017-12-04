@@ -1,4 +1,6 @@
-<div [ngStyle]="locationStyle" [tabindex]="tabIndex" 
+<div [ngStyle]="locationStyle"
+     [fieldState]="style.state"
+     [tabindex]="tabIndex" 
      (click)="clicked()" 
      (keydown)="keyPressHandler($event)"
      [title]="model.description"
