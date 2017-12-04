@@ -3,7 +3,6 @@ import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'edit-tab',
   templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.css']
 })
 export class TabComponent implements OnInit {
 

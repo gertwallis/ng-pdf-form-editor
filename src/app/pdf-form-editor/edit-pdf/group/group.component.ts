@@ -9,7 +9,6 @@ import { UI } from './../../model/UI';
 @Component({
   selector: 'edit-group',
   templateUrl: './group.component.html',
-  styleUrls: ['./group.component.css']
 })
 export class EditGroupComponent implements OnInit {
 

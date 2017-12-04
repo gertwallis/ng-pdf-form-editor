@@ -11,7 +11,6 @@ import { UI } from './pdf-form-editor/model/UI';
 @Component({
   selector: 'pdf-form',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title = 'Pdf EDITOR!';

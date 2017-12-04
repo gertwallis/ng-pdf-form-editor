@@ -1,10 +1,12 @@
-<div #inputHtml 
-    class="xboxstyle"
-    [tabindex]=-1 
-    [title]="title"    
-    [ngStyle]="{ 'width': width + 'px', 'height': height + 'px'}"
-    (keydown)="keyPressHandler($event)"
-    (blur)="blurredHandler()"
-    >
+<style>
+    .xboxstyle {
+        background-color: white;
+        position: relative;
+        z-index: 99
+    }
+</style>
+
+<div #inputHtml class="xboxstyle" [tabindex]=-1 [title]="title" [ngStyle]="{ 'width': width + 'px', 'height': height + 'px'}"
+    (keydown)="keyPressHandler($event)" (blur)="blurredHandler()">
     {{value}}
 </div>

@@ -26,7 +26,6 @@ import { UI } from './../..//model/UI';
 @Component({
   selector: 'edit-field',
   templateUrl: './field.component.html',
-  styleUrls: ['./field.component.css']
 })
 export class EditFieldComponent implements AfterContentInit {
 

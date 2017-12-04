@@ -15,7 +15,6 @@ import { UI } from './model/UI';
 @Component({
   selector: 'edit-form',
   templateUrl: './edit-pdf.component.html',
-  styleUrls: ['./edit-pdf.component.css']
 })
 export class PdfEditComponent {
   fieldChangeSubscription: Subscription;

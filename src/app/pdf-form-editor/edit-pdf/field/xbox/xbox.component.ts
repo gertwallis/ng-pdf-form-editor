@@ -7,8 +7,7 @@ import { Base } from './../../../model/Base';
 
 @Component({
   selector: 'edit-xbox',
-  templateUrl: './xbox.component.html',
-  styleUrls: ['./xbox.component.css']
+  templateUrl: './xbox.component.html'
 })
 export class EditXBoxComponent implements AfterContentInit {
 

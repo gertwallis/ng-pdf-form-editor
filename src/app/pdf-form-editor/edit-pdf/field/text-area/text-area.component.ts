@@ -7,7 +7,6 @@ import { Base } from './../../../model/Base';
 @Component({
   selector: 'edit-text-area',
   templateUrl: './text-area.component.html',
-  styleUrls: ['./text-area.component.css']
 })
 export class EditTextAreaComponent {
 

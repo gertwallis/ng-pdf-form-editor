@@ -1,3 +1,24 @@
+<style>
+  .panel.with-nav-tabs .panel-heading {
+    padding: 0px;
+    border-bottom: none;
+  }
+
+  .btn-toolbar {
+    padding: 5px;
+  }
+
+  .editView {
+    position: absolute;
+    z-index: 99;
+  }
+
+  .pdfView {
+    position: absolute;
+    z-index: 1;
+  }
+</style>
+
 <div class="panel with-nav-tabs panel-default">
   <div class="panel-heading">
     <div class="btn-toolbar">
@@ -15,19 +36,19 @@
       </div>
 
       <div class="btn-group pull-left" role="preferences">
-          <button type="button" (click)="toggleLock()" class="btn btn-primary btn-round">
-            Lock 
-            <span class="glyphicon glyphicon-lock"></span>
-          </button>
-          <button type="button" (click)="toggleShade()" class="btn btn-primary btn-round">
-              Shade 
-              <span class="glyphicon glyphicon-modal-window"></span>
-            </button>
-            
-      </div>  
+        <button type="button" (click)="toggleLock()" class="btn btn-primary btn-round">
+          Lock
+          <span class="glyphicon glyphicon-lock"></span>
+        </button>
+        <button type="button" (click)="toggleShade()" class="btn btn-primary btn-round">
+          Shade
+          <span class="glyphicon glyphicon-modal-window"></span>
+        </button>
+
+      </div>
 
       <div class="btn-group pull-right" role="zoom">
-        <button type="button" (click)="incrementZoom(-0.2)" class="btn btn-primary btn-round"> 
+        <button type="button" (click)="incrementZoom(-0.2)" class="btn btn-primary btn-round">
           <span class="glyphicon glyphicon-zoom-out"></span>
         </button>
         <button type="button" (click)="resetZoom()" class="btn btn-primary btn-round">
@@ -47,17 +68,11 @@
   <div class="panel-body">
     <div class="tab-content">
       <div class="editView">
-        <edit-page  *ngFor="let page of documentModel.pages" 
-          [editPage]="page" 
-          [class.active]="false"
-          ></edit-page>
+        <edit-page *ngFor="let page of documentModel.pages" [editPage]="page" [class.active]="false"></edit-page>
       </div>
       <div class="pdfView">
-        <edit-pdf-viewer #viewer 
-             [zoom]="1" 
-             [showAll]="false" 
-             (scaleChange)="setScale($event)">
-            ></edit-pdf-viewer>
+        <edit-pdf-viewer #viewer [zoom]="1" [showAll]="false" (scaleChange)="setScale($event)">
+          ></edit-pdf-viewer>
       </div>
       <div [ngStyle]="pageSize"></div>
     </div>

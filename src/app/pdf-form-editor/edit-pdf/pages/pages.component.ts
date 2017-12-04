@@ -13,7 +13,6 @@ import { Edit } from './../../model/Edit';
 @Component({
   selector: 'edit-pages',
   templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.css']
 })
 export class EditPagesComponent implements AfterContentInit {
 
