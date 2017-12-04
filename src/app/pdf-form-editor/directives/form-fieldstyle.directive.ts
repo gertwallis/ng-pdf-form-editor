@@ -1,24 +1,35 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
+import { UI } from '../model/UI';
 
 @Directive({
-  selector: '[editFieldStyle]'
+  selector: '[fieldState]'
 })
-export class FieldStyleDirective {
+export class FieldStyleDirective implements OnChanges {
+  @Input() fieldState: UI.DisplayState;
 
-  @Input('editFieldStyle') highlightColor: string;
-
-  constructor(private el: ElementRef) { }
-
-
-  @HostListener('mouseenter') onMouseEnter() {
-    // this.highlight(this.highlightColor || 'red');
+  constructor(private element: ElementRef) {
   }
 
-  @HostListener('mouseleave') onMouseLeave() {
-    // this.highlight(null);
+  ngOnChanges() {
+    switch(this.fieldState) {
+      case UI.DisplayState.Changed:
+        this.style.backgroundColor = 'lightgreen';
+        break;
+      case UI.DisplayState.Saved:
+        this.style.backgroundColor = 'white';
+        break;
+      case UI.DisplayState.NoValue:
+        this.style.backgroundColor = 'lightyellow';
+        break;
+      case UI.DisplayState.Invalid:
+        this.style.backgroundColor = 'lightpink';
+        break;
+      case UI.DisplayState.Locked:
+        this.style.display = 'none';
+    }
   }
 
-  private highlight(color: string) {
-    // this.el.nativeElement.style.backgroundColor = color;
+  private get style(): any {
+    return this.element.nativeElement.style;
   }
 }

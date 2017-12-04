@@ -60,40 +60,17 @@ export class EditFieldComponent implements AfterContentInit {
   }
 
   private setStyle() {
-
-    // TODO: Need to move all this mess to a directive
-    let backgroundColor: string;
-
-    switch (this.style.state) {
-      case UI.DisplayState.Changed:
-        backgroundColor = 'lightgreen';
-        break;
-      case UI.DisplayState.Saved:
-        backgroundColor = 'white';
-        break;
-      case UI.DisplayState.NoValue:
-        backgroundColor = 'lightyellow';
-        break;
-      case UI.DisplayState.Invalid:
-        backgroundColor = 'lightpink';
-        break;
-      case UI.DisplayState.Locked:
-        this.locationStyle = {
-          'display': 'none'
-        };
-        return;
+    if (this.style.state != UI.DisplayState.Locked) {
+      this.locationStyle = {
+        'position': 'absolute',
+        'left': this.style.left + 'px',
+        'top': this.style.top + 'px',
+        'width': this.style.width + 'px',
+        'height': this.style.height + 'px'
+        // 'z-index': '99'
+        //      'border': '1px solid green'
+      };
     }
-
-    this.locationStyle = {
-      'position': 'absolute',
-      'left': this.style.left + 'px',
-      'top': this.style.top + 'px',
-      'width': this.style.width + 'px',
-      'height': this.style.height + 'px',
-      'background-color': backgroundColor
-      // 'z-index': '99'
-      //      'border': '1px solid green'
-    };
   }
 
   activate() {
