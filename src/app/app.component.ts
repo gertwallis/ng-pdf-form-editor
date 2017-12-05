@@ -1,7 +1,4 @@
-import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
-import { Component, SimpleChanges, OnInit } from '@angular/core';
-// import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-
+import { Component, OnInit } from '@angular/core';
 import { DocumentService } from './services/document.service';
 
 import { PDF } from './model/PDF';

@@ -20,9 +20,9 @@
 </style>
 
 <div class="tab-content">
-  <!-- <div class="editView">
-        <edit-page *ngFor="let page of documentModel.pages" [editPage]="page" [class.active]="false"></edit-page>
-      </div> -->
+  <div class="editView">
+    <edit-page *ngFor="let page of documentModel.pages" [editPage]="page" [class.active]="false"></edit-page>
+  </div>
   <div class="pdfView">
     <edit-pdf-viewer #viewer [zoom]="1" [showAll]="false" (scaleChange)="setScale($event)">
       ></edit-pdf-viewer>

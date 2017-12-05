@@ -1,5 +1,14 @@
 import { DisplayPdfComponent } from './../display/display-pdf.component';
-import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList, ViewChild, ViewChildren, } from '@angular/core';
+import {
+    AfterContentInit,
+    Component,
+    ContentChildren,
+    Input,
+    OnInit,
+    QueryList,
+    ViewChild,
+    ViewChildren,
+} from '@angular/core';
 
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
 import { EditPageComponent } from './../page/page.component';
@@ -55,7 +64,7 @@ export class EditPagesComponent implements AfterContentInit {
 
   setPage(pageNo: number) {
     this.currentPageNo = pageNo;
-    this.viewer.goToPage(pageNo);
+    this.viewer.page = pageNo;
     const EditPageComponent = this.pageViews.filter(x => x.editPage.pageNo === pageNo);
 
     if ( EditPageComponent.length === 1) {

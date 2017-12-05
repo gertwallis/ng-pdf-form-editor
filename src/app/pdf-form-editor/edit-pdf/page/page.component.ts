@@ -1,5 +1,14 @@
 import { PageSizeDirective } from '../../directives/form-size.directive';
-import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren, AfterContentInit } from '@angular/core';
+import {
+    AfterContentInit,
+    ChangeDetectorRef,
+    Component,
+    Input,
+    OnDestroy,
+    OnInit,
+    QueryList,
+    ViewChildren,
+} from '@angular/core';
 import { Subscription } from 'rxjs/Rx';
 
 import { UpdateService } from './../../service/update.service';
@@ -30,12 +39,15 @@ export class EditPageComponent implements OnInit, AfterContentInit, OnDestroy {
 
   pageSize: {};
 
-  constructor(private moveService: UpdateService) {
+  constructor(private moveService: UpdateService, public changeDetection: ChangeDetectorRef) {
+    // this.changeDetection.detach();
+
     this.fieldSubscription = this.moveService.FieldState
       .subscribe((state: UI.LeaveField) => {
         this.moveFromField(state);
       });
-  }
+      
+    }
 
   moveFromField(field: UI.LeaveField) {
     if (field.tabIndex !== this.currentTabIndex) {

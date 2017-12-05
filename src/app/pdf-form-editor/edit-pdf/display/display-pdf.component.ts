@@ -1,5 +1,13 @@
 ﻿import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import {
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    EventEmitter,
+    Input,
+    Output,
+    ViewChild,
+} from '@angular/core';
 
 // Models
 import { UI } from './../../model/UI';
@@ -7,7 +15,8 @@ import { Base } from './../../model/Base';
 
 @Component({
     'selector': 'edit-pdf-viewer',
-    'templateUrl': './display-pdf.html'
+    'templateUrl': './display-pdf.html',
+    //  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DisplayPdfComponent {
 
@@ -26,7 +35,7 @@ export class DisplayPdfComponent {
 
     private pdf: PDFDocumentProxy;
 
-    constructor() {
+    constructor(public changeDetection: ChangeDetectorRef) {
     }
 
     setSource(url: string) {
@@ -35,6 +44,7 @@ export class DisplayPdfComponent {
 
 
     goToPage(pageNumber) {
+        // this.changeDetection.detach();
         this.page = pageNumber;
     }
 
@@ -72,11 +82,7 @@ export class DisplayPdfComponent {
 
         this.scaleChange.emit(size);
 
-        // var xxx = element.getElementsByClassName('textLayer');
-        // if (xxx) {
-        //     element.remove(xxx);
-        // }
-
+        this.changeDetection.detectChanges();
     }
     private afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
@@ -87,3 +93,6 @@ export class DisplayPdfComponent {
           }, 150);
     }
 }
+
+
+// https://blog.angularindepth.com/everything-you-need-to-know-about-change-detection-in-angular-8006c51d206f

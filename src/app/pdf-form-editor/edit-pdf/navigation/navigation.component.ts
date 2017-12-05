@@ -12,7 +12,7 @@ export class NavigationComponent implements OnInit {
   @Input() documentModel: Edit.Document;
 
   @ViewChild('pages') pages: EditPagesComponent;
-  
+
   selectPrevious(){
     this.pages.previousPage();
   }
