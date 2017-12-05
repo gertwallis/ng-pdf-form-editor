@@ -54,7 +54,6 @@ export class EditGroupComponent implements OnInit {
           'top': this.top + 'px',
           'width': this.width + 'px',
           'height': this.height + 'px',
-          'border': '1px solid red'
     };
   }
 }

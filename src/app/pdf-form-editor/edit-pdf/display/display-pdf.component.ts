@@ -4,6 +4,7 @@ import {
     ChangeDetectorRef,
     Component,
     EventEmitter,
+    HostBinding,
     Input,
     Output,
     ViewChild,
@@ -26,10 +27,12 @@ export class DisplayPdfComponent {
     @Input() public page = 1;
     @Input() public zoom = 1.0;
 
-    @Input() private originalSize = true;
-    @Input() private renderText = false;
-    @Input() private rotation = 0;
-    @Input() private showAll = false;
+    @HostBinding('hidden')  isHidden:boolean = false;
+  
+//    @Input() private originalSize = true;
+//    @Input() private renderText = false;
+//    @Input() private rotation = 0;
+//    @Input() private showAll = false;
 
     @Output() scaleChange = new EventEmitter<UI.Size>();
 
@@ -45,6 +48,7 @@ export class DisplayPdfComponent {
 
     goToPage(pageNumber) {
         // this.changeDetection.detach();
+        this.isHidden = true;
         this.page = pageNumber;
     }
 
@@ -63,14 +67,16 @@ export class DisplayPdfComponent {
         this.zoom += amount;
     }
 
-    rotate(angle: number) {
-        this.rotation += angle;
-    }
+    // rotate(angle: number) {
+    //     this.rotation += angle;
+    // }
 
     pageChanged() {
+
         const pageElement = document.getElementsByClassName('page');
 
         if (pageElement.length === 1) {
+            console.log('PAGE CHANGED: ' + this.page);
             this.setPageSize(pageElement[0]);
         }
     }
@@ -82,9 +88,10 @@ export class DisplayPdfComponent {
 
         this.scaleChange.emit(size);
 
-        this.changeDetection.detectChanges();
+        this.isHidden = false;
     }
     private afterLoadComplete(pdf: PDFDocumentProxy) {
+        console.log('AFTER LOAD COMPLETE: ' + this.page);
         this.pdf = pdf;
         // Hate introducing delays, but we can't continue until the underlying pdf
         // viewer has finished drawing the pdf.
