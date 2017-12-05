@@ -1,6 +1,6 @@
 import { Subscription } from 'rxjs/Rx';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
+//  import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
 

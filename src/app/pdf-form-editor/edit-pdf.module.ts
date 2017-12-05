@@ -17,7 +17,6 @@ import { PdfEditComponent } from './edit-pdf.component';
 
 // Page Navigation
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
-import { TabComponent } from './edit-pdf/tab/tab.component';
 
 // Editing
 import { EditPagesComponent } from './edit-pdf/pages/pages.component';
@@ -48,7 +47,6 @@ import { DisplayPdfComponent } from './edit-pdf/display/display-pdf.component';
     NavigationComponent,
     EditPageComponent,
     EditPagesComponent,
-    TabComponent,
     PdfEditComponent,
     EditGroupComponent,
     EditFieldComponent,

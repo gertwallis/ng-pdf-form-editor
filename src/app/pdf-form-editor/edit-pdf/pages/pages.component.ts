@@ -1,7 +1,6 @@
 import { DisplayPdfComponent } from './../display/display-pdf.component';
 import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList, ViewChild, ViewChildren, } from '@angular/core';
 
-import { TabComponent } from './../tab/tab.component';
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
 import { EditPageComponent } from './../page/page.component';
 
@@ -20,7 +19,6 @@ export class EditPagesComponent implements AfterContentInit {
   @Input() locked = true; // Make values already entered unchangable.
   @Input() shade = true; // Make background 50% transparent to highlight fields.
 
-  @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChildren(EditPageComponent) pageViews: QueryList<EditPageComponent>;
   @ViewChild('viewer') viewer: DisplayPdfComponent;
 
@@ -36,7 +34,7 @@ export class EditPagesComponent implements AfterContentInit {
   }
 
   nextPage() {
-    this.viewer.incrementPage(1);
+    // this.viewer.incrementPage(1);
     this.currentPageNo = (this.currentPageNo === this.documentModel.pages.length) ? 1 : this.currentPageNo + 1;
     this.setPage(this.currentPageNo);
   }
@@ -55,26 +53,22 @@ export class EditPagesComponent implements AfterContentInit {
     this.setPage(this.currentPageNo);
   }
 
-  setPage(no: number) {
-    this.currentPageNo = no;
-    const TabComponent = this.tabs.filter(page => page.pageNo === this.currentPageNo);
-    const EditPageComponent = this.pageViews.filter(x => x.editPage.pageNo === this.currentPageNo);
+  setPage(pageNo: number) {
+    this.currentPageNo = pageNo;
+    this.viewer.goToPage(pageNo);
+    const EditPageComponent = this.pageViews.filter(x => x.editPage.pageNo === pageNo);
 
-    if (TabComponent.length === 1 && EditPageComponent.length === 1) {
-      this.selectPage(TabComponent[0], EditPageComponent[0]);
+    if ( EditPageComponent.length === 1) {
+      this.selectPage(EditPageComponent[0]);
     }
   }
 
-  selectPage(newTab: TabComponent, newPage: EditPageComponent) {
-    // deactivate all page tabs
-    this.tabs.toArray().forEach(page => page.active = false);
+  selectPage( newPage: EditPageComponent) {
     this.pageViews.toArray().forEach(page => page.editPage.active = false);
 
     // activate the tab the user has clicked on.
-    newTab.active = true;
     newPage.editPage.active = true;
 
-    this.viewer.goToPage(newTab.pageNo);
   }
 
   toggleLock() {

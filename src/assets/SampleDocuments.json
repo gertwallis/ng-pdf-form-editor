@@ -34,5 +34,11 @@
     "name": "Application for Certificate of Title",
     "description": "To apply for a certificate of title for a vehicle or vessel and to note a secured interest in the vehicle or vessel.",
     "noOfPages": 7
+  },
+  {
+    "id": "252MNV2",
+    "name": "Minnesota (Watercraft)",
+    "description": "To apply for certificate of title for watercraft.",
+    "noOfPages": 5
   }
 ]
