@@ -1,13 +1,13 @@
 import { DisplayPdfComponent } from './../display/display-pdf.component';
 import {
-    AfterContentInit,
-    Component,
-    ContentChildren,
-    Input,
-    OnInit,
-    QueryList,
-    ViewChild,
-    ViewChildren,
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  Input,
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren,
 } from '@angular/core';
 
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
@@ -67,12 +67,12 @@ export class EditPagesComponent implements AfterContentInit {
     this.viewer.page = pageNo;
     const EditPageComponent = this.pageViews.filter(x => x.editPage.pageNo === pageNo);
 
-    if ( EditPageComponent.length === 1) {
+    if (EditPageComponent.length === 1) {
       this.selectPage(EditPageComponent[0]);
     }
   }
 
-  selectPage( newPage: EditPageComponent) {
+  selectPage(newPage: EditPageComponent) {
     this.pageViews.toArray().forEach(page => page.editPage.active = false);
 
     // activate the tab the user has clicked on.
@@ -119,12 +119,11 @@ export class EditPagesComponent implements AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
-    if (this.documentModel.pdfBytes) {
-      this.viewer.pdfSrc = this.base64ToArrayBuffer(this.documentModel.pdfBytes);
-    } else if (this.documentModel.url) {
+    if (this.documentModel.url) {
       this.viewer.pdfSrc = this.documentModel.url;
+    } else if (this.documentModel.pdfBytes) {
+      this.viewer.pdfSrc = this.base64ToArrayBuffer(this.documentModel.pdfBytes);
     }
-
     // this.viewer.pdfSrc = this.documentModel.url;
     this.noOfPages = this.documentModel.pages.length;
   }
