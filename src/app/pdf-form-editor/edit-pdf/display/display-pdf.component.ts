@@ -65,10 +65,8 @@ export class DisplayPdfComponent {
             pageElement.style.zIndex = '1';
 
             if (pageElement.dataset['pageNumber'] === pageNo.toString()) {
-                // pageElement.style.display = 'block';
                 pageElement.hidden = false;
             } else {
-                // pageElement.style.display = 'none';
                 pageElement.hidden = true;
             }
 
@@ -97,11 +95,10 @@ export class DisplayPdfComponent {
             if (this.redrawPage) {
                 this.goToPage(this.currentPage);
             }
-
         }
     }
 
-    private afterLoadComplete(pdf: PDFDocumentProxy) {
+    afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
         // Hate introducing delays, but we can't continue until the underlying pdf
         // viewer has finished drawing the pdf.

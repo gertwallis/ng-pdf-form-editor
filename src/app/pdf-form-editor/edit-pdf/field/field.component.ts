@@ -38,7 +38,7 @@ export class EditFieldComponent implements AfterContentInit {
 
   color: string;
   tabIndex = 0;
-  private style: UI.FieldStyle;
+  style: UI.FieldStyle;
   locked = true;
   initialValue: string;
   locationStyle: {};
