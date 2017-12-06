@@ -36,6 +36,9 @@ export class PdfEditComponent {
         group.fields.filter(field => field.name === fieldName).forEach(sameName => {
           if (sameName.value !== newValue) {
             sameName.value = newValue;
+            // TODO: Can not set the state here - need to move it from UI model to Edit model 
+            //     - it is set on field coming from the server.
+            // sameName.state = UI.DisplayState.Changed;
           }
         });
       });
