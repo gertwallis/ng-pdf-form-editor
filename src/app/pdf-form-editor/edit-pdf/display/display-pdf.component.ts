@@ -27,11 +27,11 @@ export class DisplayPdfComponent {
     @ViewChild('pdfViewer') pdfViewer: PdfViewerComponent;
 
     @Input() public pdfSrc: any;
-    @Input() public page = 1;
     @Input() public zoom = 1.0;
 
     currentSize: UI.Size;
     currentPage: number;
+    redrawPage = false;
 
     @Output() scaleChange = new EventEmitter<UI.Size>();
 
@@ -46,7 +46,16 @@ export class DisplayPdfComponent {
         this.pdfSrc = url;
     }
 
+    incrementZoom(amount: number) {
+        this.zoom += amount;
+
+        // Set flag so we know to reset the zoom. 
+        this.redrawPage = true;
+    }
+
+
     goToPage(pageNo) {
+
         this.currentPage = pageNo;
 
         const pageElements = document.getElementsByClassName('page');
@@ -56,73 +65,49 @@ export class DisplayPdfComponent {
             pageElement.style.zIndex = '1';
 
             if (pageElement.dataset['pageNumber'] === pageNo.toString()) {
-                pageElement.style.display = 'block';
+                // pageElement.style.display = 'block';
+                pageElement.hidden = false;
             } else {
-                pageElement.style.display = 'none';
+                // pageElement.style.display = 'none';
+                pageElement.hidden = true;
             }
 
-            if (this.currentSize.width !== pageElement.offsetWidth || this.currentSize.height !== pageElement.offsetHeight) {
-                this.currentSize.width = pageElement.offsetWidth;
-                this.currentSize.height = pageElement.offsetHeight;
-                this.scaleChange.emit(this.currentSize);                
-            }
+            this.notifyWidth(pageElement.offsetWidth, pageElement.offsetHeight);
+        }
+
+        this.redrawPage = false;
+    }
+
+    notifyWidth(width, height) {
+        if (width !== 0 && (this.currentSize.width !== width || this.currentSize.height !== height)) {
+            this.currentSize.width = width;
+            this.currentSize.height = height;
+            this.scaleChange.emit(this.currentSize);
         }
     }
 
-    // noOfPages() {
-    //     if (this.pdf) {
-    //         return this.pdf.numPages;
-    //     }
-    //     return 0;
-    // }
+    pageChanged() {
+        const pageElements = document.getElementsByClassName('page');
 
-    // incrementPage(amount: number) {
-    //     this.page += amount;
-    // }
+        if (pageElements.length > 0) {
+            const pageElement = <HTMLElement>pageElements.item(0);
 
-    incrementZoom(amount: number) {
-        this.zoom += amount;
+            this.notifyWidth(pageElement.clientWidth, pageElement.clientHeight);
+
+            if (this.redrawPage) {
+                this.goToPage(this.currentPage);
+            }
+
+        }
     }
 
-    // rotate(angle: number) {
-    //     this.rotation += angle;
-    // }
-
-    // pageChanged() {
-
-    //     const pageElement = document.getElementsByClassName('page');
-
-    //     if (pageElement.length === 1) {
-    //         console.log('PAGE CHANGED: ' + this.page);
-    //         this.setPageSize(pageElement[0]);
-    //     }
-    // }
-
-    // onSize(size: UI.Size) {
-    //     console.log('ON SIZE: ' + size.width + '/' + size.height);
-    //     if (this.currentSize.width !== size.width || this.currentSize.height !== size.height) {
-    //         this.currentSize = size;
-    //         // this.goToPage(this.currentPage);
-    //         this.scaleChange.emit(size);
-    //     }
-    // }
-
-    //     private setPageSize(element) {
-    //         const size = new UI.Size();
-    //         size.width = element.clientWidth;
-    //         size.height = element.clientHeight;
-
-    //         this.scaleChange.emit(size);
-    //    }
-
     private afterLoadComplete(pdf: PDFDocumentProxy) {
-        console.log('AFTER LOAD COMPLETE: ' + this.page);
         this.pdf = pdf;
         // Hate introducing delays, but we can't continue until the underlying pdf
         // viewer has finished drawing the pdf.
         setTimeout(() => {
-                this.goToPage(this.currentPage);
-          }, 150);
+            // this.goToPage(this.currentPage);
+        }, 150);
     }
 }
 

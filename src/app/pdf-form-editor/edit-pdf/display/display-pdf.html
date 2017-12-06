@@ -1,2 +1,4 @@
-﻿<pdf-viewer #pdfViewer [src]="pdfSrc" [(page)]="page" [show-all]="true" [zoom]="zoom" [render-text]="false" >
+﻿<pdf-viewer #pdfViewer [src]="pdfSrc" [show-all]="true" [zoom]="zoom" [render-text]="false" 
+        (after-load-complete)="afterLoadComplete($event)"
+        (pageChange)="pageChanged()">
 </pdf-viewer>

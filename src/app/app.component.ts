@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   constructor(private DocumentService: DocumentService) { }
 
   setDocument(document: Edit.Document) {
-    document.pages[0].active = true;
+    // document.pages[0].active = true;
     this.documentModel = document;
   }
 

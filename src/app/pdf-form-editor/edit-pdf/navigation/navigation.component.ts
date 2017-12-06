@@ -37,6 +37,10 @@ export class NavigationComponent implements AfterContentInit {
   incrementZoom(zoomFactor: number) {
     this.pages.incrementZoom(zoomFactor);
   }
+  
+  resetZoom() {
+    this.pages.resetZoom();
+  }
 
   highlight(pageNo: number) {
     if (this.pageTabs) {

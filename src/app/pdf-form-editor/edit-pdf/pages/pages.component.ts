@@ -123,5 +123,12 @@ export class EditPagesComponent implements AfterContentInit {
     }
     // this.viewer.pdfSrc = this.documentModel.url;
     this.noOfPages = this.documentModel.pages.length;
+
+    // KLUDGE to set the initial width/height - based on defaults from ng2-pdf-viewer.
+    // Would like to get that from the UI - would only work if zoom is 1.
+    const size = new UI.Size();
+    size.width = 816;
+    size.height = 1056;
+    this.setScale(size);
   }
 }
