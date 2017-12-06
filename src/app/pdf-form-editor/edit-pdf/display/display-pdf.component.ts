@@ -4,7 +4,6 @@ import {
     ChangeDetectorRef,
     Component,
     EventEmitter,
-    HostBinding,
     Input,
     Output,
     ViewChild,
@@ -27,18 +26,19 @@ export class DisplayPdfComponent {
     @Input() public page = 1;
     @Input() public zoom = 1.0;
 
-    @HostBinding('hidden')  isHidden:boolean = false;
-  
-//    @Input() private originalSize = true;
-//    @Input() private renderText = false;
-//    @Input() private rotation = 0;
-//    @Input() private showAll = false;
+    currentSize: UI.Size;
+
+    //    @Input() private originalSize = true;
+    //    @Input() private renderText = false;
+    //    @Input() private rotation = 0;
+    //    @Input() private showAll = false;
 
     @Output() scaleChange = new EventEmitter<UI.Size>();
 
     private pdf: PDFDocumentProxy;
 
-    constructor(public changeDetection: ChangeDetectorRef) {
+    constructor() {
+        this.currentSize = new UI.Size();
     }
 
     setSource(url: string) {
@@ -48,7 +48,6 @@ export class DisplayPdfComponent {
 
     goToPage(pageNumber) {
         // this.changeDetection.detach();
-        this.isHidden = true;
         this.page = pageNumber;
     }
 
@@ -71,34 +70,41 @@ export class DisplayPdfComponent {
     //     this.rotation += angle;
     // }
 
-    pageChanged() {
+    // pageChanged() {
 
-        const pageElement = document.getElementsByClassName('page');
+    //     const pageElement = document.getElementsByClassName('page');
 
-        if (pageElement.length === 1) {
-            console.log('PAGE CHANGED: ' + this.page);
-            this.setPageSize(pageElement[0]);
+    //     if (pageElement.length === 1) {
+    //         console.log('PAGE CHANGED: ' + this.page);
+    //         this.setPageSize(pageElement[0]);
+    //     }
+    // }
+
+    onSize(size: UI.Size) {
+        if (this.currentSize.width != size.width || this.currentSize.height != size.height) {
+            this.currentSize = size;
+
+            this.scaleChange.emit(size);
         }
     }
 
-    private setPageSize(element) {
-        const size = new UI.Size();
-        size.width = element.clientWidth;
-        size.height = element.clientHeight;
+    //     private setPageSize(element) {
+    //         const size = new UI.Size();
+    //         size.width = element.clientWidth;
+    //         size.height = element.clientHeight;
 
-        this.scaleChange.emit(size);
+    //         this.scaleChange.emit(size);
+    //    }
 
-        this.isHidden = false;
-    }
-    private afterLoadComplete(pdf: PDFDocumentProxy) {
-        console.log('AFTER LOAD COMPLETE: ' + this.page);
-        this.pdf = pdf;
-        // Hate introducing delays, but we can't continue until the underlying pdf
-        // viewer has finished drawing the pdf.
-        setTimeout(() => {
-                this.pageChanged();
-          }, 150);
-    }
+    //     private afterLoadComplete(pdf: PDFDocumentProxy) {
+    //         console.log('AFTER LOAD COMPLETE: ' + this.page);
+    //         this.pdf = pdf;
+    //         // Hate introducing delays, but we can't continue until the underlying pdf
+    //         // viewer has finished drawing the pdf.
+    //         setTimeout(() => {
+    //                 this.pageChanged();
+    //           }, 150);
+    //     }
 }
 
 

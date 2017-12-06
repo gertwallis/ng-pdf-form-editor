@@ -2,8 +2,19 @@
  * Created by vadimdez on 21/06/16.
  */
 import {
-  Component, Input, Output, ElementRef, EventEmitter, OnChanges, SimpleChanges, OnInit, HostListener
+    ChangeDetectionStrategy,
+    Component,
+    ElementRef,
+    EventEmitter,
+    HostListener,
+    Input,
+    OnChanges,
+    OnInit,
+    Output,
+    SimpleChanges,
 } from '@angular/core';
+
+import { UI } from './../../model/UI';
 
 function isSSR() {
   return typeof window === 'undefined';
@@ -21,8 +32,9 @@ if (!isSSR()) {
 @Component({
   selector: 'pdf-viewer',
   template: `<div class="ng2-pdf-viewer-container"><div class="pdfViewer"></div></div>`,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [
-`
+    `
 .ng2-pdf-viewer-container {
     overflow-x: auto;
 }
@@ -90,6 +102,7 @@ if (!isSSR()) {
   -moz-user-select: none;
 }
 
+/*
 :host /deep/ .textLayer .endOfContent.active {
   top: 0px;
 }
@@ -108,7 +121,7 @@ if (!isSSR()) {
   height: 100%;
 }
 
-:host /deep/ .annotationLayer .linkAnnotation > a /* -ms-a */  {
+:host /deep/ .annotationLayer .linkAnnotation > a   {
   background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7") 0 0 repeat;
 }
 
@@ -226,6 +239,7 @@ if (!isSSR()) {
 :host /deep/ .pdfViewer .canvasWrapper {
   overflow: hidden;
 }
+*/
 
 :host /deep/ .pdfViewer .page {
   direction: ltr;
@@ -294,52 +308,9 @@ export class PdfViewerComponent implements OnChanges, OnInit {
   @Output('after-load-complete') afterLoadComplete = new EventEmitter<PDFDocumentProxy>();
   @Output('error') onError = new EventEmitter<any>();
   @Output('on-progress') onProgress = new EventEmitter<PDFProgressData>();
+  @Output('on-size') onSize = new EventEmitter<UI.Size>();
 
-  constructor(private element: ElementRef) {
-    if (!isSSR()) {
-      PDFJS.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${ (PDFJS as any).version }/pdf.worker.min.js`;
-    }
-  }
-
-  ngOnInit() {
-    if (!isSSR()) {
-      this.setupViewer();
-    }
-  }
-
-  @HostListener('window:resize', [])
-  public onPageResize() {
-    if (!this._canAutoResize) {
-      return;
-    }
-
-    if (this.resizeTimeout) {
-      clearTimeout(this.resizeTimeout);
-    }
-
-    this.resizeTimeout = setTimeout(() => {
-      this.updateSize();
-    }, 100);
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    if (isSSR()) {
-      return;
-    }
-
-    if ('src' in changes) {
-      this.loadPDF();
-    } else if (this._pdf) {
-      if ('renderText' in changes) {
-        this.setupViewer();
-      }
-      this.update();
-    }
-  }
-
-  @Input()
-  src: string | Uint8Array | PDFSource;
-
+  @Input() src: string | Uint8Array | PDFSource;
   @Input('page')
   set page(_page) {
     _page = parseInt(_page, 10);
@@ -349,6 +320,7 @@ export class PdfViewerComponent implements OnChanges, OnInit {
     }
 
     this._page = _page;
+    console.log('VIEWER PAGE CHANGE:' + _page);
     this.pageChange.emit(_page);
   }
 
@@ -412,6 +384,50 @@ export class PdfViewerComponent implements OnChanges, OnInit {
     this._fitToPage = Boolean(value);
   }
 
+  constructor(private element: ElementRef) {
+    if (!isSSR()) {
+      PDFJS.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${(PDFJS as any).version}/pdf.worker.min.js`;
+    }
+  }
+
+  ngOnInit() {
+    if (!isSSR()) {
+      this.setupViewer();
+    }
+  }
+
+  @HostListener('window:resize', [])
+  public onPageResize() {
+    if (!this._canAutoResize) {
+      return;
+    }
+
+    if (this.resizeTimeout) {
+      clearTimeout(this.resizeTimeout);
+    }
+
+    this.resizeTimeout = setTimeout(() => {
+      this.updateSize();
+    }, 100);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('PDF VIEWER CHANGES');
+    if (isSSR()) {
+      return;
+    }
+
+    if ('src' in changes) {
+      this.loadPDF();
+    } else if (this._pdf) {
+      if ('renderText' in changes) {
+        this.setupViewer();
+      }
+      this.update();
+    }
+  }
+
+
   public setupViewer() {
     (<any>PDFJS).disableTextLayer = !this._renderText;
 
@@ -432,6 +448,7 @@ export class PdfViewerComponent implements OnChanges, OnInit {
   public updateSize() {
     if (!this._showAll) {
       this.renderPage(this._page);
+      console.log('UPDATE SIZE');
       return;
     }
 
@@ -495,7 +512,7 @@ export class PdfViewerComponent implements OnChanges, OnInit {
       .then((pdf: PDFDocumentProxy) => {
         this._pdf = pdf;
         this.lastLoaded = src;
-
+        console.log('AFTER LOAD COMPLETE');
         this.afterLoadComplete.emit(pdf);
 
         this.update();
@@ -551,7 +568,7 @@ export class PdfViewerComponent implements OnChanges, OnInit {
   }
 
   private renderPage(pageNumber: number) {
-    this._pdf.getPage(pageNumber).then( (page: PDFPageProxy) => {
+    this._pdf.getPage(pageNumber).then((page: PDFPageProxy) => {
       let viewport = page.getViewport(this._zoom, this._rotation);
       let container = this.element.nativeElement.querySelector('.pdfViewer');
       let scale = this._zoom;
@@ -589,6 +606,11 @@ export class PdfViewerComponent implements OnChanges, OnInit {
       }
 
       pdfPageView.setPdfPage(page);
+      console.log('DRAWING PAGE: ' + viewport.width + '/' + viewport.height);
+      const size = new UI.Size();
+      size.width = pdfPageView.viewport.width;
+      size.height = pdfPageView.viewport.height;
+      this.onSize.emit(size);
       return pdfPageView.draw();
     });
   }
