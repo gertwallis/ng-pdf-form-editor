@@ -1,10 +1,2 @@
-﻿<style>
-    .page {
-        position: absolute;
-        display: none;
-        z-index: 1;
-    }
-</style>
-
-<pdf-viewer #pdfViewer [src]="pdfSrc" [(page)]="page" [show-all]="true" [zoom]="zoom" [render-text]="false" (on-size)="onSize($event)">
+﻿<pdf-viewer #pdfViewer [src]="pdfSrc" [(page)]="page" [show-all]="true" [zoom]="zoom" [render-text]="false" >
 </pdf-viewer>

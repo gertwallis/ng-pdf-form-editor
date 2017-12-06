@@ -30,11 +30,7 @@ export class DisplayPdfComponent {
     @Input() public zoom = 1.0;
 
     currentSize: UI.Size;
-
-    //    @Input() private originalSize = true;
-    //    @Input() private renderText = false;
-    //    @Input() private rotation = 0;
-    //    @Input() private showAll = false;
+    currentPage: number;
 
     @Output() scaleChange = new EventEmitter<UI.Size>();
 
@@ -42,45 +38,46 @@ export class DisplayPdfComponent {
 
     constructor() {
         this.currentSize = new UI.Size();
+        this.currentPage = 1;
     }
 
     setSource(url: string) {
         this.pdfSrc = url;
     }
 
-    goToPage(pageNumber) {
-        // this.changeDetection.detach();
-        // this.page = pageNumber;
+    goToPage(pageNo) {
+        this.currentPage = pageNo;
 
         const pageElements = document.getElementsByClassName('page');
-        
         for (let i = 0; i < pageElements.length; i++) {
-            const pageElement  = <HTMLElement> pageElements.item(i);
+            const pageElement = <HTMLElement>pageElements.item(i);
             pageElement.style.position = 'absolute';
-            // // display: none;
             pageElement.style.zIndex = '1';
 
-            if (pageElement.dataset['pageNumber'] === pageNumber.toString()) {
+            if (pageElement.dataset['pageNumber'] === pageNo.toString()) {
                 pageElement.style.display = 'block';
-//                pageElement.setAttribute('display', 'block;');
             } else {
                 pageElement.style.display = 'none';
-                
-  //              pageElement.setAttribute('display', 'none;');
+            }
+
+            if (this.currentSize.width !== pageElement.offsetWidth || this.currentSize.height !== pageElement.offsetHeight) {
+                this.currentSize.width = pageElement.offsetWidth;
+                this.currentSize.height = pageElement.offsetHeight;
+                this.scaleChange.emit(this.currentSize);                
             }
         }
     }
 
-    noOfPages() {
-        if (this.pdf) {
-            return this.pdf.numPages;
-        }
-        return 0;
-    }
+    // noOfPages() {
+    //     if (this.pdf) {
+    //         return this.pdf.numPages;
+    //     }
+    //     return 0;
+    // }
 
-    incrementPage(amount: number) {
-        this.page += amount;
-    }
+    // incrementPage(amount: number) {
+    //     this.page += amount;
+    // }
 
     incrementZoom(amount: number) {
         this.zoom += amount;
@@ -100,13 +97,14 @@ export class DisplayPdfComponent {
     //     }
     // }
 
-    onSize(size: UI.Size) {
-        if (this.currentSize.width != size.width || this.currentSize.height != size.height) {
-            this.currentSize = size;
-
-            this.scaleChange.emit(size);
-        }
-    }
+    // onSize(size: UI.Size) {
+    //     console.log('ON SIZE: ' + size.width + '/' + size.height);
+    //     if (this.currentSize.width !== size.width || this.currentSize.height !== size.height) {
+    //         this.currentSize = size;
+    //         // this.goToPage(this.currentPage);
+    //         this.scaleChange.emit(size);
+    //     }
+    // }
 
     //     private setPageSize(element) {
     //         const size = new UI.Size();
@@ -116,16 +114,14 @@ export class DisplayPdfComponent {
     //         this.scaleChange.emit(size);
     //    }
 
-    //     private afterLoadComplete(pdf: PDFDocumentProxy) {
-    //         console.log('AFTER LOAD COMPLETE: ' + this.page);
-    //         this.pdf = pdf;
-    //         // Hate introducing delays, but we can't continue until the underlying pdf
-    //         // viewer has finished drawing the pdf.
-    //         setTimeout(() => {
-    //                 this.pageChanged();
-    //           }, 150);
-    //     }
+    private afterLoadComplete(pdf: PDFDocumentProxy) {
+        console.log('AFTER LOAD COMPLETE: ' + this.page);
+        this.pdf = pdf;
+        // Hate introducing delays, but we can't continue until the underlying pdf
+        // viewer has finished drawing the pdf.
+        setTimeout(() => {
+                this.goToPage(this.currentPage);
+          }, 150);
+    }
 }
 
-
-// https://blog.angularindepth.com/everything-you-need-to-know-about-change-detection-in-angular-8006c51d206f

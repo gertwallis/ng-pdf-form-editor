@@ -320,7 +320,6 @@ export class PdfViewerComponent implements OnChanges, OnInit {
     }
 
     this._page = _page;
-    console.log('VIEWER PAGE CHANGE:' + _page);
     this.pageChange.emit(_page);
   }
 
@@ -437,7 +436,7 @@ export class PdfViewerComponent implements OnChanges, OnInit {
 
     const pdfOptions: PDFViewerParams | any = {
       container: this.element.nativeElement.querySelector('div'),
-      removePageBorders: true,
+      removePageBorders: false,
       linkService: this._pdfLinkService
     };
 
@@ -463,6 +462,7 @@ export class PdfViewerComponent implements OnChanges, OnInit {
         stickToPage = !this._stickToPage;
       }
 
+      this.notifySize(this.element.nativeElement.firstChild.clientWidth, this.element.nativeElement.firstChild.clientHeight);
       this._pdfViewer._setScale(scale, stickToPage);
     });
   }
@@ -587,9 +587,9 @@ export class PdfViewerComponent implements OnChanges, OnInit {
 
       this._pdfLinkService = new (<any>PDFJS).PDFLinkService();
 
-      let pdfOptions: PDFViewerParams | any = {
+      const pdfOptions: PDFViewerParams | any = {
         container,
-        removePageBorders: true,
+        removePageBorders: false,
         linkService: this._pdfLinkService,
         defaultViewport: viewport,
         scale,
@@ -606,13 +606,16 @@ export class PdfViewerComponent implements OnChanges, OnInit {
       }
 
       pdfPageView.setPdfPage(page);
-      console.log('DRAWING PAGE: ' + viewport.width + '/' + viewport.height);
-      const size = new UI.Size();
-      size.width = pdfPageView.viewport.width;
-      size.height = pdfPageView.viewport.height;
-      this.onSize.emit(size);
+      this.notifySize(pdfPageView.viewport.width, pdfPageView.viewport.height);
       return pdfPageView.draw();
     });
+  }
+
+  private notifySize(width: number, height: number) {
+    const size = new UI.Size();
+    size.width = width;
+    size.height = height;
+    this.onSize.emit(size);
   }
 
   static removeAllChildNodes(element: HTMLElement) {
