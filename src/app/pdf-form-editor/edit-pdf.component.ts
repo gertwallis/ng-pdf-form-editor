@@ -1,5 +1,5 @@
 import { Subscription } from 'rxjs/Rx';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 //  import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 import { NavigationComponent } from './edit-pdf/navigation/navigation.component';
@@ -16,7 +16,7 @@ import { UI } from './model/UI';
   selector: 'edit-form',
   templateUrl: './edit-pdf.component.html',
 })
-export class PdfEditComponent {
+export class PdfEditComponent implements OnChanges{
   fieldChangeSubscription: Subscription;
 
   @Input() documentModel: Edit.Document;
@@ -60,4 +60,8 @@ export class PdfEditComponent {
 
   }
 
+
+    public ngOnChanges(changes: SimpleChanges): void {
+      console.log('CHANGES LOGGED in EDIT_PDF');
+    }
 }

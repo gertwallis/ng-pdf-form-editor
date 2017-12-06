@@ -49,7 +49,7 @@ export class DisplayPdfComponent {
     incrementZoom(amount: number) {
         this.zoom += amount;
 
-        // Set flag so we know to reset the zoom. 
+        // Set flag so we know to reset the zoom.
         this.redrawPage = true;
     }
 
@@ -64,10 +64,12 @@ export class DisplayPdfComponent {
             pageElement.style.position = 'absolute';
             pageElement.style.zIndex = '1';
 
-            if (pageElement.dataset['pageNumber'] === pageNo.toString()) {
-                pageElement.hidden = false;
-            } else {
-                pageElement.hidden = true;
+            if (pageElement.dataset['loaded']) {
+                if (pageElement.dataset['pageNumber'] === pageNo.toString()) {
+                    pageElement.hidden = false;
+                } else {
+                    pageElement.hidden = true;
+                }
             }
 
             this.notifyWidth(pageElement.offsetWidth, pageElement.offsetHeight);
