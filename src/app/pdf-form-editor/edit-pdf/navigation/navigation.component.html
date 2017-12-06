@@ -14,7 +14,7 @@
                         <span class="sr-only">Previous</span>
                     </a>
                 </li>
-                <li *ngFor="let page of documentModel.pages" ng-class="{active: isActive(page)}">
+                <li #pageTab *ngFor="let page of documentModel.pages" ng-class="{active: isActive(page)}">
                     <a (click)="selectPage(page.pageNo)">{{page.pageNo}}</a>
                 </li>
 
