@@ -2,7 +2,7 @@
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { PdfViewerModule } from './../pdf-viewer/pdf-viewer.module';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { DisplayPdfComponent } from './display-pdf.component';
 

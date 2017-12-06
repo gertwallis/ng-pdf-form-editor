@@ -1,5 +1,4 @@
-﻿import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
-import {
+﻿import {
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
@@ -11,6 +10,8 @@ import {
     ViewChild,
     ViewChildren,
 } from '@angular/core';
+
+import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
 
 // Models
 import { UI } from './../../model/UI';

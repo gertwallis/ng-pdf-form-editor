@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { PdfViewerModule } from './edit-pdf/pdf-viewer/pdf-viewer.module';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 // Services
 import { UpdateService } from './service/update.service';
