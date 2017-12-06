@@ -24,8 +24,7 @@
     <edit-page *ngFor="let page of documentModel.pages" [editPage]="page" [class.active]="false"></edit-page>
   </div>
   <div class="pdfView">
-    <edit-pdf-viewer #viewer [zoom]="1" (scaleChange)="setScale($event)">
-      ></edit-pdf-viewer>
+    <edit-pdf-viewer #viewer [zoom]="1" (scaleChange)="setScale($event)"></edit-pdf-viewer>
   </div>
   <div [ngStyle]="pageSize"></div>
 </div>

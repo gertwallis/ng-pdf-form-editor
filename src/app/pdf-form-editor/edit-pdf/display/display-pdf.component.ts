@@ -3,10 +3,13 @@ import {
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
+    ElementRef,
     EventEmitter,
     Input,
     Output,
+    QueryList,
     ViewChild,
+    ViewChildren,
 } from '@angular/core';
 
 // Models
@@ -45,10 +48,27 @@ export class DisplayPdfComponent {
         this.pdfSrc = url;
     }
 
-
     goToPage(pageNumber) {
         // this.changeDetection.detach();
-        this.page = pageNumber;
+        // this.page = pageNumber;
+
+        const pageElements = document.getElementsByClassName('page');
+        
+        for (let i = 0; i < pageElements.length; i++) {
+            const pageElement  = <HTMLElement> pageElements.item(i);
+            pageElement.style.position = 'absolute';
+            // // display: none;
+            pageElement.style.zIndex = '1';
+
+            if (pageElement.dataset['pageNumber'] === pageNumber.toString()) {
+                pageElement.style.display = 'block';
+//                pageElement.setAttribute('display', 'block;');
+            } else {
+                pageElement.style.display = 'none';
+                
+  //              pageElement.setAttribute('display', 'none;');
+            }
+        }
     }
 
     noOfPages() {

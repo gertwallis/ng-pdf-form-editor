@@ -43,7 +43,6 @@ export class EditPagesComponent implements AfterContentInit {
   }
 
   nextPage() {
-    // this.viewer.incrementPage(1);
     this.currentPageNo = (this.currentPageNo === this.documentModel.pages.length) ? 1 : this.currentPageNo + 1;
     this.setPage(this.currentPageNo);
   }
@@ -57,14 +56,13 @@ export class EditPagesComponent implements AfterContentInit {
   }
 
   previousPage() {
-    this.viewer.incrementPage(-1);
     this.currentPageNo = (this.currentPageNo === 1) ? this.documentModel.pages.length : this.currentPageNo - 1;
     this.setPage(this.currentPageNo);
   }
 
   setPage(pageNo: number) {
     this.currentPageNo = pageNo;
-    this.viewer.page = pageNo;
+    this.viewer.goToPage(pageNo);
     const EditPageComponent = this.pageViews.filter(x => x.editPage.pageNo === pageNo);
 
     if (EditPageComponent.length === 1) {
