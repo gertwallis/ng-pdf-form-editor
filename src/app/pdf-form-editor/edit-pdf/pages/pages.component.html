@@ -19,7 +19,6 @@
   }
 </style>
 
-<div class="tab-content">
   <div class="editView">
     <edit-page *ngFor="let page of documentModel.pages" [editPage]="page" [class.active]="false"></edit-page>
   </div>
@@ -27,5 +26,4 @@
     <edit-pdf-viewer #viewer [zoom]="1" (scaleChange)="setScale($event)"></edit-pdf-viewer>
   </div>
   <div [ngStyle]="pageSize"></div>
-</div>
 

@@ -20,7 +20,7 @@ import { Base } from './../../model/Base';
 @Component({
     'selector': 'edit-pdf-viewer',
     'templateUrl': './display-pdf.html',
-    //  changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DisplayPdfComponent {
 
@@ -37,7 +37,7 @@ export class DisplayPdfComponent {
 
     private pdf: PDFDocumentProxy;
 
-    constructor() {
+    constructor(private changeDetection: ChangeDetectorRef) {
         this.currentSize = new UI.Size();
         this.currentPage = 1;
     }
@@ -51,6 +51,7 @@ export class DisplayPdfComponent {
 
         // Set flag so we know to reset the zoom.
         this.redrawPage = true;
+        this.changeDetection.markForCheck();
     }
 
 
