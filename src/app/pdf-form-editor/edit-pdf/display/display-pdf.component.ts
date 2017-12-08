@@ -64,7 +64,7 @@ export class DisplayPdfComponent {
     }
 
     waitUntillLoaded(noOfTries: number, pageNo: number) {
-        console.log('WAIT: ' + noOfTries + " : " + this.zoom);
+        // console.log('WAIT: ' + noOfTries + " : " + this.zoom);
         if (this.pagesLoaded()) {
             this.loadPageIfRendered(pageNo);
         } else if (noOfTries > 0) {

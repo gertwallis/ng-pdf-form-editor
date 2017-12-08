@@ -62,6 +62,5 @@ export class PdfEditComponent implements OnChanges {
 
 
   public ngOnChanges(changes: SimpleChanges): void {
-    console.log('CHANGES LOGGED in EDIT_PDF');
   }
 }
