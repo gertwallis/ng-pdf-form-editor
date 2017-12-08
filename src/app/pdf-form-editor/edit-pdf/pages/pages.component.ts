@@ -31,14 +31,16 @@ export class EditPagesComponent implements AfterContentInit {
   @ViewChild('viewer') viewer: DisplayPdfComponent;
 
   currentPageNo: number;
+  currentZoom: number;
   editMode = false;
-  currentZoom = 0;
+  preferences: UI.Preferences;
   noOfPages: number;
 
   pageSize: {};
 
   constructor() {
     this.currentPageNo = 1;
+    this.preferences = new UI.Preferences();
   }
 
   nextPage() {
@@ -46,12 +48,27 @@ export class EditPagesComponent implements AfterContentInit {
     this.setPage(this.currentPageNo);
   }
 
-  incrementZoom(amount: number) {
-    this.viewer.incrementZoom(amount);
+  incrementZoom() {
+    this.currentZoom += this.preferences.zoomIncrement;
+    this.setZoom();
+  }
+
+  decrementZoom() {
+    this.currentZoom -= this.preferences.zoomIncrement;
+    this.setZoom();
   }
 
   resetZoom() {
-    this.viewer.zoom = 1;
+    this.currentZoom = this.preferences.defaultZoom;
+    this.setZoom();
+  }
+
+  setZoom() {
+    // const pageModel = this.documentModel.pages.find(page => page.pageNo === this.currentPageNo);
+    // pageModel.active = false;
+  
+    this.viewer.setZoom(this.currentZoom);
+//    pageModel.active = true;
   }
 
   previousPage() {
@@ -62,8 +79,9 @@ export class EditPagesComponent implements AfterContentInit {
   setPage(pageNo: number) {
     this.currentPageNo = pageNo;
     this.viewer.goToPage(pageNo);
+    
     const EditPageComponent = this.pageViews.filter(x => x.editPage.pageNo === pageNo);
-
+  
     if (EditPageComponent.length === 1) {
       this.selectPage(EditPageComponent[0]);
     }
@@ -87,7 +105,8 @@ export class EditPagesComponent implements AfterContentInit {
 
   // Emmittor functions
   setScale(size: UI.Size) {
-    if (this.pageViews && this.currentZoom !== this.viewer.zoom) {
+    console.log('SET SCALE: ' + size.width + ' / ' + size.height);
+    if (this.pageViews) {
       this.pageSize = {
         'width': size.width + 'px',
         'height': size.height + 'px',
@@ -105,30 +124,29 @@ export class EditPagesComponent implements AfterContentInit {
     }
   }
 
-  base64ToArrayBuffer(base64) {
-    const binary_string = window.atob(base64);
-    const len = binary_string.length;
-    const bytes = new Uint8Array(len);
-    for (let i = 0; i < len; i++) {
-      bytes[i] = binary_string.charCodeAt(i);
-    }
-    return bytes.buffer;
-  }
 
   public ngAfterContentInit(): void {
+    this.currentZoom = this.preferences.defaultZoom;
+    this.viewer.zoom = this.currentZoom;
     if (this.documentModel.url) {
-      this.viewer.pdfSrc = this.documentModel.url;
+      this.viewer.setPdfSourceURL(this.documentModel.url);
     } else if (this.documentModel.pdfBytes) {
-      this.viewer.pdfSrc = this.base64ToArrayBuffer(this.documentModel.pdfBytes);
+      this.viewer.setPdfSourceBase64(this.documentModel.pdfBytes);
     }
     // this.viewer.pdfSrc = this.documentModel.url;
     this.noOfPages = this.documentModel.pages.length;
 
-    // KLUDGE to set the initial width/height - based on defaults from ng2-pdf-viewer.
-    // Would like to get that from the UI - would only work if zoom is 1.
-    const size = new UI.Size();
-    size.width = 816;
-    size.height = 1056;
-    this.setScale(size);
-  }
+    setTimeout(() => {
+
+        // KLUDGE to set the initial width/height - based on defaults from ng2-pdf-viewer.
+        // Would like to get that from the UI - would only work if zoom is 1.
+        const size = new UI.Size();
+        size.width = 816;
+        size.height = 1056;
+        this.setScale(size);
+
+        // Have to wait for all the child components to intialize before we make the first page visible.  
+        this.setPage(1);
+      }, 1000);
+}
 }

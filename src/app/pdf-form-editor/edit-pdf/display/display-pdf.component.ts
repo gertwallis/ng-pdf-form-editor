@@ -27,15 +27,15 @@ export class DisplayPdfComponent {
     @ViewChild('pdfViewer') pdfViewer: PdfViewerComponent;
 
     @Input() public pdfSrc: any;
-    @Input() public zoom = 1.0;
+    @Input() public zoom: number;
 
     currentSize: UI.Size;
     currentPage: number;
-    redrawPage = false;
 
     @Output() scaleChange = new EventEmitter<UI.Size>();
 
     private pdf: PDFDocumentProxy;
+    private pageLoaded: boolean;
 
     constructor(private changeDetection: ChangeDetectorRef) {
         this.currentSize = new UI.Size();
@@ -46,27 +46,60 @@ export class DisplayPdfComponent {
         this.pdfSrc = url;
     }
 
-    incrementZoom(amount: number) {
-        this.zoom += amount;
+    setZoom(zoomAmount: number) {
+        this.zoom = zoomAmount;
 
         // Set flag so we know to reset the zoom.
-        this.redrawPage = true;
         this.changeDetection.markForCheck();
+        setTimeout(() => {
+            this.goToPage(this.currentPage);
+        }, 500);
     }
 
     goToPage(pageNo) {
 
-        this.currentPage = pageNo;
+        // Make sure everything is rendered before we load the page.
+        this.pageLoaded = false;
+        this.waitUntillLoaded(this.pdf.numPages * 10, pageNo);
+    }
 
-        // Don't hide any pages untill everything is loaded.
-        this.waitUntillLoaded(100);
+    waitUntillLoaded(noOfTries: number, pageNo: number) {
+        console.log('WAIT: ' + noOfTries + " : " + this.zoom);
+        if (this.pagesLoaded()) {
+            this.loadPageIfRendered(pageNo);
+        } else if (noOfTries > 0) {
+            noOfTries--;
+            setTimeout(() => {
+                this.waitUntillLoaded(noOfTries, pageNo);
+            }, 200);
+        }
+    }
 
-        {
+    pagesLoaded(): boolean {
+        const pageElements = document.getElementsByClassName('page');
+        if (pageElements.length === 0) {
+            return false;
+        } else {
+            // See if the last page is loaded
+            const pageElement = <HTMLElement>pageElements.item(pageElements.length - 1);
+
+            if (!pageElement.dataset['loaded']) {
+                return false;
+            }
+            //             for (let i = 0; i < pageElements.length; i++) {
+            // }
+        }
+
+        return true;
+    }
+
+    private loadPageIfRendered(pageNo: number) {
+        if (!this.pageLoaded) {
+            this.currentPage = pageNo;
 
             const pageElements = document.getElementsByClassName('page');
             for (let i = 0; i < pageElements.length; i++) {
 
-                console.log('LOADING PAGE ' + pageNo);
                 const pageElement = <HTMLElement>pageElements.item(i);
                 pageElement.style.position = 'absolute';
                 pageElement.style.zIndex = '1';
@@ -82,43 +115,26 @@ export class DisplayPdfComponent {
                 this.notifyWidth(pageElement.offsetWidth, pageElement.offsetHeight);
             }
 
-            this.redrawPage = false;
+            this.pageLoaded = true;
         }
     }
 
-    sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    base64ToArrayBuffer(base64) {
+        const binary_string = window.atob(base64);
+        const len = binary_string.length;
+        const bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes.buffer;
     }
 
-    demo() {
-        for (let i = 1; i < 10; i++) {
-            console.log('Looping: ' + i + ' ==> ' + this.pagesLoaded());
-            this.sleep(10000);
-        }
+    setPdfSourceBase64(base64) {
+        this.pdfSrc = this.base64ToArrayBuffer(base64);
     }
 
-    waitUntillLoaded(noOfTries: number): boolean {
-        let pagesLoaded = this.pagesLoaded();
-        this.demo();
-        return pagesLoaded;
-    }
-
-    pagesLoaded(): boolean {
-        const pageElements = document.getElementsByClassName('page');
-        if (pageElements.length === 0) {
-            return false;
-        }
-        else {
-            for (let i = 0; i < pageElements.length; i++) {
-                const pageElement = <HTMLElement>pageElements.item(i);
-
-                if (!pageElement.dataset['loaded']) {
-                    return false;
-                }
-            }
-        }
-
-        return true;
+    setPdfSourceURL(url) {
+        this.pdfSrc = url;
     }
 
     notifyWidth(width, height) {
@@ -130,22 +146,21 @@ export class DisplayPdfComponent {
     }
 
     pageChanged() {
-        const pageElements = document.getElementsByClassName('page');
+        // const pageElements = document.getElementsByClassName('page');
 
-        if (pageElements.length > 0) {
-            const pageElement = <HTMLElement>pageElements.item(0);
+        // if (pageElements.length > 0) {
+        //     const pageElement = <HTMLElement>pageElements.item(0);
 
-            this.notifyWidth(pageElement.clientWidth, pageElement.clientHeight);
+        //     this.notifyWidth(pageElement.clientWidth, pageElement.clientHeight);
 
-            if (this.redrawPage) {
-                this.goToPage(this.currentPage);
-            }
-        }
+        //     if (this.redrawPage) {
+        //         this.goToPage(this.currentPage);
+        //     }
+        // }
     }
 
     afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
-        this.goToPage(1);
     }
 }
 

@@ -1,4 +1,14 @@
-import { Component, Input, OnInit, ViewChild, ElementRef, ViewChildren, QueryList, AfterContentInit } from '@angular/core';
+import {
+    AfterContentInit,
+    AfterViewInit,
+    Component,
+    ElementRef,
+    Input,
+    OnInit,
+    QueryList,
+    ViewChild,
+    ViewChildren,
+} from '@angular/core';
 
 import { EditPagesComponent } from '../pages/pages.component';
 import { Edit } from './../../model/Edit';
@@ -7,7 +17,7 @@ import { Edit } from './../../model/Edit';
   selector: 'edit-navigation',
   templateUrl: './navigation.component.html',
 })
-export class NavigationComponent implements AfterContentInit {
+export class NavigationComponent implements AfterContentInit, AfterViewInit {
 
   @Input() documentModel: Edit.Document;
 
@@ -34,10 +44,14 @@ export class NavigationComponent implements AfterContentInit {
     this.highlight(this.pages.currentPageNo);
   }
 
-  incrementZoom(zoomFactor: number) {
-    this.pages.incrementZoom(zoomFactor);
+  incrementZoom() {
+    this.pages.incrementZoom();
   }
-  
+
+  decrementZoom() {
+    this.pages.decrementZoom();
+  }
+
   resetZoom() {
     this.pages.resetZoom();
   }
@@ -62,6 +76,9 @@ export class NavigationComponent implements AfterContentInit {
   }
 
   public ngAfterContentInit(): void {
-    this.highlight(1);
   }
+
+    public ngAfterViewInit(): void {
+      this.highlight(1);
+    }
 }

@@ -16,7 +16,7 @@ import { UI } from './model/UI';
   selector: 'edit-form',
   templateUrl: './edit-pdf.component.html',
 })
-export class PdfEditComponent implements OnChanges{
+export class PdfEditComponent implements OnChanges {
   fieldChangeSubscription: Subscription;
 
   @Input() documentModel: Edit.Document;
@@ -61,7 +61,7 @@ export class PdfEditComponent implements OnChanges{
   }
 
 
-    public ngOnChanges(changes: SimpleChanges): void {
-      console.log('CHANGES LOGGED in EDIT_PDF');
-    }
+  public ngOnChanges(changes: SimpleChanges): void {
+    console.log('CHANGES LOGGED in EDIT_PDF');
+  }
 }
