@@ -54,29 +54,71 @@ export class DisplayPdfComponent {
         this.changeDetection.markForCheck();
     }
 
-
     goToPage(pageNo) {
 
         this.currentPage = pageNo;
 
-        const pageElements = document.getElementsByClassName('page');
-        for (let i = 0; i < pageElements.length; i++) {
-            const pageElement = <HTMLElement>pageElements.item(i);
-            pageElement.style.position = 'absolute';
-            pageElement.style.zIndex = '1';
+        // Don't hide any pages untill everything is loaded.
+        this.waitUntillLoaded(100);
 
-            if (pageElement.dataset['loaded']) {
-                if (pageElement.dataset['pageNumber'] === pageNo.toString()) {
-                    pageElement.hidden = false;
-                } else {
-                    pageElement.hidden = true;
+        {
+
+            const pageElements = document.getElementsByClassName('page');
+            for (let i = 0; i < pageElements.length; i++) {
+
+                console.log('LOADING PAGE ' + pageNo);
+                const pageElement = <HTMLElement>pageElements.item(i);
+                pageElement.style.position = 'absolute';
+                pageElement.style.zIndex = '1';
+
+                if (pageElement.dataset['loaded']) {
+                    if (pageElement.dataset['pageNumber'] === pageNo.toString()) {
+                        pageElement.hidden = false;
+                    } else {
+                        pageElement.hidden = true;
+                    }
                 }
+
+                this.notifyWidth(pageElement.offsetWidth, pageElement.offsetHeight);
             }
 
-            this.notifyWidth(pageElement.offsetWidth, pageElement.offsetHeight);
+            this.redrawPage = false;
+        }
+    }
+
+    sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    demo() {
+        for (let i = 1; i < 10; i++) {
+            console.log('Looping: ' + i + ' ==> ' + this.pagesLoaded());
+            this.sleep(10000);
+        }
+    }
+
+    waitUntillLoaded(noOfTries: number): boolean {
+        let pagesLoaded = this.pagesLoaded();
+        this.demo();
+        return pagesLoaded;
+    }
+
+    pagesLoaded(): boolean {
+        const pageElements = document.getElementsByClassName('page');
+        if (pageElements.length === 0) {
+            return false;
+        }
+        else {
+            for (let i = 0; i < pageElements.length; i++) {
+                const pageElement = <HTMLElement>pageElements.item(i);
+
+                if (!pageElement.dataset['loaded']) {
+                    return false;
+                }
+            }
         }
 
-        this.redrawPage = false;
+        return true;
     }
 
     notifyWidth(width, height) {
@@ -103,11 +145,7 @@ export class DisplayPdfComponent {
 
     afterLoadComplete(pdf: PDFDocumentProxy) {
         this.pdf = pdf;
-        // Hate introducing delays, but we can't continue until the underlying pdf
-        // viewer has finished drawing the pdf.
-        setTimeout(() => {
-            // this.goToPage(this.currentPage);
-        }, 150);
+        this.goToPage(1);
     }
 }
 
