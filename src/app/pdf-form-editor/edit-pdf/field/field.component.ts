@@ -125,7 +125,7 @@ export class EditFieldComponent implements AfterContentInit {
       case Base.Format.AlphaNumeric:
         return '.*';
       case Base.Format.Date:
-        return '^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$';
+        return '^(0?[1-9]|1[012])[\\/\\-](0?[1-9]|[12][0-9]|3[01])[\\/\\-]\\d{4}$';
       case Base.Format.Dollar:
         return '^\\d+(\\.\\d{2})?$';
       case Base.Format.Number:
