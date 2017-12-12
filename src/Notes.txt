@@ -1,0 +1,3 @@
+https://github.com/mozilla/pdf.js/blob/master/examples/learning/prevnext.html#L76
+https://github.com/mozilla/pdf.js/issues/5601
+https://stackoverflow.com/questions/12693207/how-to-know-if-pdf-js-has-finished-rendering
