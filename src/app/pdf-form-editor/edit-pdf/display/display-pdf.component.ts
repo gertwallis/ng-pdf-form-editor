@@ -11,6 +11,7 @@
     ViewChildren,
 } from '@angular/core';
 
+import { PDFDocumentProxy, PDFProgressData } from 'ng2-pdf-viewer';
 import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
 
 // Models
